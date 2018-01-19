@@ -31,11 +31,16 @@ import { AppComponent } from './containers/app/app.component';
 
 // routes
 export const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'tests' },
+  { path: '', pathMatch: 'full', redirectTo: 'projectContractors' },
   {
-    path: 'tests',
-    loadChildren: '../tests/tests.module#TestsModule'
+    path: 'projectContractors',
+    loadChildren:
+      '../projectContractors/projectContractors.module#ProjectContractorsModule'
   }
+  // {
+  //   path: 'tests',
+  //   loadChildren: '../tests/tests.module#TestsModule'
+  // }
 ];
 
 @NgModule({
