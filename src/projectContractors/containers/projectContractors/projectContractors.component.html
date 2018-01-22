@@ -1,6 +1,11 @@
-
 <div>
-    2018 project contractors list page
+  2018 project contractors list page
+</div>
+
+
+<div *ngFor="let projectContractor of (projectContractors$ | async)">
+
+  {{projectContractor.ProjectName}}
 </div>
 <!-- 
 <div class="products">

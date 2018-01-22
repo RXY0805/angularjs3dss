@@ -11,38 +11,35 @@ import { ProjectContractor } from '../models/projectContractor.model';
 
 @Injectable()
 export class ProjectContractorExistsGuards implements CanActivate {
-    constructor(private store: Store<fromStore.ProjectContractorsState>) {}
+  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
-    canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
-        return this.checkStore().pipe(
-            switchMap(() => {
-                const id= route.params.projectId;
-                return this.hasProjectContractor(id);
-            })
-        )
-    }
+  canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
+    return this.checkStore().pipe(
+      switchMap(() => {
+        const id = route.params.projectId;
+        return this.hasProjectContractor(id);
+      })
+    );
+  }
 
-    hasProjectContractor(id: number): Observable<boolean> {
-        return this.store
-          .select(fromStore.getProjectContractorsEntities)
-          .pipe(
-            map((entities: { [key: number]: ProjectContractor }) => !!entities[id]),
-            take(1)
-          );
-      }
+  hasProjectContractor(id: number): Observable<boolean> {
+    return this.store
+      .select(fromStore.getProjectContractorsEntities)
+      .pipe(
+        map((entities: { [key: number]: ProjectContractor }) => !!entities[id]),
+        take(1)
+      );
+  }
 
-    checkStore(): Observable<boolean> {
-        return this.store.select(fromStore.getProjectContractorsLoaded).pipe(
-          tap(loaded => {
-            if (!loaded) {
-              this.store.dispatch(new fromStore.LoadProjectContractors());
-            }
-          }),
-          filter(loaded => loaded),
-          take(1)
-        );
-      }
-
+  checkStore(): Observable<boolean> {
+    return this.store.select(fromStore.getProjectContractorsLoaded).pipe(
+      tap(loaded => {
+        if (!loaded) {
+          this.store.dispatch(new fromStore.LoadProjectContractors());
+        }
+      }),
+      filter(loaded => loaded),
+      take(1)
+    );
+  }
 }
-
-

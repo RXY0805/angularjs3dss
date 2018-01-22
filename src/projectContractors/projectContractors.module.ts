@@ -10,13 +10,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducers, effects } from './store';
 
 // components 20180116 LATER
-//import * as fromComponents from './components';
+// import * as fromComponents from './components';
 
 // containers
 import * as fromContainers from './containers';
 
 // guards
-//import * as fromGuards from './guards';
+import * as fromGuards from './guards';
 
 // services
 import * as fromServices from './services';
@@ -25,7 +25,7 @@ import * as fromServices from './services';
 export const ROUTES: Routes = [
   {
     path: '',
-    // canActivate: [fromGuards.ProjectContractorsGuard],
+    canActivate: [fromGuards.ProjectContractorsGuard],
     component: fromContainers.ProjectContractorsComponent
   },
   {
@@ -44,9 +44,9 @@ export const ROUTES: Routes = [
     StoreModule.forFeature('projectContractors', reducers),
     EffectsModule.forFeature(effects)
   ],
-  providers: [...fromServices.services], //...fromGuards.guards
-  declarations: [...fromContainers.containers], //...fromComponents.components
-  exports: [...fromContainers.containers] //...fromComponents.components
+  providers: [...fromServices.services, ...fromGuards.guards], //
+  declarations: [...fromContainers.containers], // ...fromComponents.components
+  exports: [...fromContainers.containers] // ...fromComponents.components
 })
 export class ProjectContractorsModule {}
 //

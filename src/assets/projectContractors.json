@@ -1,8 +1,8 @@
 [
   {
-    "ProjectId": 1684,
-    "ProjectName": "Green Square Site 16",
-    "Contractors": [
+    "id": 1684,
+    "projectName": "Green Square Site 16",
+    "contractors": [
       {
         "company": {
           "id": 217,
@@ -1074,9 +1074,9 @@
     ]
   },
   {
-    "ProjectId": 1715,
-    "ProjectName": "Moreton Bondi",
-    "Contractors": [
+    "id": 1715,
+    "projectName": "Moreton Bondi",
+    "contractors": [
       {
         "company": {
           "id": 217,
@@ -2107,9 +2107,9 @@
     ]
   },
   {
-    "ProjectId": 2980,
-    "ProjectName": "Arthouse",
-    "Contractors": [
+    "id": 2980,
+    "projectName": "Arthouse",
+    "contractors": [
       {
         "company": {
           "id": 34,
@@ -2556,9 +2556,9 @@
     ]
   },
   {
-    "ProjectId": 4004,
-    "ProjectName": "Green Square Site 5",
-    "Contractors": [
+    "id": 4004,
+    "projectName": "Green Square Site 5",
+    "contractors": [
       {
         "company": {
           "id": 34,
@@ -3486,9 +3486,9 @@
     ]
   },
   {
-    "ProjectId": 4073,
-    "ProjectName": "Harold Park - Precinct 5",
-    "Contractors": [
+    "id": 4073,
+    "projectName": "Harold Park - Precinct 5",
+    "contractors": [
       {
         "company": {
           "id": 249,
@@ -4260,9 +4260,9 @@
     ]
   },
   {
-    "ProjectId": 7047,
-    "ProjectName": "ATP Building 1",
-    "Contractors": [
+    "id": 7047,
+    "projectName": "ATP Building 1",
+    "contractors": [
       {
         "company": {
           "id": 489,
@@ -4838,9 +4838,9 @@
     ]
   },
   {
-    "ProjectId": 8437,
-    "ProjectName": "The Finery Waterloo",
-    "Contractors": [
+    "id": 8437,
+    "projectName": "The Finery Waterloo",
+    "contractors": [
       {
         "company": {
           "id": 198,
@@ -5494,9 +5494,9 @@
     ]
   },
   {
-    "ProjectId": 10788,
-    "ProjectName": "ATP Building 2",
-    "Contractors": [
+    "id": 10788,
+    "projectName": "ATP Building 2",
+    "contractors": [
       {
         "company": {
           "id": 65,
@@ -5565,9 +5565,9 @@
     ]
   },
   {
-    "ProjectId": 12444,
-    "ProjectName": "St Leonards Square",
-    "Contractors": [
+    "id": 12444,
+    "projectName": "St Leonards Square",
+    "contractors": [
       {
         "company": {
           "id": 198,

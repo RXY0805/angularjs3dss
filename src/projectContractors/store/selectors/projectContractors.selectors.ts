@@ -7,33 +7,36 @@ import * as fromProjectContractors from '../reducers/projectContractors.reducer'
 import { ProjectContractor } from '../../models/projectContractor.model';
 
 export const getProjectContractorState = createSelector(
-    fromFeature.getProjectContractorsState,
-    (state: fromFeature.ProjectContractorsState) => state.projectContractors
+  fromFeature.getProjectContractorsState,
+  (state: fromFeature.ProjectContractorsState) => state.projectContractors
 );
 
 export const getProjectContractorsEntities = createSelector(
-    getProjectContractorState,
-    fromProjectContractors.getProjectContractorsEntities
+  getProjectContractorState,
+  fromProjectContractors.getProjectContractorsEntities
 );
 
 export const getSelectedProjectContractor = createSelector(
-    getProjectContractorState,
-    fromRoot.getRouterState,
-    (entities, router): ProjectContractor => {
-        // come back later error
-        return router.state && entities[router.state.params.id];
-    }
+  getProjectContractorState,
+  fromRoot.getRouterState,
+  (entities, router): ProjectContractor => {
+    // come back later error
+    return router.state && entities[router.state.params.id];
+  }
 );
 
-export const getAllProjectContractors = createSelector(getProjectContractorsEntities, entities =>{
-    return Object.keys(entities).map(id=> entities[id]);
-});
+export const getAllProjectContractors = createSelector(
+  getProjectContractorsEntities,
+  entities => {
+    return Object.keys(entities).map(id => entities[id]);
+  }
+);
 
 export const getProjectContractorsLoaded = createSelector(
-    getProjectContractorState,
-    fromProjectContractors.getProjectContractorsLoaded
+  getProjectContractorState,
+  fromProjectContractors.getProjectContractorsLoaded
 );
 export const getProjectContractorsLoading = createSelector(
-    getProjectContractorState,
-    fromProjectContractors.getProjectContractorsLoading
+  getProjectContractorState,
+  fromProjectContractors.getProjectContractorsLoading
 );

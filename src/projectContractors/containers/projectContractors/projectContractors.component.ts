@@ -17,6 +17,10 @@ export class ProjectContractorsComponent implements OnInit {
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
-    // this.projectContractors$ = this.store.select(fromStore.getAllProjectContractors);
+    this.projectContractors$ = this.store.select(
+      fromStore.getAllProjectContractors
+    );
+    alert('hello');
+    // debugger;
   }
 }
