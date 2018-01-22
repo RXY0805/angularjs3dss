@@ -16,7 +16,7 @@ import { reducers, effects } from './store';
 import * as fromContainers from './containers';
 
 // guards
-import * as fromGuards from './guards';
+//import * as fromGuards from './guards';
 
 // services
 import * as fromServices from './services';
@@ -25,14 +25,14 @@ import * as fromServices from './services';
 export const ROUTES: Routes = [
   {
     path: '',
-    canActivate: [fromGuards.ProjectContractorsGuard],
+    // canActivate: [fromGuards.ProjectContractorsGuard],
     component: fromContainers.ProjectContractorsComponent
   },
   {
     path: ':projectId',
-    canActivate: [fromGuards.ProjectContractorExistsGuards,],
-    component: fromContainers.ProjectContractorsComponent,
-  },
+    // canActivate: [fromGuards.ProjectContractorExistsGuards,],
+    component: fromContainers.ProjectContractorsComponent
+  }
 ];
 
 @NgModule({
@@ -42,10 +42,11 @@ export const ROUTES: Routes = [
     HttpClientModule,
     RouterModule.forChild(ROUTES),
     StoreModule.forFeature('projectContractors', reducers),
-    EffectsModule.forFeature(effects),
+    EffectsModule.forFeature(effects)
   ],
-  providers: [...fromServices.services, ...fromGuards.guards],
-  declarations: [...fromContainers.containers, ],//...fromComponents.components
-  exports: [...fromContainers.containers, ], //...fromComponents.components
+  providers: [...fromServices.services], //...fromGuards.guards
+  declarations: [...fromContainers.containers], //...fromComponents.components
+  exports: [...fromContainers.containers] //...fromComponents.components
 })
 export class ProjectContractorsModule {}
+//

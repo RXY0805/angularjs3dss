@@ -6,17 +6,17 @@ import * as fromStore from '../../store';
 import { ProjectContractor } from '../../models/projectContractor.model';
 
 @Component({
-  selector: 'products',
+  selector: 'app-project-contractors',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['projectContractors.component.css'],
-  template: './projectContractors.component.html'
+  templateUrl: './projectContractors.component.html'
 })
 export class ProjectContractorsComponent implements OnInit {
-    projectContractors$: Observable<ProjectContractor[]>;
+  projectContractors$: Observable<ProjectContractor[]>;
 
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
-    this.projectContractors$ = this.store.select(fromStore.getAllProjectContractors);
+    // this.projectContractors$ = this.store.select(fromStore.getAllProjectContractors);
   }
 }
