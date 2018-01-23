@@ -19,10 +19,7 @@ export class LoadProjectContractorsFail implements Action {
 
 export class LoadProjectContractorsSuccess implements Action {
   readonly type = LOAD_PROJECTCONTRACTORS_SUCCESS;
-  constructor(public payload: ProjectContractor[]) {
-    alert('loading contractors');
-    debugger;
-  }
+  constructor(public payload: ProjectContractor[]) {}
 }
 
 // action types

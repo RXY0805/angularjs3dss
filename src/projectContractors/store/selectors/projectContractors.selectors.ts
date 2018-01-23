@@ -32,6 +32,14 @@ export const getAllProjectContractors = createSelector(
   }
 );
 
+// export const getAllProjects = createSelector(
+//   getProjectContractorsEntities,
+//   entities => {
+//     return Object.keys(entities).map(id => entities[id])
+//     .map()
+//   }
+// );
+
 export const getProjectContractorsLoaded = createSelector(
   getProjectContractorState,
   fromProjectContractors.getProjectContractorsLoaded

@@ -1,7 +1,10 @@
 [
   {
     "id": 1684,
-    "projectName": "Green Square Site 16",
+    "project": {
+      "id": 1684,
+      "name": "Green Square Site 16"
+    },
     "contractors": [
       {
         "company": {
@@ -1075,7 +1078,10 @@
   },
   {
     "id": 1715,
-    "projectName": "Moreton Bondi",
+    "project": {
+      "id": 1715,
+      "name": "Moreton Bondi"
+    },
     "contractors": [
       {
         "company": {
@@ -2108,7 +2114,10 @@
   },
   {
     "id": 2980,
-    "projectName": "Arthouse",
+    "project": {
+      "id": 2980,
+      "name": "Arthouse"
+    },
     "contractors": [
       {
         "company": {
@@ -2557,7 +2566,11 @@
   },
   {
     "id": 4004,
-    "projectName": "Green Square Site 5",
+
+    "project": {
+      "id": 4004,
+      "name": "Green Square Site 5"
+    },
     "contractors": [
       {
         "company": {
@@ -3487,7 +3500,11 @@
   },
   {
     "id": 4073,
-    "projectName": "Harold Park - Precinct 5",
+
+    "project": {
+      "id": 4073,
+      "name": "Harold Park - Precinct 5"
+    },
     "contractors": [
       {
         "company": {
@@ -4261,7 +4278,10 @@
   },
   {
     "id": 7047,
-    "projectName": "ATP Building 1",
+    "project": {
+      "id": 7047,
+      "name": "ATP Building 1"
+    },
     "contractors": [
       {
         "company": {
@@ -4839,7 +4859,10 @@
   },
   {
     "id": 8437,
-    "projectName": "The Finery Waterloo",
+    "project": {
+      "id": 8437,
+      "name": "The Finery Waterloo"
+    },
     "contractors": [
       {
         "company": {
@@ -5495,7 +5518,11 @@
   },
   {
     "id": 10788,
-    "projectName": "ATP Building 2",
+
+    "project": {
+      "id": 10788,
+      "name": "ATP Building 2"
+    },
     "contractors": [
       {
         "company": {
@@ -5566,7 +5593,11 @@
   },
   {
     "id": 12444,
-    "projectName": "St Leonards Square",
+
+    "project": {
+      "id": 12444,
+      "name": "St Leonards Square"
+    },
     "contractors": [
       {
         "company": {

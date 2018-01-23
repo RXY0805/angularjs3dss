@@ -2,8 +2,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
+import { map, switchMap, catchError } from 'rxjs/operators';
 import * as fromStore from '../../store';
-import { ProjectContractor } from '../../models/projectContractor.model';
+import {
+  ProjectContractor,
+  Project
+} from '../../models/projectContractor.model';
 
 @Component({
   selector: 'app-project-contractors',
@@ -13,6 +17,7 @@ import { ProjectContractor } from '../../models/projectContractor.model';
 })
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
+  projects$: Observable<Project[]>;
 
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
@@ -20,7 +25,13 @@ export class ProjectContractorsComponent implements OnInit {
     this.projectContractors$ = this.store.select(
       fromStore.getAllProjectContractors
     );
-    alert('hello');
-    // debugger;
+
+    // getProjectContractorState
+    // this.projects$ = this.store
+    //   .select(fromStore.getProjectContractorsState)
+    //   .map(state => state.project);
+    // this.projects$ = this.store
+    //   .select(fromStore.getAllProjectContractors)
+    //   .map(state => state.project);
   }
 }
