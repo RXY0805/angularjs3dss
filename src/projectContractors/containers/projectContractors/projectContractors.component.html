@@ -3,9 +3,15 @@
 </div>
 
 
-<div *ngFor="let projectContractor of (projectContractors$ | async)">
+<!-- <div *ngFor="let projectContractor of (projectContractors$ | async)">
 
   {{projectContractor.project.name}}
+</div> -->
+
+
+<div *ngFor="let project of (projects$ | async)">
+
+  {{project.id}} {{project.name}}
 </div>
 <!-- 
 <div class="products">

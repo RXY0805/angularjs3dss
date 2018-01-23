@@ -26,12 +26,6 @@ export class ProjectContractorsComponent implements OnInit {
       fromStore.getAllProjectContractors
     );
 
-    // getProjectContractorState
-    // this.projects$ = this.store
-    //   .select(fromStore.getProjectContractorsState)
-    //   .map(state => state.project);
-    // this.projects$ = this.store
-    //   .select(fromStore.getAllProjectContractors)
-    //   .map(state => state.project);
+    this.projects$ = this.store.select(fromStore.getAllProjects);
   }
 }
