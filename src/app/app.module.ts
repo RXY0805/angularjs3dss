@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Routes, RouterModule } from '@angular/router';
-// import { MaterialModule } from '../shared/material/material.module';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/material/material.module';
 import {
   StoreRouterConnectingModule,
   RouterStateSerializer
@@ -47,6 +48,8 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule,
     RouterModule.forRoot(ROUTES),
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),

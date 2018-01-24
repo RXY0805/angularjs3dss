@@ -1,7 +1,6 @@
 import { Contractor } from './contractor.model';
 
-export interface ProjectContractorFilter {
-  searchText: string;
+export interface ContractorFilter {
   selectedProjectId: number;
   selectedStatusId: number;
   isOnSite: boolean;

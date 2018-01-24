@@ -7,12 +7,17 @@
 
   {{projectContractor.project.name}}
 </div> -->
-
+<!-- (onSearch)="searchContractors($event)" -->
+<app-contractor-search [projects]="projects$"></app-contractor-search>
 
 <div *ngFor="let project of (projects$ | async)">
 
   {{project.id}} {{project.name}}
 </div>
+
+
+
+
 <!-- 
 <div class="products">
     <div class="products__new">

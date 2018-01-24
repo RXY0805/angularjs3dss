@@ -8,9 +8,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { reducers, effects } from './store';
+import { MaterialModule } from '../shared/material/material.module';
 
-// components 20180116 LATER
-// import * as fromComponents from './components';
+import * as fromComponents from './components';
 
 // containers
 import * as fromContainers from './containers';
@@ -42,11 +42,12 @@ export const ROUTES: Routes = [
     HttpClientModule,
     RouterModule.forChild(ROUTES),
     StoreModule.forFeature('projectContractors', reducers),
-    EffectsModule.forFeature(effects)
+    EffectsModule.forFeature(effects),
+    MaterialModule
   ],
   providers: [...fromServices.services, ...fromGuards.guards], //
-  declarations: [...fromContainers.containers], // ...fromComponents.components
-  exports: [...fromContainers.containers] // ...fromComponents.components
+  declarations: [...fromContainers.containers, ...fromComponents.components], //
+  exports: [...fromContainers.containers, ...fromComponents.components] //
 })
 export class ProjectContractorsModule {}
 //

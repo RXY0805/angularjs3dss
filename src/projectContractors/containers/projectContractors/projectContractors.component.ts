@@ -6,7 +6,8 @@ import { map, switchMap, catchError } from 'rxjs/operators';
 import * as fromStore from '../../store';
 import {
   ProjectContractor,
-  Project
+  Project,
+  ContractorFilter
 } from '../../models/projectContractor.model';
 
 @Component({
@@ -18,6 +19,18 @@ import {
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
+
+  contractorFilter$: ContractorFilter = {
+    selectedProjectId: 0,
+    selectedStatusId: 0,
+    isOnSite: true,
+    isAuditStatus: true
+  };
+  foods = [
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' }
+  ];
 
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
