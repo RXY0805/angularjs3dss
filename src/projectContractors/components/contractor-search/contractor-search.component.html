@@ -6,8 +6,8 @@
                 <!-- [(ngModel)]="contractorFilter.selectedProjectId" -->
                 <mat-form-field>
 
-                    <mat-select placeholder="selected project" (selectionChange)="triggerFilter()">
-                        <mat-option *ngFor="let p of (projects| async)">{{p.name}}</mat-option>
+                    <mat-select placeholder="selected project" [(value)]="contractorFilter.selectedStatusId" (selectionChange)="triggerFilter()">
+                        <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </td>
@@ -46,3 +46,24 @@
         </tr> -->
     </table>
 </div>
+<div>
+    {{contractorFilter.isOnSite}}
+</div>
+<div>
+    {{contractorFilter.isAuditStatus}} {{contractorFilter.selectedStatusId}}
+</div>
+<section>
+    <label>Audit Status:</label>
+    <mat-radio-group [(ngModel)]='contractorFilter.isAuditStatus'>
+        <mat-radio-button value='1'>Yes</mat-radio-button>
+        <mat-radio-button value='0'>No</mat-radio-button>
+    </mat-radio-group>
+</section>
+<section>
+    <mat-checkbox [(ngModel)]='contractorFilter.isOnSite'>On Site</mat-checkbox>
+</section>
+
+<!-- // selectedProjectId: number;
+// contractorFilter.selectedStatusId: number;
+// isOnSite: boolean;
+// isAuditStatus: boolean; -->

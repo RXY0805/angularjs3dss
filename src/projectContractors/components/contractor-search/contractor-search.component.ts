@@ -1,7 +1,6 @@
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -25,7 +24,14 @@ import {
 })
 export class ContractorSearchComponent {
   //   @Input() contractorFilter: ContractorFilter;
-  @Input() projects: Observable<Project[]>;
+  // @Input() projects: Observable<Project[]>;
+  @Input() projects: Project[];
+  @Input() contractorFilter: ContractorFilter;
+  // selectedProjectId: number;
+  // selectedStatusId: number;
+  // isOnSite: boolean;
+  // isAuditStatus: boolean;
+
   //   @Input() projectStatus: ProjectStatus[];
   //   @Input() auditStatus: AuditStatus[];
   //   @Input() projectOnSiteStatus: ProjectOnSiteStatus[];
@@ -36,9 +42,7 @@ export class ContractorSearchComponent {
   //     onSearch: EventEmitter<ContractorFilter> = new EventEmitter<
   //       ContractorFilter
   //     >();
-  constructor() {
-    alert('search compoennt');
-  }
+  constructor() {}
   selectChange() {
     alert('change project');
 

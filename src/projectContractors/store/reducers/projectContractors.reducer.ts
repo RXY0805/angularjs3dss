@@ -1,18 +1,21 @@
 import * as fromProjectContractors from '../actions/projectContractors.action';
-import { ProjectContractor } from '../../models/projectContractor.model';
+import {
+  ProjectContractor,
+  ContractorFilter
+} from '../../models/projectContractor.model';
 
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
-  currentProjectId: number;
+  contractorFilter: ContractorFilter;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
   loading: false,
-  currentProjectId: undefined
+  contractorFilter: undefined
 };
 
 export function reducer(
@@ -60,10 +63,10 @@ export function reducer(
       };
     }
 
-    case fromProjectContractors.SET_CURRENT_PROJECT_ID: {
+    case fromProjectContractors.SET_CONTRACTOR_FILTER: {
       return {
         ...state,
-        currentProjectId: action.payload
+        contractorFilter: action.payload
       };
     }
   }
@@ -77,5 +80,5 @@ export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>
   state.loaded;
-export const getCurrentProjectId = (state: ProjectContractorState) =>
-  state.currentProjectId;
+export const getContractorFilter = (state: ProjectContractorState) =>
+  state.contractorFilter;

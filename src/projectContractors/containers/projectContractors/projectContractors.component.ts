@@ -26,11 +26,6 @@ export class ProjectContractorsComponent implements OnInit {
     isOnSite: true,
     isAuditStatus: true
   };
-  foods = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
-  ];
 
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
@@ -41,4 +36,5 @@ export class ProjectContractorsComponent implements OnInit {
 
     this.projects$ = this.store.select(fromStore.getAllProjects);
   }
+  //get project contractors by project Id
 }

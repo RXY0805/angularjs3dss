@@ -8,12 +8,9 @@
   {{projectContractor.project.name}}
 </div> -->
 <!-- (onSearch)="searchContractors($event)" -->
-<app-contractor-search [projects]="projects$"></app-contractor-search>
+<app-contractor-search [projects]="projects$" [contractorFilter]='contractorFilter$'></app-contractor-search>
 
-<div *ngFor="let project of (projects$ | async)">
 
-  {{project.id}} {{project.name}}
-</div>
 
 
 
