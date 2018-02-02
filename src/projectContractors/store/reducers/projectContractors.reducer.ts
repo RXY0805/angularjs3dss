@@ -5,12 +5,14 @@ export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
+  currentProjectId: number;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
-  loading: false
+  loading: false,
+  currentProjectId: undefined
 };
 
 export function reducer(
@@ -57,6 +59,13 @@ export function reducer(
         loaded: false
       };
     }
+
+    case fromProjectContractors.SET_CURRENT_PROJECT_ID: {
+      return {
+        ...state,
+        currentProjectId: action.payload
+      };
+    }
   }
 
   return state;
@@ -68,3 +77,5 @@ export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>
   state.loaded;
+export const getCurrentProjectId = (state: ProjectContractorState) =>
+  state.currentProjectId;

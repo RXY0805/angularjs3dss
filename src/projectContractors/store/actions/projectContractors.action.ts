@@ -8,6 +8,9 @@ export const LOAD_PROJECTCONTRACTORS_FAIL =
 export const LOAD_PROJECTCONTRACTORS_SUCCESS =
   '[ProjectContractors] Load Contractors Success';
 
+export const SET_CURRENT_PROJECT_ID =
+  '[ProjectContractors] Set Current Project Id';
+
 export class LoadProjectContractors implements Action {
   readonly type = LOAD_PROJECTCONTRACTORS;
 }
@@ -21,9 +24,13 @@ export class LoadProjectContractorsSuccess implements Action {
   readonly type = LOAD_PROJECTCONTRACTORS_SUCCESS;
   constructor(public payload: ProjectContractor[]) {}
 }
-
+export class SetCurrentProjectId implements Action {
+  readonly type = SET_CURRENT_PROJECT_ID;
+  constructor(public payload: number) {}
+}
 // action types
 export type ProjectContractorsAction =
   | LoadProjectContractors
   | LoadProjectContractorsFail
-  | LoadProjectContractorsSuccess;
+  | LoadProjectContractorsSuccess
+  | SetCurrentProjectId;
