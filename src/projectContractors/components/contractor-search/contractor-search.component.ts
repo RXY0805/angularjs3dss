@@ -23,10 +23,20 @@ import {
   styles: ['./contractor-search.component.css']
 })
 export class ContractorSearchComponent {
-  //   @Input() contractorFilter: ContractorFilter;
-  // @Input() projects: Observable<Project[]>;
   @Input() projects: Project[];
   @Input() contractorFilter: ContractorFilter;
+  @Output()
+  triggerFilter: EventEmitter<ContractorFilter> = new EventEmitter<
+    ContractorFilter
+  >();
+
+  statusList = [
+    { id: 1, name: 'Accept' },
+    { id: 2, name: 'Reject' },
+    { id: 3, name: 'For Review' },
+    { id: 4, name: 'Required' },
+    { id: 5, name: 'NOT Applicable' }
+  ];
   // selectedProjectId: number;
   // selectedStatusId: number;
   // isOnSite: boolean;
@@ -49,7 +59,8 @@ export class ContractorSearchComponent {
     // alert(this.contractorFilter.selectedProjectId);
   }
 
-  triggerFilter() {
+  onFilterChange() {
+    this.triggerFilter.emit(this.contractorFilter);
     // this.onSearch.emit(this.contractorFilter);
   }
 }

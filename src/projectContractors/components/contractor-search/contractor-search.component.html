@@ -1,19 +1,25 @@
 <div>
-    search component
+
+    <mat-form-field>
+        <mat-select [(value)]="contractorFilter.selectedStatusId" (change)="onFilterChange()">
+            <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
     <table>
         <tr>
             <td>
                 <!-- [(ngModel)]="contractorFilter.selectedProjectId" -->
                 <mat-form-field>
 
-                    <mat-select placeholder="selected project" [(value)]="contractorFilter.selectedStatusId" (selectionChange)="triggerFilter()">
+                    <mat-select placeholder="selected project" [(value)]="contractorFilter.selectedProjectId" (change)="onFilterChange()">
                         <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </td>
             <!-- <td>
                 <mat-form-field class="example-full-width">
-                    <mat-select placeholder="selected project status" [(ngModel)]="contactFilter.selectedProjectStatusId" (selectionChange)="triggerFilter()">
+                    <mat-select placeholder="selected project status" [(ngModel)]="contactFilter.selectedProjectStatusId" (selectionChange)="onFilterChange()">
                         
                         <mat-option *ngFor="let ps of projectStatus" [value]="ps.id">{{ps.status}}</mat-option>
                     </mat-select>
@@ -22,7 +28,7 @@
             <td>
                 <section class="search-section">
                     Pending Contractors
-                    <mat-checkbox class="search-margin" (change)="triggerFilter()" [(ngModel)]="contactFilter.isPending">
+                    <mat-checkbox class="search-margin" (change)="onFilterChange()" [(ngModel)]="contactFilter.isPending">
                     </mat-checkbox>
                 </section>
             </td> -->
@@ -54,13 +60,13 @@
 </div>
 <section>
     <label>Audit Status:</label>
-    <mat-radio-group [(ngModel)]='contractorFilter.isAuditStatus'>
+    <mat-radio-group (change)="onFilterChange()" [(ngModel)]='contractorFilter.isAuditStatus'>
         <mat-radio-button value='1'>Yes</mat-radio-button>
         <mat-radio-button value='0'>No</mat-radio-button>
     </mat-radio-group>
 </section>
 <section>
-    <mat-checkbox [(ngModel)]='contractorFilter.isOnSite'>On Site</mat-checkbox>
+    <mat-checkbox (change)="onFilterChange()" [(ngModel)]='contractorFilter.isOnSite'>On Site</mat-checkbox>
 </section>
 
 <!-- // selectedProjectId: number;

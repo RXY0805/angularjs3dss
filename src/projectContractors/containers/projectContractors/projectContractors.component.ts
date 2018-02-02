@@ -19,10 +19,11 @@ import {
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
+  selectedProject$: Observable<ProjectContractor>;
 
   contractorFilter$: ContractorFilter = {
     selectedProjectId: 0,
-    selectedStatusId: 0,
+    selectedStatusId: 1,
     isOnSite: true,
     isAuditStatus: true
   };
@@ -36,5 +37,14 @@ export class ProjectContractorsComponent implements OnInit {
 
     this.projects$ = this.store.select(fromStore.getAllProjects);
   }
-  //get project contractors by project Id
+  searchContractors(event: ContractorFilter) {
+    if (!event.selectedProjectId) {
+      return;
+    }
+
+    this.store.dispatch(new fromStore.SetContractorFilter(event));
+    this.selectedProject$ = this.store.select(
+      fromStore.getSelectedProjectContractors
+    );
+  }
 }

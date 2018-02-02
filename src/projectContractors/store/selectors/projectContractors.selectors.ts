@@ -24,6 +24,19 @@ export const getSelectedProjectContractor = createSelector(
     return router.state && entities[router.state.params.id];
   }
 );
+export const getProjectContractorFilter = createSelector(
+  getProjectContractorState,
+  fromProjectContractors.getContractorFilter
+);
+
+export const getSelectedProjectContractors = createSelector(
+  getProjectContractorState,
+  getProjectContractorFilter,
+  (entities, filter): ProjectContractor => {
+    // come back later error
+    return entities[filter.selectedProjectId];
+  }
+);
 
 export const getAllProjectContractors = createSelector(
   getProjectContractorsEntities,
