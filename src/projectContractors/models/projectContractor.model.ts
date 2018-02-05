@@ -7,6 +7,13 @@ export interface ContractorFilter {
   isAuditStatus: boolean;
 }
 
+export interface ProjectFilter {
+  selectedProjectId: number;
+  selectedStatusId: number;
+  isOnSite: boolean;
+  isAuditStatus: boolean;
+}
+
 export interface ProjectInvitation {
   id?: number;
   projectId: number;

@@ -1,7 +1,7 @@
 <div>
 
     <mat-form-field>
-        <mat-select [(value)]="contractorFilter.selectedStatusId" (change)="onFilterChange()">
+        <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange()">
             <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
         </mat-select>
     </mat-form-field>
@@ -9,10 +9,10 @@
     <table>
         <tr>
             <td>
-                <!-- [(ngModel)]="contractorFilter.selectedProjectId" -->
+                <!-- [(ngModel)]="projectFilter.selectedProjectId" -->
                 <mat-form-field>
 
-                    <mat-select placeholder="selected project" [(value)]="contractorFilter.selectedProjectId" (change)="onFilterChange()">
+                    <mat-select placeholder="selected project" [(value)]="projectFilter.selectedProjectId" (change)="onFilterChange()">
                         <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -53,23 +53,23 @@
     </table>
 </div>
 <div>
-    {{contractorFilter.isOnSite}}
+    {{projectFilter.isOnSite}}
 </div>
 <div>
-    {{contractorFilter.isAuditStatus}} {{contractorFilter.selectedStatusId}}
+    {{projectFilter.isAuditStatus}} {{projectFilter.selectedStatusId}}
 </div>
 <section>
     <label>Audit Status:</label>
-    <mat-radio-group (change)="onFilterChange()" [(ngModel)]='contractorFilter.isAuditStatus'>
+    <mat-radio-group (change)="onFilterChange()" [(ngModel)]='projectFilter.isAuditStatus'>
         <mat-radio-button value='1'>Yes</mat-radio-button>
         <mat-radio-button value='0'>No</mat-radio-button>
     </mat-radio-group>
 </section>
 <section>
-    <mat-checkbox (change)="onFilterChange()" [(ngModel)]='contractorFilter.isOnSite'>On Site</mat-checkbox>
+    <mat-checkbox (change)="onFilterChange()" [(ngModel)]='projectFilter.isOnSite'>On Site</mat-checkbox>
 </section>
 
 <!-- // selectedProjectId: number;
-// contractorFilter.selectedStatusId: number;
+// projectFilter.selectedStatusId: number;
 // isOnSite: boolean;
 // isAuditStatus: boolean; -->

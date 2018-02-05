@@ -7,7 +7,8 @@ import { Observable } from 'rxjs/Observable';
 
 import {
   Project,
-  ContractorFilter
+  ContractorFilter,
+  ProjectFilter
 } from '../../models/projectContractor.model';
 // import {
 //   ContractorFilter,
@@ -24,10 +25,10 @@ import {
 })
 export class ContractorSearchComponent {
   @Input() projects: Project[];
-  @Input() contractorFilter: ContractorFilter;
+  @Input() projectFilter: ProjectFilter;
   @Output()
-  triggerFilter: EventEmitter<ContractorFilter> = new EventEmitter<
-    ContractorFilter
+  triggerFilter: EventEmitter<ProjectFilter> = new EventEmitter<
+    ProjectFilter
   >();
 
   statusList = [
@@ -60,7 +61,7 @@ export class ContractorSearchComponent {
   }
 
   onFilterChange() {
-    this.triggerFilter.emit(this.contractorFilter);
+    this.triggerFilter.emit(this.projectFilter);
     // this.onSearch.emit(this.contractorFilter);
   }
 }

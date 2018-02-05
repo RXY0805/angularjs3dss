@@ -16,26 +16,17 @@ export const getProjectContractorsEntities = createSelector(
   fromProjectContractors.getProjectContractorsEntities
 );
 
-export const getSelectedProjectContractor = createSelector(
-  getProjectContractorState,
-  fromRoot.getRouterState,
-  (entities, router): ProjectContractor => {
-    // come back later error
-    return router.state && entities[router.state.params.id];
-  }
-);
-export const getProjectContractorFilter = createSelector(
-  getProjectContractorState,
-  fromProjectContractors.getContractorFilter
-);
+// export const getSelectedProjectContractor = createSelector(
+//   getProjectContractorState,
+//   fromRoot.getRouterState,
+//   (entities, router): ProjectContractor => {
 
-export const getSelectedProjectContractors = createSelector(
+//     return router.state && entities[router.state.params.id];
+//   }
+// );
+export const getSelectedProjectId = createSelector(
   getProjectContractorState,
-  getProjectContractorFilter,
-  (entities, filter): ProjectContractor => {
-    // come back later error
-    return entities[filter.selectedProjectId];
-  }
+  fromProjectContractors.getCurrentProjectId
 );
 
 export const getAllProjectContractors = createSelector(
@@ -54,13 +45,17 @@ export const getAllProjects = createSelector(
   }
 );
 
-// export const getAllProjects = createSelector(
-//   getProjectContractorsEntities,
-//   entities => {
-//     return Object.keys(entities).map(id => entities[id])
-//     .map()
-//   }
-// );
+export const getSelectedProjectContractors = createSelector(
+  getProjectContractorsEntities,
+  getSelectedProjectId,
+  (entities, projectId) => {
+    if (projectId) {
+      return entities[projectId];
+    } else {
+      return entities[10788];
+    }
+  }
+);
 
 export const getProjectContractorsLoaded = createSelector(
   getProjectContractorState,

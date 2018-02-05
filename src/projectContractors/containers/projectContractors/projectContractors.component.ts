@@ -7,7 +7,8 @@ import * as fromStore from '../../store';
 import {
   ProjectContractor,
   Project,
-  ContractorFilter
+  ContractorFilter,
+  ProjectFilter
 } from '../../models/projectContractor.model';
 
 @Component({
@@ -19,9 +20,9 @@ import {
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
-  selectedProject$: Observable<ProjectContractor>;
+  selectedProjectContractor$: Observable<ProjectContractor>;
 
-  contractorFilter$: ContractorFilter = {
+  projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
     selectedStatusId: 1,
     isOnSite: true,
@@ -31,20 +32,26 @@ export class ProjectContractorsComponent implements OnInit {
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
-    this.projectContractors$ = this.store.select(
-      fromStore.getAllProjectContractors
-    );
+    // this.projectContractors$ = this.store.select(
+    //   fromStore.getAllProjectContractors
+    // );
 
     this.projects$ = this.store.select(fromStore.getAllProjects);
+    // this.selectedProjectContractor$ = this.store.select(
+    //   fromStore.getSelectedProjectContractors
+    // );
+    this.selectedProjectContractor$ = this.store.select(
+      fromStore.getSelectedProjectContractors
+    );
   }
-  searchContractors(event: ContractorFilter) {
+
+  searchContractors(event: ProjectFilter) {
     if (!event.selectedProjectId) {
       return;
     }
-
-    this.store.dispatch(new fromStore.SetContractorFilter(event));
-    this.selectedProject$ = this.store.select(
-      fromStore.getSelectedProjectContractors
+    // console.log(event);
+    this.store.dispatch(
+      new fromStore.SetCurrentProjectId(event.selectedProjectId)
     );
   }
 }

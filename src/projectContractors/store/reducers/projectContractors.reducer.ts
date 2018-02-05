@@ -8,14 +8,12 @@ export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
-  contractorFilter: ContractorFilter;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
-  loading: false,
-  contractorFilter: undefined
+  loading: false
 };
 
 export function reducer(
@@ -62,13 +60,6 @@ export function reducer(
         loaded: false
       };
     }
-
-    case fromProjectContractors.SET_CONTRACTOR_FILTER: {
-      return {
-        ...state,
-        contractorFilter: action.payload
-      };
-    }
   }
 
   return state;
@@ -80,5 +71,3 @@ export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>
   state.loaded;
-export const getContractorFilter = (state: ProjectContractorState) =>
-  state.contractorFilter;

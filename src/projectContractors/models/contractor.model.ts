@@ -1,11 +1,11 @@
-import {Company} from './company.model';
+import { Company } from './company.model';
 
 export interface ContractorStatus {
-    id: number;
-    description: string;
+  id: number;
+  description: string;
 }
 
 export interface Contractor {
-    company: Company;
-    contractorStatus: ContractorStatus;
-  }
+  company: Company;
+  contractorStatus: ContractorStatus;
+}
