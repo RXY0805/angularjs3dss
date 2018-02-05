@@ -1,8 +1,5 @@
 import * as fromProjectContractors from '../actions/projectContractors.action';
-import {
-  ProjectContractor,
-  ContractorFilter
-} from '../../models/projectContractor.model';
+import { ProjectContractor } from '../../models/projectContractor.model';
 
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };

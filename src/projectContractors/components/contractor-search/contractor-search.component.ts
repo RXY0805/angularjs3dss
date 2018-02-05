@@ -60,8 +60,9 @@ export class ContractorSearchComponent {
     // alert(this.contractorFilter.selectedProjectId);
   }
 
-  onFilterChange() {
-    this.triggerFilter.emit(this.projectFilter);
+  onFilterChange(filter) {
+    console.log(filter);
+    this.triggerFilter.emit(filter);
     // this.onSearch.emit(this.contractorFilter);
   }
 }

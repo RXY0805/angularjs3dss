@@ -5,14 +5,16 @@
             <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
         </mat-select>
     </mat-form-field>
-
+    <div>
+        {{projectFilter.selectedProjectId}}
+    </div>
     <table>
         <tr>
             <td>
                 <!-- [(ngModel)]="projectFilter.selectedProjectId" -->
                 <mat-form-field>
 
-                    <mat-select placeholder="selected project" [(value)]="projectFilter.selectedProjectId" (change)="onFilterChange()">
+                    <mat-select placeholder="selected project" [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange()">
                         <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -68,8 +70,3 @@
 <section>
     <mat-checkbox (change)="onFilterChange()" [(ngModel)]='projectFilter.isOnSite'>On Site</mat-checkbox>
 </section>
-
-<!-- // selectedProjectId: number;
-// projectFilter.selectedStatusId: number;
-// isOnSite: boolean;
-// isAuditStatus: boolean; -->

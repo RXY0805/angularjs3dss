@@ -10,7 +10,7 @@ import * as fromStore from '../store';
 
 @Injectable()
 export class ProjectContractorsGuard implements CanActivate {
-  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
+  constructor(private store: Store<fromStore.ProjectState>) {}
 
   canActivate(): Observable<boolean> {
     return this.checkStore().pipe(

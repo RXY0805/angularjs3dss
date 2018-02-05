@@ -8,7 +8,7 @@ import { ProjectContractor } from '../../models/projectContractor.model';
 
 export const getProjectContractorState = createSelector(
   fromFeature.getProjectContractorsState,
-  (state: fromFeature.ProjectContractorsState) => state.projectContractors
+  (state: fromFeature.ProjectState) => state.projectContractors
 );
 
 export const getProjectContractorsEntities = createSelector(
@@ -24,10 +24,10 @@ export const getProjectContractorsEntities = createSelector(
 //     return router.state && entities[router.state.params.id];
 //   }
 // );
-export const getSelectedProjectId = createSelector(
-  getProjectContractorState,
-  fromProjectContractors.getCurrentProjectId
-);
+// export const getSelectedProjectId = createSelector(
+//   getProjectContractorState,
+//   fromProjectContractors.getCurrentProjectId
+// );
 
 export const getAllProjectContractors = createSelector(
   getProjectContractorsEntities,
@@ -45,17 +45,17 @@ export const getAllProjects = createSelector(
   }
 );
 
-export const getSelectedProjectContractors = createSelector(
-  getProjectContractorsEntities,
-  getSelectedProjectId,
-  (entities, projectId) => {
-    if (projectId) {
-      return entities[projectId];
-    } else {
-      return entities[10788];
-    }
-  }
-);
+// export const getSelectedProjectContractors = createSelector(
+//   getProjectContractorsEntities,
+//   getSelectedProjectId,
+//   (entities, projectId) => {
+//     if (projectId) {
+//       return entities[projectId];
+//     } else {
+//       return entities[10788];
+//     }
+//   }
+// );
 
 export const getProjectContractorsLoaded = createSelector(
   getProjectContractorState,

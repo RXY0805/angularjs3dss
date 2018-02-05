@@ -11,7 +11,7 @@ import { ProjectContractor } from '../models/projectContractor.model';
 
 @Injectable()
 export class ProjectContractorExistsGuards implements CanActivate {
-  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
+  constructor(private store: Store<fromStore.ProjectState>) {}
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
     return this.checkStore().pipe(

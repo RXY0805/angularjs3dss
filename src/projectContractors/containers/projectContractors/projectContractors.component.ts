@@ -10,6 +10,7 @@ import {
   ContractorFilter,
   ProjectFilter
 } from '../../models/projectContractor.model';
+// import { SetProjectFilter } from '../../store/actions/projectFilter.action';
 
 @Component({
   selector: 'app-project-contractors',
@@ -29,7 +30,7 @@ export class ProjectContractorsComponent implements OnInit {
     isAuditStatus: true
   };
 
-  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
+  constructor(private store: Store<fromStore.ProjectState>) {}
 
   ngOnInit() {
     // this.projectContractors$ = this.store.select(
@@ -40,18 +41,17 @@ export class ProjectContractorsComponent implements OnInit {
     // this.selectedProjectContractor$ = this.store.select(
     //   fromStore.getSelectedProjectContractors
     // );
-    this.selectedProjectContractor$ = this.store.select(
-      fromStore.getSelectedProjectContractors
-    );
+    // this.selectedProjectContractor$ = this.store.select(
+    //   fromStore.getSelectedProjectContractors
+    // );
   }
 
   searchContractors(event: ProjectFilter) {
-    if (!event.selectedProjectId) {
-      return;
-    }
-    // console.log(event);
-    this.store.dispatch(
-      new fromStore.SetCurrentProjectId(event.selectedProjectId)
-    );
+    console.log(event);
+    // if (!event.selectedProjectId) {
+    //   return;
+    // }
+
+    this.store.dispatch(new fromStore.SetProjectFilter(event));
   }
 }
