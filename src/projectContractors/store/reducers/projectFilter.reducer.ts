@@ -2,35 +2,31 @@ import * as fromProjectFilters from '../actions/projectFilters.action';
 import { ProjectFilter } from '../../models/projectContractor.model';
 
 export interface ProjectFilterState {
-  filter: ProjectFilter;
+  selectedProjectId: number;
+  selectedStatusId: number;
+  isOnSite: boolean;
+  isAuditStatus: boolean;
 }
 
 export const initialState: ProjectFilterState = {
-  filter: {
-    selectedProjectId: undefined,
-    selectedStatusId: undefined,
-    isOnSite: true,
-    isAuditStatus: true
-  }
+  selectedProjectId: undefined,
+  selectedStatusId: undefined,
+  isOnSite: true,
+  isAuditStatus: true
 };
 
 export function reducer(
   state = initialState,
   action: fromProjectFilters.ProjectFiltersAction
 ): ProjectFilterState {
-  if (action.payload) {
-    alert('filter reducer' + action.payload.selectedProjectId);
-  }
-
   switch (action.type) {
-    case fromProjectFilters.SET_PROJECT_FILTER:
-      // alert(action.payload.selectedProjectId);
+    case fromProjectFilters.FILTER_BY_PROJECT_ID:
       return {
         ...state,
-        filter: action.payload
+        selectedProjectId: action.payload
       };
   }
   return state;
 }
 
-export const getProjectFilter = (state: ProjectFilterState) => state.filter;
+export const getProjectFilter = (state: ProjectFilterState) => state;

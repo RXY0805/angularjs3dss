@@ -27,9 +27,9 @@ export class ContractorSearchComponent {
   @Input() projects: Project[];
   @Input() projectFilter: ProjectFilter;
   @Output()
-  triggerFilter: EventEmitter<ProjectFilter> = new EventEmitter<
-    ProjectFilter
-  >();
+  filterChange: EventEmitter<any> = new EventEmitter<{
+    any;
+  }>();
 
   statusList = [
     { id: 1, name: 'Accept' },
@@ -38,31 +38,14 @@ export class ContractorSearchComponent {
     { id: 4, name: 'Required' },
     { id: 5, name: 'NOT Applicable' }
   ];
-  // selectedProjectId: number;
-  // selectedStatusId: number;
-  // isOnSite: boolean;
-  // isAuditStatus: boolean;
 
-  //   @Input() projectStatus: ProjectStatus[];
-  //   @Input() auditStatus: AuditStatus[];
-  //   @Input() projectOnSiteStatus: ProjectOnSiteStatus[];
-
-  //   @Input() searching = false;
-  //   @Input() error = '';
-  //   @Output()
-  //     onSearch: EventEmitter<ContractorFilter> = new EventEmitter<
-  //       ContractorFilter
-  //     >();
   constructor() {}
-  selectChange() {
-    alert('change project');
 
-    // alert(this.contractorFilter.selectedProjectId);
-  }
-
-  onFilterChange(filter) {
-    console.log(filter);
-    this.triggerFilter.emit(filter);
-    // this.onSearch.emit(this.contractorFilter);
+  onFilterChange(filterType) {
+    alert(filterType);
+    this.filterChange.emit({
+      projectFilter: this.projectFilter,
+      filterType: filterType
+    });
   }
 }

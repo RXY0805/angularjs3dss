@@ -14,7 +14,7 @@
                 <!-- [(ngModel)]="projectFilter.selectedProjectId" -->
                 <mat-form-field>
 
-                    <mat-select placeholder="selected project" [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange()">
+                    <mat-select placeholder="selected project" [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange('PROJECT_ID')">
                         <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>

@@ -46,12 +46,23 @@ export class ProjectContractorsComponent implements OnInit {
     // );
   }
 
-  searchContractors(event: ProjectFilter) {
-    console.log(event);
-    // if (!event.selectedProjectId) {
-    //   return;
-    // }
-
-    this.store.dispatch(new fromStore.SetProjectFilter(event));
+  onFilterChange(event) {
+    if (event.filterType === 'PROJECT_ID') {
+      this.store.dispatch(
+        new fromStore.FilterByProjectId(event.projectFilter.selectedProjectId)
+      );
+    }
   }
+
+  onFilterByProjectId(event) {
+    this.store.dispatch(new fromStore.FilterByProjectId(event));
+  }
+  // searchContractors(event: ProjectFilter) {
+  //   console.log(event);
+  //   // if (!event.selectedProjectId) {
+  //   //   return;
+  //   // }
+
+  //   this.store.dispatch(new fromStore.SetProjectFilter(event));
+  // }
 }
