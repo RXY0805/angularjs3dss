@@ -1,7 +1,7 @@
 <div>
 
     <mat-form-field>
-        <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange()">
+        <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
             <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
         </mat-select>
     </mat-form-field>
@@ -54,19 +54,14 @@
         </tr> -->
     </table>
 </div>
-<div>
-    {{projectFilter.isOnSite}}
-</div>
-<div>
-    {{projectFilter.isAuditStatus}} {{projectFilter.selectedStatusId}}
-</div>
+
 <section>
     <label>Audit Status:</label>
-    <mat-radio-group (change)="onFilterChange()" [(ngModel)]='projectFilter.isAuditStatus'>
+    <mat-radio-group (change)="onFilterChange('AUDIT_STATUS')" [(ngModel)]='projectFilter.isAuditStatus'>
         <mat-radio-button value='1'>Yes</mat-radio-button>
         <mat-radio-button value='0'>No</mat-radio-button>
     </mat-radio-group>
 </section>
 <section>
-    <mat-checkbox (change)="onFilterChange()" [(ngModel)]='projectFilter.isOnSite'>On Site</mat-checkbox>
+    <mat-checkbox (change)="onFilterChange('ON_SITE')" [(ngModel)]='projectFilter.isOnSite'>On Site</mat-checkbox>
 </section>

@@ -47,22 +47,27 @@ export class ProjectContractorsComponent implements OnInit {
   }
 
   onFilterChange(event) {
-    if (event.filterType === 'PROJECT_ID') {
-      this.store.dispatch(
-        new fromStore.FilterByProjectId(event.projectFilter.selectedProjectId)
-      );
+    const filter = event.projectFilter;
+
+    switch (event.filterType) {
+      case 'PROJECT_ID':
+        this.store.dispatch(
+          new fromStore.FilterByProjectId(filter.selectedProjectId)
+        );
+        break;
+      case 'STATUS_ID':
+        this.store.dispatch(
+          new fromStore.FilterByStatusId(filter.selectedStatusId)
+        );
+        break;
+      case 'AUDIT_STATUS':
+        this.store.dispatch(
+          new fromStore.FilterByAuditStatus(filter.isAuditStatus)
+        );
+        break;
+      case 'ON_SITE':
+        this.store.dispatch(new fromStore.FilterByOnSite(filter.isOnSite));
+        break;
     }
   }
-
-  onFilterByProjectId(event) {
-    this.store.dispatch(new fromStore.FilterByProjectId(event));
-  }
-  // searchContractors(event: ProjectFilter) {
-  //   console.log(event);
-  //   // if (!event.selectedProjectId) {
-  //   //   return;
-  //   // }
-
-  //   this.store.dispatch(new fromStore.SetProjectFilter(event));
-  // }
 }

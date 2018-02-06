@@ -11,6 +11,11 @@ export const getProjectContractorState = createSelector(
   (state: fromFeature.ProjectState) => state.projectContractors
 );
 
+export const getProjectFilterState = createSelector(
+  fromFeature.getProjectFiltersState,
+  (state: fromFeature.ProjectState) => state.projectFilters
+);
+
 export const getProjectContractorsEntities = createSelector(
   getProjectContractorState,
   fromProjectContractors.getProjectContractorsEntities

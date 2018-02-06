@@ -42,7 +42,6 @@ export class ContractorSearchComponent {
   constructor() {}
 
   onFilterChange(filterType) {
-    alert(filterType);
     this.filterChange.emit({
       projectFilter: this.projectFilter,
       filterType: filterType

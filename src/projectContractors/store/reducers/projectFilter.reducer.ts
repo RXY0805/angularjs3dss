@@ -25,6 +25,21 @@ export function reducer(
         ...state,
         selectedProjectId: action.payload
       };
+    case fromProjectFilters.FILTER_BY_STATUS_ID:
+      return {
+        ...state,
+        selectedStatusId: action.payload
+      };
+    case fromProjectFilters.FILTER_BY_AUDIT_STATUS:
+      return {
+        ...state,
+        isAuditStatus: action.payload
+      };
+    case fromProjectFilters.FILTER_BY_ON_SITE:
+      return {
+        ...state,
+        isOnSite: action.payload
+      };
   }
   return state;
 }
