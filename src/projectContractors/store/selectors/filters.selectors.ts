@@ -19,24 +19,3 @@ export const getAuditStatus = createSelector(
   getFilterState,
   fromFilters.getAuditStatus
 );
-
-// export const getSelectedProjectContractor = createSelector(
-//   getProjectContractorState,
-//   fromRoot.getRouterState,
-//   (entities, router): ProjectContractor => {
-
-//     return router.state && entities[router.state.params.id];
-//   }
-// );
-
-// export const getSelectedProjectContractors = createSelector(
-//   getProjectContractorsEntities,
-//   getSelectedProjectId,
-//   (entities, projectId) => {
-//     if (projectId) {
-//       return entities[projectId];
-//     } else {
-//       return entities[10788];
-//     }
-//   }
-// );

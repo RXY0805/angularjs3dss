@@ -7,5 +7,5 @@ export interface ContractorStatus {
 
 export interface Contractor {
   company: Company;
-  contractorStatus: ContractorStatus;
+  status: ContractorStatus;
 }

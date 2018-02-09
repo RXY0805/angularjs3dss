@@ -19,26 +19,17 @@ export const getContractorsEntities = createSelector(
 
 export const getContractorsByProjectId = createSelector(
   getContractorsEntities,
-  fromFiltersSelectors.getSelectedProjectId,
-  fromFiltersSelectors.getAuditStatus,
-  (entities, projectId, isAuditStatus) => {
-    if (projectId) {
-      return entities[projectId].contractors.filter(
-        x => x.company.auditStatus === !!+isAuditStatus
-      );
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities[filterState.selectedProjectId].contractors
+        .filter(x => x.company.auditStatus === !!+filterState.isAuditStatus)
+        .filter(x => x.company.onSite === !!+filterState.isOnSite)
+        .filter(x => x.status.id === filterState.selectedStatusId);
     }
     return null;
   }
 );
-
-// export const getSelectedProjectContractor = createSelector(
-//   getProjectContractorState,
-//   fromRoot.getRouterState,
-//   (entities, router): ProjectContractor => {
-
-//     return router.state && entities[router.state.params.id];
-//   }
-// );
 
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,

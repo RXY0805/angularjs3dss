@@ -2124,11 +2124,11 @@
           "id": 34,
           "name": "Titan Cranes & Rigging Pty Limited",
           "email": "cameron.youngman@titancranes.com.au",
-          "onSite": true,
+          "onSite": false,
           "auditStatus": false
         },
         "status": {
-          "id": 3,
+          "id": 1,
           "description": "ACCEPTED"
         }
       },
@@ -2138,7 +2138,7 @@
           "name": "Global HR Pty Ltd",
 
           "email": "reception@globalhr.net.au",
-          "onSite": true,
+          "onSite": false,
           "auditStatus": false
         },
         "status": {
@@ -2165,11 +2165,11 @@
           "name": "North Surveys Pty Ltd",
           "email": "jarmstrong@northgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": true
         },
         "status": {
-          "id": 3,
-          "description": "ACCEPTED"
+          "id": 2,
+          "description": "Reject"
         }
       },
       {
@@ -2182,7 +2182,7 @@
         },
         "status": {
           "id": 3,
-          "description": "ACCEPTED"
+          "description": "For Review"
         }
       },
       {
@@ -2195,7 +2195,7 @@
         },
         "status": {
           "id": 3,
-          "description": "ACCEPTED"
+          "description": "For Review"
         }
       },
       {
@@ -2207,8 +2207,8 @@
           "auditStatus": false
         },
         "status": {
-          "id": 3,
-          "description": "ACCEPTED"
+          "id": 5,
+          "description": "NOT Applicable"
         }
       },
       {
@@ -2220,8 +2220,8 @@
           "auditStatus": false
         },
         "status": {
-          "id": 3,
-          "description": "ACCEPTED"
+          "id": 4,
+          "description": "Required"
         }
       },
       {
@@ -2233,8 +2233,8 @@
           "auditStatus": false
         },
         "status": {
-          "id": 3,
-          "description": "ACCEPTED"
+          "id": 4,
+          "description": "Required"
         }
       },
       {

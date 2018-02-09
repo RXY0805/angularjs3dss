@@ -35,20 +35,10 @@ export class ProjectContractorsComponent implements OnInit {
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
-    // this.projectContractors$ = this.store.select(
-    //   fromStore.getAllProjectContractors
-    // );
-
     this.projects$ = this.store.select(fromStore.getAllProjects);
     this.filteredContractors$ = this.store.select(
       fromStore.getContractorsByProjectId
     );
-    // this.selectedProjectContractor$ = this.store.select(
-    //   fromStore.getSelectedProjectContractors
-    // );
-    // this.selectedProjectContractor$ = this.store.select(
-    //   fromStore.getSelectedProjectContractors
-    // );
   }
 
   onFilterChange(event) {
