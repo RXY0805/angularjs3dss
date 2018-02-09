@@ -15,6 +15,11 @@ export const getSelectedProjectId = createSelector(
   fromFilters.getSelectedProjectId
 );
 
+export const getAuditStatus = createSelector(
+  getFilterState,
+  fromFilters.getAuditStatus
+);
+
 // export const getSelectedProjectContractor = createSelector(
 //   getProjectContractorState,
 //   fromRoot.getRouterState,

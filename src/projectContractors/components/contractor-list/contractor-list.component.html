@@ -26,12 +26,11 @@
 <div>
     <!-- {{hello}} {{selectedProjectContractor.name}} -->
 </div>
-<div>
-    selected {{selectedProjectContractor?selectedProjectContractor.project.name:'no project'}}
-</div>
-<div *ngIf="selectedProjectContractor">
-    <div *ngFor="let c of selectedProjectContractor.contractors">
-        {{c.company.id}} {{c.company.name}} {{c.company.email}}
+
+<div *ngIf="filteredContractors">
+    {{filteredContractors.length}}
+    <div *ngFor="let c of filteredContractors">
+        {{c.company.onSite}} || {{c.company.auditStatus}}|| {{c.company.id}} {{c.company.name}} {{c.company.email}}
     </div>
 </div>
 

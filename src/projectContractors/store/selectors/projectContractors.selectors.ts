@@ -20,10 +20,12 @@ export const getContractorsEntities = createSelector(
 export const getContractorsByProjectId = createSelector(
   getContractorsEntities,
   fromFiltersSelectors.getSelectedProjectId,
-  (entities, projectId) => {
+  fromFiltersSelectors.getAuditStatus,
+  (entities, projectId, isAuditStatus) => {
     if (projectId) {
-      alert('selector' + projectId);
-      return entities[projectId];
+      return entities[projectId].contractors.filter(
+        x => x.company.auditStatus === !!+isAuditStatus
+      );
     }
     return null;
   }

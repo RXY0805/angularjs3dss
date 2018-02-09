@@ -10,6 +10,8 @@ import {
   ContractorFilter,
   ProjectFilter
 } from '../../models/projectContractor.model';
+import { Contractor } from '../../models/contractor.model';
+
 // import { SetProjectFilter } from '../../store/actions/projectFilter.action';
 
 @Component({
@@ -21,7 +23,7 @@ import {
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
-  selectedProjectContractor$: Observable<ProjectContractor>;
+  filteredContractors$: Observable<Contractor[]>;
 
   projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
@@ -38,7 +40,7 @@ export class ProjectContractorsComponent implements OnInit {
     // );
 
     this.projects$ = this.store.select(fromStore.getAllProjects);
-    this.selectedProjectContractor$ = this.store.select(
+    this.filteredContractors$ = this.store.select(
       fromStore.getContractorsByProjectId
     );
     // this.selectedProjectContractor$ = this.store.select(

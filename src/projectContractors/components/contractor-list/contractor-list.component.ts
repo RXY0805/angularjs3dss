@@ -25,11 +25,11 @@ import { Company } from '../../models/company.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContractorListComponent implements OnInit {
-  @Input() selectedProjectContractor: ProjectContractor;
+  @Input() filteredContractors: Contractor[];
 
   displayedColumns = ['id', 'name', 'email'];
   dataSource: MatTableDataSource<Company>;
-  hello: string;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   // selectedProjectId: number;
@@ -49,9 +49,9 @@ export class ContractorListComponent implements OnInit {
   //     >();
   constructor() {
     // alert('start list');
-    if (this.selectedProjectContractor) {
+    if (this.filteredContractors) {
       this.dataSource = new MatTableDataSource(
-        this.selectedProjectContractor.contractors.map(x => x.company)
+        this.filteredContractors.map(x => x.company)
       );
     }
   }
