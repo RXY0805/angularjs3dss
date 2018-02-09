@@ -25,7 +25,8 @@ export const getContractorsByProjectId = createSelector(
       return entities[filterState.selectedProjectId].contractors
         .filter(x => x.company.auditStatus === !!+filterState.isAuditStatus)
         .filter(x => x.company.onSite === !!+filterState.isOnSite)
-        .filter(x => x.status.id === filterState.selectedStatusId);
+        .filter(x => x.status.id === filterState.selectedStatusId)
+        .map(c => c.company);
     }
     return null;
   }

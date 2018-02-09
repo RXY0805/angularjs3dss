@@ -30,7 +30,7 @@
 <div *ngIf="filteredContractors">
     {{filteredContractors.length}}
     <div *ngFor="let c of filteredContractors">
-        {{c.company.onSite}} || {{c.company.auditStatus}}|| {{c.company.id}} {{c.company.name}} {{c.company.email}}
+        {{c.onSite}} || {{c.auditStatus}}|| {{c.id}} {{c.name}} {{c.email}}
     </div>
 </div>
 

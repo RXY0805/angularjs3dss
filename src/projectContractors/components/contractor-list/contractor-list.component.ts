@@ -2,14 +2,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
 
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-  ViewChild
-} from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, Input, ViewChild } from '@angular/core';
+
 import { Observable } from 'rxjs/Observable';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
@@ -21,11 +15,12 @@ import { Company } from '../../models/company.model';
 @Component({
   selector: 'app-contractor-list',
   templateUrl: './contractor-list.component.html',
-  styles: ['./contractor-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: ['./contractor-list.component.css']
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContractorListComponent implements OnInit {
-  @Input() filteredContractors: Contractor[];
+// implements OnInit
+export class ContractorListComponent {
+  @Input() filteredContractors: Company[];
 
   displayedColumns = ['id', 'name', 'email'];
   dataSource: MatTableDataSource<Company>;
@@ -48,16 +43,11 @@ export class ContractorListComponent implements OnInit {
   //       ContractorFilter
   //     >();
   constructor() {
-    // alert('start list');
-    if (this.filteredContractors) {
-      this.dataSource = new MatTableDataSource(
-        this.filteredContractors.map(x => x.company)
-      );
-    }
+    this.dataSource = new MatTableDataSource(this.filteredContractors);
   }
-  ngOnInit() {
-    // alert('start list');
-    // console.log(this.selectedProjectContractor);
-    console.log('result here');
-  }
+
+  // ngAfterViewInit() {
+  //   this.dataSource.paginator = this.paginator;
+  //   this.dataSource.sort = this.sort;
+  // }
 }
