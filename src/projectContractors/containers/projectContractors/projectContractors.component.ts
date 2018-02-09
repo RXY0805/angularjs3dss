@@ -30,7 +30,7 @@ export class ProjectContractorsComponent implements OnInit {
     isAuditStatus: true
   };
 
-  constructor(private store: Store<fromStore.ProjectState>) {}
+  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
     // this.projectContractors$ = this.store.select(

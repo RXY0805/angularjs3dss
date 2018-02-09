@@ -6,18 +6,18 @@ import * as fromProjectContractors from '../reducers/projectContractors.reducer'
 
 import { ProjectContractor } from '../../models/projectContractor.model';
 
-export const getProjectContractorState = createSelector(
+export const getContractorState = createSelector(
   fromFeature.getProjectContractorsState,
-  (state: fromFeature.ProjectState) => state.projectContractors
+  (state: fromFeature.ProjectContractorsState) => state.contractors
 );
 
-export const getProjectFilterState = createSelector(
-  fromFeature.getProjectFiltersState,
-  (state: fromFeature.ProjectState) => state.projectFilters
+export const getFilterState = createSelector(
+  fromFeature.getProjectContractorsState,
+  (state: fromFeature.ProjectContractorsState) => state.filters
 );
 
-export const getProjectContractorsEntities = createSelector(
-  getProjectContractorState,
+export const getContractorsEntities = createSelector(
+  getContractorState,
   fromProjectContractors.getProjectContractorsEntities
 );
 
@@ -35,14 +35,14 @@ export const getProjectContractorsEntities = createSelector(
 // );
 
 export const getAllProjectContractors = createSelector(
-  getProjectContractorsEntities,
+  getContractorsEntities,
   entities => {
     return Object.keys(entities).map(id => entities[id]);
   }
 );
 
 export const getAllProjects = createSelector(
-  getProjectContractorsEntities,
+  getContractorsEntities,
   entities => {
     return Object.keys(entities)
       .map(id => entities[id])
@@ -62,11 +62,11 @@ export const getAllProjects = createSelector(
 //   }
 // );
 
-export const getProjectContractorsLoaded = createSelector(
-  getProjectContractorState,
+export const getContractorsLoaded = createSelector(
+  getContractorState,
   fromProjectContractors.getProjectContractorsLoaded
 );
-export const getProjectContractorsLoading = createSelector(
-  getProjectContractorState,
+export const getContractorsLoading = createSelector(
+  getContractorState,
   fromProjectContractors.getProjectContractorsLoading
 );

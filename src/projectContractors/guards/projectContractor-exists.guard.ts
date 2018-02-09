@@ -11,7 +11,7 @@ import { ProjectContractor } from '../models/projectContractor.model';
 
 @Injectable()
 export class ProjectContractorExistsGuards implements CanActivate {
-  constructor(private store: Store<fromStore.ProjectState>) {}
+  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
     return this.checkStore().pipe(
@@ -24,7 +24,7 @@ export class ProjectContractorExistsGuards implements CanActivate {
 
   hasProjectContractor(id: number): Observable<boolean> {
     return this.store
-      .select(fromStore.getProjectContractorsEntities)
+      .select(fromStore.getContractorsEntities)
       .pipe(
         map((entities: { [key: number]: ProjectContractor }) => !!entities[id]),
         take(1)
@@ -32,7 +32,7 @@ export class ProjectContractorExistsGuards implements CanActivate {
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromStore.getProjectContractorsLoaded).pipe(
+    return this.store.select(fromStore.getContractorsLoaded).pipe(
       tap(loaded => {
         if (!loaded) {
           this.store.dispatch(new fromStore.LoadProjectContractors());

@@ -10,7 +10,7 @@ import * as fromStore from '../store';
 
 @Injectable()
 export class ProjectContractorsGuard implements CanActivate {
-  constructor(private store: Store<fromStore.ProjectState>) {}
+  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   canActivate(): Observable<boolean> {
     return this.checkStore().pipe(
@@ -20,7 +20,7 @@ export class ProjectContractorsGuard implements CanActivate {
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromStore.getProjectContractorsLoaded).pipe(
+    return this.store.select(fromStore.getContractorsLoaded).pipe(
       tap(loaded => {
         if (!loaded) {
           this.store.dispatch(new fromStore.LoadProjectContractors());
