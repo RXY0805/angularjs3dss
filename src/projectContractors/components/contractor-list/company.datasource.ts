@@ -68,6 +68,9 @@ export class CompanyDataSource extends DataSource<any> {
     ];
     // .slice()
     return Observable.merge(...displayDataChanges).map(() => {
+      if (this._companyDatabase.data == null) {
+        return null;
+      }
       this.filteredData = this._companyDatabase.data.filter((item: Company) => {
         const searchStr = (item.name + item.email).toLowerCase();
         return searchStr.indexOf(this.filter.toLowerCase()) !== -1;

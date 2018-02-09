@@ -35,10 +35,22 @@ export class ProjectContractorsComponent implements OnInit {
   constructor(private store: Store<fromStore.ProjectContractorsState>) {}
 
   ngOnInit() {
-    this.projects$ = this.store.select(fromStore.getAllProjects);
+    this.projects$ = this.store
+      .select(fromStore.getAllProjects)
+      .map(projects => projects.sort(this.sortProjectByName));
     this.filteredContractors$ = this.store.select(
       fromStore.getContractorsByProjectId
     );
+  }
+
+  sortProjectByName(a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
   }
 
   onFilterChange(event) {
