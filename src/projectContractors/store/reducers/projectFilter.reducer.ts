@@ -45,3 +45,5 @@ export function reducer(
 }
 
 export const getProjectFilter = (state: ProjectFilterState) => state;
+export const getSelectedProjectId = (state: ProjectFilterState) =>
+  state.selectedProjectId;

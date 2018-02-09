@@ -3,6 +3,7 @@ import { createSelector } from '@ngrx/store';
 import * as fromRoot from '../../../app/store';
 import * as fromFeature from '../reducers';
 import * as fromProjectContractors from '../reducers/projectContractors.reducer';
+import * as fromFiltersSelectors from './filters.selectors';
 
 import { ProjectContractor } from '../../models/projectContractor.model';
 
@@ -11,14 +12,21 @@ export const getContractorState = createSelector(
   (state: fromFeature.ProjectContractorsState) => state.contractors
 );
 
-export const getFilterState = createSelector(
-  fromFeature.getProjectContractorsState,
-  (state: fromFeature.ProjectContractorsState) => state.filters
-);
-
 export const getContractorsEntities = createSelector(
   getContractorState,
   fromProjectContractors.getProjectContractorsEntities
+);
+
+export const getContractorsByProjectId = createSelector(
+  getContractorsEntities,
+  fromFiltersSelectors.getSelectedProjectId,
+  (entities, projectId) => {
+    if (projectId) {
+      alert('selector' + projectId);
+      return entities[projectId];
+    }
+    return null;
+  }
 );
 
 // export const getSelectedProjectContractor = createSelector(
@@ -28,10 +36,6 @@ export const getContractorsEntities = createSelector(
 
 //     return router.state && entities[router.state.params.id];
 //   }
-// );
-// export const getSelectedProjectId = createSelector(
-//   getProjectContractorState,
-//   fromProjectContractors.getCurrentProjectId
 // );
 
 export const getAllProjectContractors = createSelector(

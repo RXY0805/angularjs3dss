@@ -38,6 +38,9 @@ export class ProjectContractorsComponent implements OnInit {
     // );
 
     this.projects$ = this.store.select(fromStore.getAllProjects);
+    this.selectedProjectContractor$ = this.store.select(
+      fromStore.getContractorsByProjectId
+    );
     // this.selectedProjectContractor$ = this.store.select(
     //   fromStore.getSelectedProjectContractors
     // );
@@ -69,5 +72,12 @@ export class ProjectContractorsComponent implements OnInit {
         this.store.dispatch(new fromStore.FilterByOnSite(filter.isOnSite));
         break;
     }
+    // this.selectedProjectContractor$ = this.store.select(
+    //   fromStore.getContractorsByProjectId
+    // );
+    // this.selectedProjectContractor$.subscribe(result => {
+    //   console.log(result.project.name);
+    // });
+    // console.log(this.selectedProjectContractor$);
   }
 }

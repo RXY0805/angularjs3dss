@@ -9,6 +9,7 @@ import {
   OnInit,
   ViewChild
 } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
@@ -27,7 +28,7 @@ export class ContractorListComponent implements OnInit {
   @Input() selectedProjectContractor: ProjectContractor;
 
   displayedColumns = ['id', 'name', 'email'];
-  dataSource: MatTableDataSource<Contractor>;
+  dataSource: MatTableDataSource<Company>;
   hello: string;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -47,16 +48,16 @@ export class ContractorListComponent implements OnInit {
   //       ContractorFilter
   //     >();
   constructor() {
-    this.hello = 'hello list component';
-    alert('start list');
-
-    // this.dataSource = new MatTableDataSource(
-    //   this.selectedProjectContractor.contractors
-    // );
+    // alert('start list');
+    if (this.selectedProjectContractor) {
+      this.dataSource = new MatTableDataSource(
+        this.selectedProjectContractor.contractors.map(x => x.company)
+      );
+    }
   }
   ngOnInit() {
     // alert('start list');
     // console.log(this.selectedProjectContractor);
-    console.log(this.selectedProjectContractor);
+    console.log('result here');
   }
 }
