@@ -24,7 +24,7 @@ export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
   filteredContractors$: Observable<Company[]>;
-
+  isCheckable$: true;
   projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
     selectedStatusId: 1,
@@ -32,7 +32,11 @@ export class ProjectContractorsComponent implements OnInit {
     isAuditStatus: true
   };
 
-  constructor(private store: Store<fromStore.ProjectContractorsState>) {}
+  constructor(private store: Store<fromStore.ProjectContractorsState>) {
+    this.store.dispatch(
+      new fromStore.FilterByStatusId(this.projectFilter$.selectedStatusId)
+    );
+  }
 
   ngOnInit() {
     this.projects$ = this.store

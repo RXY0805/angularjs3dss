@@ -10,7 +10,7 @@ export interface ProjectFilterState {
 
 export const initialState: ProjectFilterState = {
   selectedProjectId: undefined,
-  selectedStatusId: 1,
+  selectedStatusId: undefined,
   isOnSite: true,
   isAuditStatus: true
 };

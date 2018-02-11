@@ -7,11 +7,13 @@ import {
   OnInit
 } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
+import { SelectionModel } from '@angular/cdk/collections';
 import { Company } from '../../models/company.model';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/filter';
 import { Subscription } from 'rxjs/Subscription';
 import { CompanyDatabase, CompanyDataSource } from './company.datasource';
+
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -23,8 +25,11 @@ import { CompanyDatabase, CompanyDataSource } from './company.datasource';
 })
 export class ContractorListComponent implements OnInit {
   @Input() filteredContractors: Observable<Company[]>;
+  @Input() isCheckable: boolean;
   private companyData: Company[] = [];
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['select', 'name', 'email'];
+  selection = new SelectionModel<number>(true, []);
+
   public companyDatabase: CompanyDatabase;
   public dataSource: CompanyDataSource;
   public defaultPageSize: number;
@@ -40,7 +45,6 @@ export class ContractorListComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     // this.defaultPageSize = this.isCheckable ? 5:10;
-    this.displayedColumns = ['id', 'name', 'email'];
     this.companyDatabase = new CompanyDatabase(this.filteredContractors);
     this.dataSource = new CompanyDataSource(
       this.companyDatabase,
@@ -56,5 +60,39 @@ export class ContractorListComponent implements OnInit {
         }
         this.dataSource.filter = this.filter.nativeElement.value;
       });
+  }
+  isAllSelected(): boolean {
+    if (!this.dataSource) {
+      return false;
+    }
+    if (this.selection.isEmpty()) {
+      return false;
+    }
+
+    if (this.filter.nativeElement.value) {
+      return (
+        this.selection.selected.length === this.dataSource.renderedData.length
+      );
+    } else {
+      return (
+        this.selection.selected.length === this.companyDatabase.data.length
+      );
+    }
+  }
+
+  masterToggle() {
+    if (!this.dataSource) {
+      return;
+    }
+
+    if (this.isAllSelected()) {
+      this.selection.clear();
+    } else if (this.filter.nativeElement.value) {
+      this.dataSource.renderedData.forEach(data =>
+        this.selection.select(data.id)
+      );
+    } else {
+      this.companyDatabase.data.forEach(data => this.selection.select(data.id));
+    }
   }
 }

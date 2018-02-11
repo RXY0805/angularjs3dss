@@ -4,40 +4,49 @@
     </mat-form-field>
 </div> -->
 <!-- *ngIf="dataSource" -->
-<div>
+<div class="example-container mat-elevation-z8">
     <div>
         <mat-form-field>
             <input matInput #filter placeholder="filter contractors">
         </mat-form-field>
     </div>
-    <div class="example-container mat-elevation-z8">
 
-        <mat-table [dataSource]="dataSource" matSort>
-
-            <!-- ID Column -->
-            <ng-container matColumnDef="id">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-            </ng-container>
-
-
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="email">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
-                <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
-            </ng-container>
-            <!-- Color Column -->
-
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;">
-            </mat-row>
-        </mat-table>
-
-        <mat-paginator #paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="defaultPageSize" [pageSizeOptions]="[5, 10, 25, 100]">
-        </mat-paginator>
+    <div class="example-header example-selection-header" *ngIf="!selection.isEmpty()">
+        {{selection.selected.length}} {{selection.selected.length == 1 ? 'company' : 'companies'}} selected
     </div>
+
+    <!--  -->
+    <mat-table [dataSource]="dataSource" matSort>
+        <!-- select -->
+        <ng-container matColumnDef="select">
+            <mat-header-cell *matHeaderCellDef>
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+                </mat-checkbox>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null" [checked]="selection.isSelected(row.id)">
+                </mat-checkbox>
+            </mat-cell>
+        </ng-container>
+
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+        </ng-container>
+        <!-- Color Column -->
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+
+    <mat-paginator #paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="defaultPageSize" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+
 </div>
