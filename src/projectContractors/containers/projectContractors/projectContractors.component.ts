@@ -24,7 +24,10 @@ export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
   filteredContractors$: Observable<Company[]>;
+
   isCheckable$: true;
+  selectedProjectId$: Observable<number>;
+
   projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
     selectedStatusId: 1,
@@ -45,6 +48,7 @@ export class ProjectContractorsComponent implements OnInit {
     this.filteredContractors$ = this.store.select(
       fromStore.getContractorsByProjectId
     );
+    this.selectedProjectId$ = this.store.select(fromStore.getSelectedProjectId);
   }
 
   sortProjectByName(a, b) {

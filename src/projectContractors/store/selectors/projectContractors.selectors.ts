@@ -32,6 +32,33 @@ export const getContractorsByProjectId = createSelector(
   }
 );
 
+export const getNonSelectedProjectContractors = createSelector(
+  getContractorsEntities,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return Object.keys(entities)
+        .map(id => entities[id])
+        .map(p => p.id !== filterState.selectedProjectId);
+    }
+    return null;
+  }
+);
+
+export const getAvailableContractors = createSelector(
+  getNonSelectedProjectContractors,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return Object.keys(entities)
+        .map(id => entities[id])
+        .map(p => p.contractors)
+        .map(x => x.company);
+    }
+    return null;
+  }
+);
+
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,
   entities => {

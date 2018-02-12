@@ -57,6 +57,10 @@ export function reducer(
         loaded: false
       };
     }
+    case fromProjectContractors.INVITE_CONTRACTORS: {
+      alert('new contractor');
+      return state;
+    }
   }
 
   return state;

@@ -47,7 +47,8 @@ export const ROUTES: Routes = [
     MaterialModule
   ],
   providers: [...fromServices.services, ...fromGuards.guards], //
-  declarations: [...fromContainers.containers, ...fromComponents.components], //
+  declarations: [...fromContainers.containers, ...fromComponents.components],
+  entryComponents: [fromComponents.ContractorInviteDialogComponent], //
   exports: [...fromContainers.containers, ...fromComponents.components] //
 })
 export class ProjectContractorsModule {}
