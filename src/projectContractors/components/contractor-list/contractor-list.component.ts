@@ -24,7 +24,7 @@ import { CompanyDatabase, CompanyDataSource } from './company.datasource';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContractorListComponent implements OnInit {
-  @Input() filteredContractors: Observable<Company[]>;
+  @Input() contractors: Observable<Company[]>;
   @Input() isCheckable: boolean;
   private companyData: Company[] = [];
   displayedColumns = ['select', 'name', 'email'];
@@ -45,7 +45,7 @@ export class ContractorListComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     // this.defaultPageSize = this.isCheckable ? 5:10;
-    this.companyDatabase = new CompanyDatabase(this.filteredContractors);
+    this.companyDatabase = new CompanyDatabase(this.contractors);
     this.dataSource = new CompanyDataSource(
       this.companyDatabase,
       this.paginator,

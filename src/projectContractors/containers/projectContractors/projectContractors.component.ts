@@ -23,10 +23,10 @@ import { Company } from '../../models/company.model';
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
-  filteredContractors$: Observable<Company[]>;
-
+  selectedProject$: Observable<Project>;
+  contractors$: Observable<Company[]>;
+  availableContractors$: Observable<Company[]>;
   isCheckable$: true;
-  selectedProjectId$: Observable<number>;
 
   projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
@@ -45,10 +45,11 @@ export class ProjectContractorsComponent implements OnInit {
     this.projects$ = this.store
       .select(fromStore.getAllProjects)
       .map(projects => projects.sort(this.sortProjectByName));
-    this.filteredContractors$ = this.store.select(
-      fromStore.getContractorsByProjectId
+    this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
+    this.contractors$ = this.store.select(fromStore.getContractorsByProjectId);
+    this.availableContractors$ = this.store.select(
+      fromStore.getAvailableContractors
     );
-    this.selectedProjectId$ = this.store.select(fromStore.getSelectedProjectId);
   }
 
   sortProjectByName(a, b) {

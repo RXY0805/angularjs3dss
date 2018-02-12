@@ -1,4 +1,11 @@
-<h1 mat-dialog-title>Invite Contractors to join project: projectId: {{data.projectId|async}}</h1>
+<h1 mat-dialog-title>Invite Contractors to join project {{data.currentProject.name}}</h1>
+
+
+
+<app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable"></app-contractor-list>
+
+
+
 <!-- <div mat-dialog-content>
 
     <mat-tab-group>

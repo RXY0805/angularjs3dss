@@ -1,11 +1,15 @@
 import { createSelector } from '@ngrx/store';
 
+import { map, mergeAll } from 'rxjs/operators';
+
 import * as fromRoot from '../../../app/store';
 import * as fromFeature from '../reducers';
 import * as fromProjectContractors from '../reducers/projectContractors.reducer';
 import * as fromFiltersSelectors from './filters.selectors';
 
 import { ProjectContractor } from '../../models/projectContractor.model';
+import { Company } from '../../models/Company.model';
+import { getFilterState } from '../index';
 
 export const getContractorState = createSelector(
   fromFeature.getProjectContractorsState,
@@ -32,37 +36,38 @@ export const getContractorsByProjectId = createSelector(
   }
 );
 
-export const getNonSelectedProjectContractors = createSelector(
-  getContractorsEntities,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.selectedProjectId) {
-      return Object.keys(entities)
-        .map(id => entities[id])
-        .map(p => p.id !== filterState.selectedProjectId);
-    }
-    return null;
-  }
-);
-
-export const getAvailableContractors = createSelector(
-  getNonSelectedProjectContractors,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.selectedProjectId) {
-      return Object.keys(entities)
-        .map(id => entities[id])
-        .map(p => p.contractors)
-        .map(x => x.company);
-    }
-    return null;
-  }
-);
+// export const getAvailableContractors = createSelector(
+//   getNonSelectedProjectContractors,
+//   fromFiltersSelectors.getFilterState,
+//   (entities, filterState) => {
+//     if (filterState.selectedProjectId) {
+//       return Object.keys(entities)
+//         .map(id => entities[id])
+//         .map(p => p.contractors)
+//         .map(x => x.company);
+//     }
+//     return null;
+//   }
+// );
 
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,
   entities => {
     return Object.keys(entities).map(id => entities[id]);
+  }
+);
+export const getAvailableContractors = createSelector(
+  getAllProjectContractors,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities
+        .filter(x => x.id !== filterState.selectedProjectId)
+        .map(x => x.contractors)
+        .map(c => c.company)
+        .mergeAll();
+    }
+    return null;
   }
 );
 
@@ -75,17 +80,16 @@ export const getAllProjects = createSelector(
   }
 );
 
-// export const getSelectedProjectContractors = createSelector(
-//   getProjectContractorsEntities,
-//   getSelectedProjectId,
-//   (entities, projectId) => {
-//     if (projectId) {
-//       return entities[projectId];
-//     } else {
-//       return entities[10788];
-//     }
-//   }
-// );
+export const getSelectedProject = createSelector(
+  getContractorsEntities,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities[filterState.selectedProjectId].project;
+    }
+    return null;
+  }
+);
 
 export const getContractorsLoaded = createSelector(
   getContractorState,

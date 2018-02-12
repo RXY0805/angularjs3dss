@@ -2,6 +2,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/filter';
+import { Subscription } from 'rxjs/Subscription';
 import {
   Component,
   Output,
@@ -14,16 +16,21 @@ import { Store } from '@ngrx/store';
 import { FormControl, Validators } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-//import { ContractorInviteDialogComponent } from './contractor-invite-dialog.component';
+// import { ContractorInviteDialogComponent } from './contractor-invite-dialog.component';
 import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
+import { Project } from '../../models/projectContractor.model';
 @Component({
   selector: 'app-contractor-invite',
   // styleUrls: ['./contractor-invite.component.css'],
   templateUrl: './contractor-invite.component.html'
 })
-export class ContractorInviteComponent implements OnInit {
+export class ContractorInviteComponent {
+  @Input() selectedProject: Observable<Project>;
+  @Input() availableContractors: Observable<Company[]>;
+  currentProject: Project;
+  // currentAvailableContractors: Company[];
   invitation: ProjectInvitation = {
     existContractIds: ([] = []),
     projectId: 0
@@ -33,27 +40,26 @@ export class ContractorInviteComponent implements OnInit {
   //   isPending: false,
   //   selectedProjectId: 0,
   // }
-  availableContractors: Observable<Company[]>;
-  @Input() selectedProjectId: number;
 
+  // @Input() selectedProjectId: number;
   constructor(
     public dialog: MatDialog,
     private store: Store<fromStore.ProjectContractorsState>
   ) {}
 
-  ngOnInit() {
-    this.availableContractors = this.store.select(
-      fromStore.getAvailableContractors
-    );
-  }
-
   openDialog(): void {
-    this.invitation.projectId = this.selectedProjectId;
+    this.selectedProject.subscribe(x => {
+      this.currentProject = x;
+    });
+    // this.availableContractors.subscribe(x => {
+    //   this.currentAvailableContractors = x;
+    // });
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {
       width: '650px',
       data: {
-        projectId: this.selectedProjectId,
+        currentProject: this.currentProject,
         availableContractors: this.availableContractors,
+        currentAvailableContractors: this.availableContractors,
         isCheckable: true,
         invitation: this.invitation
         // duplicatedContractorIds: this.duplicatedContractorIds
@@ -73,13 +79,15 @@ export class ContractorInviteComponent implements OnInit {
   // styleUrls: ['contractor-invite-dialog.component.css'],
   templateUrl: 'contractor-invite-dialog.component.html'
 })
-export class ContractorInviteDialogComponent {
+export class ContractorInviteDialogComponent implements OnInit {
   public noneContractInvited: boolean;
   public isExistedEmail: boolean;
   public duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation = {
     projectId: 0
   };
+
+  selectedProject$: Observable<Project>;
 
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -91,13 +99,14 @@ export class ContractorInviteDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     public store: Store<fromStore.ProjectContractorsState>
   ) {
-    console.log(data);
     this.noneContractInvited = true;
 
     this.invitation = data.invitation;
     this.isExistedEmail = false;
   }
-
+  ngOnInit() {
+    // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
+  }
   onNoClick(): void {
     this.dialogRef.close();
   }
