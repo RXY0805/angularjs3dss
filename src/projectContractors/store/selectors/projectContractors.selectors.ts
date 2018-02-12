@@ -64,8 +64,12 @@ export const getAvailableContractors = createSelector(
       return entities
         .filter(x => x.id !== filterState.selectedProjectId)
         .map(x => x.contractors)
-        .map(c => c.company)
-        .mergeAll();
+        .reduce(function(pre, cur) {
+          return pre.concat(cur);
+        })
+        .map(result => {
+          return result.company;
+        });
     }
     return null;
   }
