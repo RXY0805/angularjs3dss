@@ -5,13 +5,13 @@
 </div> -->
 <!-- *ngIf="dataSource" -->
 <div class="example-container mat-elevation-z8">
-    <div>
-        <mat-form-field>
-            <input matInput #filter placeholder="filter contractors">
-        </mat-form-field>
+    <div class="example-header" [style.display]="selection.isEmpty() ? '' : 'none'">
+        <mat-input-container floatPlaceholder="never">
+            <input matInput #filter placeholder="Filter users">
+        </mat-input-container>
     </div>
 
-    <div class="example-header example-selection-header" *ngIf="!selection.isEmpty()">
+    <div class="example-header example-selection-header" [hidden]="!selection.isEmpty()">
         {{selection.selected.length}} {{selection.selected.length == 1 ? 'company' : 'companies'}} selected
     </div>
 
@@ -20,17 +20,21 @@
         <!-- select -->
         <ng-container matColumnDef="select">
             <mat-header-cell *matHeaderCellDef>
-                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">&nbsp;
                 </mat-checkbox>
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null" [checked]="selection.isSelected(row.id)">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null" [checked]="selection.isSelected(row.id)">&nbsp;
                 </mat-checkbox>
             </mat-cell>
         </ng-container>
 
 
         <!-- Name Column -->
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+        </ng-container>
         <ng-container matColumnDef="name">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>

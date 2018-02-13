@@ -29,7 +29,7 @@ export class ContractorListComponent implements OnInit {
   @Input() contractors: Observable<Company[]>;
   @Input() isCheckable: boolean;
   private companyData: Company[] = [];
-  displayedColumns = ['select', 'name', 'email'];
+  displayedColumns = ['select', 'id', 'name', 'email'];
   selection = new SelectionModel<string>(true, []);
 
   public companyDatabase: CompanyDatabase;
@@ -42,7 +42,8 @@ export class ContractorListComponent implements OnInit {
   private paginatorSubscription: Subscription = Subscription.EMPTY;
   private sortSubscription: Subscription = Subscription.EMPTY;
   private query: string;
-  // companysTrackByFn = (index: number, company: Company) => company.id;
+  // companysTrackByFn = (index: string, company: Company) =>
+  //   company.id.toString();
 
   constructor() {}
   ngOnInit() {
