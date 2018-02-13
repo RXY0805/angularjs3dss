@@ -10,7 +10,9 @@ import { MatPaginator, MatSort } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { Company } from '../../models/company.model';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/from';
 import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/distinct';
 import { Subscription } from 'rxjs/Subscription';
 import { CompanyDatabase, CompanyDataSource } from './company.datasource';
 
@@ -28,10 +30,10 @@ export class ContractorListComponent implements OnInit {
   @Input() isCheckable: boolean;
   private companyData: Company[] = [];
   displayedColumns = ['select', 'name', 'email'];
-  selection = new SelectionModel<number>(true, []);
+  selection = new SelectionModel<string>(true, []);
 
   public companyDatabase: CompanyDatabase;
-  public dataSource: CompanyDataSource;
+  public dataSource: CompanyDataSource | null;
   public defaultPageSize: number;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -40,11 +42,12 @@ export class ContractorListComponent implements OnInit {
   private paginatorSubscription: Subscription = Subscription.EMPTY;
   private sortSubscription: Subscription = Subscription.EMPTY;
   private query: string;
-  companysTrackByFn = (index: number, company: Company) => company.id;
+  // companysTrackByFn = (index: number, company: Company) => company.id;
 
   constructor() {}
   ngOnInit() {
     // this.defaultPageSize = this.isCheckable ? 5:10;
+
     this.companyDatabase = new CompanyDatabase(this.contractors);
     this.dataSource = new CompanyDataSource(
       this.companyDatabase,
@@ -89,10 +92,12 @@ export class ContractorListComponent implements OnInit {
       this.selection.clear();
     } else if (this.filter.nativeElement.value) {
       this.dataSource.renderedData.forEach(data =>
-        this.selection.select(data.id)
+        this.selection.select(data.id.toString())
       );
     } else {
-      this.companyDatabase.data.forEach(data => this.selection.select(data.id));
+      this.companyDatabase.data.forEach(data =>
+        this.selection.select(data.id.toString())
+      );
     }
   }
 }

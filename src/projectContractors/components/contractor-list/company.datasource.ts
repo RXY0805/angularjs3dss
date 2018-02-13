@@ -22,9 +22,15 @@ export class CompanyDatabase {
   get data(): Company[] {
     return this.dataChange.value;
   }
-
+  // get unique company list
   setData(items: Company[]) {
-    this.dataChange.next(items);
+    if (items && items.length) {
+      const uniqueCompanyList = Array.from(
+        items.reduce((m, t) => m.set(t.id, t), new Map()).values()
+      );
+
+      this.dataChange.next(uniqueCompanyList);
+    }
   }
 
   constructor(items: Observable<Company[]>) {

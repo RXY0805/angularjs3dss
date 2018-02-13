@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { map, switchMap, catchError } from 'rxjs/operators';
+import { map, switchMap, catchError, distinct } from 'rxjs/operators';
 import * as fromStore from '../../store';
 import {
   ProjectContractor,
