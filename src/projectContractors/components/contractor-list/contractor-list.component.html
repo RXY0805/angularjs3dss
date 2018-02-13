@@ -11,7 +11,7 @@
         </mat-input-container>
     </div>
 
-    <div class="example-header example-selection-header" [hidden]="!selection.isEmpty()">
+    <div class="example-header example-selection-header" [hidden]="selection.isEmpty()">
         {{selection.selected.length}} {{selection.selected.length == 1 ? 'company' : 'companies'}} selected
     </div>
 

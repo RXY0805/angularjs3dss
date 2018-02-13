@@ -30,7 +30,7 @@ export class ContractorListComponent implements OnInit {
   @Input() isCheckable: boolean;
   private companyData: Company[] = [];
   displayedColumns = ['select', 'id', 'name', 'email'];
-  selection = new SelectionModel<string>(true, []);
+  selection = new SelectionModel<number>(true, []);
 
   public companyDatabase: CompanyDatabase;
   public dataSource: CompanyDataSource | null;
@@ -75,7 +75,7 @@ export class ContractorListComponent implements OnInit {
 
     if (this.filter.nativeElement.value) {
       return (
-        this.selection.selected.length === this.dataSource.renderedData.length
+        this.selection.selected.length === this.dataSource.filteredData.length
       );
     } else {
       return (
@@ -92,13 +92,11 @@ export class ContractorListComponent implements OnInit {
     if (this.isAllSelected()) {
       this.selection.clear();
     } else if (this.filter.nativeElement.value) {
-      this.dataSource.renderedData.forEach(data =>
-        this.selection.select(data.id.toString())
+      this.dataSource.filteredData.forEach(data =>
+        this.selection.select(data.id)
       );
     } else {
-      this.companyDatabase.data.forEach(data =>
-        this.selection.select(data.id.toString())
-      );
+      this.companyDatabase.data.forEach(data => this.selection.select(data.id));
     }
   }
 }
