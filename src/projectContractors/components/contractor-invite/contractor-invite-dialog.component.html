@@ -1,16 +1,11 @@
 <h1 mat-dialog-title>Invite Contractors to join project {{data.currentProject.name}}</h1>
 
 
-
-<app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable"></app-contractor-list>
-
-
-
-<!-- <div mat-dialog-content>
+<div mat-dialog-content>
 
     <mat-tab-group>
         <mat-tab label="exist contracts">
-            <app-contractor-list [contractors]="data.availableContractors" [isCheckable]="data.isCheckable" (onToggleInviteContractor)="getInvitedContractorIds($event)"></app-contractor-list>
+            <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable"></app-contractor-list>
             <div class="button-group">
                 <button class="mat-button-left" mat-raised-button (click)="onNoClick()">No Thanks</button>
                 <button class="mat-button-right" mat-raised-button color="warn" [disabled]="noneContractInvited" [mat-dialog-close]="data.invitation">Invite</button>
@@ -25,6 +20,10 @@
 
                         <mat-form-field class="full-width">
                             <textarea matInput placeholder="Company Name"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <textarea matInput placeholder="ABN Number"></textarea>
+
                         </mat-form-field>
                         <mat-form-field class="full-width">
                             <input matInput placeholder="Email" (change)="triggerEmailSearch($event.target.value)" [formControl]="emailFormControl" (keyup)="triggerEmailSearch($event.target.value)">
@@ -48,4 +47,4 @@
         </mat-tab>
     </mat-tab-group>
 
-</div> -->
+</div>

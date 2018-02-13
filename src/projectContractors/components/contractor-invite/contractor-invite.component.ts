@@ -110,7 +110,9 @@ export class ContractorInviteDialogComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
+  onABNLookup(): void {
+    alert('search ABN');
+  }
   getInvitedContractorIds(invitedContractorIds) {
     this.invitation.existContractIds = invitedContractorIds;
     this.noneContractInvited = !this.invitation.existContractIds.length;
