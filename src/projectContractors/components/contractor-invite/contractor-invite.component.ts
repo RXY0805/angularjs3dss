@@ -21,6 +21,7 @@ import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/projectContractor.model';
+import { FormBuilder } from '@angular/forms/src/form_builder';
 @Component({
   selector: 'app-contractor-invite',
   // styleUrls: ['./contractor-invite.component.css'],
@@ -83,15 +84,18 @@ export class ContractorInviteDialogComponent implements OnInit {
   public noneContractInvited: boolean;
   public isExistedEmail: boolean;
   public duplicatedContractorIds: string[] = [];
-  invitation: ProjectInvitation = {
-    projectId: 0
-  };
+  invitation: ProjectInvitation;
 
   selectedProject$: Observable<Project>;
 
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email
+  ]);
+  companyABNFormControl = new FormControl('', [
+    Validators.required,
+    Validators.maxLength(11),
+    Validators.minLength(11)
   ]);
 
   constructor(
@@ -111,7 +115,8 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.dialogRef.close();
   }
   onABNLookup(): void {
-    alert('search ABN');
+    // http://abr.business.gov.au/json/AbnDetails.aspx?callback=abnCallback&abn=68118606303&guid=acb92423-c0bc-42b0-a248-5110fa241e6c
+    alert('search ABN' + this.invitation.newCompanyABN);
   }
   getInvitedContractorIds(invitedContractorIds) {
     this.invitation.existContractIds = invitedContractorIds;

@@ -18,7 +18,9 @@ export interface ProjectInvitation {
   id?: number;
   projectId: number;
   existContractIds?: string[];
-  newContractEmail?: string;
+  newCompanyEmail?: string;
+  newCompanyABN?: string;
+  newCompanyName?: string;
 }
 export interface Project {
   id?: number;

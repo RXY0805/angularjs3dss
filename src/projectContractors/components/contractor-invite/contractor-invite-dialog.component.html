@@ -17,14 +17,6 @@
                 </mat-card-header>
                 <mat-card-content>
                     <form class="newContractorForm" layout-align="center center">
-
-                        <mat-form-field class="full-width">
-                            <textarea matInput placeholder="Company Name"></textarea>
-                        </mat-form-field>
-                        <mat-form-field class="full-width">
-                            <textarea matInput placeholder="ABN Number"></textarea>
-
-                        </mat-form-field>
                         <mat-form-field class="full-width">
                             <input matInput placeholder="Email" (change)="triggerEmailSearch($event.target.value)" [formControl]="emailFormControl" (keyup)="triggerEmailSearch($event.target.value)">
                             <mat-hint class="error-message" *ngIf="isExistedEmail">The email is existed in 3DSS</mat-hint>
@@ -36,6 +28,19 @@
                                 <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
+                        <mat-form-field class="example-form-field">
+                            <input matInput number-only placeholder="new company abn" [formControl]="companyABNFormControl" />
+                            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
+                                <mat-icon>search</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <!-- *ngIf="invitation.newCompanyABN" -->
+                        <div>
+                            <mat-input-container>
+
+                                <input matInput name="newCompanyName" [(ngModel)]="invitation.newCompanyName" disabled>
+                            </mat-input-container>
+                        </div>
                     </form>
                 </mat-card-content>
             </mat-card>

@@ -21,6 +21,8 @@ import * as fromGuards from './guards';
 // services
 import * as fromServices from './services';
 
+import { NumberOnlyDirective } from '../shared/directives/numberOnlyDirective';
+
 // routes
 export const ROUTES: Routes = [
   {
@@ -47,7 +49,11 @@ export const ROUTES: Routes = [
     MaterialModule
   ],
   providers: [...fromServices.services, ...fromGuards.guards], //
-  declarations: [...fromContainers.containers, ...fromComponents.components],
+  declarations: [
+    ...fromContainers.containers,
+    ...fromComponents.components,
+    NumberOnlyDirective
+  ],
   entryComponents: [fromComponents.ContractorInviteDialogComponent], //
   exports: [...fromContainers.containers, ...fromComponents.components] //
 })
