@@ -1,17 +1,18 @@
 import * as fromSearchABNS from '../actions/searchABN.action';
+import { TradingEntity } from '../../models/tradingEntity.model';
 
 export interface SearchABNState {
   abn: string;
   searched: boolean;
   searching: boolean;
-  companyName: string;
+  tradingEntity: TradingEntity;
 }
 
 export const initialState: SearchABNState = {
   abn: undefined,
   searched: false,
   searching: false,
-  companyName: undefined
+  tradingEntity: undefined
 };
 
 export function reducer(
@@ -28,12 +29,12 @@ export function reducer(
 
     case fromSearchABNS.SEARCH_ABN_SUCCESS: {
       const result = action.payload;
-      alert('abn result' + result);
+      console.log(result);
       return {
         ...state,
         searching: false,
         searched: true,
-        companyName: result
+        tradingEntity: result
       };
     }
 
@@ -49,6 +50,6 @@ export function reducer(
   return state;
 }
 
-export const getCompanyName = (state: SearchABNState) => state.companyName;
+export const getTradingEntity = (state: SearchABNState) => state.tradingEntity;
 export const getSearchABNSearching = (state: SearchABNState) => state.searching;
 export const getSearchABNSearched = (state: SearchABNState) => state.searched;

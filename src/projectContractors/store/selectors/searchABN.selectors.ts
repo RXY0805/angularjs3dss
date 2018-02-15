@@ -10,7 +10,7 @@ export const getSearchABNState = createSelector(
   (state: fromFeature.ProjectContractorsState) => state.searchABN
 );
 
-export const getCompanyName = createSelector(
+export const getTradingEntity = createSelector(
   getSearchABNState,
-  fromSearchABN.getCompanyName
+  fromSearchABN.getTradingEntity
 );

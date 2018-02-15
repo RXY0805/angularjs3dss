@@ -13,18 +13,14 @@ import { ProjectContractor } from '../models/projectContractor.model';
 export class SearchABNService {
   private ABN_API_PATH = 'http://abr.business.gov.au/json/AbnDetails.aspx?&';
   private authGuid = 'acb92423-c0bc-42b0-a248-5110fa241e6c';
-  private result: string;
 
   constructor(private http: HttpClient) {}
 
   getCompanyByABN(abn: string): Observable<any> {
-    // const callback = 'abnCallback';
     return this.http
       .jsonp(`${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`, 'callback')
-      .map(data => {
-        alert('get data');
-        console.log(data);
-      });
+      .map(data => data)
+      .pipe(catchError((error: any) => Observable.throw(error.json())));
     // .
     //   .get<ABNEntity>(
     //     `${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`,
