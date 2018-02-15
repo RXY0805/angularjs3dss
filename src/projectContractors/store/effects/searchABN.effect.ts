@@ -20,10 +20,11 @@ export class SearchABNEffects {
     .ofType<searchABNAction.SearchABN>(searchABNAction.SEARCH_ABN)
     .pipe(
       switchMap(action => {
+        alert('abn effect');
         return this.searchABNService
           .getCompanyByABN(action.payload)
           .pipe(
-            map(EntityName => new searchABNAction.SearchABNSuccess(EntityName)),
+            map(result => new searchABNAction.SearchABNSuccess(result)),
             catchError(error => of(new searchABNAction.SearchABNFail(error)))
           );
       })

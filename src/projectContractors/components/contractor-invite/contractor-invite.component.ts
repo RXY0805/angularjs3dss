@@ -110,14 +110,25 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.isExistedEmail = false;
   }
   ngOnInit() {
+    this.store.select(fromStore.getCompanyName).subscribe(result => {
+      this.invitation.newCompanyName = result;
+    });
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
   onNoClick(): void {
     this.dialogRef.close();
   }
-  onABNLookup(): void {
+  onABNLookup() {
+    // this.availableContractors$ = this.store.select(
+    //   fromStore.getAvailableContractors
+    // );
+    alert('abn number' + this.companyABNFormControl.value);
+    this.store.dispatch(
+      new fromStore.SearchABN(this.companyABNFormControl.value)
+    );
+
     // http://abr.business.gov.au/json/AbnDetails.aspx?callback=abnCallback&abn=68118606303&guid=acb92423-c0bc-42b0-a248-5110fa241e6c
-    alert('search ABN' + this.invitation.newCompanyABN);
+    // alert('search ABN' + this.invitation.newCompanyABN);
   }
   getInvitedContractorIds(invitedContractorIds) {
     this.invitation.existContractIds = invitedContractorIds;

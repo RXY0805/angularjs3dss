@@ -28,7 +28,7 @@ export function reducer(
 
     case fromSearchABNS.SEARCH_ABN_SUCCESS: {
       const result = action.payload;
-
+      alert('abn result' + result);
       return {
         ...state,
         searching: false,

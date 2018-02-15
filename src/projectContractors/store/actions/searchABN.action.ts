@@ -10,7 +10,7 @@ export class SearchABN implements Action {
 }
 export class SearchABNSuccess implements Action {
   readonly type = SEARCH_ABN_SUCCESS;
-  constructor(public payload: string) {}
+  constructor(public payload: any) {}
 }
 
 export class SearchABNFail implements Action {

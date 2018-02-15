@@ -1,22 +1,58 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
+import { ABNEntity } from '../models/projectContractor.model';
 
 import { ProjectContractor } from '../models/projectContractor.model';
 @Injectable()
 export class SearchABNService {
-  private ABN_API_PATH = 'http://abr.business.gov.au/json/AbnDetails.aspx?callback=abnCallback&';
+  private ABN_API_PATH = 'http://abr.business.gov.au/json/AbnDetails.aspx?&';
   private authGuid = 'acb92423-c0bc-42b0-a248-5110fa241e6c';
+  private result: string;
+
   constructor(private http: HttpClient) {}
 
   getCompanyByABN(abn: string): Observable<any> {
+    // const callback = 'abnCallback';
     return this.http
-      .get<any>(`${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`)
-      .pipe(catchError((error: any) => Observable.throw(error.json())));
+      .jsonp(`${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`, 'callback')
+      .map(data => {
+        alert('get data');
+        console.log(data);
+      });
+    // .
+    //   .get<ABNEntity>(
+    //     `${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`,
+    //     this.httpOptions
+    //   )
+    // .pipe(catchError((error: any) => Observable.throw(error.json())))
   }
+
+  // getCompany(abn: string): Observable<any> {
+  //   return this.http
+  //     .get<any>(`${this.ABN_API_PATH}abn=${abn}&guid=${this.authGuid}`)
+  //     .map(this.extractData)
+  //     .catch(this.handleError);
+  // }
+  // private handleError(error: any) {
+  //   const errMsg = error.message
+  //     ? error.message
+  //     : error.status
+  //       ? `${error.status} - ${error.statusText}`
+  //       : 'Server   error';
+  //   console.error(errMsg); // log to console instead
+  //   return Observable.throw(errMsg);
+  // }
+
+  // private extractData(res: Response) {
+  //   const body = res.json();
+  //   return body || [];
+  // }
 }
 // return sample
 
@@ -41,4 +77,5 @@ export class SearchABNService {
 // 96638532587
 // abn auth guid
 // acb92423-c0bc-42b0-a248-5110fa241e6c
+//   http://abr.business.gov.au/json/AbnDetails.aspx?abn=96638532587&guid=acb92423-c0bc-42b0-a248-5110fa241e6c
 // 'http://abr.business.gov.au/json/AbnDetails.aspx?callback=abnCallback&abn=' + abn + '&guid=' + guid;
