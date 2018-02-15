@@ -22,6 +22,7 @@ import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/projectContractor.model';
 import { FormBuilder } from '@angular/forms/src/form_builder';
+
 @Component({
   selector: 'app-contractor-invite',
   // styleUrls: ['./contractor-invite.component.css'],
