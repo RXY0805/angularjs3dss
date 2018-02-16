@@ -16,7 +16,6 @@ import { Store } from '@ngrx/store';
 import { FormControl, Validators } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-// import { ContractorInviteDialogComponent } from './contractor-invite-dialog.component';
 import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
@@ -32,16 +31,10 @@ export class ContractorInviteComponent {
   @Input() selectedProject: Observable<Project>;
   @Input() availableContractors: Observable<Company[]>;
   currentProject: Project;
-  // currentAvailableContractors: Company[];
   invitation: ProjectInvitation = {
     existContractIds: ([] = []),
     projectId: 0
   };
-  // contractorFilter$: ContractorFilter = {
-  //   searchText:'',
-  //   isPending: false,
-  //   selectedProjectId: 0,
-  // }
 
   // @Input() selectedProjectId: number;
   constructor(
@@ -64,7 +57,6 @@ export class ContractorInviteComponent {
         currentAvailableContractors: this.availableContractors,
         isCheckable: true,
         invitation: this.invitation
-        // duplicatedContractorIds: this.duplicatedContractorIds
       }
     });
 
@@ -86,7 +78,7 @@ export class ContractorInviteDialogComponent implements OnInit {
 
   public duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
-  duplicatedEmail$: any;
+  isDuplicatedEmail: boolean;
   lastABN: string;
   selectedProject$: Observable<Project>;
 
@@ -109,6 +101,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.noneContractInvited = true;
 
     this.invitation = data.invitation;
+    this.isDuplicatedEmail = false;
   }
   ngOnInit() {
     this.store.select(fromStore.getTradingEntity).subscribe(tradingEntity => {
@@ -120,7 +113,10 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.store.select(fromStore.getCompanyABN).subscribe(abn => {
       this.lastABN = abn;
     });
-    this.duplicatedEmail$ = this.store.select(fromStore.isDuplicatedEmail);
+
+    this.store.select(fromStore.isDuplicatedEmail).subscribe(res => {
+      this.isDuplicatedEmail = res && res.length ? true : false;
+    });
 
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
