@@ -1,0 +1,8 @@
+.invite-dialog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.invite-dialog-container > * {
+  width: 60%;
+}
