@@ -6,6 +6,7 @@ import * as fromRoot from '../../../app/store';
 import * as fromFeature from '../reducers';
 import * as fromProjectContractors from '../reducers/projectContractors.reducer';
 import * as fromFiltersSelectors from './filters.selectors';
+import * as fromCompanySelectors from './company.selectors';
 
 import { ProjectContractor } from '../../models/projectContractor.model';
 import { Company } from '../../models/Company.model';
@@ -36,26 +37,13 @@ export const getContractorsByProjectId = createSelector(
   }
 );
 
-// export const getAvailableContractors = createSelector(
-//   getNonSelectedProjectContractors,
-//   fromFiltersSelectors.getFilterState,
-//   (entities, filterState) => {
-//     if (filterState.selectedProjectId) {
-//       return Object.keys(entities)
-//         .map(id => entities[id])
-//         .map(p => p.contractors)
-//         .map(x => x.company);
-//     }
-//     return null;
-//   }
-// );
-
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,
   entities => {
     return Object.keys(entities).map(id => entities[id]);
   }
 );
+
 export const getAvailableContractors = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
@@ -95,10 +83,32 @@ export const getSelectedProject = createSelector(
   }
 );
 
+export const isDuplicatedEmail = createSelector(
+  getAllProjectContractors,
+  fromCompanySelectors.getCompanyEmail,
+  (entities, email) => {
+    console.log('total companies length' + entities.length + ' ' + email);
+    return (
+      entities
+        .map(x => x.contractors)
+        .reduce(function(pre, cur) {
+          return pre.concat(cur);
+        })
+        .map(result => {
+          return result.company;
+        })
+        .filter(c => c.email === email)
+        //.filter(c => c.email.toLo.toLowerwerCase().trim() === email.toLowerCase().trim())
+        .map(c => c.id)
+    );
+  }
+);
+
 export const getContractorsLoaded = createSelector(
   getContractorState,
   fromProjectContractors.getProjectContractorsLoaded
 );
+
 export const getContractorsLoading = createSelector(
   getContractorState,
   fromProjectContractors.getProjectContractorsLoading

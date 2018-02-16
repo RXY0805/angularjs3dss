@@ -83,9 +83,10 @@ export class ContractorInviteComponent {
 })
 export class ContractorInviteDialogComponent implements OnInit {
   public noneContractInvited: boolean;
-  public isExistedEmail: boolean;
+
   public duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
+  isDuplicatedEmail: boolean;
 
   selectedProject$: Observable<Project>;
 
@@ -93,6 +94,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     Validators.required,
     Validators.email
   ]);
+
   companyABNFormControl = new FormControl('', [
     Validators.required,
     Validators.maxLength(11),
@@ -107,7 +109,6 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.noneContractInvited = true;
 
     this.invitation = data.invitation;
-    this.isExistedEmail = false;
   }
   ngOnInit() {
     this.store.select(fromStore.getTradingEntity).subscribe(tradingEntity => {
@@ -115,6 +116,7 @@ export class ContractorInviteDialogComponent implements OnInit {
         ? tradingEntity.EntityName
         : '';
     });
+
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
   onNoClick(): void {
@@ -129,7 +131,11 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.invitation.existContractIds = invitedContractorIds;
     this.noneContractInvited = !this.invitation.existContractIds.length;
   }
-
+  getErrorMessage() {
+    return this.emailFormControl.hasError('required')
+      ? 'You must enter a value'
+      : this.emailFormControl.hasError('email') ? 'Not a valid email' : '';
+  }
   // onInvitation(): void {
   // dispatch create invitation action then post data to web api
   // alert("please check console log");
@@ -138,16 +144,16 @@ export class ContractorInviteDialogComponent implements OnInit {
   // this.store.dispatch(new projectInvitationActions.Create(this.invitation));
   // }
 
-  //   triggerEmailSearch(value) {
-  //     if (!this.emailFormControl.errors) {
-  //       this.invitation.newContractEmail = value;
-  //       this.store
-  //         .select(state =>
-  //           getDuplicatedContractorIds(state.contractors.contractors)
-  //         )
-  //         .subscribe(res => (this.duplicatedContractorIds = res as string[]));
-  //       this.store.dispatch(new contractorsActions.CheckEmailExist(value));
-  //       this.isExistedEmail = this.duplicatedContractorIds.length > 0;
-  //     }
-  //   }
+  onDuplicatedEmailCheck(value) {
+    if (!this.emailFormControl.errors) {
+      this.isDuplicatedEmail = false;
+      this.invitation.newCompanyEmail = value;
+      this.store.dispatch(new fromStore.SetCompanyEmail(value));
+      this.store.select(fromStore.isDuplicatedEmail).subscribe(result => {
+        if (result && result > 0) {
+          this.isDuplicatedEmail = true;
+        }
+      });
+    }
+  }
 }

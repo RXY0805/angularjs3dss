@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
-import { ABNEntity } from '../models/projectContractor.model';
+// import { ABNEntity } from '../models/projectContractor.model';
 
 import { ProjectContractor } from '../models/projectContractor.model';
 @Injectable()

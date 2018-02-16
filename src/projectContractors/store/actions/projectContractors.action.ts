@@ -49,6 +49,7 @@ export class InviteContractorsFail implements Action {
   readonly type = INVITE_CONTRACTORS_FAIL;
   constructor(public payload: any) {}
 }
+
 // action types
 export type ProjectContractorsAction =
   | LoadProjectContractors
