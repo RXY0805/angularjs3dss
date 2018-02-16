@@ -12,7 +12,7 @@ import * as fromServices from '../../services';
 export class CompanyEffects {
   constructor(
     private actions$: Actions,
-    private searchABNService: fromServices.SearchABNService
+    private searchABNService: fromServices.CompanyService
   ) {}
 
   @Effect()

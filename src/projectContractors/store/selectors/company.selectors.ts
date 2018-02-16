@@ -19,3 +19,8 @@ export const getCompanyEmail = createSelector(
   getCompanyState,
   fromCompany.getCompanyEmail
 );
+
+export const getCompanyABN = createSelector(
+  getCompanyState,
+  fromCompany.getCompanyABN
+);

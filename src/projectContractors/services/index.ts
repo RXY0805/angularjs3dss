@@ -1,7 +1,7 @@
 import { ProjectContractorsService } from './projectContractors.service';
-import { SearchABNService } from './searchABN.service';
+import { CompanyService } from './company.service';
 
-export const services: any[] = [ProjectContractorsService, SearchABNService];
+export const services: any[] = [ProjectContractorsService, CompanyService];
 
 export * from './projectContractors.service';
-export * from './searchABN.service';
+export * from './company.service';

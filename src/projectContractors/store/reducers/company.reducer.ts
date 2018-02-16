@@ -25,6 +25,7 @@ export function reducer(
     case fromCompany.SEARCH_ABN: {
       return {
         ...state,
+        abn: action.payload,
         searching: true
       };
     }
@@ -62,3 +63,4 @@ export const getTradingEntity = (state: CompanyState) => state.tradingEntity;
 export const getSearchABNSearching = (state: CompanyState) => state.searching;
 export const getSearchABNSearched = (state: CompanyState) => state.searched;
 export const getCompanyEmail = (state: CompanyState) => state.email;
+export const getCompanyABN = (state: CompanyState) => state.abn;

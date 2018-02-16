@@ -6,11 +6,10 @@ import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
-// import { ABNEntity } from '../models/projectContractor.model';
 
 import { ProjectContractor } from '../models/projectContractor.model';
 @Injectable()
-export class SearchABNService {
+export class CompanyService {
   private ABN_API_PATH = 'http://abr.business.gov.au/json/AbnDetails.aspx?&';
   private authGuid = 'acb92423-c0bc-42b0-a248-5110fa241e6c';
 

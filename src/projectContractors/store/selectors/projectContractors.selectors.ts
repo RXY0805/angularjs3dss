@@ -87,9 +87,8 @@ export const isDuplicatedEmail = createSelector(
   getAllProjectContractors,
   fromCompanySelectors.getCompanyEmail,
   (entities, email) => {
-    console.log('total companies length' + entities.length + ' ' + email);
-    return (
-      entities
+    if (email && email.length) {
+      return entities
         .map(x => x.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
@@ -97,10 +96,12 @@ export const isDuplicatedEmail = createSelector(
         .map(result => {
           return result.company;
         })
-        .filter(c => c.email === email)
-        //.filter(c => c.email.toLo.toLowerwerCase().trim() === email.toLowerCase().trim())
-        .map(c => c.id)
-    );
+        .filter(
+          c => c.email.toLowerCase().trim() === email.toLowerCase().trim()
+        )
+        .map(c => c.id);
+    }
+    return null;
   }
 );
 

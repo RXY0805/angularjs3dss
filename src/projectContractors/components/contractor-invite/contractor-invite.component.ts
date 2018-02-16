@@ -86,8 +86,8 @@ export class ContractorInviteDialogComponent implements OnInit {
 
   public duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
-  isDuplicatedEmail: boolean;
-
+  duplicatedEmail$: any;
+  lastABN: string;
   selectedProject$: Observable<Project>;
 
   emailFormControl = new FormControl('', [
@@ -117,15 +117,22 @@ export class ContractorInviteDialogComponent implements OnInit {
         : '';
     });
 
+    this.store.select(fromStore.getCompanyABN).subscribe(abn => {
+      this.lastABN = abn;
+    });
+    this.duplicatedEmail$ = this.store.select(fromStore.isDuplicatedEmail);
+
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
   onNoClick(): void {
     this.dialogRef.close();
   }
   onABNLookup() {
-    this.store.dispatch(
-      new fromStore.SearchABN(this.companyABNFormControl.value)
-    );
+    if (this.lastABN !== this.companyABNFormControl.value) {
+      this.store.dispatch(
+        new fromStore.SearchABN(this.companyABNFormControl.value)
+      );
+    }
   }
   getInvitedContractorIds(invitedContractorIds) {
     this.invitation.existContractIds = invitedContractorIds;
@@ -146,14 +153,8 @@ export class ContractorInviteDialogComponent implements OnInit {
 
   onDuplicatedEmailCheck(value) {
     if (!this.emailFormControl.errors) {
-      this.isDuplicatedEmail = false;
       this.invitation.newCompanyEmail = value;
       this.store.dispatch(new fromStore.SetCompanyEmail(value));
-      this.store.select(fromStore.isDuplicatedEmail).subscribe(result => {
-        if (result && result > 0) {
-          this.isDuplicatedEmail = true;
-        }
-      });
     }
   }
 }

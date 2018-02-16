@@ -42,12 +42,12 @@
                 </mat-card-content>
             </mat-card>
             <div>
-                duplicated email: {{isDuplicatedEmail}}
+                duplicated email: {{(duplicatedEmail$|async)}}
             </div>
+            <!-- "emailFormControl.hasError('email') || emailFormControl.hasError('required') || -->
             <div class="button-group">
                 <button class="mat-button-left" mat-button (click)="onNoClick()">No Thanks</button>
-                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="emailFormControl.hasError('email') || emailFormControl.hasError('required') || isExistedEmail"
-                    [mat-dialog-close]="data.invitation">Send Invitation</button>
+                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
             </div>
         </mat-tab>
     </mat-tab-group>
