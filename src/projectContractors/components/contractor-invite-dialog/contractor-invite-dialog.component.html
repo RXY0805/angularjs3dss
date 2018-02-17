@@ -16,21 +16,24 @@
                 <mat-card-header>
                 </mat-card-header>
                 <mat-card-content>
-                    <form class="newContractorForm" layout-align="center center">
+                    <form [formGroup]="companyForm" layout-align="center center">
                         <mat-form-field class="full-width">
-                            <input matInput placeholder="Enter Company Email" (change)="onDuplicatedEmailCheck($event.target.value)" [formControl]="emailFormControl"
+                            <input matInput placeholder="Enter Company Email" type="email" (change)="onDuplicatedEmailCheck($event.target.value)" formControlName="email"
                                 (keyup)="onDuplicatedEmailCheck($event.target.value)" required>
                             <!-- <mat-hint class="error-message" *ngIf="isExistedEmail">The email is existed in 3DSS</mat-hint> -->
-                            <mat-error *ngIf="emailFormControl.invalid">{{getErrorMessage()}}</mat-error>
+                            <!-- <mat-error *ngIf="emailFormControl.invalid">{{getErrorMessage()}}</mat-error> -->
                         </mat-form-field>
                         <mat-form-field class="example-form-field">
-                            <input matInput number-only abn-validator placeholder="new company abn" [formControl]="companyABNFormControl" />
+                            <input matInput number-only placeholder="new company abn" formControlName="abn" />
                             <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
                                 <mat-icon>search</mat-icon>
                             </button>
 
                         </mat-form-field>
-
+                        <div *ngIf="abn.errors&&(abn.dirty||abn.touched)">
+                            <p *ngIf="abn.errors.required">New company abn is required</p>
+                            <p *ngIf="abn.errors.invalidABN">INVALID New company abn</p>
+                        </div>
                         <!-- *ngIf="invitation.newCompanyABN" -->
                         <div>
                             <mat-input-container>

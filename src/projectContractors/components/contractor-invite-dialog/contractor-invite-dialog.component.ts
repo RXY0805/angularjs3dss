@@ -13,43 +13,67 @@ import {
   OnInit
 } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { FormControl, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl
+} from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/projectContractor.model';
-import { FormBuilder } from '@angular/forms/src/form_builder';
+
+function abnValidator(c: FormControl) {
+  const abn = c.value.replace(/[^\d]/, '');
+  const weights = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+
+  if (abn.length === 11) {
+    let sum = 0;
+
+    for (let index = 0; index <= weights.length - 1; index++) {
+      const weight = weights[index];
+      const digit = abn[index] - (index ? 0 : 1);
+      sum += weight * digit;
+    }
+
+    if (sum % 89 === 0) {
+      return null;
+    } else {
+      return {
+        invalidABN: { invalidABN: abn }
+      };
+    }
+  }
+
+  // else{
+  //   return validABN : {parsedABN: abn; }
+  // }
+}
 
 @Component({
   styleUrls: ['contractor-invite-dialog.component.css'],
   templateUrl: 'contractor-invite-dialog.component.html'
 })
 export class ContractorInviteDialogComponent implements OnInit {
-  public noneContractInvited: boolean;
+  companyForm: FormGroup;
+  email: FormControl;
+  abn: FormControl;
+  noneContractInvited: boolean;
 
-  public duplicatedContractorIds: string[] = [];
+  duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
   isDuplicatedEmail: boolean;
   lastABN: string;
   selectedProject$: Observable<Project>;
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email
-  ]);
-
-  companyABNFormControl = new FormControl('', [
-    Validators.required,
-    Validators.maxLength(11),
-    Validators.minLength(11)
-  ]);
-
   constructor(
     public dialogRef: MatDialogRef<ContractorInviteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public store: Store<fromStore.ProjectContractorsState>
+    public store: Store<fromStore.ProjectContractorsState>,
+    public form: FormBuilder
   ) {
     this.noneContractInvited = true;
 
@@ -57,6 +81,9 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.isDuplicatedEmail = false;
   }
   ngOnInit() {
+    this.createFormControls();
+    this.createForm();
+
     this.store.select(fromStore.getTradingEntity).subscribe(tradingEntity => {
       this.invitation.newCompanyName = tradingEntity
         ? tradingEntity.EntityName
@@ -73,13 +100,27 @@ export class ContractorInviteDialogComponent implements OnInit {
 
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
+  public createFormControls() {
+    this.email = new FormControl('', Validators.required);
+    this.abn = new FormControl('', [
+      Validators.required,
+      Validators.minLength(11),
+      abnValidator
+    ]);
+  }
+  public createForm() {
+    this.companyForm = new FormGroup({
+      email: this.email,
+      abn: this.abn
+    });
+  }
   onNoClick(): void {
     this.dialogRef.close();
   }
   onABNLookup() {
-    if (this.lastABN !== this.companyABNFormControl.value) {
+    if (this.lastABN !== this.companyForm.controls.abn.value) {
       this.store.dispatch(
-        new fromStore.SearchABN(this.companyABNFormControl.value)
+        new fromStore.SearchABN(this.companyForm.controls.abn.value)
       );
     }
   }
@@ -87,11 +128,11 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.invitation.existContractIds = invitedContractorIds;
     this.noneContractInvited = !this.invitation.existContractIds.length;
   }
-  getErrorMessage() {
-    return this.emailFormControl.hasError('required')
-      ? 'You must enter a value'
-      : this.emailFormControl.hasError('email') ? 'Not a valid email' : '';
-  }
+  //   getErrorMessage() {
+  //     return this.emailFormControl.hasError('required')
+  //       ? 'You must enter a value'
+  //       : this.emailFormControl.hasError('email') ? 'Not a valid email' : '';
+  //   }
   // onInvitation(): void {
   // dispatch create invitation action then post data to web api
   // alert("please check console log");
@@ -101,7 +142,7 @@ export class ContractorInviteDialogComponent implements OnInit {
   // }
 
   onDuplicatedEmailCheck(value) {
-    if (!this.emailFormControl.errors) {
+    if (!this.companyForm.controls.email.errors) {
       this.invitation.newCompanyEmail = value;
       this.store.dispatch(new fromStore.SetCompanyEmail(value));
     }
