@@ -25,33 +25,7 @@ import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/projectContractor.model';
-
-function abnValidator(c: FormControl) {
-  const abn = c.value.replace(/[^\d]/, '');
-  const weights = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-
-  if (abn.length === 11) {
-    let sum = 0;
-
-    for (let index = 0; index <= weights.length - 1; index++) {
-      const weight = weights[index];
-      const digit = abn[index] - (index ? 0 : 1);
-      sum += weight * digit;
-    }
-
-    if (sum % 89 === 0) {
-      return null;
-    } else {
-      return {
-        invalidABN: { invalidABN: abn }
-      };
-    }
-  }
-
-  // else{
-  //   return validABN : {parsedABN: abn; }
-  // }
-}
+import { ThreeDSSValidators } from '../../../shared/validator/threeDSSValidators';
 
 @Component({
   styleUrls: ['contractor-invite-dialog.component.css'],
@@ -105,7 +79,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.abn = new FormControl('', [
       Validators.required,
       Validators.minLength(11),
-      abnValidator
+      ThreeDSSValidators.abnValidator
     ]);
   }
   public createForm() {
