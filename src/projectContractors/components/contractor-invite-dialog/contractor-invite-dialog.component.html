@@ -24,16 +24,22 @@
                             <!-- <mat-error *ngIf="emailFormControl.invalid">{{getErrorMessage()}}</mat-error> -->
                         </mat-form-field>
                         <mat-form-field class="example-form-field">
-                            <input matInput number-only placeholder="new company abn" formControlName="abn" />
+                            <input matInput threedss-number-only placeholder="new company abn" formControlName="abn" />
                             <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
                                 <mat-icon>search</mat-icon>
                             </button>
 
                         </mat-form-field>
-                        <div *ngIf="abn.errors&&(abn.dirty||abn.touched)">
+                        <threedss-show-errors [control]="companyForm.controls.abn">
+                        </threedss-show-errors>
+                        <!-- <div *ngIf="abn.errors&&(abn.dirty||abn.touched)">
                             <p *ngIf="abn.errors.required">New company abn is required</p>
+
+                            <p *ngIf="abn.errors.minlength">
+                                Name must be at least 11 characters long.
+                            </p>
                             <p *ngIf="abn.errors.invalidABN">INVALID New company abn</p>
-                        </div>
+                        </div> -->
                         <!-- *ngIf="invitation.newCompanyABN" -->
                         <div>
                             <mat-input-container>

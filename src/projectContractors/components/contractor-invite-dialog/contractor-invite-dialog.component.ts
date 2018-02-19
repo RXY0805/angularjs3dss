@@ -79,6 +79,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.abn = new FormControl('', [
       Validators.required,
       Validators.minLength(11),
+      Validators.maxLength(11),
       ThreeDSSValidators.abnValidator
     ]);
   }

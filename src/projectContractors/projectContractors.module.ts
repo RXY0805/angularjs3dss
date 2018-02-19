@@ -22,7 +22,7 @@ import * as fromGuards from './guards';
 import * as fromServices from './services';
 
 import { NumberOnlyDirective } from '../shared/directives/numberOnlyDirective';
-// import { ABNValidatorDirective } from '../shared/validator/abn-validator';
+import { ShowErrorsComponent } from '../shared/errors/show-error.component';
 
 // routes
 export const ROUTES: Routes = [
@@ -54,7 +54,8 @@ export const ROUTES: Routes = [
   declarations: [
     ...fromContainers.containers,
     ...fromComponents.components,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    ShowErrorsComponent
   ],
   entryComponents: [fromComponents.ContractorInviteDialogComponent], //
   exports: [...fromContainers.containers, ...fromComponents.components] //

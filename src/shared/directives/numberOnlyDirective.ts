@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[number-only]'
+  selector: '[threedss-number-only]'
 })
 export class NumberOnlyDirective {
   // Allow decimal numbers and negative values

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AbstractControlDirective, AbstractControl } from '@angular/forms';
 
 @Component({
-  selector: 'show-errors',
+  selector: 'threedss-show-errors',
   template: `
     <ul *ngIf="shouldShowErrors()">
       <li style="color: red" *ngFor="let error of listOfErrors()">{{error}}</li>
@@ -16,12 +16,9 @@ export class ShowErrorsComponent {
       'The min number of characters is ' + params.requiredLength,
     maxlength: params =>
       'The max allowed number of characters is ' + params.requiredLength,
-    pattern: params => 'The required pattern is: ' + params.requiredPattern,
-    years: params => params.message,
-    countryCity: params => params.message,
-    uniqueName: params => params.message,
-    telephoneNumbers: params => params.message,
-    telephoneNumber: params => params.message
+    // pattern: params => 'The required pattern is: ' + params.requiredPattern,
+    // uniqueName: params => params.message,
+    abnValidator: params => params.message
   };
 
   @Input() private control: AbstractControlDirective | AbstractControl;
