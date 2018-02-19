@@ -3,7 +3,7 @@ import { Action } from '@ngrx/store';
 import {
   ProjectContractor,
   ProjectInvitation
-} from '../../models/projectContractor.model';
+} from '../../models/project-contractor.model';
 import { AnyFn } from '@ngrx/store/src/selector';
 
 export const LOAD_PROJECTCONTRACTORS = '[ProjectContractors] Load Contractors';

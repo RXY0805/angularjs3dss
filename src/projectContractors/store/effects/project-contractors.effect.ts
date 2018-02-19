@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { map, switchMap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 
-import * as projectContractorActions from '../actions/projectContractors.action';
+import * as projectContractorActions from '../actions/project-contractors.action';
 import * as fromServices from '../../services';
 
 @Injectable()

@@ -1,7 +1,7 @@
-import { ProjectContractorsEffects } from './projectContractors.effect';
+import { ProjectContractorsEffects } from './project-contractors.effect';
 import { CompanyEffects } from './company.effect';
 
 export const effects: any[] = [ProjectContractorsEffects, CompanyEffects];
 
-export * from './projectContractors.effect';
+export * from './project-contractors.effect';
 export * from './company.effect';

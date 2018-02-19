@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
-import { ProjectContractor } from '../models/projectContractor.model';
+import { ProjectContractor } from '../models/project-contractor.model';
 @Injectable()
 export class CompanyService {
   private ABN_API_PATH = 'http://abr.business.gov.au/json/AbnDetails.aspx?&';

@@ -1,5 +1,5 @@
 import * as fromCompany from '../actions/company.action';
-import { TradingEntity } from '../../models/tradingEntity.model';
+import { TradingEntity } from '../../models/trading-entity.model';
 
 export interface CompanyState {
   abn: string;

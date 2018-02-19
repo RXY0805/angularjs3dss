@@ -1,5 +1,5 @@
-import * as fromProjectFilters from '../actions/projectFilters.action';
-import { ProjectFilter } from '../../models/projectContractor.model';
+import * as fromProjectFilters from '../actions/project-filters.action';
+import { ProjectFilter } from '../../models/project-contractor.model';
 
 export interface ProjectFilterState {
   selectedProjectId: number;

@@ -22,9 +22,9 @@ import {
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as fromStore from '../../store';
-import { ProjectInvitation } from '../../models/projectContractor.model';
+import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
-import { Project } from '../../models/projectContractor.model';
+import { Project } from '../../models/project-contractor.model';
 import { CustomValidators } from '../../../shared/validator/custom-validators';
 
 @Component({
@@ -58,10 +58,8 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.createFormControls();
     this.createForm();
 
-    this.store.select(fromStore.getTradingEntity).subscribe(tradingEntity => {
-      this.invitation.newCompanyName = tradingEntity
-        ? tradingEntity.EntityName
-        : '';
+    this.store.select(fromStore.getTradingEntity).subscribe(result => {
+      this.invitation.tradingEntity = result ? result : null;
     });
 
     this.store.select(fromStore.getCompanyABN).subscribe(abn => {
@@ -118,7 +116,7 @@ export class ContractorInviteDialogComponent implements OnInit {
 
   onDuplicatedEmailCheck(value) {
     if (!this.companyForm.controls.email.errors) {
-      this.invitation.newCompanyEmail = value;
+      this.invitation.email = value;
       this.store.dispatch(new fromStore.SetCompanyEmail(value));
     }
   }

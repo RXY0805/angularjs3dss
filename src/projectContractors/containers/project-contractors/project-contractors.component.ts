@@ -9,7 +9,7 @@ import {
   Project,
   ContractorFilter,
   ProjectFilter
-} from '../../models/projectContractor.model';
+} from '../../models/project-contractor.model';
 import { Contractor } from '../../models/contractor.model';
 import { Company } from '../../models/company.model';
 // import { SetProjectFilter } from '../../store/actions/projectFilter.action';

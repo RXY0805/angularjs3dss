@@ -1,3 +1,3 @@
-export * from './projectContractors.action';
-export * from './projectFilters.action';
+export * from './project-contractors.action';
+export * from './project-filters.action';
 export * from './company.action';

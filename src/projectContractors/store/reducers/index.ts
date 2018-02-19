@@ -1,7 +1,7 @@
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
 
-import * as fromProjectContractors from './projectContractors.reducer';
-import * as fromProjectFilters from './projectFilter.reducer';
+import * as fromProjectContractors from './project-contractors.reducer';
+import * as fromProjectFilters from './project-filter.reducer';
 import * as fromCompany from './company.reducer';
 
 export interface ProjectContractorsState {

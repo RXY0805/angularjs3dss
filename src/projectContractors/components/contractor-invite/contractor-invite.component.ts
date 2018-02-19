@@ -18,9 +18,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import * as fromStore from '../../store';
 import { ContractorInviteDialogComponent } from '../contractor-invite-dialog/contractor-invite-dialog.component';
-import { ProjectInvitation } from '../../models/projectContractor.model';
+import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
-import { Project } from '../../models/projectContractor.model';
+import { Project } from '../../models/project-contractor.model';
 import { FormBuilder } from '@angular/forms/src/form_builder';
 
 @Component({

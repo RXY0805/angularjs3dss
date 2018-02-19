@@ -4,11 +4,11 @@ import { map, mergeAll } from 'rxjs/operators';
 
 import * as fromRoot from '../../../app/store';
 import * as fromFeature from '../reducers';
-import * as fromProjectContractors from '../reducers/projectContractors.reducer';
+import * as fromProjectContractors from '../reducers/project-contractors.reducer';
 import * as fromFiltersSelectors from './filters.selectors';
 import * as fromCompanySelectors from './company.selectors';
 
-import { ProjectContractor } from '../../models/projectContractor.model';
+import { ProjectContractor } from '../../models/project-contractor.model';
 import { Company } from '../../models/Company.model';
 import { getFilterState } from '../index';
 

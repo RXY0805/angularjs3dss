@@ -1,4 +1,5 @@
 import { Contractor } from './contractor.model';
+import { TradingEntity } from './trading-entity.model';
 
 export interface ContractorFilter {
   selectedProjectId: number;
@@ -18,9 +19,8 @@ export interface ProjectInvitation {
   id?: number;
   projectId: number;
   existContractIds?: string[];
-  newCompanyEmail?: string;
-  newCompanyABN?: string;
-  newCompanyName?: string;
+  email?: string;
+  tradingEntity?: TradingEntity;
 }
 export interface Project {
   id?: number;

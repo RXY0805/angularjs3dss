@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { tap, map, filter, take, switchMap } from 'rxjs/operators';
 import * as fromStore from '../store';
 
-import { ProjectContractor } from '../models/projectContractor.model';
+import { ProjectContractor } from '../models/project-contractor.model';
 
 @Injectable()
 export class ProjectContractorExistsGuards implements CanActivate {

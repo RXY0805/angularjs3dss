@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/observable/throw';
 
-import { ProjectContractor } from '../models/projectContractor.model';
+import { ProjectContractor } from '../models/project-contractor.model';
 @Injectable()
 export class ProjectContractorsService {
   constructor(private http: HttpClient) {}
