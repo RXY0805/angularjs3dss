@@ -28,7 +28,7 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
   // styleUrls: ['./contractor-invite.component.css'],
   templateUrl: './contractor-invite.component.html'
 })
-export class ContractorInviteComponent {
+export class ContractorInviteComponent implements OnInit {
   @Input() selectedProject: Observable<Project>;
   @Input() availableContractors: Observable<Company[]>;
   currentProject: Project;
@@ -42,11 +42,15 @@ export class ContractorInviteComponent {
     public dialog: MatDialog,
     private store: Store<fromStore.ProjectContractorsState>
   ) {}
-
-  openDialog(): void {
+  ngOnInit() {
     this.selectedProject.subscribe(x => {
       this.currentProject = x;
     });
+  }
+
+  // this.defaultPageSize = this.isCheckable ? 5:10;
+
+  openDialog(): void {
     // this.availableContractors.subscribe(x => {
     //   this.currentAvailableContractors = x;
     // });

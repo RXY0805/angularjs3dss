@@ -1,6 +1,5 @@
-import { ProjectContractorsComponent } from './projectContractors/projectContractors.component';
+import { ProjectContractorsComponent } from './project-contractors/project-contractors.component';
 
 export const containers: any[] = [ProjectContractorsComponent];
 
-export * from './projectContractors/projectContractors.component';
-
+export * from './project-contractors/project-contractors.component';

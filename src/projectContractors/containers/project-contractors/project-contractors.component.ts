@@ -17,8 +17,8 @@ import { Company } from '../../models/company.model';
 @Component({
   selector: 'app-project-contractors',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['projectContractors.component.css'],
-  templateUrl: './projectContractors.component.html'
+  styleUrls: ['project-contractors.component.css'],
+  templateUrl: './project-contractors.component.html'
 })
 export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
