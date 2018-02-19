@@ -30,6 +30,8 @@ export class CompanyDatabase {
       );
 
       this.dataChange.next(uniqueCompanyList);
+    } else {
+      this.dataChange.next(null);
     }
   }
 
