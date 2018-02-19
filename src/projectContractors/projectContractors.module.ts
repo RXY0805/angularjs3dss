@@ -21,7 +21,7 @@ import * as fromGuards from './guards';
 // services
 import * as fromServices from './services';
 
-import { NumberOnlyDirective } from '../shared/directives/numberOnlyDirective';
+import { NumberOnlyDirective } from '../shared/directives/number-only';
 import { ShowErrorsComponent } from '../shared/errors/show-error.component';
 
 // routes

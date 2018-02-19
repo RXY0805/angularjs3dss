@@ -6,7 +6,7 @@ import {
 } from '@angular/forms';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
-export class ThreeDSSValidators {
+export class CustomValidators {
   static abnValidator(c: FormControl): ValidationErrors {
     const abn = c.value.replace(/[^\d]/, '');
     const weights = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];

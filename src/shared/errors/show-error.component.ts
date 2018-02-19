@@ -12,10 +12,12 @@ import { AbstractControlDirective, AbstractControl } from '@angular/forms';
 export class ShowErrorsComponent {
   private static readonly errorMessages = {
     required: () => 'This field is required',
+    email: () => 'invalid email format',
     minlength: params =>
       'The min number of characters is ' + params.requiredLength,
     maxlength: params =>
       'The max allowed number of characters is ' + params.requiredLength,
+
     // pattern: params => 'The required pattern is: ' + params.requiredPattern,
     // uniqueName: params => params.message,
     abnValidator: params => params.message

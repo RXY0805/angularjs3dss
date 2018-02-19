@@ -25,7 +25,7 @@ import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/projectContractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/projectContractor.model';
-import { ThreeDSSValidators } from '../../../shared/validator/threeDSSValidators';
+import { CustomValidators } from '../../../shared/validator/custom-validators';
 
 @Component({
   styleUrls: ['contractor-invite-dialog.component.css'],
@@ -75,12 +75,12 @@ export class ContractorInviteDialogComponent implements OnInit {
     // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
   public createFormControls() {
-    this.email = new FormControl('', Validators.required);
+    this.email = new FormControl('', [Validators.required, Validators.email]);
     this.abn = new FormControl('', [
       Validators.required,
       Validators.minLength(11),
       Validators.maxLength(11),
-      ThreeDSSValidators.abnValidator
+      CustomValidators.abnValidator
     ]);
   }
   public createForm() {

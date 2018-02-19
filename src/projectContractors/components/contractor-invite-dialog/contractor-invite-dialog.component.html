@@ -2,7 +2,6 @@
 
 
 <div mat-dialog-content>
-
     <mat-tab-group>
         <mat-tab label="exist contracts">
             <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable"></app-contractor-list>
@@ -19,10 +18,11 @@
                     <form [formGroup]="companyForm" layout-align="center center">
                         <mat-form-field class="full-width">
                             <input matInput placeholder="Enter Company Email" type="email" (change)="onDuplicatedEmailCheck($event.target.value)" formControlName="email"
-                                (keyup)="onDuplicatedEmailCheck($event.target.value)" required>
-                            <!-- <mat-hint class="error-message" *ngIf="isExistedEmail">The email is existed in 3DSS</mat-hint> -->
-                            <!-- <mat-error *ngIf="emailFormControl.invalid">{{getErrorMessage()}}</mat-error> -->
+                                (keyup)="onDuplicatedEmailCheck($event.target.value)">
                         </mat-form-field>
+                        <threedss-show-errors [control]="companyForm.controls.email">
+                        </threedss-show-errors>
+                        <mat-error *ngIf="isDuplicatedEmail">The email is existed in 3DSS</mat-error>
                         <mat-form-field class="example-form-field">
                             <input matInput threedss-number-only placeholder="new company abn" formControlName="abn" />
                             <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
@@ -32,33 +32,18 @@
                         </mat-form-field>
                         <threedss-show-errors [control]="companyForm.controls.abn">
                         </threedss-show-errors>
-                        <!-- <div *ngIf="abn.errors&&(abn.dirty||abn.touched)">
-                            <p *ngIf="abn.errors.required">New company abn is required</p>
-
-                            <p *ngIf="abn.errors.minlength">
-                                Name must be at least 11 characters long.
-                            </p>
-                            <p *ngIf="abn.errors.invalidABN">INVALID New company abn</p>
-                        </div> -->
-                        <!-- *ngIf="invitation.newCompanyABN" -->
                         <div>
                             <mat-input-container>
-
                                 <input matInput name="newCompanyName" [(ngModel)]="invitation.newCompanyName" disabled>
                             </mat-input-container>
                         </div>
                     </form>
                 </mat-card-content>
             </mat-card>
-            <div>
-                duplicated email: {{isDuplicatedEmail}}
-            </div>
-            <!-- "emailFormControl.hasError('email') || emailFormControl.hasError('required') || -->
             <div class="button-group">
                 <button class="mat-button-left" mat-button (click)="onNoClick()">No Thanks</button>
-                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
+                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="companyForm.invalid || isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
             </div>
         </mat-tab>
     </mat-tab-group>
-
 </div>
