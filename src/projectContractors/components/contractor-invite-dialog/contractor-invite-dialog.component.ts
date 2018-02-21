@@ -97,22 +97,20 @@ export class ContractorInviteDialogComponent implements OnInit {
       );
     }
   }
-  getInvitedContractorIds(invitedContractorIds) {
-    this.invitation.existContractIds = invitedContractorIds;
-    this.noneContractInvited = !this.invitation.existContractIds.length;
-  }
-  //   getErrorMessage() {
-  //     return this.emailFormControl.hasError('required')
-  //       ? 'You must enter a value'
-  //       : this.emailFormControl.hasError('email') ? 'Not a valid email' : '';
-  //   }
-  // onInvitation(): void {
-  // dispatch create invitation action then post data to web api
-  // alert("please check console log");
-  // console.log(this.invitation);
-  // debugger;
-  // this.store.dispatch(new projectInvitationActions.Create(this.invitation));
+  // getInvitedContractorIds(invitedContractorIds) {
+  //   this.invitation.existContractIds = invitedContractorIds;
+  //   this.noneContractInvited = !this.invitation.existContractIds.length;
   // }
+  onToggleSelectedCompanies(event) {
+    console.log(event);
+  }
+  onInvitation(): void {
+    console.log(this.invitation);
+
+    this.store.dispatch(
+      new fromStore.InviteExistCompaniesSuccess(this.invitation)
+    );
+  }
 
   onDuplicatedEmailCheck(value) {
     if (!this.companyForm.controls.email.errors) {

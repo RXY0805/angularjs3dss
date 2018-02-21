@@ -2,8 +2,10 @@ import {
   ChangeDetectionStrategy,
   Component,
   ViewChild,
+  EventEmitter,
   ElementRef,
   Input,
+  Output,
   OnInit
 } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
@@ -28,6 +30,11 @@ import { CompanyDatabase, CompanyDataSource } from './company.datasource';
 export class ContractorListComponent implements OnInit {
   @Input() contractors: Observable<Company[]>;
   @Input() isCheckable: boolean;
+  @Output()
+  toggleSelectedCompanies: EventEmitter<any> = new EventEmitter<{
+    any;
+  }>();
+
   private companyData: Company[] = [];
   displayedColumns = ['select', 'id', 'name', 'email'];
   selection = new SelectionModel<number>(true, []);
@@ -35,14 +42,16 @@ export class ContractorListComponent implements OnInit {
   public companyDatabase: CompanyDatabase;
   public dataSource: CompanyDataSource | null;
   public defaultPageSize: number;
+  public selectedCompanies: Company[];
   public dataLength: number;
   currentFilter: string;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('filter') filter: ElementRef;
-  private paginatorSubscription: Subscription = Subscription.EMPTY;
-  private sortSubscription: Subscription = Subscription.EMPTY;
-  private query: string;
+  // private paginatorSubscription: Subscription = Subscription.EMPTY;
+  // private sortSubscription: Subscription = Subscription.EMPTY;
+  // private query: string;
   // companysTrackByFn = (index: string, company: Company) =>
   //   company.id.toString();
 
@@ -114,5 +123,25 @@ export class ContractorListComponent implements OnInit {
     } else {
       this.companyDatabase.data.forEach(data => this.selection.select(data.id));
     }
+  }
+
+  onToggleSelectedCompanies(id, name) {
+    let index = -1;
+
+    if (this.selectedCompanies) {
+      index = this.selectedCompanies.indexOf(id);
+    }
+
+    if (index < 0) {
+      const selectedCompany: Company = {
+        id: id,
+        name: name
+      };
+      this.selectedCompanies.push(selectedCompany);
+    } else {
+      this.selectedCompanies.splice(index, 1);
+    }
+    alert('toggle selected' + this.selectedCompanies.length);
+    this.toggleSelectedCompanies.emit(this.selectedCompanies);
   }
 }

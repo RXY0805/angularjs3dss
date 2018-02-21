@@ -64,16 +64,16 @@ export function reducer(
       };
     }
     case fromProjectContractors.INVITE_EXIST_COMPANIES: {
-      const projectInvitation = action.payload;
-      for (let i = 0; i < projectInvitation.existContractIds.length; i++) {}
+      // const projectInvitation = action.payload;
+      // for (let i = 0; i < projectInvitation.existContractIds.length; i++) {}
 
       // invite existed companies
       return state;
     }
     case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
       const projectId = action.payload.projectId;
+      const existedCompanies = action.payload.existCompanies;
 
-      const existedCompanies = action.payload.existedCompanies;
       for (let i = 0; i < existedCompanies.length; i++) {
         const newContractor: Contractor = {
           company: existedCompanies[i],

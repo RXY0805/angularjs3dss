@@ -1,4 +1,5 @@
 import { Contractor } from './contractor.model';
+import { Company } from './company.model';
 import { TradingEntity } from './trading-entity.model';
 
 export interface ContractorFilter {
@@ -24,4 +25,11 @@ export interface ProjectContractor {
   id: number;
   project: Project;
   contractors: Contractor[];
+}
+export interface ProjectInvitation {
+  projectId: number;
+  existCompanies?: Company[];
+  email?: string;
+  abn?: string;
+  tradingEntity?: TradingEntity;
 }
