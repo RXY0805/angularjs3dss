@@ -58,16 +58,8 @@ export class ContractorListComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     this.contractors.subscribe(res => {
-      if (this.currentFilter) {
-        this.dataLength = res.filter((item: Company) => {
-          const searchContent = (item.name + item.email).toLowerCase();
-          return searchContent.indexOf(this.currentFilter.toLowerCase()) !== -1;
-        }).length;
-      } else {
-        this.dataLength = res && res.length ? res.length : 0;
-      }
-
       this.companyDatabase = new CompanyDatabase(this.contractors);
+
       this.dataSource = new CompanyDataSource(
         this.companyDatabase,
         this.paginator,
@@ -75,6 +67,15 @@ export class ContractorListComponent implements OnInit {
       );
       if (this.currentFilter) {
         this.dataSource.filter = this.currentFilter;
+        this.dataLength = res.filter((item: Company) => {
+          const searchContent = (item.name + item.email).toLowerCase();
+          return searchContent.indexOf(this.currentFilter.toLowerCase()) !== -1;
+        }).length;
+      } else {
+        this.dataLength =
+          this.companyDatabase.data && this.companyDatabase.data.length
+            ? this.companyDatabase.data.length
+            : 0;
       }
     });
 
