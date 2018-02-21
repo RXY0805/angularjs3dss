@@ -15,13 +15,6 @@ export interface ProjectFilter {
   isAuditStatus: boolean;
 }
 
-export interface ProjectInvitation {
-  id?: number;
-  projectId: number;
-  existContractIds?: string[];
-  email?: string;
-  tradingEntity?: TradingEntity;
-}
 export interface Project {
   id?: number;
   name: string;

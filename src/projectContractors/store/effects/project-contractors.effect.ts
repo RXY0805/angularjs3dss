@@ -35,4 +35,25 @@ export class ProjectContractorsEffects {
           );
       })
     );
+
+  // @Effect()
+  // inviteExistCompanies$ = this.actions$
+  //   .ofType(projectContractorActions.INVITE_EXIST_COMPANIES)
+  //   .pipe(
+  //     switchMap((action: projectContractorActions.InviteExistCompanies) => {
+  //       return this.projectContractorService
+  //         .inviteExistCompanies(action.payload)
+  //         .pipe(
+  //           map(
+  //             projectContractors =>
+  //               new projectContractorActions.InviteExistCompaniesSuccess(
+  //                 projectContractors
+  //               )
+  //           ),
+  //           catchError(error =>
+  //             of(new projectContractorActions.InviteExistCompaniesFail(error))
+  //           )
+  //         );
+  //     })
+  //   );
 }

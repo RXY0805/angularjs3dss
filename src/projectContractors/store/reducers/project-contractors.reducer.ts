@@ -1,5 +1,11 @@
 import * as fromProjectContractors from '../actions/project-contractors.action';
 import { ProjectContractor } from '../../models/project-contractor.model';
+import {
+  Contractor,
+  ContractorStatus,
+  defaultContractorStatus
+} from '../../models/contractor.model';
+import { Company } from '../../models/company.model';
 
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
@@ -57,7 +63,27 @@ export function reducer(
         loaded: false
       };
     }
-    case fromProjectContractors.INVITE_CONTRACTORS: {
+    case fromProjectContractors.INVITE_EXIST_COMPANIES: {
+      const projectInvitation = action.payload;
+      for (let i = 0; i < projectInvitation.existContractIds.length; i++) {}
+
+      // invite existed companies
+      return state;
+    }
+    case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
+      const projectId = action.payload.projectId;
+
+      const existedCompanies = action.payload.existedCompanies;
+      for (let i = 0; i < existedCompanies.length; i++) {
+        const newContractor: Contractor = {
+          company: existedCompanies[i],
+          status: defaultContractorStatus
+        };
+        Object.assign({}, state.entities[projectId], {
+          contractors: [...state.entities[projectId].contractors, newContractor]
+        });
+      }
+      alert(state.entities[projectId].contractors.length);
       return state;
     }
   }
