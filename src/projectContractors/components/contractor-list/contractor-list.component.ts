@@ -35,7 +35,8 @@ export class ContractorListComponent implements OnInit {
   public companyDatabase: CompanyDatabase;
   public dataSource: CompanyDataSource | null;
   public defaultPageSize: number;
-
+  public dataLength: number;
+  currentFilter: string;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('filter') filter: ElementRef;
@@ -49,12 +50,16 @@ export class ContractorListComponent implements OnInit {
   ngOnInit() {
     // this.defaultPageSize = this.isCheckable ? 5:10;
 
-    this.companyDatabase = new CompanyDatabase(this.contractors);
-    this.dataSource = new CompanyDataSource(
-      this.companyDatabase,
-      this.paginator,
-      this.sort
-    );
+    this.contractors.subscribe(res => {
+      this.dataLength = res && res.length ? res.length : 0;
+      this.companyDatabase = new CompanyDatabase(this.contractors);
+      this.dataSource = new CompanyDataSource(
+        this.companyDatabase,
+        this.paginator,
+        this.sort
+      );
+    });
+
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
       .debounceTime(150)
       .distinctUntilChanged()
@@ -63,6 +68,8 @@ export class ContractorListComponent implements OnInit {
           return;
         }
         this.dataSource.filter = this.filter.nativeElement.value;
+        this.currentFilter = this.filter.nativeElement.value;
+        this.dataLength = this.dataSource.filteredData.length;
       });
   }
   isAllSelected(): boolean {

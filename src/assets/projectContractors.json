@@ -1,5 +1,28 @@
 [
   {
+    "id": 100,
+    "project": {
+      "id": 100,
+      "name": "A100 testing site"
+    },
+    "contractors": [
+      {
+        "company": {
+          "id": 123456,
+          "name": "wade testing limited",
+          "email": "wr@marr.com.au",
+          "onSite": true,
+          "auditStatus": true
+        },
+        "status": {
+          "id": 5,
+          "description": "terminated"
+        }
+      }
+    ]
+  },
+
+  {
     "id": 1684,
     "project": {
       "id": 1684,
@@ -28,7 +51,7 @@
           "auditStatus": true
         },
         "status": {
-          "id": 1,
+          "id": 5,
           "description": "ACCEPTED"
         }
       },
@@ -54,7 +77,7 @@
           "auditStatus": true
         },
         "status": {
-          "id": 3,
+          "id": 5,
           "description": "ACCEPTED"
         }
       },
