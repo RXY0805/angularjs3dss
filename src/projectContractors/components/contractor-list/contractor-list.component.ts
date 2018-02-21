@@ -48,16 +48,25 @@ export class ContractorListComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {
-    // this.defaultPageSize = this.isCheckable ? 5:10;
-
     this.contractors.subscribe(res => {
-      this.dataLength = res && res.length ? res.length : 0;
+      if (this.currentFilter) {
+        this.dataLength = res.filter((item: Company) => {
+          const searchContent = (item.name + item.email).toLowerCase();
+          return searchContent.indexOf(this.currentFilter.toLowerCase()) !== -1;
+        }).length;
+      } else {
+        this.dataLength = res && res.length ? res.length : 0;
+      }
+
       this.companyDatabase = new CompanyDatabase(this.contractors);
       this.dataSource = new CompanyDataSource(
         this.companyDatabase,
         this.paginator,
         this.sort
       );
+      if (this.currentFilter) {
+        this.dataSource.filter = this.currentFilter;
+      }
     });
 
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
