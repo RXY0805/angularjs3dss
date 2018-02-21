@@ -26,8 +26,8 @@
         </ng-container>
         <!-- Name Column -->
         <ng-container matColumnDef="id">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+            <mat-header-cell hidden="!isCheckable" *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+            <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.id}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="name">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
