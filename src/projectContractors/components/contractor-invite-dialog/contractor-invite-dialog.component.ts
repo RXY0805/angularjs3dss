@@ -42,6 +42,7 @@ export class ContractorInviteDialogComponent implements OnInit {
   isDuplicatedEmail: boolean;
   lastABN: string;
   selectedProject$: Observable<Project>;
+  noneCompanyInvited: boolean;
 
   constructor(
     public dialogRef: MatDialogRef<ContractorInviteDialogComponent>,
@@ -49,8 +50,6 @@ export class ContractorInviteDialogComponent implements OnInit {
     public store: Store<fromStore.ProjectContractorsState>,
     public form: FormBuilder
   ) {
-    this.noneContractInvited = true;
-
     this.invitation = data.invitation;
     this.isDuplicatedEmail = false;
   }
@@ -102,13 +101,13 @@ export class ContractorInviteDialogComponent implements OnInit {
   //   this.noneContractInvited = !this.invitation.existContractIds.length;
   // }
   onToggleSelectedCompanies(event) {
-    event.forEach(element => {
-      console.log(element);
-    });
+    this.invitation.existCompanies = event;
+    this.noneCompanyInvited = event === null;
+    // event.forEach(element => {
+    //   console.log(element);
+    // });
   }
   onInvitation(): void {
-    console.log(this.invitation);
-
     this.store.dispatch(
       new fromStore.InviteExistCompaniesSuccess(this.invitation)
     );

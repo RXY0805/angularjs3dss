@@ -7,7 +7,9 @@
             <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable" (toggleSelectedCompanies)="onToggleSelectedCompanies($event)"></app-contractor-list>
             <div class="button-group">
                 <button class="mat-button-left" mat-raised-button (click)="onNoClick()">No Thanks</button>
-                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="noneContractInvited" [mat-dialog-close]="data.invitation">Invite</button>
+                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="noneCompanyInvited" (click)="onInvitation()"
+                    [mat-dialog-close]="data.invitation">Invite</button>
+                <!-- [disabled]="noneCompanyInvited" -->
             </div>
         </mat-tab>
         <mat-tab label="New company">

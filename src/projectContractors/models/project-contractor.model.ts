@@ -26,6 +26,7 @@ export interface ProjectContractor {
   project: Project;
   contractors: Contractor[];
 }
+
 export interface ProjectInvitation {
   projectId: number;
   existCompanies?: Company[];

@@ -73,17 +73,30 @@ export function reducer(
     case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
       const projectId = action.payload.projectId;
       const existedCompanies = action.payload.existCompanies;
+      // state.entities.m
+      // alert(state.entities.projectContractor.length);
+      const currentProject = {
+        ...state.entities[action.payload.projectId]
+        // [action.payload.projectId]: action.payload
+      };
+      console.log(currentProject);
 
       for (let i = 0; i < existedCompanies.length; i++) {
         const newContractor: Contractor = {
+          id: existedCompanies[i].id,
           company: existedCompanies[i],
           status: defaultContractorStatus
         };
-        Object.assign({}, state.entities[projectId], {
-          contractors: [...state.entities[projectId].contractors, newContractor]
-        });
+
+        // return {
+        //   //state.entities: [action.payload.projectId].
+        // };
+        // Object.assign({}, state.entities[projectId], {
+        //   contractors: [...state.entities[projectId].contractors, newContractor]
+        // });
       }
-      alert(state.entities[projectId].contractors.length);
+
+      // alert(state.entities[projectId].contractors.length);
       return state;
     }
   }

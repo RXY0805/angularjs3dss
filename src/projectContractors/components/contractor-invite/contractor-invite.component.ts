@@ -33,8 +33,6 @@ export class ContractorInviteComponent implements OnInit {
   @Input() availableContractors: Observable<Company[]>;
   currentProject: Project;
   invitation: ProjectInvitation = {
-    // existCompanies: (Company[] = []),
-
     projectId: 0
   };
 
