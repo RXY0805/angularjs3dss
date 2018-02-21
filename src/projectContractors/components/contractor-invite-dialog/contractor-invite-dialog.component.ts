@@ -102,7 +102,9 @@ export class ContractorInviteDialogComponent implements OnInit {
   //   this.noneContractInvited = !this.invitation.existContractIds.length;
   // }
   onToggleSelectedCompanies(event) {
-    console.log(event);
+    event.forEach(element => {
+      console.log(element);
+    });
   }
   onInvitation(): void {
     console.log(this.invitation);

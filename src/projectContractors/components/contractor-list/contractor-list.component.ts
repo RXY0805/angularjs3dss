@@ -42,7 +42,7 @@ export class ContractorListComponent implements OnInit {
   public companyDatabase: CompanyDatabase;
   public dataSource: CompanyDataSource | null;
   public defaultPageSize: number;
-  public selectedCompanies: Company[];
+  public selectedCompanies: Company[] = [];
   public dataLength: number;
   currentFilter: string;
 
@@ -117,11 +117,15 @@ export class ContractorListComponent implements OnInit {
     if (this.isAllSelected()) {
       this.selection.clear();
     } else if (this.filter.nativeElement.value) {
-      this.dataSource.filteredData.forEach(data =>
-        this.selection.select(data.id)
-      );
+      this.dataSource.filteredData.forEach(data => {
+        this.selection.select(data.id);
+        this.onToggleSelectedCompanies(data.id, data.name);
+      });
     } else {
-      this.companyDatabase.data.forEach(data => this.selection.select(data.id));
+      this.companyDatabase.data.forEach(data => {
+        this.selection.select(data.id);
+        this.onToggleSelectedCompanies(data.id, data.name);
+      });
     }
   }
 
@@ -129,19 +133,22 @@ export class ContractorListComponent implements OnInit {
     let index = -1;
 
     if (this.selectedCompanies) {
-      index = this.selectedCompanies.indexOf(id);
+      index = this.selectedCompanies
+        .map(function(c) {
+          return c.id;
+        })
+        .indexOf(id);
     }
 
     if (index < 0) {
-      const selectedCompany: Company = {
+      const company: Company = {
         id: id,
         name: name
       };
-      this.selectedCompanies.push(selectedCompany);
+      this.selectedCompanies.push(company);
     } else {
       this.selectedCompanies.splice(index, 1);
     }
-    alert('toggle selected' + this.selectedCompanies.length);
     this.toggleSelectedCompanies.emit(this.selectedCompanies);
   }
 }

@@ -19,7 +19,7 @@
                 <label *ngIf="!isCheckable"></label>
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-checkbox *ngIf="isCheckable" (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null;toggleSelectedCompanies(row.id, row.name)"
+                <mat-checkbox *ngIf="isCheckable" (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null;onToggleSelectedCompanies(row.id, row.name)"
                     [checked]="selection.isSelected(row.id)">&nbsp;
                 </mat-checkbox>
             </mat-cell>
