@@ -30,10 +30,10 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
 })
 export class ContractorInviteComponent implements OnInit {
   @Input() selectedProject: Observable<Project>;
-  @Input() availableContractors: Observable<Company[]>;
+  availableContractors$: Observable<Company[]>;
   currentProject: Project;
   invitation: ProjectInvitation;
-
+  currentAvailableContractors: Company[];
   // @Input() selectedProjectId: number;
   constructor(
     public dialog: MatDialog,
@@ -48,17 +48,22 @@ export class ContractorInviteComponent implements OnInit {
   // this.defaultPageSize = this.isCheckable ? 5:10;
 
   openDialog(): void {
-    // this.availableContractors.subscribe(x => {
+    this.availableContractors$ = this.store.select(
+      fromStore.getAvailableContractors
+    );
+    // this.availableContractors$.subscribe(x => {
     //   this.currentAvailableContractors = x;
+    //   // alert('available length: ' + x.length);
     // });
     this.invitation = {
       projectId: this.currentProject.id
     };
+
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {
       width: '650px',
       data: {
         currentProject: this.currentProject,
-        currentAvailableContractors: this.availableContractors,
+        currentAvailableContractors: this.availableContractors$,
         isCheckable: true,
         invitation: this.invitation
       }

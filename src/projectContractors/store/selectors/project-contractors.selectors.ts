@@ -27,6 +27,26 @@ export const getContractorsByProjectId = createSelector(
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
     if (filterState.selectedProjectId) {
+      return entities[filterState.selectedProjectId].contractors.map(
+        c => c.company
+      );
+    }
+    return null;
+  }
+);
+
+export const getContractorsIdByProjectId = createSelector(
+  getContractorsByProjectId,
+  c => {
+    return c.map(x => x.id);
+  }
+);
+
+export const getFilteredContractorsByProjectId = createSelector(
+  getContractorsEntities,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
       return entities[filterState.selectedProjectId].contractors
         .filter(x => x.company.auditStatus === !!+filterState.isAuditStatus)
         .filter(x => x.company.onSite === !!+filterState.isOnSite)
@@ -44,7 +64,7 @@ export const getAllProjectContractors = createSelector(
   }
 );
 
-export const getAvailableContractors = createSelector(
+export const getUnassignedContractorsByProjectId = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
@@ -60,6 +80,16 @@ export const getAvailableContractors = createSelector(
         });
     }
     return null;
+  }
+);
+
+export const getAvailableContractors = createSelector(
+  getUnassignedContractorsByProjectId,
+  getContractorsIdByProjectId,
+  (unassignedContractors, assignedContractorsId) => {
+    return unassignedContractors.filter(function(c) {
+      return assignedContractorsId.indexOf(c.id) < 0;
+    });
   }
 );
 

@@ -25,7 +25,7 @@ export class ProjectContractorsComponent implements OnInit {
   projects$: Observable<Project[]>;
   selectedProject$: Observable<Project>;
   contractors$: Observable<Company[]>;
-  availableContractors$: Observable<Company[]>;
+
   isCheckable$: true;
 
   projectFilter$: ProjectFilter = {
@@ -46,9 +46,8 @@ export class ProjectContractorsComponent implements OnInit {
       .select(fromStore.getAllProjects)
       .map(projects => projects.sort(this.sortProjectByName));
     this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
-    this.contractors$ = this.store.select(fromStore.getContractorsByProjectId);
-    this.availableContractors$ = this.store.select(
-      fromStore.getAvailableContractors
+    this.contractors$ = this.store.select(
+      fromStore.getFilteredContractorsByProjectId
     );
   }
 

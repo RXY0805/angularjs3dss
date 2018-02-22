@@ -145,6 +145,7 @@ export class ContractorListComponent implements OnInit {
       const company: Company = {
         id: id,
         name: name,
+        email: '',
         onSite: false,
         auditStatus: false
       };
