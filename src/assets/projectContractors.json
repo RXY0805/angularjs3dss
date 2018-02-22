@@ -12,7 +12,9 @@
           "name": "wade testing limited",
           "email": "wr@marr.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -35,7 +37,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -48,7 +52,9 @@
           "name": "GVK NSW REO Pty Ltd",
           "email": "ray@gvk-group.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -61,7 +67,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -74,7 +82,9 @@
           "name": "Borger Crane Hire & Rigging Services Pty Limited",
           "email": "kerrie@borgercranes.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -87,7 +97,9 @@
           "name": "Rediform Contracting Pty Limited",
           "email": "tom@rediform.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -100,7 +112,9 @@
           "name": "Carrington Electrical Services Pty Limited",
           "email": "Jasmineg@carringtonelectrical.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -113,7 +127,9 @@
           "name": "Lawrence Group Pty Limited",
           "email": "karina@lawrencegroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -126,7 +142,9 @@
           "name": "Central Plumbing Pty. Ltd.",
           "email": "support@centralpg.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -139,7 +157,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -152,7 +172,9 @@
           "name": "Interspan (NSW) Pty Ltd",
           "email": "mwylde@interspan.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -165,7 +187,9 @@
           "name": "Central Plumbing Pty. Ltd.",
           "email": "support@centralpg.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -179,7 +203,9 @@
 
           "email": "nrussell@evsgroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -192,7 +218,9 @@
           "name": "Magnetic Automation Pty Ltd",
           "email": "rblackmore@magnetic-oz.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -205,7 +233,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -218,7 +248,9 @@
           "name": "Otis Elevator Company Pty Limited",
           "email": "peter.gabriel@otis.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -231,7 +263,9 @@
           "name": "Coates Hire Pty Limited",
           "email": "bryan.campbell@coateshire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -244,7 +278,9 @@
           "name": "Arctic Fencing",
           "email": "fencing@sydney.net",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -257,7 +293,9 @@
           "name": "Arctic Fencing",
           "email": "fencing@sydney.net",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -270,7 +308,9 @@
           "name": "Oz Cut Concrete Cutting Services Pty Limited",
           "email": "admin@ozcut.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -283,7 +323,9 @@
           "name": "Climatech NSW Pty Ltd",
           "email": "gmalone@climatech.net.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -296,7 +338,9 @@
           "name": "Mainland Civil NSW Pty Limited",
           "email": "James_mcmillan@mainlandcivil.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -309,7 +353,9 @@
           "name": "Waco Kwikform Limited",
           "email": "sydney@wacokwikform.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -322,7 +368,9 @@
           "name": "Micos Aluminium Windows and Doors Pty Ltd",
           "email": "ajan.pasupati@micos.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -335,7 +383,9 @@
           "name": "Kohinor Scaffolding",
           "email": "darylmclean@hotmail.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -348,7 +398,9 @@
           "name": "Innovative Fire Services Pty Limited",
           "email": "adeller@innovativefire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -361,7 +413,9 @@
           "name": "3D Safety Pty Limited",
           "email": "support@3dsafety.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -374,7 +428,9 @@
           "name": "ZWF Pty Ltd",
           "email": "mingersoll@zwf.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -387,7 +443,9 @@
           "name": "Sky High Group Pty Ltd",
           "email": "nathan@skyhighgroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -400,7 +458,9 @@
           "name": "Total Hoardings Pty Limited",
           "email": "scott@hoardings.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -413,7 +473,9 @@
           "name": "Elephants Foot Waste Compactors Pty Ltd",
           "email": "whs@elephantsfoot.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -426,7 +488,9 @@
           "name": "Australian Lifting & Safety Pty Ltd",
           "email": "Accounts@alsafety.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -439,7 +503,9 @@
           "name": "Wilken Service Pty. Limited",
           "email": "info@wilken.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -452,7 +518,9 @@
           "name": "Sydney Plaster Pty Limited",
           "email": "charlieboumelhem@sydneyplaster.net.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -465,7 +533,9 @@
           "name": "MPDI Pty Ltd",
           "email": "adam@mpdi.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -478,7 +548,9 @@
           "name": "City of Sydney",
           "email": "abalakrishnan@cityofsydney.nsw.gov.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -491,7 +563,9 @@
           "name": "Brobrik",
           "email": "admin@brobrik.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -504,7 +578,9 @@
           "name": "Titan Cranes & Rigging Pty Limited",
           "email": "cameron.youngman@titancranes.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -517,7 +593,9 @@
           "name": "Feenix NSW Pty Limited",
           "email": "carly@feenix.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -530,7 +608,9 @@
           "name": "Novak Signs Pty Limited",
           "email": "scott@novaksigns.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -543,7 +623,9 @@
           "name": "Skyreach (Nsw) Pty Limited",
           "email": "mpedialis@skyreach.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -556,7 +638,9 @@
           "name": "Micos Aluminium Windows and Doors Pty Ltd",
           "email": "ajan.pasupati@micos.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -569,7 +653,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -582,7 +668,9 @@
           "name": "Fyto-Green Australia Pty Ltd",
           "email": "swilliams@fytogreen.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -595,7 +683,9 @@
           "name": "TPN Insulations Pty Ltd",
           "email": "support@tpm.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -608,7 +698,9 @@
           "name": "Linker Surveying Pty Ltd",
           "email": "tasy@linkersurveying.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -621,7 +713,9 @@
           "name": "Archiland Contractors Pty Ltd",
           "email": "RACHEL@archilands.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -634,7 +728,9 @@
           "name": "CD Commercial Projects Pty Ltd",
           "email": "admin@cdconstruction.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -647,7 +743,9 @@
           "name": "Nash Plant Hire",
           "email": "hire@nashplant.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -660,7 +758,9 @@
           "name": "City Rendering Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -673,7 +773,9 @@
           "name": "Want Access Pty Ltd",
           "email": "chris@wantaccess.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -686,7 +788,9 @@
           "name": "Southside Corp",
           "email": "scorp@southsidecorp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -699,7 +803,9 @@
           "name": "Southside Corp",
           "email": "scorp@southsidecorp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -712,7 +818,9 @@
           "name": "BPM Industries Australia Pty Ltd",
           "email": "p.miller@bpmaustralia.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -725,7 +833,9 @@
           "name": "BPM Industries Australia Pty Ltd",
           "email": "p.miller@bpmaustralia.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -738,7 +848,9 @@
           "name": "The trustee for The McKeon Family Trust",
           "email": "c.mckeon@dynamicdb.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -751,7 +863,9 @@
           "name": "The trustee for The McKeon Family Trust",
           "email": "c.mckeon@dynamicdb.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -764,7 +878,9 @@
           "name": "Stone Alliance Partnership Pty Ltd",
           "email": "janine@stonealliance.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -777,7 +893,9 @@
           "name": "Baron Forge (NSW) Pty. Ltd.",
           "email": "david.esha@baronforge.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -790,7 +908,9 @@
           "name": "Clear Sky Contracting Pty Ltd",
           "email": "jason.garratt@clearskycontracting.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -803,7 +923,9 @@
           "name": "Coastal Steel Fabrications Pty Limited",
           "email": "coastalsteel@bigpond.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -816,7 +938,9 @@
           "name": "RISSAFETY PTY LTD",
           "email": "gareth.bull@rissafety.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -829,7 +953,9 @@
           "name": "HPS Sydney Pty Ltd",
           "email": "hps@hpssydney.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -842,7 +968,9 @@
           "name": "HPS Sydney Pty Ltd",
           "email": "hps@hpssydney.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -855,7 +983,9 @@
           "name": "Kalinya Enterprises Pty Limited",
           "email": "jbtc@optusnet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -868,7 +998,9 @@
           "name": "Norska (NSW) Pty Limited",
           "email": "milton@norska.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -881,7 +1013,9 @@
           "name": "Master Carpet Holdings Pty Ltd",
           "email": "ian@mastercarpet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -894,7 +1028,9 @@
           "name": "The Gardenmakers Pty Limited",
           "email": "keith.burns@thegms.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -907,7 +1043,9 @@
           "name": "Cityview Group (Aust) Pty Ltd",
           "email": "support@cityview.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -920,7 +1058,9 @@
           "name": "Grange Glass & Aluminium Pty Ltd",
           "email": "jlam@grangeglass.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -933,7 +1073,9 @@
           "name": "Fencing Logistics Pty Limited",
           "email": "sheryl@fencinglogistics.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -947,7 +1089,9 @@
 
           "email": "sam.moussa@mdi.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -960,7 +1104,9 @@
           "name": "Allsystems PFP Pty Limited",
           "email": "barry@allsystemspfp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -973,7 +1119,9 @@
           "name": "Aj Aluminium Pty Limited",
           "email": "admin@ajaluminium.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -986,7 +1134,9 @@
           "name": "N W C Pty Ltd",
           "email": "paul@nwcsteel.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -999,7 +1149,9 @@
           "name": "Designed Craft Pty Limited",
           "email": "sales@designedcraft.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1012,7 +1164,9 @@
           "name": "Universal Communications Group Pty Limited",
           "email": "james.wakelam@universalcomsgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1025,7 +1179,9 @@
           "name": "Select Asset Solutions",
           "email": "support@select-solutions.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1038,7 +1194,9 @@
           "name": "Syfon Systems Pty. Ltd.",
           "email": "paul.spiridopoulos@syfon.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -1051,7 +1209,9 @@
           "name": "The Brendan Mcenearney FT",
           "email": "mishmac@bigpond.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1064,7 +1224,9 @@
           "name": "Retail Fm Pty Ltd",
           "email": "sbourke@woolworths.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -1077,7 +1239,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -1090,7 +1254,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1112,7 +1278,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1125,7 +1293,9 @@
           "name": "Wilken Service Pty. Limited",
           "email": "info@wilken.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1138,7 +1308,9 @@
           "name": "Planet Plumbing Group Pty Limited",
           "email": "amanduva@planetplumbing.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1151,7 +1323,9 @@
           "name": "Ellis Post Tension Pty Ltd",
           "email": "ellisposttension@gmail.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1164,7 +1338,9 @@
           "name": "City Electrical Services (AUST) Pty Limited",
           "email": "accounts@cityelectrical.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1177,7 +1353,9 @@
           "name": "Wideform Pty Limited",
           "email": "Ldesantis@wideform.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1190,7 +1368,9 @@
           "name": "Theos Bros. (Aust) Pty Limited ",
           "email": "admin@tbagroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1203,7 +1383,9 @@
           "name": "Clas Concrete & Construction Pty Ltd",
           "email": "info@clascc.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1216,7 +1398,9 @@
           "name": "Southside Reinforcing (Aus) Pty Ltd",
           "email": "sreo@bigpond.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1229,7 +1413,9 @@
           "name": "Concrete Sealing Services Pty Limited",
           "email": "goochie1@bigpond.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1242,7 +1428,9 @@
           "name": "Resolution Rigging Services Pty Ltd",
           "email": "info@resolutionrigging.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1255,7 +1443,9 @@
           "name": "The Gardenmakers Pty Limited",
           "email": "keith.burns@thegms.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1268,7 +1458,9 @@
           "name": "City Projects Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1281,7 +1473,9 @@
           "name": "Arctic Fencing",
           "email": "fencing@sydney.net",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1294,7 +1488,9 @@
           "name": "Royal Wolf Trading Australia Pty Limited",
           "email": "ddasilva@royalwolf.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1307,7 +1503,9 @@
           "name": "Total Hoardings Pty Limited",
           "email": "scott@hoardings.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1320,7 +1518,9 @@
           "name": "Lack Group (K&D Traffic Management)",
           "email": "deik@lackgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1333,7 +1533,9 @@
           "name": "William L. Backhouse Pty. Limited",
           "email": "fran.smart@landdata.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1346,7 +1548,9 @@
           "name": "Extreme Fire Solutions",
           "email": "jaldag@extremefire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -1359,7 +1563,9 @@
           "name": "Extreme Fire Solutions",
           "email": "jaldag@extremefire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1372,7 +1578,9 @@
           "name": "Erect Safe Scaffolding (NSW) Pty Limited",
           "email": "steveo@erectsafe.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1385,7 +1593,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1398,7 +1608,9 @@
           "name": "Deluxe Cleaning Pty Limited",
           "email": "operations@deluxecleaning.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1411,7 +1623,9 @@
           "name": "Austral Precast (NSW) Pty Limited ",
           "email": "gary.balfour@australprecast.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1424,7 +1638,9 @@
           "name": "G James Glass & Aluminium Pty Limited",
           "email": "stephen_ninness@gjames.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1437,7 +1653,9 @@
           "name": "Greencap Consulting",
           "email": "3dsupport@greencap.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1450,7 +1668,9 @@
           "name": "Lack Group (K&D Traffic Management)",
           "email": "deik@lackgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1463,7 +1683,9 @@
           "name": "Pacific Core Cut Pty Limited",
           "email": "pacificcorecut@gmail.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1476,7 +1698,9 @@
           "name": "Titan Hoists & Rigging Pty Limited",
           "email": "jason.hotop@titanhoists.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1489,7 +1713,9 @@
           "name": "Stone Alliance Partnership Pty Ltd",
           "email": "janine@stonealliance.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1502,7 +1728,9 @@
           "name": "BG&E Pty Limited",
           "email": "support@bgande.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1515,7 +1743,9 @@
           "name": "Allsystems PFP Pty Limited",
           "email": "barry@allsystemspfp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1528,7 +1758,9 @@
           "name": "Triple 'M' Mechanical Services Pty Ltd",
           "email": "support@triplemmechanical.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1541,7 +1773,9 @@
           "name": "Polyseal Waterproofing Technologies Pty Ltd",
           "email": "nsw@polyseal.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1554,7 +1788,9 @@
           "name": "Everwilling Cranes Pty Limited",
           "email": "Leanne@everwilling.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1567,7 +1803,9 @@
           "name": "EVS Group Australia Pty Limited",
           "email": "nrussell@evsgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1580,7 +1818,9 @@
           "name": "Brobrik",
           "email": "admin@brobrik.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1593,7 +1833,9 @@
           "name": "Australian Lifting & Safety Pty Ltd",
           "email": "Accounts@alsafety.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1606,7 +1848,9 @@
           "name": "Sydney Plaster Pty Limited",
           "email": "charlieboumelhem@sydneyplaster.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1619,7 +1863,9 @@
           "name": "Terry's Electrical Services Pty. Limited",
           "email": "office@tesme.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1632,7 +1878,9 @@
           "name": "Otis Elevator Company Pty Limited",
           "email": "peter.gabriel@otis.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1645,7 +1893,9 @@
           "name": "Elephants Foot Waste Compactors Pty Ltd",
           "email": "whs@elephantsfoot.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1658,7 +1908,9 @@
           "name": "K M Glass & Aluminium Pty Ltd",
           "email": "kaila@seraluminium.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1671,7 +1923,9 @@
           "name": "City Rendering Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1684,7 +1938,9 @@
           "name": "The Australian Turntable Co. Pty. Ltd.",
           "email": "ben@turntables.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1697,7 +1953,9 @@
           "name": "Linker Surveying Pty Ltd",
           "email": "tasy@linkersurveying.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1710,7 +1968,9 @@
           "name": "Bettertiles Contracting Pty Limited",
           "email": "reazul@bettertiles.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1723,7 +1983,9 @@
           "name": "ADI Carpentry and Doors Pty Ltd",
           "email": "accounts@adicorp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1736,7 +1998,9 @@
           "name": "IJF Australia Pty Limited",
           "email": "belindad@ijf.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1749,7 +2013,9 @@
           "name": "J.L.M.D. Services Pty Ltd",
           "email": "mark@jlmd.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1762,7 +2028,9 @@
           "name": "Paintech Painters and Decorators Pty Limited",
           "email": "info@paintech.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -1775,7 +2043,9 @@
           "name": "Paintech Painters and Decorators Pty Limited",
           "email": "info@paintech.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1788,7 +2058,9 @@
           "name": "Louvreclad Pty Ltd",
           "email": "angela.hornbuckle@louvreclad.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1801,7 +2073,9 @@
           "name": "Fine Touch Pty Limited",
           "email": "philipm@finetouch.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1814,7 +2088,9 @@
           "name": "Baron Forge (NSW) Pty. Ltd.",
           "email": "david.esha@baronforge.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1827,7 +2103,9 @@
           "name": "Turner Bros Furnishings Pty Limited",
           "email": "peter.c@turnerbros.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -1840,7 +2118,9 @@
           "name": "Turner Bros Furnishings Pty Limited",
           "email": "peter.c@turnerbros.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1853,7 +2133,9 @@
           "name": "Preston NSW Pty Limited",
           "email": "admin@preston.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1866,7 +2148,9 @@
           "name": "Norska (NSW) Pty Limited",
           "email": "milton@norska.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1879,7 +2163,9 @@
           "name": "A J Bristow & Sons Pty Limited",
           "email": "support@ajbristowandsons.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -1892,7 +2178,9 @@
           "name": "A J Bristow & Sons Pty Limited",
           "email": "support@ajbristowandsons.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1905,7 +2193,9 @@
           "name": "Landscape Solutions Australia Pty Limited",
           "email": "marcus.amico@landscapesolutions.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1918,7 +2208,9 @@
           "name": "Syfon Systems Pty. Ltd.",
           "email": "paul.spiridopoulos@syfon.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1931,7 +2223,9 @@
           "name": "Raines Carpets Pty Ltd",
           "email": "draines@rainescarpets.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1944,7 +2238,9 @@
           "name": "All Hills Fencing Pty Limited",
           "email": "sales@allhills.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1957,7 +2253,9 @@
           "name": "Icon Custom Projects Pty Limited",
           "email": "paul@iconcustomprojects.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1970,7 +2268,9 @@
           "name": "RISSAFETY PTY LTD",
           "email": "gareth.bull@rissafety.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1983,7 +2283,9 @@
           "name": "Magic Door Industries Pty Limited",
           "email": "sam.moussa@mdi.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -1996,7 +2298,9 @@
           "name": "Alphasafe (Nsw) Pty Limited",
           "email": "Admin@alphasafe.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2009,7 +2313,9 @@
           "name": "Sam The Paving Man Pty Limited ",
           "email": "george@samthepavingman.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2022,7 +2328,9 @@
           "name": "Proactfm Pty. Ltd.",
           "email": "support@proactfm.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2035,7 +2343,9 @@
           "name": "AW Signs Pty Ltd",
           "email": "awsales@awsigns.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2048,7 +2358,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2061,7 +2373,9 @@
           "name": "Cronulla Carpets",
           "email": "adrian@cronullacarpets.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2074,7 +2388,9 @@
           "name": "DJ Adair Crane Services Pty Limited",
           "email": "admin@djadaircranes.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2087,7 +2403,9 @@
           "name": "Lightsource Services Pty. Ltd.",
           "email": "Jackl@lightsourceservices.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2100,7 +2418,9 @@
           "name": "Nash Plant Hire",
           "email": "hire@nashplant.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2113,7 +2433,9 @@
           "name": "Advanced Solutions Group Pty. Ltd.",
           "email": "advanced@solution4u.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2126,7 +2448,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2148,7 +2472,9 @@
           "name": "Titan Cranes & Rigging Pty Limited",
           "email": "rxy0805@hotmail.com",
           "onSite": false,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 1,
@@ -2162,7 +2488,9 @@
 
           "email": "reception@globalhr.net.au",
           "onSite": false,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2175,7 +2503,9 @@
           "name": "Mack Steel Fixing Pty Ltd",
           "email": "info@macksteelfixing.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2188,7 +2518,9 @@
           "name": "North Surveys Pty Ltd",
           "email": "jarmstrong@northgroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 2,
@@ -2201,7 +2533,9 @@
           "name": "Speedy Gantry Hire Pty Ltd",
           "email": "nsw@speedygantry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2214,7 +2548,9 @@
           "name": "Heinrich Constructions Pty. Ltd.",
           "email": "safety@heinrichconstructions.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2227,7 +2563,9 @@
           "name": "Royal Wolf Trading Australia Pty Limited",
           "email": "ddasilva@royalwolf.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -2240,7 +2578,9 @@
           "name": "East Coast Concrete Contractors",
           "email": "conan@eastcoastconcrete.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 4,
@@ -2253,7 +2593,9 @@
           "name": "Boone & Willard Queensland Pty Ltd",
           "email": "tony@bnw.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 4,
@@ -2266,7 +2608,9 @@
           "name": "Perigon",
           "email": "ian.lonie@perigon.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2279,7 +2623,9 @@
           "name": "Advanced Precast (QLD)",
           "email": "cherylh@advprecast.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2292,7 +2638,9 @@
           "name": "Delta Group Pty Limited",
           "email": "neville.williams@deltagroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2305,7 +2653,9 @@
           "name": "Rovera Scaffolding (Qld) Pty Limited",
           "email": "accounts@roveraqld.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2318,7 +2668,9 @@
           "name": "Steelmark (Aust) Pty Ltd",
           "email": "info@steelmark.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2331,7 +2683,9 @@
           "name": "The Trustee for HITEC GLAZING Trust",
           "email": "derryn@hitecglazing.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2344,7 +2698,9 @@
           "name": "BSF Mobile Cranes Pty Ltd",
           "email": "chris@bsfmobilecranes.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2357,7 +2713,9 @@
           "name": "Alimak Hek Pty Limited",
           "email": "alan.evans@alimakhek.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2370,7 +2728,9 @@
           "name": "Precision Interior Walls & Ceilings Pty Ltd",
           "email": "admin@piwc.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2383,7 +2743,9 @@
           "name": "The Trustee For Mcp (Aus) Trust",
           "email": "kate@meales.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -2396,7 +2758,9 @@
           "name": "Fugen Masonry Contractors (Qld) Pty Ltd",
           "email": "ccornelius@fugen.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2409,7 +2773,9 @@
           "name": "Premier Fire (N.Q.)",
           "email": "brisbaneadmin@premfire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2422,7 +2788,9 @@
           "name": "HVAC Queensland",
           "email": "safety@hvac.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2435,7 +2803,9 @@
           "name": "Terry's Electrical Services Pty. Limited",
           "email": "office@tesme.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2448,7 +2818,9 @@
           "name": "Premium Doors Pty Limited",
           "email": "greg@premiumdoors.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2461,7 +2833,9 @@
           "name": "Tiling Waterproofing Services Pty Ltd",
           "email": "support@tilingwaterproofing.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2474,7 +2848,9 @@
           "name": "Aluminium Balustrades Burleigh Heads Pty Ltd",
           "email": "info@alubal.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -2487,7 +2863,9 @@
           "name": "Aluminium Balustrades Burleigh Heads Pty Ltd",
           "email": "info@alubal.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2500,7 +2878,9 @@
           "name": "Applikote (Qld) Pty Ltd",
           "email": "applikote@powerup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -2513,7 +2893,9 @@
           "name": "Applikote (Qld) Pty Ltd",
           "email": "applikote@powerup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2526,7 +2908,9 @@
           "name": "Quick Core & Cut Concrete Cutting Service",
           "email": "Justin@quickcore.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2539,7 +2923,9 @@
           "name": "Schindler Lifts Australia Pty Limited",
           "email": "Doug.Blackman@au.schindler.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2552,7 +2938,9 @@
           "name": "Bill Adams Tiling",
           "email": "andrea@billadamstiling.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -2565,7 +2953,9 @@
           "name": "Bill Adams Tiling",
           "email": "andrea@billadamstiling.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2578,7 +2968,9 @@
           "name": "Bradco Joinery",
           "email": "amelia.b@bradco.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2601,7 +2993,9 @@
           "name": "Titan Cranes & Rigging Pty Limited",
           "email": "cameron.youngman@titancranes.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2614,7 +3008,9 @@
           "name": "Novak Signs Pty Limited",
           "email": "scott@novaksigns.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2627,7 +3023,9 @@
           "name": "Poles & Underground Pty Limited",
           "email": "maxe@pu.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2640,7 +3038,9 @@
           "name": "Trazmet Pty Limited",
           "email": "cbarchini@trazmet.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2653,7 +3053,9 @@
           "name": "Magnetic Automation Pty Ltd",
           "email": "rblackmore@magnetic-oz.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2666,7 +3068,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2679,7 +3083,9 @@
           "name": "C.M.S. Surveyors Pty Limited",
           "email": "acummins@cmssurveyors.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2692,7 +3098,9 @@
           "name": "Linker Surveying Pty Ltd",
           "email": "tasy@linkersurveying.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2705,7 +3113,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2718,7 +3128,9 @@
           "name": "Alimak Hek Pty Limited",
           "email": "alan.evans@alimakhek.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2731,7 +3143,9 @@
           "name": "Australian Prestressing Services Pty Limited",
           "email": "aps@apspt.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2744,7 +3158,9 @@
           "name": "Southside Corp",
           "email": "scorp@southsidecorp.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2757,7 +3173,9 @@
           "name": "3D Safety Pty Limited",
           "email": "support@3dsafety.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2770,7 +3188,9 @@
           "name": "Carrington Electrical Services Pty Limited",
           "email": "Jasmineg@carringtonelectrical.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2783,7 +3203,9 @@
           "name": "McPherson Plumbing (NSW) Pty Limited",
           "email": "john@mcplumbing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2796,7 +3218,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2809,7 +3233,9 @@
           "name": "MPDI Pty Ltd",
           "email": "adam@mpdi.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2822,7 +3248,9 @@
           "name": "Mainland Civil NSW Pty Limited",
           "email": "James_mcmillan@mainlandcivil.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2835,7 +3263,9 @@
           "name": "Waco Kwikform Limited",
           "email": "sydney@wacokwikform.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2848,7 +3278,9 @@
           "name": "Coopers Heavy Industries Pty Limited",
           "email": "support@coopers.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2861,7 +3293,9 @@
           "name": "Civic Traffic & Labour",
           "email": "info@civictrafficandlabour.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -2874,7 +3308,9 @@
           "name": "Civic Traffic & Labour",
           "email": "info@civictrafficandlabour.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2887,7 +3323,9 @@
           "name": "Coates Hire Pty Limited",
           "email": "bryan.campbell@coateshire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -2900,7 +3338,9 @@
           "name": "Oz Cut Concrete Cutting Services Pty Limited",
           "email": "admin@ozcut.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2913,7 +3353,9 @@
           "name": "Crest Air Conditioning Pty Limited",
           "email": "nsingh@crestair.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2926,7 +3368,9 @@
           "name": "Electromaster Holdings NSW Pty Limited",
           "email": "admin@electromaster.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2939,7 +3383,9 @@
           "name": "Innovative Fire Services Pty Limited",
           "email": "adeller@innovativefire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2952,7 +3398,9 @@
           "name": "Erect Safe Scaffolding (NSW) Pty Limited",
           "email": "steveo@erectsafe.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2965,7 +3413,9 @@
           "name": "Austral Precast (NSW) Pty Limited ",
           "email": "gary.balfour@australprecast.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2978,7 +3428,9 @@
           "name": "Total Hoardings Pty Limited",
           "email": "scott@hoardings.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -2991,7 +3443,9 @@
           "name": "Allsystems PFP Pty Limited",
           "email": "barry@allsystemspfp.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3004,7 +3458,9 @@
           "name": "Country Air Plumbing Services Pty Ltd",
           "email": "scott@countryairplumbing.net",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3017,7 +3473,9 @@
           "name": "Micos Aluminium Windows and Doors Pty Ltd",
           "email": "ajan.pasupati@micos.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3030,7 +3488,9 @@
           "name": "The Duct Company Pty Limited",
           "email": "francesco.antonelli@theductcompany.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3043,7 +3503,9 @@
           "name": "Buildup Interior Pty Limited",
           "email": "admin@buildup.net.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3056,7 +3518,9 @@
           "name": "All Traffic Hire Pty Ltd",
           "email": "bookings@atstraffic.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3070,7 +3534,9 @@
           "email": "Accounts@alsafety.com.au",
 
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3083,7 +3549,9 @@
           "name": "Fugen Holdings (Australia) ",
           "email": "accounts@fugen.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3096,7 +3564,9 @@
           "name": "Coastal Steel Fabrications Pty Limited",
           "email": "coastalsteel@bigpond.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3109,7 +3579,9 @@
           "name": "Prestige Joinery Sydney Pty Limited",
           "email": "sharon@prestigesydney.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3122,7 +3594,9 @@
           "name": "Bettertiles Contracting Pty Limited",
           "email": "reazul@bettertiles.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3135,7 +3609,9 @@
           "name": "EVS Group Australia Pty Limited",
           "email": "nrussell@evsgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3148,7 +3624,9 @@
           "name": "Syfon Systems Pty. Ltd.",
           "email": "paul.spiridopoulos@syfon.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3161,7 +3639,9 @@
           "name": "Morris C Painting - Building NSW Pty Ltd",
           "email": "zelko@morrisc.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3174,7 +3654,9 @@
           "name": "Elephants Foot Waste Compactors Pty Ltd",
           "email": "whs@elephantsfoot.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3187,7 +3669,9 @@
           "name": "Louvreclad Pty Ltd",
           "email": "angela.hornbuckle@louvreclad.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3200,7 +3684,9 @@
           "name": "Premium Doors Pty Limited",
           "email": "greg@premiumdoors.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3213,7 +3699,9 @@
           "name": "Advanced Weather Proofing Pty Ltd",
           "email": "tash@advacedweatherproofing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3226,7 +3714,9 @@
           "name": "Baron Forge (NSW) Pty. Ltd.",
           "email": "david.esha@baronforge.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3239,7 +3729,9 @@
           "name": "Schindler Lifts Australia Pty Limited",
           "email": "Doug.Blackman@au.schindler.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3252,7 +3744,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3265,7 +3759,9 @@
           "name": "ZWF Pty Ltd",
           "email": "mingersoll@zwf.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3278,7 +3774,9 @@
           "name": "Resolution Rigging Services Pty Ltd",
           "email": "info@resolutionrigging.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3291,7 +3789,9 @@
           "name": "Want Access Pty Ltd",
           "email": "chris@wantaccess.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3304,7 +3804,9 @@
           "name": "City Rendering Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3317,7 +3819,9 @@
           "name": "Adfinis Pty Limited ",
           "email": "brohan@adfinis.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3330,7 +3834,9 @@
           "name": "LAF Contracting (NSW) Pty Ltd",
           "email": "nswcontract@lafgroup.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3343,7 +3849,9 @@
           "name": "Feenix NSW Pty Limited",
           "email": "carly@feenix.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3356,7 +3864,9 @@
           "name": "Crown Group Holdings Pty Ltd",
           "email": "support@crown.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -3369,7 +3879,9 @@
           "name": "Royal Wolf Trading Australia Pty Limited",
           "email": "ddasilva@royalwolf.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3382,7 +3894,9 @@
           "name": "Cityview Group (Aust) Pty Ltd",
           "email": "support@cityview.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3395,7 +3909,9 @@
           "name": "Botany Access",
           "email": "maintenance@botanyaccess.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3408,7 +3924,9 @@
           "name": "Amarkoff Pty Limited",
           "email": "amarkoff.com@gmail.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3421,7 +3939,9 @@
           "name": "Sunlite Innovations Pty Ltd",
           "email": "lee@sunlite.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3434,7 +3954,9 @@
           "name": "DecoGlaze",
           "email": "installs@decoglaze.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3447,7 +3969,9 @@
           "name": "DecoGlaze",
           "email": "installs@decoglaze.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -3460,7 +3984,9 @@
           "name": "Cronulla Carpets",
           "email": "adrian@cronullacarpets.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3473,7 +3999,9 @@
           "name": "Kalinya Enterprises Pty Limited",
           "email": "jbtc@optusnet.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3486,7 +4014,9 @@
           "name": "Adi Corporation (Aust) Pty Limited",
           "email": "info@adicorp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3499,7 +4029,9 @@
           "name": "The Gardenmakers Pty Limited",
           "email": "keith.burns@thegms.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3512,7 +4044,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3536,7 +4070,9 @@
           "email": "scott@hoardings.com.au",
 
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -3549,7 +4085,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3562,7 +4100,9 @@
           "name": "Boone & Willard Plumbing Pty Limited",
           "email": "office@bnw.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -3575,7 +4115,9 @@
           "name": "GVK NSW REO Pty Ltd",
           "email": "ray@gvk-group.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3588,7 +4130,9 @@
           "name": "Mainland Civil NSW Pty Limited",
           "email": "James_mcmillan@mainlandcivil.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3601,7 +4145,9 @@
           "name": "Lawrence Group Pty Limited",
           "email": "karina@lawrencegroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -3614,7 +4160,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3627,7 +4175,9 @@
           "name": "City Electrical Services (AUST) Pty Limited",
           "email": "accounts@cityelectrical.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3640,7 +4190,9 @@
           "name": "Wilken Service Pty. Limited",
           "email": "info@wilken.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3653,7 +4205,9 @@
           "name": "JDP Formwork Pty Ltd",
           "email": "juan@jdpintegrated.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -3666,7 +4220,9 @@
           "name": "JDP Formwork Pty Ltd",
           "email": "juan@jdpintegrated.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3679,7 +4235,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3692,7 +4250,9 @@
           "name": "Australian Prestressing Services Pty Limited",
           "email": "aps@apspt.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3705,7 +4265,9 @@
           "name": "Twin Lakes Air Pty Limited",
           "email": "glenn@twinlakesair.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3718,7 +4280,9 @@
           "name": "Boone & Willard Plumbing Pty Limited",
           "email": "office@bnw.net.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3731,7 +4295,9 @@
           "name": "JDP Access Pty Ltd",
           "email": "darren@jdpaccess.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 2,
@@ -3744,7 +4310,9 @@
           "name": "JDP Access Pty Ltd",
           "email": "darren@jdpaccess.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3757,7 +4325,9 @@
           "name": "Borger Crane Hire & Rigging Services Pty Limited",
           "email": "kerrie@borgercranes.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3770,7 +4340,9 @@
           "name": "ATCO Structures & Logistics Pty Ltd",
           "email": "atcosydney@atcosl.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3783,7 +4355,9 @@
           "name": "Elephants Foot Waste Compactors Pty Ltd",
           "email": "whs@elephantsfoot.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3796,7 +4370,9 @@
           "name": "Oz Cut Concrete Cutting Services Pty Limited",
           "email": "admin@ozcut.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3809,7 +4385,9 @@
           "name": "Sky High Group Pty Ltd",
           "email": "nathan@skyhighgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3822,7 +4400,9 @@
           "name": "Peddle Thorp Architects (PTW)",
           "email": "support@PTW.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -3835,7 +4415,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -3848,7 +4430,9 @@
           "name": "Magnetic Automation Pty Ltd",
           "email": "rblackmore@magnetic-oz.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3861,7 +4445,9 @@
           "name": "Guardian Protection Services (AUST) Pty Limited",
           "email": "tkennedy@guardianps.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3874,7 +4460,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3887,7 +4475,9 @@
           "name": "Buildup Interior Pty Limited",
           "email": "admin@buildup.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3900,7 +4490,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3913,7 +4505,9 @@
           "name": "3D Safety Pty Limited",
           "email": "support@3dsafety.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3926,7 +4520,9 @@
           "name": "Otis Elevator Company Pty Limited",
           "email": "peter.gabriel@otis.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3939,7 +4535,9 @@
           "name": "DJD Brick & Blocklaying Pty Limited",
           "email": "lesley@djdbrick.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3952,7 +4550,9 @@
           "name": "Lawrence Group Pty Limited",
           "email": "karina@lawrencegroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3965,7 +4565,9 @@
           "name": "I.C.M. Property Services Pty. Ltd.",
           "email": "deyanstancic@y7mail.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -3978,7 +4580,9 @@
           "name": "Bettertiles Contracting Pty Limited",
           "email": "reazul@bettertiles.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -3991,7 +4595,9 @@
           "name": "ADW Johnson Pty Limited",
           "email": "support@adwjohnson.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4004,7 +4610,9 @@
           "name": "Icon Custom Projects Pty Limited",
           "email": "paul@iconcustomprojects.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4017,7 +4625,9 @@
           "name": "Micos Aluminium Windows and Doors Pty Ltd",
           "email": "ajan.pasupati@micos.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4030,7 +4640,9 @@
           "name": "Adi Corporation (Aust) Pty Limited",
           "email": "info@adicorp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4043,7 +4655,9 @@
           "name": "Baron Forge (NSW) Pty. Ltd.",
           "email": "david.esha@baronforge.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4056,7 +4670,9 @@
           "name": "Paintscape Painters & Decorators Pty Ltd",
           "email": "gblekos@paintscape.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4069,7 +4685,9 @@
           "name": "ZWF Pty Ltd",
           "email": "mingersoll@zwf.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4082,7 +4700,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4095,7 +4715,9 @@
           "name": "Australian Lifting & Safety Pty Ltd",
           "email": "Accounts@alsafety.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4108,7 +4730,9 @@
           "name": "Allsystems PFP Pty Limited",
           "email": "barry@allsystemspfp.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4121,7 +4745,9 @@
           "name": "Amarkoff Pty Limited",
           "email": "amarkoff.com@gmail.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4134,7 +4760,9 @@
           "name": "Sydney Plaster Pty Limited",
           "email": "charlieboumelhem@sydneyplaster.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4147,7 +4775,9 @@
           "name": "City Rendering Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4160,7 +4790,9 @@
           "name": "Kalinya Enterprises Pty Limited",
           "email": "jbtc@optusnet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4173,7 +4805,9 @@
           "name": "Fyto-Green Australia Pty Ltd",
           "email": "swilliams@fytogreen.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4186,7 +4820,9 @@
           "name": "Clear Sky Contracting Pty Ltd",
           "email": "jason.garratt@clearskycontracting.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4199,7 +4835,9 @@
           "name": "Louvreclad Pty Ltd",
           "email": "angela.hornbuckle@louvreclad.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4212,7 +4850,9 @@
           "name": "DecoGlaze",
           "email": "installs@decoglaze.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4225,7 +4865,9 @@
           "name": "The Gardenmakers Pty Limited",
           "email": "keith.burns@thegms.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4238,7 +4880,9 @@
           "name": "Fencing Logistics Pty Limited",
           "email": "sheryl@fencinglogistics.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4251,7 +4895,9 @@
           "name": "Master Carpet Holdings Pty Ltd",
           "email": "ian@mastercarpet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4264,7 +4910,9 @@
           "name": "RISSAFETY PTY LTD",
           "email": "gareth.bull@rissafety.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4277,7 +4925,9 @@
           "name": "Karland Fair Furnishings Pty Ltd",
           "email": "support@karlandfair.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4290,7 +4940,9 @@
           "name": "Total Hoardings Pty Limited",
           "email": "scott@hoardings.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4312,7 +4964,9 @@
           "name": "Mainland Civil NSW Pty Limited",
           "email": "James_mcmillan@mainlandcivil.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 5,
@@ -4325,7 +4979,9 @@
           "name": "CD Commercial Projects Pty Ltd",
           "email": "admin@cdconstruction.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4338,7 +4994,9 @@
           "name": "Stowe Australia Pty Limited",
           "email": "rob.iacono@stoweaustralia.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4351,7 +5009,9 @@
           "name": "Heyday Group",
           "email": "tkuitert@heyday5.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4364,7 +5024,9 @@
           "name": "Quick Plumbing Group Pty Limited ",
           "email": "quick@quickplumbing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4377,7 +5039,9 @@
           "name": "ATCO Structures & Logistics Pty Ltd",
           "email": "atcosydney@atcosl.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4390,7 +5054,9 @@
           "name": "EVS Group Australia Pty Limited",
           "email": "nrussell@evsgroup.com.au",
           "onSite": false,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4403,7 +5069,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4416,7 +5084,9 @@
           "name": "3D Safety Pty Limited",
           "email": "support@3dsafety.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4429,7 +5099,9 @@
           "name": "Wideform Pty Limited",
           "email": "Ldesantis@wideform.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4442,7 +5114,9 @@
           "name": "Southside Corp",
           "email": "scorp@southsidecorp.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4455,7 +5129,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4468,7 +5144,9 @@
           "name": "Traino Group Pty Limited",
           "email": "andrew@trainogroup.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4481,7 +5159,9 @@
           "name": "Advanced Weather Proofing Pty Ltd",
           "email": "tash@advacedweatherproofing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4494,7 +5174,9 @@
           "name": "Pacific Core Cut Pty Limited",
           "email": "pacificcorecut@gmail.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4507,7 +5189,9 @@
           "name": "MacDonald Contracting Australia Pty Limited",
           "email": "lyle@mcaustralia.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4520,7 +5204,9 @@
           "name": "Borger Crane Hire & Rigging Services Pty Limited",
           "email": "kerrie@borgercranes.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4533,7 +5219,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4546,7 +5234,9 @@
           "name": "Lawrence Group Pty Limited",
           "email": "karina@lawrencegroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4559,7 +5249,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4572,7 +5264,9 @@
           "name": "ZWF Pty Ltd",
           "email": "mingersoll@zwf.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4585,7 +5279,9 @@
           "name": "Chevalier (Aluminium Engineering) Aust.",
           "email": "alex_liu@chevalier.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4598,7 +5294,9 @@
           "name": "Energy Power Systems Australia Pty. Limited.",
           "email": "Lance.Deighton@energypower.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4611,7 +5309,9 @@
           "name": "Australian Lifting & Safety Pty Ltd",
           "email": "Accounts@alsafety.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4624,7 +5324,9 @@
           "name": "JBS&G Australia Pty Ltd",
           "email": "support@jbsg.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4637,7 +5339,9 @@
           "name": "Alimak Hek Pty Limited",
           "email": "alan.evans@alimakhek.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4650,7 +5354,9 @@
           "name": "SRG Building (Northern) P/L",
           "email": "jeff.barnes@srglimited.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4663,7 +5369,9 @@
           "name": "Erect Safe Scaffolding (NSW) Pty Limited",
           "email": "steveo@erectsafe.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4676,7 +5384,9 @@
           "name": "Resolution Rigging Services Pty Ltd",
           "email": "info@resolutionrigging.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4689,7 +5399,9 @@
           "name": "Triple 'M' Fire Pty Ltd",
           "email": "chutchings@triple-m.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4702,7 +5414,9 @@
           "name": "C.M.S. Surveyors Pty Limited",
           "email": "acummins@cmssurveyors.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4715,7 +5429,9 @@
           "name": "Yap Engineering Pty Ltd",
           "email": "sales@yap-eng.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4728,7 +5444,9 @@
           "name": "Skyrise Facade Systems Pty Ltd",
           "email": "support@skyrisefacadessystems.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4741,7 +5459,9 @@
           "name": "Fredon Air (Nsw) Pty Limited",
           "email": "support@fredonair.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4754,7 +5474,9 @@
           "name": "Schindler Lifts Australia Pty Limited",
           "email": "Doug.Blackman@au.schindler.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4767,7 +5489,9 @@
           "name": "Axis Plumbing NSW Pty Limited",
           "email": "craigm@axisplumbing.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4780,7 +5504,9 @@
           "name": "Unreal Steel Pty Ltd",
           "email": "admin@unrealsteel.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4793,7 +5519,9 @@
           "name": "Conrina Masonry Pty. Limited",
           "email": "con@conrina.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4806,7 +5534,9 @@
           "name": "Cubic Interiors Nsw Pty Ltd",
           "email": "david@cubic.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4819,7 +5549,9 @@
           "name": "Wilken Service Pty. Limited",
           "email": "info@wilken.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4832,7 +5564,9 @@
           "name": "Thermal Mechanical Suppliers Pty Ltd",
           "email": "scott@tmsuppliers.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4845,7 +5579,9 @@
           "name": "Electromaster Holdings NSW Pty Limited",
           "email": "admin@electromaster.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4858,7 +5594,9 @@
           "name": "Santana Studwelding",
           "email": "santanastudwelding@bigpond.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4871,7 +5609,9 @@
           "name": "Altius Construction and Engineering Pty Limited",
           "email": "paul@altius.net.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -4893,7 +5633,9 @@
           "name": "McPherson Plumbing (NSW) Pty Limited",
           "email": "john@mcplumbing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4906,7 +5648,9 @@
           "name": "Wideform Pty Limited",
           "email": "Ldesantis@wideform.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4919,7 +5663,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4932,7 +5678,9 @@
           "name": "Goldline Industries Pty Ltd",
           "email": "support@goldlineindustries.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4945,7 +5693,9 @@
           "name": "Theos Bros. (Aust) Pty Limited ",
           "email": "admin@tbagroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4958,7 +5708,9 @@
           "name": "Erect Safe Scaffolding (NSW) Pty Limited",
           "email": "steveo@erectsafe.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4971,7 +5723,9 @@
           "name": "Lawrence Group Pty Limited",
           "email": "karina@lawrencegroup.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4984,7 +5738,9 @@
           "name": "Advanced Weather Proofing Pty Ltd",
           "email": "tash@advacedweatherproofing.com.au",
           "onSite": false,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -4997,7 +5753,9 @@
           "name": "Zenith Air (NSW) Pty Limited",
           "email": "gchaillet@zenithair.com.au ",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 5,
@@ -5010,7 +5768,9 @@
           "name": "Innovative Fire Services Pty Limited",
           "email": "adeller@innovativefire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5023,7 +5783,9 @@
           "name": "Titan Cranes & Rigging Pty Limited",
           "email": "cameron.youngman@titancranes.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5036,7 +5798,9 @@
           "name": "Interspan (NSW) Pty Ltd",
           "email": "mwylde@interspan.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5049,7 +5813,9 @@
           "name": "Titan Hoists & Rigging Pty Limited",
           "email": "jason.hotop@titanhoists.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5062,7 +5828,9 @@
           "name": "Austral Steelfixing Pty Limited",
           "email": "danielfreitas@australsteelfixing.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5075,7 +5843,9 @@
           "name": "Borger Crane Hire & Rigging Services Pty Limited",
           "email": "kerrie@borgercranes.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5088,7 +5858,9 @@
           "name": "Arctic Fencing",
           "email": "fencing@sydney.net",
           "onSite": false,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5101,7 +5873,9 @@
           "name": "Force Professional Security Services Pty Ltd",
           "email": "accounts@forcesecurity.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5114,7 +5888,9 @@
           "name": "Magnetic Automation Pty Ltd",
           "email": "rblackmore@magnetic-oz.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5127,7 +5903,9 @@
           "name": "Zenith Air (NSW) Pty Limited",
           "email": "gchaillet@zenithair.com.au ",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5140,7 +5918,9 @@
           "name": "JBS&G Australia Pty Ltd",
           "email": "support@jbsg.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5153,7 +5933,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5166,7 +5948,9 @@
           "name": "Robert Bird & Partners Pty Ltd",
           "email": "support@robertbird.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5179,7 +5963,9 @@
           "name": "Northrop Consulting Engineers Pty Limited",
           "email": "Joel.Chapman@sydney.northrop.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5192,7 +5978,9 @@
           "name": "Integrated Group Services Pty Ltd",
           "email": "support@igs.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5205,7 +5993,9 @@
           "name": "ZWF Pty Ltd",
           "email": "mingersoll@zwf.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5218,7 +6008,9 @@
           "name": "Australian Lifting & Safety Pty Ltd",
           "email": "Accounts@alsafety.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5231,7 +6023,9 @@
           "name": "3D Safety Pty Limited",
           "email": "support@3dsafety.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5244,7 +6038,9 @@
           "name": "Pacific Core Cut Pty Limited",
           "email": "pacificcorecut@gmail.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5257,7 +6053,9 @@
           "name": "Allsystems PFP Pty Limited",
           "email": "barry@allsystemspfp.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5270,7 +6068,9 @@
           "name": "Killard Excavation Pty Limited",
           "email": "support@killardexcavation.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5283,7 +6083,9 @@
           "name": "Australian High Voltage",
           "email": "rlemon@tobco.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5296,7 +6098,9 @@
           "name": "Coates Hire Pty Limited",
           "email": "bryan.campbell@coateshire.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5309,7 +6113,9 @@
           "name": "Coastal Steel Fabrications Pty Limited",
           "email": "coastalsteel@bigpond.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5322,7 +6128,9 @@
           "name": "Fugen Holdings (Aust) Pty Ltd",
           "email": "support@fugenholdingsaust.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5335,7 +6143,9 @@
           "name": "Sydney Plaster Pty Limited",
           "email": "charlieboumelhem@sydneyplaster.net.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5348,7 +6158,9 @@
           "name": "Fine Solutions Pty. Ltd.",
           "email": "allan@finesolutions.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5361,7 +6173,9 @@
           "name": "Ama (Aust) Pty Ltd",
           "email": "ayden@amawindows.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5374,7 +6188,9 @@
           "name": "Coopers Heavy Industries Pty Limited",
           "email": "support@coopers.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5387,7 +6203,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5400,7 +6218,9 @@
           "name": "Elephants Foot Waste Compactors Pty Ltd",
           "email": "whs@elephantsfoot.com.au",
           "onSite": true,
-          "auditStatus": true
+          "auditStatus": true,
+          "auditDate": "2017-12-01",
+          "expiryDate": "3000-12-01"
         },
         "status": {
           "id": 3,
@@ -5413,7 +6233,9 @@
           "name": "Oz Cut Concrete Cutting Services Pty Limited",
           "email": "admin@ozcut.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5426,7 +6248,9 @@
           "name": "Otis Elevator Company Pty Limited",
           "email": "peter.gabriel@otis.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5439,7 +6263,9 @@
           "name": "Top Knot Projects Pty Ltd",
           "email": "eoin@topknotcarpentry.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5452,7 +6278,9 @@
           "name": "Archiland Contractors Pty Ltd",
           "email": "RACHEL@archilands.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5465,7 +6293,9 @@
           "name": "A1 Painting Group Pty Ltd",
           "email": "info@a1paintinggroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5478,7 +6308,9 @@
           "name": "Kalinya Enterprises Pty Limited",
           "email": "jbtc@optusnet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5491,7 +6323,9 @@
           "name": "City Rendering Pty Limited",
           "email": "kerry@cityrendering.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5504,7 +6338,9 @@
           "name": "Talis Civil Pty Limited",
           "email": "jbye@bigpond.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5517,7 +6353,9 @@
           "name": "Feenix NSW Pty Limited",
           "email": "carly@feenix.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5530,7 +6368,9 @@
           "name": "Baron Forge (NSW) Pty. Ltd.",
           "email": "david.esha@baronforge.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5553,7 +6393,9 @@
           "name": "Schindler Lifts Australia Pty Limited",
           "email": "Doug.Blackman@au.schindler.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5566,7 +6408,9 @@
           "name": "Axis Plumbing NSW Pty Limited",
           "email": "craigm@axisplumbing.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 1,
@@ -5579,7 +6423,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 1,
@@ -5592,7 +6438,9 @@
           "name": "Mainland Civil NSW Pty Limited",
           "email": "James_mcmillan@mainlandcivil.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5605,7 +6453,9 @@
           "name": "F.I.P. Electrical (Nsw) Pty Ltd",
           "email": "safety@fipelectrical.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5628,7 +6478,9 @@
           "name": "McPherson Plumbing (NSW) Pty Limited",
           "email": "john@mcplumbing.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5641,7 +6493,9 @@
           "name": "Carrington Electrical Services Pty Limited",
           "email": "Jasmineg@carringtonelectrical.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5654,7 +6508,9 @@
           "name": "Trazmet Pty Limited",
           "email": "cbarchini@trazmet.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5667,7 +6523,9 @@
           "name": "Alimak Hek Pty Limited",
           "email": "alan.evans@alimakhek.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5680,7 +6538,9 @@
           "name": "Decade Waterproofing & Products Pty Limited",
           "email": "salesx@decadewp.com",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5693,7 +6553,9 @@
           "name": "Marr Contracting Pty Limited",
           "email": "simon@marr.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5706,7 +6568,9 @@
           "name": "Micos Aluminium Windows and Doors Pty Ltd",
           "email": "ajan.pasupati@micos.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5719,7 +6583,9 @@
           "name": "GVK NSW REO Pty Ltd",
           "email": "ray@gvk-group.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5732,7 +6598,9 @@
           "name": "De Martin & Gasparini Pty Limited",
           "email": "sal.volpato@boral.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5745,7 +6613,9 @@
           "name": "Commercial TC Pty Ltd",
           "email": "am@commercialplanthire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5758,7 +6628,9 @@
           "name": "Delta Group Pty Limited",
           "email": "neville.williams@deltagroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5771,7 +6643,9 @@
           "name": "Erect Safe Scaffolding (NSW) Pty Limited",
           "email": "steveo@erectsafe.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5784,7 +6658,9 @@
           "name": "Interspan (NSW) Pty Ltd",
           "email": "mwylde@interspan.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5797,7 +6673,9 @@
           "name": "MPDI Pty Ltd",
           "email": "adam@mpdi.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5810,7 +6688,9 @@
           "name": "C.M.S. Surveyors Pty Limited",
           "email": "acummins@cmssurveyors.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5823,7 +6703,9 @@
           "name": "Rix Specialist Contracting",
           "email": "sdalgliesh@therixgroup.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5836,7 +6718,9 @@
           "name": "Innovative Fire Services Pty Limited",
           "email": "adeller@innovativefire.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,
@@ -5849,7 +6733,9 @@
           "name": "Total Hoardings Pty Limited",
           "email": "scott@hoardings.com.au",
           "onSite": true,
-          "auditStatus": false
+          "auditStatus": false,
+          "auditDate": "2016-01-01",
+          "expiryDate": "5000-12-01"
         },
         "status": {
           "id": 3,

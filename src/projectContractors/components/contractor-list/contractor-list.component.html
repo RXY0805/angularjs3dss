@@ -30,12 +30,20 @@
             <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.id}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="email">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="auditDate" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.auditDate}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="expiryDate" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Expiry Date </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.expiryDate}} </mat-cell>
         </ng-container>
         <!-- Color Column -->
 

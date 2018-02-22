@@ -35,7 +35,6 @@ export class ContractorInviteDialogComponent implements OnInit {
   companyForm: FormGroup;
   email: FormControl;
   abn: FormControl;
-  noneContractInvited: boolean;
 
   duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
@@ -43,6 +42,7 @@ export class ContractorInviteDialogComponent implements OnInit {
   lastABN: string;
   selectedProject$: Observable<Project>;
   noneCompanyInvited: boolean;
+  isCheckable: boolean;
 
   constructor(
     public dialogRef: MatDialogRef<ContractorInviteDialogComponent>,
@@ -50,10 +50,12 @@ export class ContractorInviteDialogComponent implements OnInit {
     public store: Store<fromStore.ProjectContractorsState>,
     public form: FormBuilder
   ) {
+    console.log(data.currentAvailableContractors);
     this.invitation = data.invitation;
     this.isDuplicatedEmail = false;
   }
   ngOnInit() {
+    this.isCheckable = true;
     this.noneCompanyInvited = true;
     this.createFormControls();
     this.createForm();
@@ -102,6 +104,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.invitation.existCompanies = event;
     this.noneCompanyInvited = event && event.length ? false : true;
   }
+
   onInvitation(): void {
     console.log(this.invitation);
     this.store.dispatch(

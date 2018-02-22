@@ -4,4 +4,6 @@ export interface Company {
   email?: string;
   onSite?: boolean;
   auditStatus?: boolean;
+  auditDate?: string;
+  expiryDate?: string;
 }

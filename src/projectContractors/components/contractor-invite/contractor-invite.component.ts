@@ -45,8 +45,6 @@ export class ContractorInviteComponent implements OnInit {
     });
   }
 
-  // this.defaultPageSize = this.isCheckable ? 5:10;
-
   openDialog(): void {
     this.availableContractors$ = this.store.select(
       fromStore.getAvailableContractors
@@ -61,7 +59,6 @@ export class ContractorInviteComponent implements OnInit {
       data: {
         currentProject: this.currentProject,
         currentAvailableContractors: this.availableContractors$,
-        isCheckable: true,
         invitation: this.invitation
       }
     });

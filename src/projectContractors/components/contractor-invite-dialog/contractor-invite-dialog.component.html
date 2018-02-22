@@ -4,7 +4,7 @@
 <div mat-dialog-content>
     <mat-tab-group>
         <mat-tab label="Existing companies">
-            <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="data.isCheckable" (toggleSelectedCompanies)="onToggleSelectedCompanies($event)"></app-contractor-list>
+            <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleSelectedCompanies)="onToggleSelectedCompanies($event)"></app-contractor-list>
             <div class="button-group">
                 <button class="mat-button-left" mat-raised-button (click)="onNoClick()">No Thanks</button>
                 <button class="mat-button-right" mat-raised-button color="warn" [disabled]="noneCompanyInvited" (click)="onInvitation()"

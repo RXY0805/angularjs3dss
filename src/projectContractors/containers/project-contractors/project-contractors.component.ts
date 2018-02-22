@@ -26,7 +26,7 @@ export class ProjectContractorsComponent implements OnInit {
   selectedProject$: Observable<Project>;
   contractors$: Observable<Company[]>;
 
-  isCheckable$: true;
+  isCheckable: boolean;
 
   projectFilter$: ProjectFilter = {
     selectedProjectId: 0,
@@ -42,6 +42,7 @@ export class ProjectContractorsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isCheckable = false;
     this.projects$ = this.store
       .select(fromStore.getAllProjects)
       .map(projects => projects.sort(this.sortProjectByName));

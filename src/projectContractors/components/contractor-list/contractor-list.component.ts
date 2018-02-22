@@ -36,7 +36,7 @@ export class ContractorListComponent implements OnInit {
   }>();
 
   private companyData: Company[] = [];
-  displayedColumns = ['select', 'id', 'name', 'email'];
+  displayedColumns: string[];
   selection = new SelectionModel<number>(true, []);
 
   public companyDatabase: CompanyDatabase;
@@ -57,6 +57,19 @@ export class ContractorListComponent implements OnInit {
 
   constructor() {}
   ngOnInit() {
+    if (this.isCheckable) {
+      this.displayedColumns = ['select', 'id', 'name', 'email'];
+    } else {
+      this.displayedColumns = [
+        'select',
+        'id',
+        'name',
+        'email',
+        'auditDate',
+        'expiryDate'
+      ];
+    }
+    this.defaultPageSize = this.isCheckable ? 5 : 10;
     this.contractors.subscribe(res => {
       this.companyDatabase = new CompanyDatabase(this.contractors);
 
@@ -145,7 +158,6 @@ export class ContractorListComponent implements OnInit {
       const company: Company = {
         id: id,
         name: name,
-        email: '',
         onSite: false,
         auditStatus: false
       };
