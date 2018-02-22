@@ -6,7 +6,7 @@ export interface ContractorStatus {
 }
 
 export interface Contractor {
-  id: number;
+  // id: number;
   company: Company;
   status: ContractorStatus;
 }

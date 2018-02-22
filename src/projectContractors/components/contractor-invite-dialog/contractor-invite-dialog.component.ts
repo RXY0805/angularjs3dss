@@ -54,6 +54,7 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.isDuplicatedEmail = false;
   }
   ngOnInit() {
+    this.noneCompanyInvited = true;
     this.createFormControls();
     this.createForm();
 
@@ -102,12 +103,10 @@ export class ContractorInviteDialogComponent implements OnInit {
   // }
   onToggleSelectedCompanies(event) {
     this.invitation.existCompanies = event;
-    this.noneCompanyInvited = event === null;
-    // event.forEach(element => {
-    //   console.log(element);
-    // });
+    this.noneCompanyInvited = event && event.length ? false : true;
   }
   onInvitation(): void {
+    console.log(this.invitation);
     this.store.dispatch(
       new fromStore.InviteExistCompaniesSuccess(this.invitation)
     );

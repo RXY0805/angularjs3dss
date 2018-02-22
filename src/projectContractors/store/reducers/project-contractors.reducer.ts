@@ -73,31 +73,65 @@ export function reducer(
     case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
       const projectId = action.payload.projectId;
       const existedCompanies = action.payload.existCompanies;
-      // state.entities.m
-      // alert(state.entities.projectContractor.length);
-      const currentProject = {
-        ...state.entities[action.payload.projectId]
-        // [action.payload.projectId]: action.payload
-      };
-      console.log(currentProject);
+      const newContractors = [];
 
+      // const newContractors = [];
+      // alert(state.entities[projectId].project.name);
+      // console.log(state.entities[projectId].contractors.length);
+      const contractsLength = state.entities[projectId].contractors;
       for (let i = 0; i < existedCompanies.length; i++) {
         const newContractor: Contractor = {
-          id: existedCompanies[i].id,
           company: existedCompanies[i],
           status: defaultContractorStatus
         };
-
-        // return {
-        //   //state.entities: [action.payload.projectId].
-        // };
-        // Object.assign({}, state.entities[projectId], {
-        //   contractors: [...state.entities[projectId].contractors, newContractor]
-        // });
+        newContractors.push(newContractor);
       }
+      const result = {
+        ...state,
+        entities: {
+          ...state.entities,
+          [projectId]: {
+            ...state.entities[projectId],
+            contractors: [
+              ...(state.entities[projectId].contractors || []),
+              ...(state.entities[projectId].contractors || []).concat(
+                newContractors
+              )
+            ]
+          }
+        }
+      };
+      console.log(result);
+      return result;
+      //console.log(state.entities);
+      // return newContractService;
+      // console.log(state.entities[projectId].contractors);
+      // return newContractService;
+      // for (let i = 0; i < existedCompanies.length; i++) {
+      // // const newContractor: Contractor = {
+      //   company: existedCompanies[i],
+      //   status: defaultContractorStatus
+      // };
+      // console.log(state.entities[projectId]);
+      // return {
+      //   ...state,
+      //   entities: {
+      //     ...state.entities,
+      //     [projectId]: {
+      //       ...state.entities[projectId],
+      //       contractors: [
+      //         ...state.entities[projectId].contractors,
+      //         newContractor
+      //       ]
+      //     }
+      //   }
+      // };
+      // alert(state.entities[projectId].contractors.length);
+      // return addNewContractor;
+      // }
 
       // alert(state.entities[projectId].contractors.length);
-      return state;
+      // return state;
     }
   }
 

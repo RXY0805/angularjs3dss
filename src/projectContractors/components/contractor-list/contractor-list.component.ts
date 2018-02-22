@@ -144,7 +144,9 @@ export class ContractorListComponent implements OnInit {
     if (index < 0) {
       const company: Company = {
         id: id,
-        name: name
+        name: name,
+        onSite: false,
+        auditStatus: false
       };
       this.selectedCompanies.push(company);
     } else {
