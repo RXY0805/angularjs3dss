@@ -32,9 +32,7 @@ export class ContractorInviteComponent implements OnInit {
   @Input() selectedProject: Observable<Project>;
   @Input() availableContractors: Observable<Company[]>;
   currentProject: Project;
-  invitation: ProjectInvitation = {
-    projectId: 0
-  };
+  invitation: ProjectInvitation;
 
   // @Input() selectedProjectId: number;
   constructor(
@@ -53,12 +51,13 @@ export class ContractorInviteComponent implements OnInit {
     // this.availableContractors.subscribe(x => {
     //   this.currentAvailableContractors = x;
     // });
-    this.invitation.projectId = this.currentProject.id;
+    this.invitation = {
+      projectId: this.currentProject.id
+    };
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {
       width: '650px',
       data: {
         currentProject: this.currentProject,
-        availableContractors: this.availableContractors,
         currentAvailableContractors: this.availableContractors,
         isCheckable: true,
         invitation: this.invitation

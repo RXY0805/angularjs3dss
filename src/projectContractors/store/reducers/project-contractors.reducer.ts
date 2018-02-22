@@ -93,7 +93,6 @@ export function reducer(
           [projectId]: {
             ...state.entities[projectId],
             contractors: [
-              ...(state.entities[projectId].contractors || []),
               ...(state.entities[projectId].contractors || []).concat(
                 newContractors
               )
