@@ -38,7 +38,7 @@ export const getContractorsByProjectId = createSelector(
 export const getContractorsIdByProjectId = createSelector(
   getContractorsByProjectId,
   c => {
-    return c.map(x => x.id);
+    return c.map(x => x.id) || null;
   }
 );
 

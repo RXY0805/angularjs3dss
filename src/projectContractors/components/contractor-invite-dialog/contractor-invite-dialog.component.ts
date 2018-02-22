@@ -97,10 +97,7 @@ export class ContractorInviteDialogComponent implements OnInit {
       );
     }
   }
-  // getInvitedContractorIds(invitedContractorIds) {
-  //   this.invitation.existContractIds = invitedContractorIds;
-  //   this.noneContractInvited = !this.invitation.existContractIds.length;
-  // }
+
   onToggleSelectedCompanies(event) {
     this.invitation.existCompanies = event;
     this.noneCompanyInvited = event && event.length ? false : true;

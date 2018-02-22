@@ -34,7 +34,7 @@ export class ContractorInviteComponent implements OnInit {
   currentProject: Project;
   invitation: ProjectInvitation;
   currentAvailableContractors: Company[];
-  // @Input() selectedProjectId: number;
+
   constructor(
     public dialog: MatDialog,
     private store: Store<fromStore.ProjectContractorsState>
@@ -51,10 +51,7 @@ export class ContractorInviteComponent implements OnInit {
     this.availableContractors$ = this.store.select(
       fromStore.getAvailableContractors
     );
-    // this.availableContractors$.subscribe(x => {
-    //   this.currentAvailableContractors = x;
-    //   // alert('available length: ' + x.length);
-    // });
+
     this.invitation = {
       projectId: this.currentProject.id
     };
