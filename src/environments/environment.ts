@@ -4,5 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // For local host 4200
+  dataFolder: '../assets'
+  // for 3dss integration
+  // dataFolder: '../AngularJS3DSSAppScripts/assets'
 };
