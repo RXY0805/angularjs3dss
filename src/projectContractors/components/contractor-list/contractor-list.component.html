@@ -33,7 +33,7 @@
             <mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
         </ng-container>
-        <ng-container matColumnDef="email">
+        <ng-container matColumnDef="email" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
         </ng-container>

@@ -58,7 +58,7 @@ export class ContractorListComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     if (this.isCheckable) {
-      this.displayedColumns = ['select', 'id', 'name', 'email'];
+      this.displayedColumns = ['select', 'id', 'name'];
     } else {
       this.displayedColumns = [
         'select',
