@@ -49,9 +49,7 @@ export class ContractorListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('filter') filter: ElementRef;
-  // private paginatorSubscription: Subscription = Subscription.EMPTY;
-  // private sortSubscription: Subscription = Subscription.EMPTY;
-  // private query: string;
+
   // companysTrackByFn = (index: string, company: Company) =>
   //   company.id.toString();
 
