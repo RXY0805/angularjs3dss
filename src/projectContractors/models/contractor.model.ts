@@ -1,17 +1,9 @@
 import { Company } from './company.model';
-
-export interface ContractorStatus {
-  id: number;
-  description: string;
-}
+import { Project } from './project.model';
 
 export interface Contractor {
   // id: number;
+  id?: number;
   company: Company;
-  status: ContractorStatus;
+  project: Project;
 }
-
-export const defaultContractorStatus: ContractorStatus = {
-  id: 3,
-  description: 'For Review'
-};

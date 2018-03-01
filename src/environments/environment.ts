@@ -5,8 +5,10 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:1212/api/',
+  baseUrl: 'http://localhost:1212/',
   // For local host 4200
-  dataFolder: '../assets'
+  //dataFolder: '../assets'
   // for 3dss integration
-  // dataFolder: '../AngularJS3DSSAppScripts/assets'
+  dataFolder: '../AngularJS3DSSAppScripts/assets'
 };

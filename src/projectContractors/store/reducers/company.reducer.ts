@@ -32,7 +32,6 @@ export function reducer(
 
     case fromCompany.SEARCH_ABN_SUCCESS: {
       const result = action.payload;
-      console.log(result);
       return {
         ...state,
         searching: false,

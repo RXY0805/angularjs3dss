@@ -20,7 +20,8 @@ import * as fromStore from '../../store';
 import { ContractorInviteDialogComponent } from '../contractor-invite-dialog/contractor-invite-dialog.component';
 import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
-import { Project } from '../../models/project-contractor.model';
+import { Project } from '../../models/project.model';
+import { Contractor } from '../../models/contractor.model';
 import { FormBuilder } from '@angular/forms/src/form_builder';
 
 @Component({
@@ -29,11 +30,11 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
   templateUrl: './contractor-invite.component.html'
 })
 export class ContractorInviteComponent implements OnInit {
-  @Input() selectedProject: Observable<Project>;
-  availableContractors$: Observable<Company[]>;
+  @Input() selectedProject: Observable<any>;
+  availableContractors$: Observable<Contractor[]>;
   currentProject: Project;
   invitation: ProjectInvitation;
-  currentAvailableContractors: Company[];
+  currentAvailableContractors: Contractor[];
 
   constructor(
     public dialog: MatDialog,
@@ -41,6 +42,7 @@ export class ContractorInviteComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.selectedProject.subscribe(x => {
+      // console.log(x);
       this.currentProject = x;
     });
   }
@@ -55,7 +57,7 @@ export class ContractorInviteComponent implements OnInit {
     };
 
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {
-      width: '650px',
+      width: '750px',
       data: {
         currentProject: this.currentProject,
         currentAvailableContractors: this.availableContractors$,

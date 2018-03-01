@@ -17,7 +17,7 @@ export class ProjectContractorsEffects {
 
   @Effect()
   loadProjectContractors$ = this.actions$
-    .ofType(projectContractorActions.LOAD_PROJECTCONTRACTORS)
+    .ofType(projectContractorActions.LOAD_PROJECT_CONTRACTORS)
     .pipe(
       switchMap(() => {
         return this.projectContractorService

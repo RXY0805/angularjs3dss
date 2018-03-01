@@ -32,9 +32,9 @@ export const ROUTES: Routes = [
     component: fromContainers.ProjectContractorsComponent
   },
   {
-    path: ':projectId',
+    path: ':contractorId',
     // canActivate: [fromGuards.ProjectContractorExistsGuards,],
-    component: fromContainers.ProjectContractorsComponent
+    component: fromContainers.ContractorEditComponent
   }
 ];
 

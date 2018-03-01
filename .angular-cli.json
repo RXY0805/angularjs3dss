@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../Website/AngularJS3DSSAppScripts",
       "assets": [
         "assets",
         "favicon.ico",

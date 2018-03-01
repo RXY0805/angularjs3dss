@@ -1,0 +1,80 @@
+<form (submit)="onSubmit()" [formGroup]="contractorForm">
+    <table formGroupName="company">
+        <tr>
+            <td>Email</td>
+            <td>
+                <mat-form-field class="example-form-field">
+                    <input matInput formControlName="email" />
+                </mat-form-field>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Company Name</td>
+            <td>
+                <mat-form-field>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+
+            </td>
+        </tr>
+    </table>
+
+    <table formGroupName="project">
+        <tr>
+            <td>audit status</td>
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-select matInput class="width-80-percent" formControlName="auditStatus">
+                        <mat-option *ngFor="let auditOption of auditStatusOptions" [value]="auditOption.value">{{auditOption.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>Onsite Status</td>
+            <td>
+                <mat-form-field class="full-width">
+                    <mat-select matInput class="width-60-percent" formControlName="onSite">
+                        <mat-option *ngFor="let onsiteOption of onsiteOptions" [value]="onsiteOption.value">{{onsiteOption.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>Terminated</td>
+            <td>
+                <mat-checkbox matInput class="width-60-percent" formControlName="isTerminated">
+                </mat-checkbox>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="form-group">
+        <button type="submit" [disabled]="!contractorForm.valid">Submit</button>
+    </div>
+</form>
+
+
+<!-- <ng-container matColumnDef="project.auditStatus" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> Audit Status </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-select class="width-80-percent" [(value)]="row.project? row.project.auditStatus:''" (change)="alert('change onsite')">
+                    <mat-option *ngFor="let option of auditStatusOptions" [value]="option.value">{{option.name}}</mat-option>
+                </mat-select>
+            </mat-cell>
+        </ng-container> -->
+
+
+<!-- <ng-container matColumnDef="project.onSite" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> On Site </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-select class="width-60-percent" [(value)]="row.project? row.project.onSite:''" (change)="alert('change onsite')">
+                    <mat-option *ngFor="let option of onsiteOptions" [value]="option.value">{{option.name}}</mat-option>
+                </mat-select>
+            </mat-cell>
+        </ng-container> -->
+<!-- <div>
+    edit {{currentContractor.id }} {{currentContractor.company.email }}
+</div> -->

@@ -1,67 +1,43 @@
 <div>
-
-    <mat-form-field>
-        <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
-            <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <div>
-        {{projectFilter.selectedProjectId}}
-    </div>
-    <table>
+    <table class="ngSearchControls">
         <tr>
+            <td>Select Project:</td>
             <td>
-                <!-- [(ngModel)]="projectFilter.selectedProjectId" -->
                 <mat-form-field>
-
-                    <mat-select placeholder="selected project" [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange('PROJECT_ID')">
+                    <mat-select placeholder="choose..." [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange('PROJECT_ID')">
                         <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </td>
-            <!-- <td>
-                <mat-form-field class="example-full-width">
-                    <mat-select placeholder="selected project status" [(ngModel)]="contactFilter.selectedProjectStatusId" (selectionChange)="onFilterChange()">
-                        
-                        <mat-option *ngFor="let ps of projectStatus" [value]="ps.id">{{ps.status}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </td>
-            <td>
-                <section class="search-section">
-                    Pending Contractors
-                    <mat-checkbox class="search-margin" (change)="onFilterChange()" [(ngModel)]="contactFilter.isPending">
-                    </mat-checkbox>
-                </section>
-            </td> -->
         </tr>
 
-        <!-- <tr>
+        <tr>
+            <td>Select Project Status:</td>
             <td>
-                <mat-form-field class="example-full-width">
-                    <mat-select placeholder="selected audit status" [(ngModel)]="contactFilter.selectedAuditStatusId">
-                        <mat-option *ngFor="let t of auditStatus" [value]="t.id">{{t.status}}</mat-option>
+                <mat-form-field>
+                    <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
+                        <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </td>
-            <td>
-                <mat-form-field class="example-full-width">
-                    <mat-select placeholder="selected onsite status" [(ngModel)]="contactFilter.selectedProjectOnSiteStatusId">
-                        <mat-option *ngFor="let s of projectOnSiteStatus" [value]="s.id">{{s.status}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
+        </tr>
+        <tr>
+            <td class="doubleBottomPadding">
+                Select Audit Status:
             </td>
-        </tr> -->
+            <td class="doubleBottomPadding">
+                <mat-radio-group (change)="onFilterChange('AUDIT_STATUS')" [(ngModel)]='projectFilter.isAuditStatus'>
+                    <mat-radio-button value='1'>Ok</mat-radio-button>
+                    <mat-radio-button value='0'>For Review</mat-radio-button>
+                </mat-radio-group>
+            </td>
+        </tr>
+        <tr>
+            <td class="doubleBottomPadding">Contractor Onsite:</td>
+            <td class="doubleBottomPadding">
+                <mat-checkbox (change)="onFilterChange('ON_SITE')" [(ngModel)]='projectFilter.isOnSite'></mat-checkbox>
+            </td>
+        </tr>
+
     </table>
 </div>
-
-<section>
-    <label>Audit Status:</label>
-    <mat-radio-group (change)="onFilterChange('AUDIT_STATUS')" [(ngModel)]='projectFilter.isAuditStatus'>
-        <mat-radio-button value='1'>Yes</mat-radio-button>
-        <mat-radio-button value='0'>No</mat-radio-button>
-    </mat-radio-group>
-</section>
-<section>
-    <mat-checkbox (change)="onFilterChange('ON_SITE')" [(ngModel)]='projectFilter.isOnSite'>On Site</mat-checkbox>
-</section>

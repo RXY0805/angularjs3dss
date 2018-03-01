@@ -1,52 +1,85 @@
 <div class="example-container mat-elevation-z8">
     <div class="example-header" [style.display]="selection.isEmpty() ? '' : 'none'">
-        <mat-input-container floatPlaceholder="never">
-            <input matInput #filter placeholder="Filter contractors">
+        <mat-input-container>
+            <input matInput #filter placeholder="Search for keywords">
         </mat-input-container>
     </div>
 
-    <div class="example-header example-selection-header" [hidden]="selection.isEmpty()">
+    <div *ngIf="isCheckable" class="example-header example-selection-header" [style.display]="selection.isEmpty() ? 'none':''">
         {{selection.selected.length}} {{selection.selected.length == 1 ? 'company' : 'companies'}} selected
     </div>
 
-    <!--  -->
+    <!-- [hidden]="selection.isEmpty()"  -->
     <mat-table [dataSource]="dataSource" matSort>
         <!-- select -->
-        <ng-container matColumnDef="select">
+        <!-- <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                {{row.id}}
+            </mat-cell>
+        </ng-container> -->
+        <ng-container matColumnDef="select" *ngIf="isCheckable">
             <mat-header-cell *matHeaderCellDef>
-                <mat-checkbox *ngIf="isCheckable" (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">&nbsp;
+                <mat-checkbox *ngIf="isCheckable" (change)="$event ? masterToggle() : ''" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">All
                 </mat-checkbox>
-                <label *ngIf="!isCheckable"></label>
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-checkbox *ngIf="isCheckable" (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null;onToggleSelectedCompanies(row.id, row.name)"
-                    [checked]="selection.isSelected(row.id)">&nbsp;
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.company.id) : '';onToggleSelectedCompanies(row.company.id, row.company.name)"
+                    [checked]="selection.isSelected(row.company.id)">&nbsp;
                 </mat-checkbox>
             </mat-cell>
         </ng-container>
-        <!-- Name Column -->
-        <ng-container matColumnDef="id">
-            <mat-header-cell hidden="!isCheckable" *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
-            <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.id}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="email" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="auditDate" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.auditDate}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="expiryDate" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Expiry Date </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.expiryDate}} </mat-cell>
-        </ng-container>
-        <!-- Color Column -->
 
+        <ng-container matColumnDef="company.name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <a *ngIf="!isCheckable" [href]="baseUrl+'UserHome.aspx?view=project&pid='+row.id">{{row.company.name}}</a>
+                <span *ngIf="isCheckable">{{row.company.name}}</span>
+            </mat-cell>
+        </ng-container>
+
+        <!-- <ng-container matColumnDef="project.auditStatus" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> Audit Status </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-select class="width-80-percent" [(value)]="row.project? row.project.auditStatus:''" (change)="alert('change onsite')">
+                    <mat-option *ngFor="let option of auditStatusOptions" [value]="option.value">{{option.name}}</mat-option>
+                </mat-select>
+            </mat-cell>
+        </ng-container> -->
+        <ng-container matColumnDef="company.email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.company.email}} </mat-cell>
+        </ng-container>
+
+        <!-- <ng-container matColumnDef="project.onSite" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> On Site </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-select class="width-60-percent" [(value)]="row.project? row.project.onSite:''" (change)="alert('change onsite')">
+                    <mat-option *ngFor="let option of onsiteOptions" [value]="option.value">{{option.name}}</mat-option>
+                </mat-select>
+            </mat-cell>
+        </ng-container> -->
+
+
+        <ng-container matColumnDef="project.auditDate" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.project.auditDate}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="project.expiryDate" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> Expiry Date </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.color]="getColor(row.project.expiryDate)"> {{row.project.expiryDate}} </mat-cell>
+        </ng-container>
+        <!-- Color   Column -->
+        <ng-container matColumnDef="company.id">
+            <mat-header-cell hidden="!isCheckable" *matHeaderCellDef> ID </mat-header-cell>
+            <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.company.id}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="id" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <button (click)="onEditContractor(row.id)">Edit</button>
+            </mat-cell>
+        </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;">
         </mat-row>
@@ -56,5 +89,4 @@
     </div>
     <mat-paginator #paginator [length]="dataLength" [pageIndex]="0" [pageSize]="defaultPageSize" [pageSizeOptions]="[5, 10, 25, 100]">
     </mat-paginator>
-
 </div>

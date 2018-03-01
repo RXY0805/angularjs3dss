@@ -6,9 +6,8 @@
         <mat-tab label="Existing companies">
             <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleSelectedCompanies)="onToggleSelectedCompanies($event)"></app-contractor-list>
             <div class="button-group">
-                <button class="mat-button-left" mat-raised-button (click)="onNoClick()">No Thanks</button>
-                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="noneCompanyInvited" (click)="onInvitation()"
-                    [mat-dialog-close]="data.invitation">Invite</button>
+                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
+                <button class="ngButton" mat-raised-button color="primary" [disabled]="noneCompanyInvited" (click)="onInvitation()" [mat-dialog-close]="data.invitation">Invite</button>
                 <!-- [disabled]="noneCompanyInvited" -->
             </div>
         </mat-tab>
@@ -18,41 +17,95 @@
                 </mat-card-header>
                 <mat-card-content>
                     <form [formGroup]="companyForm" layout-align="center center">
-                        <mat-form-field class="full-width">
-                            <input matInput placeholder="Enter Company Email" (change)="onDuplicatedEmailCheck($event.target.value)" formControlName="email"
-                                (keyup)="onDuplicatedEmailCheck($event.target.value)">
-                        </mat-form-field>
-                        <threedss-show-errors [control]="companyForm.controls.email">
-                        </threedss-show-errors>
-                        <mat-error *ngIf="isDuplicatedEmail">The email is existed in 3DSS</mat-error>
-                        <mat-form-field class="example-form-field">
-                            <input matInput threedss-number-only placeholder="new company abn" formControlName="abn" />
-                            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
-                                <mat-icon>search</mat-icon>
-                            </button>
+                        <table>
+                            <tr>
+                                <td>
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="New Company Email" (change)="onDuplicatedEmailCheck($event.target.value)" formControlName="email"
+                                            (keyup)="onDuplicatedEmailCheck($event.target.value)">
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <threedss-show-errors [control]="companyForm.controls.email"></threedss-show-errors>
+                                    <mat-error *ngIf="isDuplicatedEmail">The email is existed in 3DSS</mat-error>
+                                </td>
+                            </tr>
+                            <tr>
 
-                        </mat-form-field>
-                        <threedss-show-errors [control]="companyForm.controls.abn">
-                        </threedss-show-errors>
+                                <td>
+                                    <mat-form-field class="example-form-field">
+                                        <input matInput threedss-number-only placeholder="New Company ABN" formControlName="abn" />
+                                    </mat-form-field>
+                                </td>
+
+                                <td>
+                                    <button *ngIf="!companyForm.controls.abn.errors" class="button-group ngButton" mat-raised-button color="primary" (click)="onABNLookup()">
+                                        search
+                                    </button>
+
+                                    <!-- <i class="material-icons">search</i>
+                                    <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
+                                         <mat-icon class="material-icons md-24">search</mat-icon>
+                                    </button> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <threedss-show-errors [control]="companyForm.controls.abn">
+                                    </threedss-show-errors>
+                                </td>
+                            </tr>
+                        </table>
                     </form>
                 </mat-card-content>
                 <mat-card-content *ngIf="invitation.tradingEntity">
-                    <div>
-                        <mat-input-container>
-                            <input matInput name="businessName" [(ngModel)]="invitation.tradingEntity.BusinessName" disabled>
-                        </mat-input-container>
-                    </div>
-                    <div>
-                        <mat-input-container>
-                            <input matInput name="EntityName" [(ngModel)]="invitation.tradingEntity.EntityName" disabled>
-                        </mat-input-container>
-                    </div>
+                    <table style="width:100%">
+                        <tr>
+                            <td width="30%">
+                                Entity Name:
+                            </td>
+                            <td width="70%">
+                                {{invitation.tradingEntity.EntityName}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ABN Status:
+                            </td>
+                            <td>
+                                <div [ngSwitch]="isABNActived">
+                                    <span *ngSwitchCase="true" class="green-icon">Active</span>
+                                    <span *ngSwitchCase="false" class="red-icon">Inactive</span>
+                                    <!-- <mat-icon *ngSwitchCase="true" class="material-icons md-24 green-icon">check circle</mat-icon>
+                                    <mat-icon *ngSwitchCase="false" class="material-icons md-24 red-icon">clear</mat-icon> -->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Post Code:
+                            </td>
+                            <td>
+                                {{invitation.tradingEntity.AddressPostcode}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                State:
+                            </td>
+                            <td>
+                                {{invitation.tradingEntity.AddressState}}
+                            </td>
+                        </tr>
+                    </table>
                 </mat-card-content>
 
             </mat-card>
             <div class="button-group">
-                <button class="mat-button-left" mat-button (click)="onNoClick()">No Thanks</button>
-                <button class="mat-button-right" mat-raised-button color="warn" [disabled]="companyForm.invalid || isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
+                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
+                <button class="ngButton" mat-raised-button color="primary" [disabled]="companyForm.invalid || isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
             </div>
         </mat-tab>
     </mat-tab-group>

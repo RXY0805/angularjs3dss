@@ -4,13 +4,14 @@ import {
   ProjectContractor,
   ProjectInvitation
 } from '../../models/project-contractor.model';
+import { Contractor } from '../../models/contractor.model';
 
 // import { AnyFn } from '@ngrx/store/src/selector';
 
-export const LOAD_PROJECTCONTRACTORS = '[ProjectContractors] Load Contractors';
-export const LOAD_PROJECTCONTRACTORS_FAIL =
+export const LOAD_PROJECT_CONTRACTORS = '[ProjectContractors] Load Contractors';
+export const LOAD_PROJECT_CONTRACTORS_FAIL =
   '[ProjectContractors] Load Contractors Fail';
-export const LOAD_PROJECTCONTRACTORS_SUCCESS =
+export const LOAD_PROJECT_CONTRACTORS_SUCCESS =
   '[ProjectContractors] Load Contractors Success';
 
 export const INVITE_EXIST_COMPANIES =
@@ -26,25 +27,45 @@ export const INVITE_NEW_COMPANY_SUCCESS =
 export const INVITE_NEW_COMPANY_FAIL =
   '[ProjectContractors] Invite New Company Fail';
 
-export const SET_CURRENT_PROJECT_ID =
-  '[ProjectContractors] Set Current Project Id';
+export const SET_CURRENT_CONTRACTOR_ID =
+  '[ProjectContractors] Set Current Contractor Id';
+
+export const UPDATE_CONTRACTOR = '[ProjectContractors] Update Contractor';
+export const UPDATE_CONTRACTOR_SUCCESS =
+  '[ProjectContractors] Update Contractor Success';
+export const UPDATE_CONTRACTOR_FAIL =
+  '[ProjectContractors] Update Contractor Fail';
 
 export class LoadProjectContractors implements Action {
-  readonly type = LOAD_PROJECTCONTRACTORS;
+  readonly type = LOAD_PROJECT_CONTRACTORS;
 }
 
 export class LoadProjectContractorsFail implements Action {
-  readonly type = LOAD_PROJECTCONTRACTORS_FAIL;
+  readonly type = LOAD_PROJECT_CONTRACTORS_FAIL;
   constructor(public payload: any) {}
 }
 
 export class LoadProjectContractorsSuccess implements Action {
-  readonly type = LOAD_PROJECTCONTRACTORS_SUCCESS;
+  readonly type = LOAD_PROJECT_CONTRACTORS_SUCCESS;
   constructor(public payload: ProjectContractor[]) {}
 }
-export class SetCurrentProjectId implements Action {
-  readonly type = SET_CURRENT_PROJECT_ID;
+export class SetCurrentContractorId implements Action {
+  readonly type = SET_CURRENT_CONTRACTOR_ID;
   constructor(public payload: number) {}
+}
+
+export class UpdateContractor implements Action {
+  readonly type = UPDATE_CONTRACTOR;
+  constructor(public payload: Contractor) {}
+}
+export class UpdateContractorSuccess implements Action {
+  readonly type = UPDATE_CONTRACTOR_SUCCESS;
+  constructor(public payload: Contractor) {}
+}
+
+export class UpdateContractorFail implements Action {
+  readonly type = UPDATE_CONTRACTOR_FAIL;
+  constructor(public payload: any) {}
 }
 
 export class InviteExistCompanies implements Action {
@@ -84,4 +105,7 @@ export type ProjectContractorsAction =
   | InviteNewCompany
   | InviteNewCompanyFail
   | InviteNewCompanySuccess
-  | SetCurrentProjectId;
+  | SetCurrentContractorId
+  | UpdateContractor
+  | UpdateContractorSuccess
+  | UpdateContractorFail;

@@ -24,7 +24,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
-import { Project } from '../../models/project-contractor.model';
+import { Project } from '../../models/project.model';
+
 import { CustomValidators } from '../../../shared/validator/custom-validators';
 
 @Component({
@@ -43,14 +44,13 @@ export class ContractorInviteDialogComponent implements OnInit {
   selectedProject$: Observable<Project>;
   noneCompanyInvited: boolean;
   isCheckable: boolean;
-
+  isABNActived: boolean;
   constructor(
     public dialogRef: MatDialogRef<ContractorInviteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public store: Store<fromStore.ProjectContractorsState>,
     public form: FormBuilder
   ) {
-    console.log(data.currentAvailableContractors);
     this.invitation = data.invitation;
     this.isDuplicatedEmail = false;
   }
@@ -62,6 +62,9 @@ export class ContractorInviteDialogComponent implements OnInit {
 
     this.store.select(fromStore.getTradingEntity).subscribe(result => {
       this.invitation.tradingEntity = result ? result : null;
+      if (result) {
+        this.isABNActived = result.AbnStatus.toUpperCase() === 'ACTIVE';
+      }
     });
 
     this.store.select(fromStore.getCompanyABN).subscribe(abn => {

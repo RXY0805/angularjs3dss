@@ -6,10 +6,10 @@ import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import {
-  Project,
   ContractorFilter,
   ProjectFilter
 } from '../../models/project-contractor.model';
+import { Project } from '../../models/project.model';
 // import {
 //   ContractorFilter,
 //   Project,

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/observable/throw';
 import { ProjectInvitation } from '../models/project-contractor.model';
+import { environment } from '../../environments/environment';
 
 import { ProjectContractor } from '../models/project-contractor.model';
 @Injectable()

@@ -1,17 +1,17 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-
+import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { map, switchMap, catchError, distinct } from 'rxjs/operators';
 import * as fromStore from '../../store';
 import {
   ProjectContractor,
-  Project,
   ContractorFilter,
   ProjectFilter
 } from '../../models/project-contractor.model';
 import { Contractor } from '../../models/contractor.model';
 import { Company } from '../../models/company.model';
+import { Project } from '../../models/project.model';
 // import { SetProjectFilter } from '../../store/actions/projectFilter.action';
 
 @Component({
@@ -24,7 +24,7 @@ export class ProjectContractorsComponent implements OnInit {
   projectContractors$: Observable<ProjectContractor[]>;
   projects$: Observable<Project[]>;
   selectedProject$: Observable<Project>;
-  contractors$: Observable<Company[]>;
+  contractors$: Observable<Contractor[]>;
 
   isCheckable: boolean;
 
@@ -35,7 +35,11 @@ export class ProjectContractorsComponent implements OnInit {
     isAuditStatus: true
   };
 
-  constructor(private store: Store<fromStore.ProjectContractorsState>) {
+  constructor(
+    private store: Store<fromStore.ProjectContractorsState>,
+    private router: Router,
+    private actR: ActivatedRoute
+  ) {
     this.store.dispatch(
       new fromStore.FilterByStatusId(this.projectFilter$.selectedStatusId)
     );
@@ -46,10 +50,8 @@ export class ProjectContractorsComponent implements OnInit {
     this.projects$ = this.store
       .select(fromStore.getAllProjects)
       .map(projects => projects.sort(this.sortProjectByName));
-    this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
-    this.contractors$ = this.store.select(
-      fromStore.getFilteredContractorsByProjectId
-    );
+    this.selectedProject$ = this.store.select(fromStore.getSelectedMainProject);
+    this.contractors$ = this.store.select(fromStore.getContractorsByFilter);
   }
 
   sortProjectByName(a, b) {
@@ -60,6 +62,11 @@ export class ProjectContractorsComponent implements OnInit {
       return 1;
     }
     return 0;
+  }
+
+  onEditContractor(id) {
+    this.store.dispatch(new fromStore.SetCurrentContractorId(id));
+    this.router.navigate(['/contractors', id]);
   }
 
   onFilterChange(event) {

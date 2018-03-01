@@ -1,22 +1,21 @@
 import * as fromProjectContractors from '../actions/project-contractors.action';
+import { Contractor } from '../../models/contractor.model';
+import { defaultProject } from '../../models/project.model';
 import { ProjectContractor } from '../../models/project-contractor.model';
-import {
-  Contractor,
-  ContractorStatus,
-  defaultContractorStatus
-} from '../../models/contractor.model';
 import { Company } from '../../models/company.model';
 
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
+  currentContractorId: number;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
-  loading: false
+  loading: false,
+  currentContractorId: undefined
 };
 
 export function reducer(
@@ -24,14 +23,14 @@ export function reducer(
   action: fromProjectContractors.ProjectContractorsAction
 ): ProjectContractorState {
   switch (action.type) {
-    case fromProjectContractors.LOAD_PROJECTCONTRACTORS: {
+    case fromProjectContractors.LOAD_PROJECT_CONTRACTORS: {
       return {
         ...state,
         loading: true
       };
     }
 
-    case fromProjectContractors.LOAD_PROJECTCONTRACTORS_SUCCESS: {
+    case fromProjectContractors.LOAD_PROJECT_CONTRACTORS_SUCCESS: {
       const projectContractors = action.payload;
 
       const entities = projectContractors.reduce(
@@ -56,13 +55,39 @@ export function reducer(
       };
     }
 
-    case fromProjectContractors.LOAD_PROJECTCONTRACTORS_FAIL: {
+    case fromProjectContractors.LOAD_PROJECT_CONTRACTORS_FAIL: {
       return {
         ...state,
         loading: false,
         loaded: false
       };
     }
+    case fromProjectContractors.SET_CURRENT_CONTRACTOR_ID: {
+      return { ...state, currentContractorId: action.payload };
+    }
+
+    case fromProjectContractors.UPDATE_CONTRACTOR_SUCCESS: {
+      const mainProjectId = action.payload.id;
+      const result = {
+        ...state,
+        entities: {
+          ...state.entities,
+          [mainProjectId]: {
+            ...state.entities[mainProjectId],
+            contractors: [
+              ...(state.entities[mainProjectId].contractors || [])
+                .concat
+                // newContractors
+                ()
+            ]
+          }
+        }
+      };
+      return result;
+
+      // return { ...state, currentContractorId: action.payload };
+    }
+
     case fromProjectContractors.INVITE_EXIST_COMPANIES: {
       // const projectInvitation = action.payload;
       // for (let i = 0; i < projectInvitation.existContractIds.length; i++) {}
@@ -71,18 +96,20 @@ export function reducer(
       return state;
     }
     case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
-      const projectId = action.payload.projectId;
+      const mainProjectId = action.payload.projectId;
       const existedCompanies = action.payload.existCompanies;
       const newContractors = [];
 
       // const newContractors = [];
       // alert(state.entities[projectId].project.name);
       // console.log(state.entities[projectId].contractors.length);
-      const contractsLength = state.entities[projectId].contractors;
+
       for (let i = 0; i < existedCompanies.length; i++) {
+        defaultProject.mainProjectId = mainProjectId;
         const newContractor: Contractor = {
+          id: undefined,
           company: existedCompanies[i],
-          status: defaultContractorStatus
+          project: defaultProject
         };
         newContractors.push(newContractor);
       }
@@ -90,47 +117,17 @@ export function reducer(
         ...state,
         entities: {
           ...state.entities,
-          [projectId]: {
-            ...state.entities[projectId],
+          [mainProjectId]: {
+            ...state.entities[mainProjectId],
             contractors: [
-              ...(state.entities[projectId].contractors || []).concat(
+              ...(state.entities[mainProjectId].contractors || []).concat(
                 newContractors
               )
             ]
           }
         }
       };
-      console.log(result);
       return result;
-      //console.log(state.entities);
-      // return newContractService;
-      // console.log(state.entities[projectId].contractors);
-      // return newContractService;
-      // for (let i = 0; i < existedCompanies.length; i++) {
-      // // const newContractor: Contractor = {
-      //   company: existedCompanies[i],
-      //   status: defaultContractorStatus
-      // };
-      // console.log(state.entities[projectId]);
-      // return {
-      //   ...state,
-      //   entities: {
-      //     ...state.entities,
-      //     [projectId]: {
-      //       ...state.entities[projectId],
-      //       contractors: [
-      //         ...state.entities[projectId].contractors,
-      //         newContractor
-      //       ]
-      //     }
-      //   }
-      // };
-      // alert(state.entities[projectId].contractors.length);
-      // return addNewContractor;
-      // }
-
-      // alert(state.entities[projectId].contractors.length);
-      // return state;
     }
   }
 
@@ -139,6 +136,8 @@ export function reducer(
 
 export const getProjectContractorsEntities = (state: ProjectContractorState) =>
   state.entities;
+export const getCurrentContractorId = (state: ProjectContractorState) =>
+  state.currentContractorId;
 export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>

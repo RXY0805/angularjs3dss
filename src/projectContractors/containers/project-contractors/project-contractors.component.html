@@ -1,4 +1,4 @@
 <app-contractor-search [projects]="projects$" [projectFilter]="projectFilter$" (filterChange)="onFilterChange($event)">
 </app-contractor-search>
 <app-contractor-invite [selectedProject]="selectedProject$"></app-contractor-invite>
-<app-contractor-list [contractors]="contractors$" [isCheckable]="isCheckable"></app-contractor-list>
+<app-contractor-list [contractors]="contractors$" (editContractor)="onEditContractor($event)" [isCheckable]="isCheckable"></app-contractor-list>

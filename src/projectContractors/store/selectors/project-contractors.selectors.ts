@@ -1,7 +1,8 @@
 import { createSelector } from '@ngrx/store';
 
-import { map, mergeAll } from 'rxjs/operators';
-
+import { mergeAll } from 'rxjs/operators';
+import { filter } from 'rxjs/operator/filter';
+import { map } from 'rxjs/operator/map';
 import * as fromRoot from '../../../app/store';
 import * as fromFeature from '../reducers';
 import * as fromProjectContractors from '../reducers/project-contractors.reducer';
@@ -9,7 +10,9 @@ import * as fromFiltersSelectors from './filters.selectors';
 import * as fromCompanySelectors from './company.selectors';
 
 import { ProjectContractor } from '../../models/project-contractor.model';
-import { Company } from '../../models/Company.model';
+import { Contractor } from '../../models/contractor.model';
+import { Company } from '../../models/company.model';
+import { Project } from '../../models/project.model';
 import { getFilterState } from '../index';
 
 export const getContractorState = createSelector(
@@ -22,45 +25,93 @@ export const getContractorsEntities = createSelector(
   fromProjectContractors.getProjectContractorsEntities
 );
 
-export const getContractorsByProjectId = createSelector(
-  getContractorsEntities,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.selectedProjectId) {
-      return entities[filterState.selectedProjectId].contractors.map(
-        c => c.company
-      );
-    }
-    return null;
-  }
-);
-
-export const getContractorsIdByProjectId = createSelector(
-  getContractorsByProjectId,
-  c => {
-    return c.map(x => x.id) || null;
-  }
-);
-
-export const getFilteredContractorsByProjectId = createSelector(
-  getContractorsEntities,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.selectedProjectId) {
-      return entities[filterState.selectedProjectId].contractors
-        .filter(x => x.company.auditStatus === !!+filterState.isAuditStatus)
-        .filter(x => x.company.onSite === !!+filterState.isOnSite)
-        .filter(x => x.status.id === filterState.selectedStatusId)
-        .map(c => c.company);
-    }
-    return null;
-  }
-);
-
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,
   entities => {
     return Object.keys(entities).map(id => entities[id]);
+  }
+);
+
+export const getAllCompaniesByProjectId = createSelector(
+  getAllProjectContractors,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities
+        .filter(pc => pc.id === filterState.selectedProjectId)
+        .map(c => c.contractors)
+        .reduce(function(pre, cur) {
+          return pre.concat(cur);
+        })
+        .map(y => {
+          return y.contractor;
+        });
+      // .map(x => x.company);
+    }
+    return null;
+  }
+);
+export const getAllContractorsByProjectId = createSelector(
+  getAllProjectContractors,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities
+        .filter(pc => pc.id === filterState.selectedProjectId)
+        .map(c => c.contractors)
+        .reduce(function(pre, cur) {
+          return pre.concat(cur);
+        })
+        .map(y => y.contractor)
+        .filter(x => x.company.id > 0);
+    }
+    return null;
+  }
+);
+
+export const getCurrentContractorId = createSelector(
+  getContractorState,
+  fromProjectContractors.getCurrentContractorId
+);
+
+export const getSelectedContractor = createSelector(
+  getAllContractorsByProjectId,
+  getCurrentContractorId,
+  (contractors, selectedContractorId): Contractor => {
+    const result = contractors
+      .map(x => x)
+      .filter(m => m.id === selectedContractorId);
+    if (result && result.length) {
+      return result[0];
+    }
+    return null;
+  }
+);
+
+export const getContractorsByFilter = createSelector(
+  getAllProjectContractors,
+  fromFiltersSelectors.getFilterState,
+  (entities, filterState) => {
+    if (filterState.selectedProjectId) {
+      return entities
+        .filter(pc => pc.id === filterState.selectedProjectId)
+        .map(c => c.contractors)
+        .reduce(function(pre, cur) {
+          return pre.concat(cur);
+        })
+        .map(y => y.contractor)
+        .filter(x => x.project.auditStatus === !!+filterState.isAuditStatus)
+        .filter(x => x.project.onSite === !!+filterState.isOnSite)
+        .filter(x => x.project.status.id === filterState.selectedStatusId);
+    }
+    return null;
+  }
+);
+
+export const getAllCompaniesIdByProjectId = createSelector(
+  getAllContractorsByProjectId,
+  c => {
+    return c.map(x => x.company.id) || null;
   }
 );
 
@@ -76,8 +127,9 @@ export const getUnassignedContractorsByProjectId = createSelector(
           return pre.concat(cur);
         })
         .map(result => {
-          return result.company;
-        });
+          return result.contractor;
+        })
+        .filter(x => x.id && x.id > 0); // project has been assigned to the contractor
     }
     return null;
   }
@@ -85,10 +137,10 @@ export const getUnassignedContractorsByProjectId = createSelector(
 
 export const getAvailableContractors = createSelector(
   getUnassignedContractorsByProjectId,
-  getContractorsIdByProjectId,
-  (unassignedContractors, assignedContractorsId) => {
+  getAllCompaniesIdByProjectId,
+  (unassignedContractors, assignedCompaniesId) => {
     return unassignedContractors.filter(function(c) {
-      return assignedContractorsId.indexOf(c.id) < 0;
+      return assignedCompaniesId.indexOf(c.company.id) < 0;
     });
   }
 );
@@ -98,16 +150,16 @@ export const getAllProjects = createSelector(
   entities => {
     return Object.keys(entities)
       .map(id => entities[id])
-      .map(x => x.project);
+      .map(x => x.mainProject);
   }
 );
 
-export const getSelectedProject = createSelector(
+export const getSelectedMainProject = createSelector(
   getContractorsEntities,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
     if (filterState.selectedProjectId) {
-      return entities[filterState.selectedProjectId].project;
+      return entities[filterState.selectedProjectId].mainProject;
     }
     return null;
   }

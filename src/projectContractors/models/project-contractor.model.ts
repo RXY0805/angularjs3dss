@@ -1,5 +1,6 @@
 import { Contractor } from './contractor.model';
 import { Company } from './company.model';
+import { Project } from './project.model';
 import { TradingEntity } from './trading-entity.model';
 
 export interface ContractorFilter {
@@ -16,14 +17,9 @@ export interface ProjectFilter {
   isAuditStatus: boolean;
 }
 
-export interface Project {
-  id?: number;
-  name: string;
-}
-
 export interface ProjectContractor {
   id: number;
-  project: Project;
+  mainProject: Project;
   contractors: Contractor[];
 }
 
