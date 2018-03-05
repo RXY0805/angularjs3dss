@@ -35,6 +35,7 @@ export class ContractorFormComponent implements OnInit {
     project: undefined
   };
   @Output() submit = new EventEmitter<Contractor>();
+  @Output() cancel = new EventEmitter();
   contractorForm: FormGroup;
   // project: FormGroup;
   // auditStatus: FormControl;
@@ -93,7 +94,17 @@ export class ContractorFormComponent implements OnInit {
         onSite: new FormControl(this.contractor.project.onSite, [
           Validators.required
         ]),
-        isTerminated: new FormControl(this.contractor.project.isTerminated)
+        isTerminated: new FormControl(this.contractor.project.isTerminated),
+        status: new FormGroup({
+          id: new FormControl({
+            value: this.contractor.project.status.id,
+            disabled: false
+          }),
+          description: new FormControl({
+            value: this.contractor.project.status.description,
+            disabled: false
+          })
+        })
       })
     });
 
@@ -139,17 +150,11 @@ export class ContractorFormComponent implements OnInit {
   onSubmit() {
     if (this.contractorForm.valid) {
       const { value, valid, touched } = this.contractorForm;
-      // console.log(this.contractorForm.value);
-      // alert('start submit');
-      // console.log(this.contractor);
-      // this.currentContractor.project.onSite =
-      //   this.onSiteStatus.value === 'true';
-      // this.currentContractor.project.auditStatus = this.auditStatus.value;
-      // this.currentContractor.project.status.id = this.projectStatus.value;
-      // alert('on site status : ' + this.currentContractor.project.onSite);
-      // console.log(this.currentContractor);
-      console.log(this.contractorForm.value);
       this.submit.emit({ ...this.contractor, ...value });
     }
   }
+  onCancel() {
+    this.cancel.emit();
+  }
+  //
 }

@@ -74,9 +74,8 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.store.select(fromStore.isDuplicatedEmail).subscribe(res => {
       this.isDuplicatedEmail = res && res.length ? true : false;
     });
-
-    // this.selectedProject$ = this.store.select(fromStore.getSelectedProject);
   }
+
   public createFormControls() {
     this.email = new FormControl('', [Validators.required, Validators.email]);
     this.abn = new FormControl('', [
@@ -86,15 +85,14 @@ export class ContractorInviteDialogComponent implements OnInit {
       CustomValidators.abnValidator
     ]);
   }
+
   public createForm() {
     this.companyForm = new FormGroup({
       email: this.email,
       abn: this.abn
     });
   }
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+
   onABNLookup() {
     if (this.lastABN !== this.companyForm.controls.abn.value) {
       this.store.dispatch(
@@ -108,17 +106,18 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.noneCompanyInvited = event && event.length ? false : true;
   }
 
-  onInvitation(): void {
-    console.log(this.invitation);
-    this.store.dispatch(
-      new fromStore.InviteExistCompaniesSuccess(this.invitation)
-    );
-  }
-
   onDuplicatedEmailCheck(value) {
     if (!this.companyForm.controls.email.errors) {
       this.invitation.email = value;
       this.store.dispatch(new fromStore.SetCompanyEmail(value));
     }
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  onInvitation(): void {
+    this.dialogRef.close(this.invitation);
   }
 }

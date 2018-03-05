@@ -35,25 +35,42 @@ export class ProjectContractorsEffects {
           );
       })
     );
-
-  // @Effect()
-  // inviteExistCompanies$ = this.actions$
-  //   .ofType(projectContractorActions.INVITE_EXIST_COMPANIES)
-  //   .pipe(
-  //     switchMap((action: projectContractorActions.InviteExistCompanies) => {
-  //       return this.projectContractorService
-  //         .inviteExistCompanies(action.payload)
-  //         .pipe(
-  //           map(
-  //             projectContractors =>
-  //               new projectContractorActions.InviteExistCompaniesSuccess(
-  //                 projectContractors
-  //               )
-  //           ),
-  //           catchError(error =>
-  //             of(new projectContractorActions.InviteExistCompaniesFail(error))
-  //           )
-  //         );
-  //     })
-  //   );
+  @Effect()
+  updateContractor$ = this.actions$
+    .ofType(projectContractorActions.UPDATE_CONTRACTOR)
+    .pipe(
+      switchMap((action: projectContractorActions.UpdateContractor) => {
+        return this.projectContractorService
+          .updateContractor(action.payload)
+          .pipe(
+            map(
+              contractor =>
+                new projectContractorActions.UpdateContractorSuccess(contractor)
+            ),
+            catchError(error =>
+              of(new projectContractorActions.UpdateContractorFail(error))
+            )
+          );
+      })
+    );
+  @Effect()
+  createInvitation$ = this.actions$
+    .ofType(projectContractorActions.CREATE_INVITATION)
+    .pipe(
+      switchMap((action: projectContractorActions.CreateInvitation) => {
+        return this.projectContractorService
+          .createInvitation(action.payload)
+          .pipe(
+            map(
+              projectContractors =>
+                new projectContractorActions.CreateInvitationSuccess(
+                  projectContractors
+                )
+            ),
+            catchError(error =>
+              of(new projectContractorActions.CreateInvitationFail(error))
+            )
+          );
+      })
+    );
 }

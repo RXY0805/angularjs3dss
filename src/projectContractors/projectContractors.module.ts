@@ -33,7 +33,10 @@ export const ROUTES: Routes = [
   },
   {
     path: ':contractorId',
-    // canActivate: [fromGuards.ProjectContractorExistsGuards,],
+    canActivate: [
+      fromGuards.ProjectContractorsGuard,
+      fromGuards.ProjectContractorExistsGuards
+    ],
     component: fromContainers.ContractorEditComponent
   }
 ];

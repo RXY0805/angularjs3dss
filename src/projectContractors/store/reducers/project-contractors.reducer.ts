@@ -3,19 +3,24 @@ import { Contractor } from '../../models/contractor.model';
 import { defaultProject } from '../../models/project.model';
 import { ProjectContractor } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
+import { Project } from '../../models/project.model';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/operator/filter';
+
+import 'rxjs/add/operator/distinct';
+import { Subscription } from 'rxjs/Subscription';
 
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
-  currentContractorId: number;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
-  loading: false,
-  currentContractorId: undefined
+  loading: false
 };
 
 export function reducer(
@@ -62,58 +67,65 @@ export function reducer(
         loaded: false
       };
     }
-    case fromProjectContractors.SET_CURRENT_CONTRACTOR_ID: {
-      return { ...state, currentContractorId: action.payload };
-    }
 
     case fromProjectContractors.UPDATE_CONTRACTOR_SUCCESS: {
-      const mainProjectId = action.payload.id;
-      const result = {
+      const contractor = action.payload;
+      const mainProjectId = contractor.project.mainProjectId;
+
+      return {
         ...state,
         entities: {
           ...state.entities,
           [mainProjectId]: {
             ...state.entities[mainProjectId],
             contractors: [
-              ...(state.entities[mainProjectId].contractors || [])
-                .concat
-                // newContractors
-                ()
+              ...state.entities[mainProjectId].contractors.map((item, i) => {
+                if (item.id !== contractor.id) {
+                  return item;
+                }
+                return {
+                  ...item,
+                  ...contractor
+                };
+              })
             ]
           }
         }
       };
-      return result;
-
-      // return { ...state, currentContractorId: action.payload };
     }
 
-    case fromProjectContractors.INVITE_EXIST_COMPANIES: {
-      // const projectInvitation = action.payload;
-      // for (let i = 0; i < projectInvitation.existContractIds.length; i++) {}
-
-      // invite existed companies
-      return state;
-    }
-    case fromProjectContractors.INVITE_EXIST_COMPANIES_SUCCESS: {
-      const mainProjectId = action.payload.projectId;
-      const existedCompanies = action.payload.existCompanies;
+    case fromProjectContractors.CREATE_INVITATION_SUCCESS: {
+      const invitation = action.payload;
+      const mainProjectId = invitation.projectId;
+      const existedCompanies = invitation.existCompanies;
       const newContractors = [];
+      const newCompanyEmail = invitation.email;
+      defaultProject.mainProjectId = mainProjectId;
 
-      // const newContractors = [];
-      // alert(state.entities[projectId].project.name);
-      // console.log(state.entities[projectId].contractors.length);
-
-      for (let i = 0; i < existedCompanies.length; i++) {
-        defaultProject.mainProjectId = mainProjectId;
-        const newContractor: Contractor = {
+      if (existedCompanies && existedCompanies.length > 0) {
+        for (let i = 0; i < existedCompanies.length; i++) {
+          const contractor_exist_company: Contractor = {
+            id: undefined,
+            company: existedCompanies[i],
+            project: defaultProject
+          };
+          newContractors.push(contractor_exist_company);
+        }
+      } else {
+        const newCompany: Company = {
           id: undefined,
-          company: existedCompanies[i],
+          name: undefined,
+          email: newCompanyEmail
+        };
+
+        const contractor_new_company: Contractor = {
+          id: undefined,
+          company: newCompany,
           project: defaultProject
         };
-        newContractors.push(newContractor);
+        newContractors.push(contractor_new_company);
       }
-      const result = {
+      return {
         ...state,
         entities: {
           ...state.entities,
@@ -127,7 +139,6 @@ export function reducer(
           }
         }
       };
-      return result;
     }
   }
 
@@ -136,8 +147,7 @@ export function reducer(
 
 export const getProjectContractorsEntities = (state: ProjectContractorState) =>
   state.entities;
-export const getCurrentContractorId = (state: ProjectContractorState) =>
-  state.currentContractorId;
+
 export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>

@@ -28,9 +28,9 @@ export class ProjectContractorsComponent implements OnInit {
 
   isCheckable: boolean;
 
-  projectFilter$: ProjectFilter = {
+  projectFilter: ProjectFilter = {
     selectedProjectId: 0,
-    selectedStatusId: 1,
+    selectedStatusId: 0,
     isOnSite: true,
     isAuditStatus: true
   };
@@ -39,11 +39,7 @@ export class ProjectContractorsComponent implements OnInit {
     private store: Store<fromStore.ProjectContractorsState>,
     private router: Router,
     private actR: ActivatedRoute
-  ) {
-    this.store.dispatch(
-      new fromStore.FilterByStatusId(this.projectFilter$.selectedStatusId)
-    );
-  }
+  ) {}
 
   ngOnInit() {
     this.isCheckable = false;
@@ -51,7 +47,35 @@ export class ProjectContractorsComponent implements OnInit {
       .select(fromStore.getAllProjects)
       .map(projects => projects.sort(this.sortProjectByName));
     this.selectedProject$ = this.store.select(fromStore.getSelectedMainProject);
+    this.store.select(fromStore.getProjectId).subscribe(id => {
+      if (id && id > 0) {
+        this.projectFilter.selectedProjectId = id;
+      } else {
+        this.projects$.subscribe(x => {
+          this.projectFilter.selectedProjectId = x[0].id;
+        });
+      }
+      this.store.dispatch(
+        new fromStore.FilterByProjectId(this.projectFilter.selectedProjectId)
+      );
+    });
+    this.reloadFilterStatus();
     this.contractors$ = this.store.select(fromStore.getContractorsByFilter);
+  }
+
+  reloadFilterStatus() {
+    this.store.select(fromStore.getAuditStatus).subscribe(x => {
+      this.projectFilter.isAuditStatus = x;
+      this.store.dispatch(new fromStore.FilterByAuditStatus(x));
+    });
+    this.store.select(fromStore.getOnSiteStatus).subscribe(x => {
+      this.projectFilter.isOnSite = x;
+      this.store.dispatch(new fromStore.FilterByOnSite(x));
+    });
+    this.store.select(fromStore.getStatusId).subscribe(x => {
+      this.projectFilter.selectedStatusId = x;
+      this.store.dispatch(new fromStore.FilterByStatusId(x));
+    });
   }
 
   sortProjectByName(a, b) {
@@ -62,11 +86,6 @@ export class ProjectContractorsComponent implements OnInit {
       return 1;
     }
     return 0;
-  }
-
-  onEditContractor(id) {
-    this.store.dispatch(new fromStore.SetCurrentContractorId(id));
-    this.router.navigate(['/contractors', id]);
   }
 
   onFilterChange(event) {
@@ -92,5 +111,13 @@ export class ProjectContractorsComponent implements OnInit {
         this.store.dispatch(new fromStore.FilterByOnSite(filter.isOnSite));
         break;
     }
+  }
+
+  onSendInvitation(projectInvitation) {
+    this.store.dispatch(
+      // 20180303 remove comment while wep api ready
+      // new fromStore.CreateInvitation(this.invitation)
+      new fromStore.CreateInvitationSuccess(projectInvitation)
+    );
   }
 }

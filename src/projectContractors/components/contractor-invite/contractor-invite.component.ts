@@ -31,6 +31,7 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
 })
 export class ContractorInviteComponent implements OnInit {
   @Input() selectedProject: Observable<any>;
+  @Output() sendInvitation = new EventEmitter<ProjectInvitation>();
   availableContractors$: Observable<Contractor[]>;
   currentProject: Project;
   invitation: ProjectInvitation;
@@ -67,7 +68,7 @@ export class ContractorInviteComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(invitation => {
       if (invitation) {
-        // this.onInvite.emit(invitation);
+        this.sendInvitation.emit(invitation);
       }
     });
   }

@@ -36,51 +36,59 @@ export const getAllCompaniesByProjectId = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
-    if (filterState.selectedProjectId) {
+    if (filterState.projectId) {
       return entities
-        .filter(pc => pc.id === filterState.selectedProjectId)
+        .filter(pc => pc.id === filterState.projectId)
         .map(c => c.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
-        })
-        .map(y => {
-          return y.contractor;
         });
-      // .map(x => x.company);
     }
     return null;
   }
 );
+
+export const getAllContractors = createSelector(
+  getAllProjectContractors,
+  entities => {
+    return entities
+      .filter(x => x)
+      .map(c => c.contractors)
+      .reduce(function(pre, cur) {
+        return pre.concat(cur);
+      })
+      .filter(x => x.company.id > 0);
+    // return null;
+  }
+);
+
 export const getAllContractorsByProjectId = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
-    if (filterState.selectedProjectId) {
+    if (filterState.projectId) {
       return entities
-        .filter(pc => pc.id === filterState.selectedProjectId)
+        .filter(pc => pc.id === filterState.projectId)
         .map(c => c.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
         })
-        .map(y => y.contractor)
         .filter(x => x.company.id > 0);
     }
     return null;
   }
 );
 
-export const getCurrentContractorId = createSelector(
-  getContractorState,
-  fromProjectContractors.getCurrentContractorId
-);
-
 export const getSelectedContractor = createSelector(
-  getAllContractorsByProjectId,
-  getCurrentContractorId,
-  (contractors, selectedContractorId): Contractor => {
+  getAllContractors,
+  fromRoot.getRouterState,
+  (contractors, router): Contractor => {
+    const contractorId = router.state && router.state.params.contractorId;
+
     const result = contractors
       .map(x => x)
-      .filter(m => m.id === selectedContractorId);
+      .filter(m => m.id === parseInt(contractorId, 10));
+
     if (result && result.length) {
       return result[0];
     }
@@ -92,17 +100,16 @@ export const getContractorsByFilter = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
-    if (filterState.selectedProjectId) {
+    if (filterState.projectId) {
       return entities
-        .filter(pc => pc.id === filterState.selectedProjectId)
+        .filter(pc => pc.id === filterState.projectId)
         .map(c => c.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
         })
-        .map(y => y.contractor)
         .filter(x => x.project.auditStatus === !!+filterState.isAuditStatus)
         .filter(x => x.project.onSite === !!+filterState.isOnSite)
-        .filter(x => x.project.status.id === filterState.selectedStatusId);
+        .filter(x => x.project.status.id === filterState.statusId);
     }
     return null;
   }
@@ -119,15 +126,12 @@ export const getUnassignedContractorsByProjectId = createSelector(
   getAllProjectContractors,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
-    if (filterState.selectedProjectId) {
+    if (filterState.projectId) {
       return entities
-        .filter(x => x.id !== filterState.selectedProjectId)
+        .filter(x => x.id !== filterState.projectId)
         .map(x => x.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
-        })
-        .map(result => {
-          return result.contractor;
         })
         .filter(x => x.id && x.id > 0); // project has been assigned to the contractor
     }
@@ -158,8 +162,8 @@ export const getSelectedMainProject = createSelector(
   getContractorsEntities,
   fromFiltersSelectors.getFilterState,
   (entities, filterState) => {
-    if (filterState.selectedProjectId) {
-      return entities[filterState.selectedProjectId].mainProject;
+    if (filterState.projectId) {
+      return entities[filterState.projectId].mainProject;
     }
     return null;
   }

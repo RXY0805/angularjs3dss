@@ -6,7 +6,7 @@
         <mat-tab label="Existing companies">
             <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleSelectedCompanies)="onToggleSelectedCompanies($event)"></app-contractor-list>
             <div class="button-group">
-                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
+                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
                 <button class="ngButton" mat-raised-button color="primary" [disabled]="noneCompanyInvited" (click)="onInvitation()" [mat-dialog-close]="data.invitation">Invite</button>
                 <!-- [disabled]="noneCompanyInvited" -->
             </div>
@@ -17,51 +17,52 @@
                 </mat-card-header>
                 <mat-card-content>
                     <form [formGroup]="companyForm" layout-align="center center">
-                        <table>
+                        <table class="ng-table">
                             <tr>
+                                <td>Company Email:</td>
                                 <td>
                                     <mat-form-field class="full-width">
                                         <input matInput placeholder="New Company Email" (change)="onDuplicatedEmailCheck($event.target.value)" formControlName="email"
                                             (keyup)="onDuplicatedEmailCheck($event.target.value)">
                                     </mat-form-field>
                                 </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <threedss-show-errors [control]="companyForm.controls.email"></threedss-show-errors>
                                     <mat-error *ngIf="isDuplicatedEmail">The email is existed in 3DSS</mat-error>
                                 </td>
                             </tr>
-                            <tr>
 
+                            <tr>
+                                <td>Company ABN:</td>
                                 <td>
                                     <mat-form-field class="example-form-field">
                                         <input matInput threedss-number-only placeholder="New Company ABN" formControlName="abn" />
                                     </mat-form-field>
                                 </td>
-
+                                <td *ngIf="companyForm.controls.abn.errors">
+                                    <threedss-show-errors [control]="companyForm.controls.abn">
+                                    </threedss-show-errors>
+                                </td>
                                 <td>
-                                    <button *ngIf="!companyForm.controls.abn.errors" class="button-group ngButton" mat-raised-button color="primary" (click)="onABNLookup()">
-                                        search
+                                  <div class="ng-button-group">
+                                    <button *ngIf="!companyForm.controls.abn.errors" class="ngButton" mat-raised-button color="primary" (click)="onABNLookup()">
+                                      search
                                     </button>
-
+                                  </div>
+                                  
                                     <!-- <i class="material-icons">search</i>
                                     <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="onABNLookup()">
                                          <mat-icon class="material-icons md-24">search</mat-icon>
                                     </button> -->
                                 </td>
+
                             </tr>
-                            <tr>
-                                <td>
-                                    <threedss-show-errors [control]="companyForm.controls.abn">
-                                    </threedss-show-errors>
-                                </td>
-                            </tr>
+
                         </table>
                     </form>
                 </mat-card-content>
                 <mat-card-content *ngIf="invitation.tradingEntity">
-                    <table style="width:100%">
+                    <table class="ng-table" style="width:100%">
                         <tr>
                             <td width="30%">
                                 Entity Name:
@@ -103,9 +104,9 @@
                 </mat-card-content>
 
             </mat-card>
-            <div class="button-group">
-                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
-                <button class="ngButton" mat-raised-button color="primary" [disabled]="companyForm.invalid || isDuplicatedEmail" [mat-dialog-close]="data.invitation">Send Invitation</button>
+            <div class="ng-button-group">
+                <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+                <button class="ngButton" mat-raised-button color="primary" [disabled]="companyForm.invalid || isDuplicatedEmail" [mat-dialog-close]="data.invitation">Invite</button>
             </div>
         </mat-tab>
     </mat-tab-group>

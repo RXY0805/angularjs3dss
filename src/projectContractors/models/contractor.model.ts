@@ -6,4 +6,5 @@ export interface Contractor {
   id?: number;
   company: Company;
   project: Project;
+  [key: number]: any;
 }

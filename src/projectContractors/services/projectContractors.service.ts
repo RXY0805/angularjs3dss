@@ -4,10 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators/catchError';
 import 'rxjs/add/observable/throw';
-import { ProjectInvitation } from '../models/project-contractor.model';
 import { environment } from '../../environments/environment';
 
-import { ProjectContractor } from '../models/project-contractor.model';
+import {
+  ProjectContractor,
+  ProjectInvitation
+} from '../models/project-contractor.model';
+import { Contractor } from '../models/contractor.model';
+
 @Injectable()
 export class ProjectContractorsService {
   constructor(private http: HttpClient) {}
@@ -19,14 +23,16 @@ export class ProjectContractorsService {
       )
       .pipe(catchError((error: any) => Observable.throw(error.json())));
   }
-  // Observable the following service method
-  inviteExistCompanies(
-    projectInvitation: ProjectInvitation
-  ): ProjectInvitation {
-    return projectInvitation;
-    // return this.http.post<ProjectInvitation>(
-    //   `http://localhost:4200/api/projectInvitation`,
-    //   invitation
-    // );
+
+  createInvitation(payload: ProjectInvitation): Observable<ProjectInvitation> {
+    return this.http
+      .post<ProjectInvitation>(`/api/projectInvitation`, payload)
+      .pipe(catchError((error: any) => Observable.throw(error.json())));
+  }
+
+  updateContractor(payload: Contractor): Observable<Contractor> {
+    return this.http
+      .put<Contractor>(`/api/contractor/${payload.id}`, payload)
+      .pipe(catchError((error: any) => Observable.throw(error.json())));
   }
 }

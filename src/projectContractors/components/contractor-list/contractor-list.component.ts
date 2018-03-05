@@ -39,10 +39,7 @@ export class ContractorListComponent implements OnInit {
   toggleSelectedCompanies: EventEmitter<any> = new EventEmitter<{
     any;
   }>();
-  @Output()
-  editContractor: EventEmitter<any> = new EventEmitter<{
-    any;
-  }>();
+
   private currentDate: string;
   private companyData: Company[] = [];
   displayedColumns: string[];
@@ -78,18 +75,14 @@ export class ContractorListComponent implements OnInit {
       this.displayedColumns = [
         'select',
         'company.name',
-        'company.email',
-        'company.id',
-        'id'
+        'company.email'
+        // 'company.id',
+        // 'id'
       ];
     } else {
       this.displayedColumns = [
-        // 'select',
-
         'company.name',
-        // 'project.auditStatus',
         'company.email',
-        // 'project.onSite',
         'project.auditDate',
         'project.expiryDate',
         'id'
@@ -178,9 +171,7 @@ export class ContractorListComponent implements OnInit {
       });
     }
   }
-  onEditContractor(id) {
-    this.editContractor.emit(id);
-  }
+
   onToggleSelectedCompanies(id, name) {
     let index = -1;
 

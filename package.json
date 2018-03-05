@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy": "xcopy \"dist\" \"..\\Website\\AngularJS3DSSAppScripts\" /i /s /r /y /c",
+    "dist": "npm install && npm run build && npm run copy"
   },
   "private": true,
   "dependencies": {

@@ -38,13 +38,14 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.contractor$ = this.store.select(fromStore.getSelectedContractor);
+
     // If the update effect fires, we check if the current id is the one being updated, and redirect to its details
     this.redirectSub = this.actionsSubject
       .filter(action => action.type === fromStore.UPDATE_CONTRACTOR)
       .filter(
         (action: fromStore.UpdateContractorSuccess) =>
           action.payload.id ===
-          this.activatedRoute.snapshot.params['contractorId']
+          parseInt(this.activatedRoute.snapshot.params['contractorId'], 10)
       )
       .subscribe((action: fromStore.UpdateContractorSuccess) =>
         this.router.navigate(['/contractors', action.payload.id])
@@ -59,8 +60,14 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
     this.redirectSub.unsubscribe();
   }
   onSubmit(contractor) {
-    console.log(contractor);
-
-    // this.store.dispatch(new contactsActions.Patch(contractor));
+    // console.log(contractor);
+    // 20180302 REMOVE comment while WEPAPI2018 ready
+    // this.store.dispatch(new fromStore.UpdateContractor(contractor));
+    this.store.dispatch(new fromStore.UpdateContractorSuccess(contractor));
+    this.router.navigate(['/contractors']);
+    // this.store.dispatch(new fromStore.UpdateContractor(contractor));
+  }
+  onCancel() {
+    this.router.navigate(['/contractors']);
   }
 }

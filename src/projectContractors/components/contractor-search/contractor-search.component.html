@@ -15,7 +15,7 @@
             <td>Select Project Status:</td>
             <td>
                 <mat-form-field>
-                    <mat-select [(value)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
+                    <mat-select [(ngModel)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
                         <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>

@@ -2,15 +2,15 @@ import * as fromProjectFilters from '../actions/project-filters.action';
 import { ProjectFilter } from '../../models/project-contractor.model';
 
 export interface ProjectFilterState {
-  selectedProjectId: number;
-  selectedStatusId: number;
+  projectId: number;
+  statusId: number;
   isOnSite: boolean;
   isAuditStatus: boolean;
 }
 
 export const initialState: ProjectFilterState = {
-  selectedProjectId: undefined,
-  selectedStatusId: undefined,
+  projectId: undefined,
+  statusId: 1,
   isOnSite: true,
   isAuditStatus: true
 };
@@ -23,13 +23,15 @@ export function reducer(
     case fromProjectFilters.FILTER_BY_PROJECT_ID:
       return {
         ...state,
-        selectedProjectId: action.payload
+        projectId: action.payload
       };
-    case fromProjectFilters.FILTER_BY_STATUS_ID:
+    case fromProjectFilters.FILTER_BY_STATUS_ID: {
       return {
         ...state,
-        selectedStatusId: action.payload
+        statusId: action.payload
       };
+    }
+
     case fromProjectFilters.FILTER_BY_AUDIT_STATUS:
       return {
         ...state,
@@ -45,7 +47,8 @@ export function reducer(
 }
 
 export const getProjectFilter = (state: ProjectFilterState) => state;
-export const getSelectedProjectId = (state: ProjectFilterState) =>
-  state.selectedProjectId;
+export const getProjectId = (state: ProjectFilterState) => state.projectId;
 export const getAuditStatus = (state: ProjectFilterState) =>
   state.isAuditStatus;
+export const getOnSiteStatus = (state: ProjectFilterState) => state.isOnSite;
+export const getStatusId = (state: ProjectFilterState) => state.statusId;

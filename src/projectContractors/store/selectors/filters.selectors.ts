@@ -10,12 +10,22 @@ export const getFilterState = createSelector(
   (state: fromFeature.ProjectContractorsState) => state.filters
 );
 
-export const getSelectedProjectId = createSelector(
+export const getProjectId = createSelector(
   getFilterState,
-  fromFilters.getSelectedProjectId
+  fromFilters.getProjectId
 );
 
 export const getAuditStatus = createSelector(
   getFilterState,
   fromFilters.getAuditStatus
+);
+
+export const getOnSiteStatus = createSelector(
+  getFilterState,
+  fromFilters.getOnSiteStatus
+);
+
+export const getStatusId = createSelector(
+  getFilterState,
+  fromFilters.getStatusId
 );

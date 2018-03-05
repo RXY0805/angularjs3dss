@@ -14,21 +14,11 @@ export const LOAD_PROJECT_CONTRACTORS_FAIL =
 export const LOAD_PROJECT_CONTRACTORS_SUCCESS =
   '[ProjectContractors] Load Contractors Success';
 
-export const INVITE_EXIST_COMPANIES =
-  '[ProjectContractors] Invite Exist Companies';
-export const INVITE_EXIST_COMPANIES_SUCCESS =
-  '[ProjectContractors] Invite Exist Companies Success';
-export const INVITE_EXIST_COMPANIES_FAIL =
-  '[ProjectContractors] Invite Exist Companies Fail';
-
-export const INVITE_NEW_COMPANY = '[ProjectContractors] Invite New Company';
-export const INVITE_NEW_COMPANY_SUCCESS =
-  '[ProjectContractors] Invite New Company Success';
-export const INVITE_NEW_COMPANY_FAIL =
-  '[ProjectContractors] Invite New Company Fail';
-
-export const SET_CURRENT_CONTRACTOR_ID =
-  '[ProjectContractors] Set Current Contractor Id';
+export const CREATE_INVITATION = '[ProjectContractors] Create Invitation';
+export const CREATE_INVITATION_SUCCESS =
+  '[ProjectContractors] Create Invitation Success';
+export const CREATE_INVITATION_FAIL =
+  '[ProjectContractors] Create Invitation Fail';
 
 export const UPDATE_CONTRACTOR = '[ProjectContractors] Update Contractor';
 export const UPDATE_CONTRACTOR_SUCCESS =
@@ -49,10 +39,6 @@ export class LoadProjectContractorsSuccess implements Action {
   readonly type = LOAD_PROJECT_CONTRACTORS_SUCCESS;
   constructor(public payload: ProjectContractor[]) {}
 }
-export class SetCurrentContractorId implements Action {
-  readonly type = SET_CURRENT_CONTRACTOR_ID;
-  constructor(public payload: number) {}
-}
 
 export class UpdateContractor implements Action {
   readonly type = UPDATE_CONTRACTOR;
@@ -68,29 +54,16 @@ export class UpdateContractorFail implements Action {
   constructor(public payload: any) {}
 }
 
-export class InviteExistCompanies implements Action {
-  readonly type = INVITE_EXIST_COMPANIES;
+export class CreateInvitation implements Action {
+  readonly type = CREATE_INVITATION;
   constructor(public payload: ProjectInvitation) {}
 }
-export class InviteExistCompaniesSuccess implements Action {
-  readonly type = INVITE_EXIST_COMPANIES_SUCCESS;
+export class CreateInvitationSuccess implements Action {
+  readonly type = CREATE_INVITATION_SUCCESS;
   constructor(public payload: ProjectInvitation) {}
 }
-export class InviteExistCompaniesFail implements Action {
-  readonly type = INVITE_EXIST_COMPANIES_FAIL;
-  constructor(public payload: any) {}
-}
-
-export class InviteNewCompany implements Action {
-  readonly type = INVITE_NEW_COMPANY;
-  constructor(public payload: ProjectInvitation) {}
-}
-export class InviteNewCompanySuccess implements Action {
-  readonly type = INVITE_NEW_COMPANY_SUCCESS;
-  constructor(public payload: any) {}
-}
-export class InviteNewCompanyFail implements Action {
-  readonly type = INVITE_NEW_COMPANY_FAIL;
+export class CreateInvitationFail implements Action {
+  readonly type = CREATE_INVITATION_FAIL;
   constructor(public payload: any) {}
 }
 
@@ -99,13 +72,9 @@ export type ProjectContractorsAction =
   | LoadProjectContractors
   | LoadProjectContractorsFail
   | LoadProjectContractorsSuccess
-  | InviteExistCompanies
-  | InviteExistCompaniesFail
-  | InviteExistCompaniesSuccess
-  | InviteNewCompany
-  | InviteNewCompanyFail
-  | InviteNewCompanySuccess
-  | SetCurrentContractorId
+  | CreateInvitation
+  | CreateInvitationFail
+  | CreateInvitationSuccess
   | UpdateContractor
   | UpdateContractorSuccess
   | UpdateContractorFail;

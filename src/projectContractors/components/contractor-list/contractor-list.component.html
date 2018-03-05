@@ -38,14 +38,6 @@
             </mat-cell>
         </ng-container>
 
-        <!-- <ng-container matColumnDef="project.auditStatus" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef> Audit Status </mat-header-cell>
-            <mat-cell *matCellDef="let row">
-                <mat-select class="width-80-percent" [(value)]="row.project? row.project.auditStatus:''" (change)="alert('change onsite')">
-                    <mat-option *ngFor="let option of auditStatusOptions" [value]="option.value">{{option.name}}</mat-option>
-                </mat-select>
-            </mat-cell>
-        </ng-container> -->
         <ng-container matColumnDef="company.email">
             <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.company.email}} </mat-cell>
@@ -63,21 +55,23 @@
 
         <ng-container matColumnDef="project.auditDate" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.project.auditDate}} </mat-cell>
+            <mat-cell *matCellDef="let row"> {{row.project.auditDate | date:'yyyy-MM-dd'}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="project.expiryDate" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef> Expiry Date </mat-header-cell>
-            <mat-cell *matCellDef="let row" [style.color]="getColor(row.project.expiryDate)"> {{row.project.expiryDate}} </mat-cell>
+            <mat-cell *matCellDef="let row" [style.color]="getColor(row.project.expiryDate)"> {{row.project.expiryDate | date:'yyyy-MM-dd'}} </mat-cell>
         </ng-container>
         <!-- Color   Column -->
-        <ng-container matColumnDef="company.id">
+        <!-- <ng-container matColumnDef="company.id">
             <mat-header-cell hidden="!isCheckable" *matHeaderCellDef> ID </mat-header-cell>
             <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.company.id}} </mat-cell>
-        </ng-container>
+        </ng-container> -->
         <ng-container matColumnDef="id" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <button (click)="onEditContractor(row.id)">Edit</button>
+                <a [routerLink]="['/contractors', row.id]">
+                    <span>Edit</span>
+                </a>
             </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

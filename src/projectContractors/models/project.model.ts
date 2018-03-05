@@ -21,6 +21,7 @@ export const defaultProjectStatus: ProjectStatus = {
 };
 
 export const defaultProject: Project = {
+  mainProjectId: undefined,
   onSite: false,
   auditStatus: false,
   status: defaultProjectStatus,

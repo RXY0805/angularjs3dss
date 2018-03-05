@@ -1,60 +1,62 @@
-<form (submit)="onSubmit()" [formGroup]="contractorForm">
-    <table formGroupName="company">
-        <tr>
-            <td>Email</td>
-            <td>
-                <mat-form-field class="example-form-field">
-                    <input matInput formControlName="email" />
-                </mat-form-field>
+<div id="editFormContainer">
+    <form (submit)="onSubmit()" [formGroup]="contractorForm" class="ng-edit-form-width">
+        <table class="ng-form-table" formGroupName="company">
+            <tr>
+                <td class="first">Email:</td>
+                <td class="last">
+                    <mat-form-field class="ng-form-field-width">
+                        <input matInput formControlName="email" />
+                    </mat-form-field>
 
-            </td>
-        </tr>
-        <tr>
-            <td>Company Name</td>
-            <td>
-                <mat-form-field>
-                    <input matInput formControlName="name" />
-                </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">Company Name:</td>
+                <td class="last">
+                    <mat-form-field class="ng-form-field-width">
+                        <input matInput formControlName="name" />
+                    </mat-form-field>
 
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
 
-    <table formGroupName="project">
-        <tr>
-            <td>audit status</td>
-            <td>
-                <mat-form-field class="full-width">
-                    <mat-select matInput class="width-80-percent" formControlName="auditStatus">
-                        <mat-option *ngFor="let auditOption of auditStatusOptions" [value]="auditOption.value">{{auditOption.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </td>
-        </tr>
-        <tr>
-            <td>Onsite Status</td>
-            <td>
-                <mat-form-field class="full-width">
-                    <mat-select matInput class="width-60-percent" formControlName="onSite">
-                        <mat-option *ngFor="let onsiteOption of onsiteOptions" [value]="onsiteOption.value">{{onsiteOption.name}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </td>
-        </tr>
-        <tr>
-            <td>Terminated</td>
-            <td>
-                <mat-checkbox matInput class="width-60-percent" formControlName="isTerminated">
-                </mat-checkbox>
-            </td>
-        </tr>
-    </table>
+        <table class="ng-form-table" formGroupName="project">
+            <tr>
+                <td class="first">Audit status:</td>
+                <td class="last">
+                    <mat-form-field class="full-width">
+                        <mat-select matInput formControlName="auditStatus">
+                            <mat-option *ngFor="let auditOption of auditStatusOptions" [value]="auditOption.value">{{auditOption.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">Onsite Status:</td>
+                <td class="last">
+                    <mat-form-field class="full-width">
+                        <mat-select matInput formControlName="onSite">
+                            <mat-option *ngFor="let onsiteOption of onsiteOptions" [value]="onsiteOption.value">{{onsiteOption.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td class="first doubleBottomPadding">Terminated:</td>
+                <td class="last">
+                    <mat-checkbox matInput formControlName="isTerminated">
+                    </mat-checkbox>
+                </td>
+            </tr>
+        </table>
+        <div class="ng-button-group">
+          <button class="ngButton" (click)="onCancel()">Cancel</button>
+          <button type="submit" [disabled]="!contractorForm.valid">Submit</button>
+        </div>
+    </form>
+</div>
 
-
-    <div class="form-group">
-        <button type="submit" [disabled]="!contractorForm.valid">Submit</button>
-    </div>
-</form>
 
 
 <!-- <ng-container matColumnDef="project.auditStatus" *ngIf="!isCheckable">
