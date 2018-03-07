@@ -10,5 +10,5 @@ export const environment = {
   // For local host 4200
   dataFolder: '../assets'
   // for 3dss integration
-  // dataFolder: '../AngularJS3DSSAppScripts/assets'
+  //dataFolder: '../AngularJS3DSSAppScripts/assets'
 };

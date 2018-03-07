@@ -8,6 +8,7 @@ export interface Project {
   expiryDate?: string;
   status: ProjectStatus;
   isTerminated?: boolean;
+  isInvited?: boolean;
 }
 
 export interface ProjectStatus {
@@ -16,8 +17,8 @@ export interface ProjectStatus {
 }
 
 export const defaultProjectStatus: ProjectStatus = {
-  id: 3,
-  description: 'For Review'
+  id: 6,
+  description: 'Invited'
 };
 
 export const defaultProject: Project = {
@@ -25,5 +26,6 @@ export const defaultProject: Project = {
   onSite: false,
   auditStatus: false,
   status: defaultProjectStatus,
-  isTerminated: false
+  isTerminated: false,
+  isInvited: true
 };

@@ -68,10 +68,11 @@
         </ng-container> -->
         <ng-container matColumnDef="id" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <!-- hide edit link if company just invited to project -->
             <mat-cell *matCellDef="let row">
-                <a [routerLink]="['/contractors', row.id]">
-                    <span>Edit</span>
-                </a>
+                <span *ngIf="!row.project.isInvited">
+                    <a [routerLink]="['/contractors', row.id]">Edit</a>
+                </span>
             </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

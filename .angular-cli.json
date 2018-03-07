@@ -6,11 +6,15 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../Website/AngularJS3DSSAppScripts",
       "assets": [
         "assets",
         "favicon.ico",
-        { "glob": "package.json", "input": "../", "output": "./assets/" },
+        {
+          "glob": "package.json",
+          "input": "../",
+          "output": "./assets/"
+        },
         {
           "glob": "projectContractors.json",
           "input": "./",
@@ -24,7 +28,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["styles.css", "theme-3dss.scss"],
+      "styles": [ "styles.css", "theme-3dss.scss" ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {

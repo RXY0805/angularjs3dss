@@ -22,6 +22,16 @@
         </table>
 
         <table class="ng-form-table" formGroupName="project">
+            <tr formGroupName="status">
+                <td class="first">Project status:</td>
+                <td class="last">
+                    <mat-form-field class="full-width">
+                        <mat-select matInput formControlName="id">
+                            <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+            </tr>
             <tr>
                 <td class="first">Audit status:</td>
                 <td class="last">
@@ -42,17 +52,17 @@
                     </mat-form-field>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td class="first doubleBottomPadding">Terminated:</td>
                 <td class="last">
                     <mat-checkbox matInput formControlName="isTerminated">
                     </mat-checkbox>
                 </td>
-            </tr>
+            </tr> -->
         </table>
         <div class="ng-button-group">
-          <button class="ngButton" (click)="onCancel()">Cancel</button>
-          <button type="submit" [disabled]="!contractorForm.valid">Submit</button>
+            <button class="ngButton" (click)="onCancel()">Cancel</button>
+            <button type="submit" [disabled]="!contractorForm.valid">Submit</button>
         </div>
     </form>
 </div>

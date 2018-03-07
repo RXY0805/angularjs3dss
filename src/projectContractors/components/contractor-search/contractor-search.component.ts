@@ -10,13 +10,7 @@ import {
   ProjectFilter
 } from '../../models/project-contractor.model';
 import { Project } from '../../models/project.model';
-// import {
-//   ContractorFilter,
-//   Project,
-//   ProjectStatus,
-//   ProjectOnSiteStatus,
-//   AuditStatus
-// } from '@app-core/models';
+import { ProjectConstants } from '../../../shared/utility/constants/project-constants.component';
 
 @Component({
   selector: 'app-contractor-search',
@@ -31,13 +25,7 @@ export class ContractorSearchComponent {
     any;
   }>();
 
-  statusList = [
-    { id: 1, name: 'Accept' },
-    { id: 2, name: 'Reject' },
-    { id: 3, name: 'For Review' },
-    { id: 4, name: 'Required' },
-    { id: 5, name: 'NOT Applicable' }
-  ];
+  statusList = ProjectConstants.ProjectStatusOptions;
 
   constructor() {}
 
