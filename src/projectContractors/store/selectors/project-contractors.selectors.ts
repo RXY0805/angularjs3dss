@@ -1,6 +1,6 @@
 import { createSelector } from '@ngrx/store';
 
-import { mergeAll } from 'rxjs/operators';
+import { mergeAll, take } from 'rxjs/operators';
 import { filter } from 'rxjs/operator/filter';
 import { map } from 'rxjs/operator/map';
 import * as fromRoot from '../../../app/store';
@@ -9,11 +9,7 @@ import * as fromProjectContractors from '../reducers/project-contractors.reducer
 import * as fromFiltersSelectors from './filters.selectors';
 import * as fromCompanySelectors from './company.selectors';
 
-import { ProjectContractor } from '../../models/project-contractor.model';
-import { Contractor } from '../../models/contractor.model';
-import { Company } from '../../models/company.model';
-import { Project } from '../../models/project.model';
-import { getFilterState } from '../index';
+import { Contractor, Project } from '@project-contractors/models';
 
 export const getContractorState = createSelector(
   fromFeature.getProjectContractorsState,
@@ -25,26 +21,15 @@ export const getContractorsEntities = createSelector(
   fromProjectContractors.getProjectContractorsEntities
 );
 
+export const getCurrentProjectId = createSelector(
+  getContractorState,
+  fromProjectContractors.getCurrentProjectId
+);
+
 export const getAllProjectContractors = createSelector(
   getContractorsEntities,
   entities => {
     return Object.keys(entities).map(id => entities[id]);
-  }
-);
-
-export const getAllCompaniesByProjectId = createSelector(
-  getAllProjectContractors,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.projectId) {
-      return entities
-        .filter(pc => pc.id === filterState.projectId)
-        .map(c => c.contractors)
-        .reduce(function(pre, cur) {
-          return pre.concat(cur);
-        });
-    }
-    return null;
   }
 );
 
@@ -57,37 +42,92 @@ export const getAllContractors = createSelector(
       .reduce(function(pre, cur) {
         return pre.concat(cur);
       })
-      .filter(x => x.company.id > 0);
-    // return null;
+      .filter(x => x.companyId > 0); // new invited company NOT include
+  }
+);
+
+export const getAllSortedProjects = createSelector(
+  getContractorsEntities,
+  (entities): Project[] => {
+    return Object.keys(entities)
+      .map(id => {
+        return entities[id];
+      })
+      .sort(sortProjectByName)
+      .map(x => {
+        return new Project(x.id, x.projectName);
+      });
+  }
+);
+
+function sortProjectByName(a, b) {
+  if (a.projectName < b.projectName) {
+    return -1;
+  }
+  if (a.projectName > b.projectName) {
+    return 1;
+  }
+  return 0;
+}
+
+export const getCurrentProject = createSelector(
+  getAllSortedProjects,
+  getCurrentProjectId,
+  (projects, currentProjectId): Project => {
+    if (currentProjectId > 0) {
+      return projects.filter(p => p.id === currentProjectId)[0];
+    }
+    return projects[0];
   }
 );
 
 export const getAllContractorsByProjectId = createSelector(
   getAllProjectContractors,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.projectId) {
-      return entities
-        .filter(pc => pc.id === filterState.projectId)
-        .map(c => c.contractors)
-        .reduce(function(pre, cur) {
-          return pre.concat(cur);
-        })
-        .filter(x => x.company.id > 0);
-    }
-    return null;
+  getCurrentProject,
+  (entities, project): Contractor[] => {
+    return entities
+      .filter(pc => pc.id === project.id)
+      .map(c => c.contractors)
+      .reduce(function(pre, cur) {
+        return pre.concat(cur);
+      })
+      .filter(x => x.companyId && x.companyId > 0);
   }
 );
 
-export const getSelectedContractor = createSelector(
+export const getFilteredContractors = createSelector(
+  getAllContractorsByProjectId,
+  fromFiltersSelectors.getFilterState,
+  (contractors, filterState) => {
+    if (filterState.auditStatusId > -1) {
+      contractors = contractors.filter(
+        x => x.auditComplete === filterState.auditStatusId
+      );
+    }
+
+    if (filterState.onSiteStatusId > -1) {
+      contractors = contractors.filter(
+        x => x.onSite === filterState.onSiteStatusId
+      );
+    }
+
+    if (filterState.statusId > -1) {
+      contractors = contractors.filter(
+        x => x.statusId === filterState.statusId
+      );
+    }
+    return contractors;
+  }
+);
+
+export const getContractorById = createSelector(
   getAllContractors,
   fromRoot.getRouterState,
   (contractors, router): Contractor => {
     const contractorId = router.state && router.state.params.contractorId;
-
     const result = contractors
       .map(x => x)
-      .filter(m => m.id === parseInt(contractorId, 10));
+      .filter(m => m.contractorId === parseInt(contractorId, 10));
 
     if (result && result.length) {
       return result[0];
@@ -96,44 +136,25 @@ export const getSelectedContractor = createSelector(
   }
 );
 
-export const getContractorsByFilter = createSelector(
-  getAllProjectContractors,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.projectId) {
-      return entities
-        .filter(pc => pc.id === filterState.projectId)
-        .map(c => c.contractors)
-        .reduce(function(pre, cur) {
-          return pre.concat(cur);
-        })
-        .filter(x => x.project.auditStatus === !!+filterState.isAuditStatus)
-        .filter(x => x.project.onSite === !!+filterState.isOnSite)
-        .filter(x => x.project.status.id === filterState.statusId);
-    }
-    return null;
-  }
-);
-
 export const getAllCompaniesIdByProjectId = createSelector(
   getAllContractorsByProjectId,
   c => {
-    return c.map(x => x.company.id) || null;
+    return c.map(x => x.companyId) || null;
   }
 );
 
 export const getUnassignedContractorsByProjectId = createSelector(
   getAllProjectContractors,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.projectId) {
+  getCurrentProject,
+  (entities, selectedProject) => {
+    if (selectedProject.id) {
       return entities
-        .filter(x => x.id !== filterState.projectId)
+        .filter(x => x.id !== selectedProject.id)
         .map(x => x.contractors)
         .reduce(function(pre, cur) {
           return pre.concat(cur);
         })
-        .filter(x => x.id && x.id > 0); // project has been assigned to the contractor
+        .filter(x => x.companyId && x.companyId > 0); // project has been assigned to the contractor
     }
     return null;
   }
@@ -144,28 +165,8 @@ export const getAvailableContractors = createSelector(
   getAllCompaniesIdByProjectId,
   (unassignedContractors, assignedCompaniesId) => {
     return unassignedContractors.filter(function(c) {
-      return assignedCompaniesId.indexOf(c.company.id) < 0;
+      return assignedCompaniesId.indexOf(c.companyId) < 0;
     });
-  }
-);
-
-export const getAllProjects = createSelector(
-  getContractorsEntities,
-  entities => {
-    return Object.keys(entities)
-      .map(id => entities[id])
-      .map(x => x.mainProject);
-  }
-);
-
-export const getSelectedMainProject = createSelector(
-  getContractorsEntities,
-  fromFiltersSelectors.getFilterState,
-  (entities, filterState) => {
-    if (filterState.projectId) {
-      return entities[filterState.projectId].mainProject;
-    }
-    return null;
   }
 );
 
@@ -182,9 +183,12 @@ export const isDuplicatedEmail = createSelector(
         .map(result => {
           return result.company;
         })
-        .filter(
-          c => c.email.toLowerCase().trim() === email.toLowerCase().trim()
-        )
+        .filter(c => {
+          if (c.email) {
+            return c.email.toLowerCase().trim() === email.toLowerCase().trim();
+          }
+          return false;
+        })
         .map(c => c.id);
     }
     return null;

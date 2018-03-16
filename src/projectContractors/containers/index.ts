@@ -1,10 +1,10 @@
-import { ProjectContractorsComponent } from './project-contractors/project-contractors.component';
-import { ContractorEditComponent } from './contractor-edit/contractor-edit.component';
+import { ProjectContractorsComponent } from './project-contractors.component';
+import { ContractorEditComponent } from './contractor-edit.component';
 
 export const containers: any[] = [
   ProjectContractorsComponent,
   ContractorEditComponent
 ];
 
-export * from './project-contractors/project-contractors.component';
-export * from './contractor-edit/contractor-edit.component';
+export * from './project-contractors.component';
+export * from './contractor-edit.component';

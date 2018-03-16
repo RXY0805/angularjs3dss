@@ -32,20 +32,6 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
 
 import { AppComponent } from './containers/app/app.component';
 
-// routes
-// export const ROUTES: Routes = [
-//   { path: '', pathMatch: 'full', redirectTo: 'projectContractors' },
-//   {
-//     path: 'projectContractors',
-//     loadChildren:
-//       '../projectContractors/projectContractors.module#ProjectContractorsModule'
-//   }
-//   // {
-//   //   path: 'tests',
-//   //   loadChildren: '../tests/tests.module#TestsModule'
-//   // }
-// ];
-
 @NgModule({
   imports: [
     BrowserModule,

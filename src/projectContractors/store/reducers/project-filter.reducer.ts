@@ -1,18 +1,16 @@
 import * as fromProjectFilters from '../actions/project-filters.action';
-import { ProjectFilter } from '../../models/project-contractor.model';
+import { ProjectFilter } from '@project-contractors/models';
 
 export interface ProjectFilterState {
-  projectId: number;
   statusId: number;
-  isOnSite: boolean;
-  isAuditStatus: boolean;
+  onSiteStatusId: number;
+  auditStatusId: number;
 }
 
 export const initialState: ProjectFilterState = {
-  projectId: undefined,
-  statusId: 1,
-  isOnSite: true,
-  isAuditStatus: true
+  statusId: -1,
+  onSiteStatusId: -1,
+  auditStatusId: -1
 };
 
 export function reducer(
@@ -20,35 +18,21 @@ export function reducer(
   action: fromProjectFilters.ProjectFiltersAction
 ): ProjectFilterState {
   switch (action.type) {
-    case fromProjectFilters.FILTER_BY_PROJECT_ID:
+    case fromProjectFilters.PROFECT_FILTERS_UPDATED:
+      // console.log('reducer recieved payload', action.payload);
       return {
         ...state,
-        projectId: action.payload
-      };
-    case fromProjectFilters.FILTER_BY_STATUS_ID: {
-      return {
-        ...state,
-        statusId: action.payload
-      };
-    }
-
-    case fromProjectFilters.FILTER_BY_AUDIT_STATUS:
-      return {
-        ...state,
-        isAuditStatus: action.payload
-      };
-    case fromProjectFilters.FILTER_BY_ON_SITE:
-      return {
-        ...state,
-        isOnSite: action.payload
+        statusId: action.payload.statusId,
+        auditStatusId: action.payload.auditStatusId,
+        onSiteStatusId: action.payload.onSiteStatusId
       };
   }
   return state;
 }
 
 export const getProjectFilter = (state: ProjectFilterState) => state;
-export const getProjectId = (state: ProjectFilterState) => state.projectId;
-export const getAuditStatus = (state: ProjectFilterState) =>
-  state.isAuditStatus;
-export const getOnSiteStatus = (state: ProjectFilterState) => state.isOnSite;
+export const getAuditStatusId = (state: ProjectFilterState) =>
+  state.auditStatusId;
+export const getOnSiteStatusId = (state: ProjectFilterState) =>
+  state.onSiteStatusId;
 export const getStatusId = (state: ProjectFilterState) => state.statusId;

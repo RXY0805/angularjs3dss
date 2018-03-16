@@ -45,7 +45,9 @@ export class ProjectContractorsEffects {
           .pipe(
             map(
               contractor =>
-                new projectContractorActions.UpdateContractorSuccess(contractor)
+                new projectContractorActions.UpdateContractorSuccess(
+                  action.payload
+                )
             ),
             catchError(error =>
               of(new projectContractorActions.UpdateContractorFail(error))

@@ -3,7 +3,7 @@
     "id": 100,
     "mainProject": {
       "id": 100,
-      "name": "A100 TESTING SITE"
+      "name": "ABCD100 TESTING SITE"
     },
     "contractors": [
       {
@@ -16,12 +16,12 @@
         "project": {
           "id": 16000,
           "mainProjectId": 100,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-12-07T12:08:09.17",
           "status": {
-            "id": 1,
-            "description": "ACCEPTED"
+            "id": 5,
+            "description": "Terminated"
           }
         }
       }
@@ -44,12 +44,12 @@
         "project": {
           "id": 3540,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-12-07T12:08:09.17",
           "status": {
-            "id": 1,
-            "description": "ACCEPTED"
+            "id": 5,
+            "description": "Terminated"
           }
         }
       },
@@ -63,8 +63,8 @@
         "project": {
           "id": 3154,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:07:31.33",
           "status": {
             "id": 1,
@@ -82,8 +82,8 @@
         "project": {
           "id": 4055,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2016-03-09T08:48:49.27",
           "status": {
             "id": 5,
@@ -101,8 +101,8 @@
         "project": {
           "id": 3260,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:38.95",
           "status": {
             "id": 3,
@@ -120,8 +120,8 @@
         "project": {
           "id": 3526,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-01-18T13:51:09.53",
           "status": {
             "id": 3,
@@ -139,8 +139,8 @@
         "project": {
           "id": 3450,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:07:38.25",
           "status": {
             "id": 3,
@@ -158,8 +158,8 @@
         "project": {
           "id": 3413,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -177,8 +177,8 @@
           "id": 3127,
 
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:01.09",
           "status": {
             "id": 3,
@@ -196,8 +196,8 @@
         "project": {
           "id": 3266,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:08.06",
           "status": {
             "id": 3,
@@ -215,8 +215,8 @@
         "project": {
           "id": 1731,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:47.24",
           "status": {
             "id": 3,
@@ -234,8 +234,8 @@
         "project": {
           "id": 3250,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:51:39.77",
           "status": {
             "id": 3,
@@ -253,8 +253,8 @@
         "project": {
           "id": 3579,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:26:00.92",
           "status": {
             "id": 3,
@@ -272,8 +272,8 @@
         "project": {
           "id": 4101,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:26:28.86",
           "status": {
             "id": 3,
@@ -291,8 +291,8 @@
         "project": {
           "id": 4337,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -309,8 +309,8 @@
         "project": {
           "id": 3464,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2015-10-13T16:08:46.55",
           "status": {
             "id": 5,
@@ -328,8 +328,8 @@
         "project": {
           "id": 3464,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:07:22.74",
           "status": {
             "id": 3,
@@ -347,8 +347,8 @@
         "project": {
           "id": 3666,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-01-18T13:50:54.96",
           "status": {
             "id": 3,
@@ -366,8 +366,8 @@
         "project": {
           "id": 4820,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -384,8 +384,8 @@
         "project": {
           "id": 3547,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -402,8 +402,8 @@
         "project": {
           "id": 411,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2016-04-04T14:13:27.60",
           "status": {
             "id": 5,
@@ -421,8 +421,8 @@
         "project": {
           "id": 3867,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:27:01.47",
           "status": {
             "id": 3,
@@ -440,8 +440,8 @@
         "project": {
           "id": 7162,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -458,8 +458,8 @@
         "project": {
           "id": 4400,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -476,8 +476,8 @@
         "project": {
           "id": 3681,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:25:36.80",
           "status": {
             "id": 3,
@@ -495,8 +495,8 @@
         "project": {
           "id": 4379,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -513,8 +513,8 @@
         "project": {
           "id": 3491,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:08:05.97",
           "status": {
             "id": 3,
@@ -532,8 +532,8 @@
         "project": {
           "id": 3627,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:26:51.76",
           "status": {
             "id": 3,
@@ -551,8 +551,8 @@
         "project": {
           "id": 4689,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -569,8 +569,8 @@
         "project": {
           "id": 3597,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:26:41.74",
           "status": {
             "id": 3,
@@ -588,8 +588,8 @@
         "project": {
           "id": 4614,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -606,8 +606,8 @@
         "project": {
           "id": 3086,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:22.87",
           "status": {
             "id": 3,
@@ -625,8 +625,8 @@
         "project": {
           "id": 3186,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:08:12.40",
 
           "status": {
@@ -645,8 +645,8 @@
         "project": {
           "id": 4800,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -663,8 +663,8 @@
         "project": {
           "id": 10792,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2017-01-24T10:07:41.04",
           "status": {
             "id": 5,
@@ -682,8 +682,8 @@
         "project": {
           "id": 7150,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -700,8 +700,8 @@
         "project": {
           "id": 8609,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -718,8 +718,8 @@
         "project": {
           "id": 8622,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -736,8 +736,8 @@
         "project": {
           "id": 4098,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -754,8 +754,8 @@
         "project": {
           "id": 3518,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:07:55.15",
           "status": {
             "id": 3,
@@ -773,8 +773,8 @@
         "project": {
           "id": 3658,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:24:37.64",
           "status": {
             "id": 3,
@@ -792,8 +792,8 @@
         "project": {
           "id": 4524,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -810,8 +810,8 @@
         "project": {
           "id": 3385,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-26T14:07:44.69",
           "status": {
             "id": 3,
@@ -829,8 +829,8 @@
         "project": {
           "id": 7152,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -847,8 +847,8 @@
         "project": {
           "id": 3551,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:26:10.21",
           "status": {
             "id": 3,
@@ -866,8 +866,8 @@
         "project": {
           "id": 3504,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:25:18.76",
           "status": {
             "id": 3,
@@ -885,8 +885,8 @@
         "project": {
           "id": 3310,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-12-07T12:08:27.15",
           "status": {
             "id": 3,
@@ -904,8 +904,8 @@
         "project": {
           "id": 3408,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:14.64",
           "status": {
             "id": 3,
@@ -923,8 +923,8 @@
         "project": {
           "id": 3677,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -942,8 +942,8 @@
         "project": {
           "id": 3264,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:51:47.75",
           "status": {
             "id": 3,
@@ -961,8 +961,8 @@
         "project": {
           "id": 3264,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2015-09-01T14:50:45.37",
           "status": {
             "id": 5,
@@ -980,8 +980,8 @@
         "project": {
           "id": 4564,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -998,8 +998,8 @@
         "project": {
           "id": 10770,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1016,8 +1016,8 @@
         "project": {
           "id": 4845,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1034,8 +1034,8 @@
         "project": {
           "id": 4324,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1052,8 +1052,8 @@
         "project": {
           "id": 3942,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:25:11.46",
           "status": {
             "id": 3,
@@ -1071,8 +1071,8 @@
         "project": {
           "id": 4347,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "auditDate": "2016-05-30T16:06:29.26",
           "status": {
             "id": 3,
@@ -1090,9 +1090,9 @@
         "project": {
           "id": 4123,
           "mainProjectId": 1684,
-          "onSite": true,
+          "onSite": 1,
 
-          "auditStatus": false,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1109,8 +1109,8 @@
         "project": {
           "id": 3407,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2015-10-08T08:52:54.14",
           "status": {
             "id": 3,
@@ -1128,8 +1128,8 @@
         "project": {
           "id": 4498,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1146,8 +1146,8 @@
         "project": {
           "id": 4471,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1164,8 +1164,8 @@
         "project": {
           "id": 4385,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1182,8 +1182,8 @@
         "project": {
           "id": 4473,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1200,8 +1200,8 @@
         "project": {
           "id": 4184,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2017-03-09T08:15:49.29",
           "status": {
             "id": 5,
@@ -1219,8 +1219,8 @@
         "project": {
           "id": 4184,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1237,8 +1237,8 @@
         "project": {
           "id": 4403,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1255,8 +1255,8 @@
         "project": {
           "id": 3872,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": true,
+          "onSite": 1,
+          "auditStatus": 1,
           "auditDate": "2016-04-21T15:27:11.24",
           "status": {
             "id": 3,
@@ -1274,8 +1274,8 @@
         "project": {
           "id": 3894,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1292,8 +1292,8 @@
         "project": {
           "id": 4290,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1310,8 +1310,8 @@
         "project": {
           "id": 4436,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -1328,8 +1328,8 @@
         "project": {
           "id": 4436,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2016-05-25T09:45:06.38",
           "status": {
             "id": 5,
@@ -1347,8 +1347,8 @@
         "project": {
           "id": 4457,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -1365,8 +1365,8 @@
         "project": {
           "id": 4457,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1383,8 +1383,8 @@
         "project": {
           "id": 4465,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -1401,8 +1401,8 @@
         "project": {
           "id": 4465,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1419,8 +1419,8 @@
         "project": {
           "id": 4602,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -1437,8 +1437,8 @@
         "project": {
           "id": 4602,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1455,8 +1455,8 @@
         "project": {
           "id": 7067,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1473,8 +1473,8 @@
         "project": {
           "id": 7171,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1491,8 +1491,8 @@
         "project": {
           "id": 8317,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1509,8 +1509,8 @@
         "project": {
           "id": 10793,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1527,8 +1527,8 @@
         "project": {
           "id": 10802,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2017-03-21T16:23:29.44",
           "status": {
             "id": 5,
@@ -1546,8 +1546,8 @@
         "project": {
           "id": 11124,
           "mainProjectId": 1684,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2017-04-03T11:28:28.02",
           "status": {
             "id": 5,
@@ -1575,8 +1575,8 @@
           "id": 7087,
 
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1593,8 +1593,8 @@
         "project": {
           "id": 8482,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1611,8 +1611,8 @@
         "project": {
           "id": 2973,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1629,8 +1629,8 @@
         "project": {
           "id": 3582,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1647,8 +1647,8 @@
         "project": {
           "id": 4394,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1665,8 +1665,8 @@
         "project": {
           "id": 4928,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1683,8 +1683,8 @@
         "project": {
           "id": 7218,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1701,8 +1701,8 @@
         "project": {
           "id": 2977,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1719,8 +1719,8 @@
         "project": {
           "id": 3905,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1738,8 +1738,8 @@
         "project": {
           "id": 2890,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1756,8 +1756,8 @@
         "project": {
           "id": 3219,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1774,8 +1774,8 @@
         "project": {
           "id": 10954,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1792,8 +1792,8 @@
         "project": {
           "id": 3204,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1810,8 +1810,8 @@
         "project": {
           "id": 2998,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1828,8 +1828,8 @@
         "project": {
           "id": 1858,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1846,8 +1846,8 @@
         "project": {
           "id": 1732,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1864,8 +1864,8 @@
         "project": {
           "id": 7092,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1882,8 +1882,8 @@
         "project": {
           "id": 4050,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1900,8 +1900,8 @@
         "project": {
           "id": 3128,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1918,8 +1918,8 @@
         "project": {
           "id": 3138,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1936,8 +1936,8 @@
         "project": {
           "id": 3593,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1954,8 +1954,8 @@
         "project": {
           "id": 3191,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1972,8 +1972,8 @@
         "project": {
           "id": 3117,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -1990,8 +1990,8 @@
         "project": {
           "id": 4097,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2008,8 +2008,8 @@
         "project": {
           "id": 3866,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2026,8 +2026,8 @@
         "project": {
           "id": 3496,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2044,8 +2044,8 @@
         "project": {
           "id": 3975,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2062,8 +2062,8 @@
         "project": {
           "id": 3937,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2080,8 +2080,8 @@
         "project": {
           "id": 3132,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2098,8 +2098,8 @@
         "project": {
           "id": 453,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2017-12-04T16:27:20.98",
           "status": {
             "id": 5,
@@ -2117,8 +2117,8 @@
         "project": {
           "id": 4118,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2135,8 +2135,8 @@
         "project": {
           "id": 466,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2016-04-07T10:08:15.26",
           "status": {
             "id": 5,
@@ -2154,8 +2154,8 @@
         "project": {
           "id": 4207,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2172,8 +2172,8 @@
         "project": {
           "id": 3203,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2190,8 +2190,8 @@
         "project": {
           "id": 4718,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2208,8 +2208,8 @@
         "project": {
           "id": 518,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "expiryDate": "2015-08-12T10:05:04.80",
           "status": {
             "id": 5,
@@ -2227,8 +2227,8 @@
         "project": {
           "id": 3173,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2245,8 +2245,8 @@
         "project": {
           "id": 3120,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2263,8 +2263,8 @@
         "project": {
           "id": 5960,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2281,8 +2281,8 @@
         "project": {
           "id": 5971,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2299,8 +2299,8 @@
         "project": {
           "id": 3437,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2317,8 +2317,8 @@
         "project": {
           "id": 7151,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2335,8 +2335,8 @@
         "project": {
           "id": 3091,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2353,8 +2353,8 @@
         "project": {
           "id": 3802,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2372,8 +2372,8 @@
         "project": {
           "id": 3398,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2390,8 +2390,8 @@
         "project": {
           "id": 4679,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2408,8 +2408,8 @@
         "project": {
           "id": 3324,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2426,8 +2426,8 @@
         "project": {
           "id": 3936,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2444,8 +2444,8 @@
         "project": {
           "id": 3732,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2462,8 +2462,8 @@
         "project": {
           "id": 3105,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2480,8 +2480,8 @@
         "project": {
           "id": 1771,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2498,8 +2498,8 @@
         "project": {
           "id": 3871,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2516,8 +2516,8 @@
         "project": {
           "id": 4013,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2534,8 +2534,8 @@
         "project": {
           "id": 3136,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2552,8 +2552,8 @@
         "project": {
           "id": 4388,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2570,8 +2570,8 @@
         "project": {
           "id": 4125,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2588,8 +2588,8 @@
         "project": {
           "id": 4109,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2606,8 +2606,8 @@
         "project": {
           "id": 7141,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2624,8 +2624,8 @@
         "project": {
           "id": 2899,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2642,8 +2642,8 @@
         "project": {
           "id": 2999,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2660,8 +2660,8 @@
         "project": {
           "id": 3742,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2678,8 +2678,8 @@
         "project": {
           "id": 7278,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2697,8 +2697,8 @@
         "project": {
           "id": 3110,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2715,8 +2715,8 @@
         "project": {
           "id": 3347,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2733,8 +2733,8 @@
         "project": {
           "id": 3544,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2751,8 +2751,8 @@
         "project": {
           "id": 3376,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2769,8 +2769,8 @@
         "project": {
           "id": 10688,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2787,8 +2787,8 @@
         "project": {
           "id": 4472,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2805,8 +2805,8 @@
         "project": {
           "id": 3499,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2823,8 +2823,8 @@
         "project": {
           "id": 8548,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2841,8 +2841,8 @@
         "project": {
           "id": 8329,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2860,8 +2860,8 @@
         "project": {
           "id": 4632,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -2878,8 +2878,8 @@
         "project": {
           "id": 4632,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2896,8 +2896,8 @@
         "project": {
           "id": 4788,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 2,
             "description": "DECLINED"
@@ -2914,8 +2914,8 @@
         "project": {
           "id": 4788,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2932,8 +2932,8 @@
         "project": {
           "id": 7168,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2950,8 +2950,8 @@
         "project": {
           "id": 7276,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2968,8 +2968,8 @@
         "project": {
           "id": 8380,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"
@@ -2986,8 +2986,8 @@
         "project": {
           "id": 10927,
           "mainProjectId": 1715,
-          "onSite": true,
-          "auditStatus": false,
+          "onSite": 1,
+          "auditStatus": 0,
           "status": {
             "id": 3,
             "description": "ACCEPTED"

@@ -19,9 +19,8 @@ import { MatDialog } from '@angular/material';
 import * as fromStore from '../../store';
 import { ContractorInviteDialogComponent } from '../contractor-invite-dialog/contractor-invite-dialog.component';
 import { ProjectInvitation } from '../../models/project-contractor.model';
-import { Company } from '../../models/company.model';
-import { Project } from '../../models/project.model';
-import { Contractor } from '../../models/contractor.model';
+import { Company, Project, Contractor } from '@project-contractors/models';
+
 import { FormBuilder } from '@angular/forms/src/form_builder';
 
 @Component({
@@ -30,7 +29,7 @@ import { FormBuilder } from '@angular/forms/src/form_builder';
   templateUrl: './contractor-invite.component.html'
 })
 export class ContractorInviteComponent implements OnInit {
-  @Input() selectedProject: Observable<any>;
+  @Input() project: Observable<Project>;
   @Output() sendInvitation = new EventEmitter<ProjectInvitation>();
   availableContractors$: Observable<Contractor[]>;
   currentProject: Project;
@@ -42,8 +41,7 @@ export class ContractorInviteComponent implements OnInit {
     private store: Store<fromStore.ProjectContractorsState>
   ) {}
   ngOnInit() {
-    this.selectedProject.subscribe(x => {
-      // console.log(x);
+    this.project.subscribe(x => {
       this.currentProject = x;
     });
   }
@@ -54,16 +52,18 @@ export class ContractorInviteComponent implements OnInit {
     );
 
     this.invitation = {
-      projectId: this.currentProject.id
+      projectId: this.currentProject.id,
+      existCompanies: []
     };
 
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {
-      width: '750px',
+      width: '850px',
       data: {
         currentProject: this.currentProject,
         currentAvailableContractors: this.availableContractors$,
         invitation: this.invitation
-      }
+      },
+      disableClose: true
     });
 
     dialogRef.afterClosed().subscribe(invitation => {

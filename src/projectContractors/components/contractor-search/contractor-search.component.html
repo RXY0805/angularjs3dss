@@ -4,8 +4,8 @@
             <td>Select Project:</td>
             <td>
                 <mat-form-field>
-                    <mat-select placeholder="choose..." [(ngModel)]="projectFilter.selectedProjectId" (selectionChange)="onFilterChange('PROJECT_ID')">
-                        <mat-option *ngFor="let project of (projects| async)" [value]="project.id">{{project.name}}</mat-option>
+                    <mat-select (change)="onProjectChange()" [(ngModel)]="currentProjectId">
+                        <mat-option *ngFor="let project of allProjects" [value]="project.id">{{project.projectName}}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </td>
@@ -15,7 +15,7 @@
             <td>Select Project Status:</td>
             <td>
                 <mat-form-field>
-                    <mat-select [(ngModel)]="projectFilter.selectedStatusId" (change)="onFilterChange('STATUS_ID')">
+                    <mat-select [(ngModel)]="filter.statusId" (change)="onFilterChange()">
                         <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -26,18 +26,23 @@
                 Select Audit Status:
             </td>
             <td class="doubleBottomPadding">
-                <mat-radio-group (change)="onFilterChange('AUDIT_STATUS')" [(ngModel)]='projectFilter.isAuditStatus'>
-                    <mat-radio-button value='1'>Ok</mat-radio-button>
-                    <mat-radio-button value='0'>For Review</mat-radio-button>
+                <mat-radio-group (change)="onFilterChange()" [(ngModel)]="filter.auditStatusId">
+                    <mat-radio-button class="example-radio-button" *ngFor="let auditStatus of auditStatusList" [value]="auditStatus.id">
+                        {{auditStatus.name}}
+                    </mat-radio-button>
                 </mat-radio-group>
             </td>
         </tr>
         <tr>
             <td class="doubleBottomPadding">Contractor Onsite:</td>
             <td class="doubleBottomPadding">
-                <mat-checkbox (change)="onFilterChange('ON_SITE')" [(ngModel)]='projectFilter.isOnSite'></mat-checkbox>
+                <mat-radio-group (change)="onFilterChange()" [(ngModel)]='filter.onSiteStatusId'>
+                    <mat-radio-button class="example-radio-button" *ngFor="let onSiteStatus of onSiteStatusList" [value]="onSiteStatus.id">
+                        {{onSiteStatus.name}}
+                    </mat-radio-button>
+                </mat-radio-group>
             </td>
         </tr>
-
     </table>
+
 </div>

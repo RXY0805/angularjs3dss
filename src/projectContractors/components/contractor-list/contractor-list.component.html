@@ -10,7 +10,7 @@
     </div>
 
     <!-- [hidden]="selection.isEmpty()"  -->
-    <mat-table [dataSource]="dataSource" matSort>
+    <mat-table [ngClass]="isCheckable?'dialog-mode':''" [dataSource]="dataSource" matSort>
         <!-- select -->
         <!-- <ng-container matColumnDef="id">
             <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
@@ -20,27 +20,32 @@
         </ng-container> -->
         <ng-container matColumnDef="select" *ngIf="isCheckable">
             <mat-header-cell *matHeaderCellDef>
-                <mat-checkbox *ngIf="isCheckable" (change)="$event ? masterToggle() : ''" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">All
+                <mat-checkbox *ngIf="isCheckable" (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+                    <a>All</a>
                 </mat-checkbox>
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.company.id) : '';onToggleSelectedCompanies(row.company.id, row.company.name)"
-                    [checked]="selection.isSelected(row.company.id)">&nbsp;
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.companyId) : null;onToggleSelectedCompany(row.companyId,row.companyName,false)"
+                    [checked]="selection.isSelected(row.companyId)">&nbsp;
                 </mat-checkbox>
             </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="company.name">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </mat-header-cell>
+        <ng-container matColumnDef="companyName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                <a>Company Site</a>
+            </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <a *ngIf="!isCheckable" [href]="baseUrl+'UserHome.aspx?view=project&pid='+row.id">{{row.company.name}}</a>
-                <span *ngIf="isCheckable">{{row.company.name}}</span>
+                <a *ngIf="!isCheckable && !row.isInvited" [href]="baseUrl+'UserHome.aspx?view=project&pid='+row.contractorId" target="_blank">{{row.companyName}}</a>
+                <span *ngIf="isCheckable || row.isInvited">{{row.companyName}}</span>
             </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="company.email">
-            <mat-header-cell *matHeaderCellDef mat-sort-header> User </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.company.email}} </mat-cell>
+        <ng-container matColumnDef="auditUserName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                <a>User</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.auditUserName}} </mat-cell>
         </ng-container>
 
         <!-- <ng-container matColumnDef="project.onSite" *ngIf="!isCheckable">
@@ -52,26 +57,54 @@
             </mat-cell>
         </ng-container> -->
 
-
-        <ng-container matColumnDef="project.auditDate" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <ng-container matColumnDef="statusId" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef>
+                <a>Status</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{getProjectStatus(row.statusId)}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="onSite" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef>
+                <a>On Site</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{ getOnSiteStatus(row.onSite) }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="auditComplete" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef>
+                <a>Audit</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{ getAuditStatus(row.auditComplete) }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="licenceExpires" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                <a>Expiry Date</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.color]="getColor(row.licenceExpires)"> {{row.licenceExpires | date:'yyyy-MM-dd'}} </mat-cell>
+        </ng-container>
+        <!-- <ng-container matColumnDef="project.auditDate" *ngIf="!isCheckable">
+            <mat-header-cell *matHeaderCellDef>
+                <a>Date</a>
+            </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.project.auditDate | date:'yyyy-MM-dd'}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="project.expiryDate" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef> Expiry Date </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef>
+                <a>Expiry Date</a>
+            </mat-header-cell>
             <mat-cell *matCellDef="let row" [style.color]="getColor(row.project.expiryDate)"> {{row.project.expiryDate | date:'yyyy-MM-dd'}} </mat-cell>
-        </ng-container>
+        </ng-container> -->
         <!-- Color   Column -->
         <!-- <ng-container matColumnDef="company.id">
             <mat-header-cell hidden="!isCheckable" *matHeaderCellDef> ID </mat-header-cell>
             <mat-cell hidden="!isCheckable" *matCellDef="let row"> {{row.company.id}} </mat-cell>
         </ng-container> -->
-        <ng-container matColumnDef="id" *ngIf="!isCheckable">
+        <ng-container matColumnDef="contractorId" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-            <!-- hide edit link if company just invited to project -->
+            <!-- hide edit link if company just invited to project  row.project.status.id}}-->
+
             <mat-cell *matCellDef="let row">
-                <span *ngIf="!row.project.isInvited">
-                    <a [routerLink]="['/contractors', row.id]">Edit</a>
+                <span *ngIf="row.statusId !== terminatedStatusId && row.statusId !== invitedStatusId">
+                    <a [routerLink]="['/contractors', row.contractorId]">Edit</a>
                 </span>
             </mat-cell>
         </ng-container>

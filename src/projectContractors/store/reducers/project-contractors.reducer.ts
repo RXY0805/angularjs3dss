@@ -1,9 +1,5 @@
 import * as fromProjectContractors from '../actions/project-contractors.action';
-import { Contractor } from '../../models/contractor.model';
-import { defaultProject } from '../../models/project.model';
-import { ProjectContractor } from '../../models/project-contractor.model';
-import { Company } from '../../models/company.model';
-import { Project } from '../../models/project.model';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/from';
 import 'rxjs/add/operator/filter';
@@ -11,16 +7,25 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/distinct';
 import { Subscription } from 'rxjs/Subscription';
 
+import * as fromModels from '../../models';
+import {
+  ProjectContractor,
+  Contractor,
+  InvitedContractor
+} from '@project-contractors/models';
+
 export interface ProjectContractorState {
   entities: { [id: number]: ProjectContractor };
   loaded: boolean;
   loading: boolean;
+  currentProjectId: number;
 }
 
 export const initialState: ProjectContractorState = {
   entities: {},
   loaded: false,
-  loading: false
+  loading: false,
+  currentProjectId: 0
 };
 
 export function reducer(
@@ -37,7 +42,6 @@ export function reducer(
 
     case fromProjectContractors.LOAD_PROJECT_CONTRACTORS_SUCCESS: {
       const projectContractors = action.payload;
-
       const entities = projectContractors.reduce(
         (
           entities: { [id: number]: ProjectContractor },
@@ -59,6 +63,13 @@ export function reducer(
         entities
       };
     }
+    case fromProjectContractors.SET_CURRENT_PROJECT_ID: {
+      // alert('in reducer' + action.payload);
+      return {
+        ...state,
+        currentProjectId: action.payload
+      };
+    }
 
     case fromProjectContractors.LOAD_PROJECT_CONTRACTORS_FAIL: {
       return {
@@ -70,8 +81,7 @@ export function reducer(
 
     case fromProjectContractors.UPDATE_CONTRACTOR_SUCCESS: {
       const contractor = action.payload;
-      const mainProjectId = contractor.project.mainProjectId;
-
+      const mainProjectId = state.currentProjectId;
       return {
         ...state,
         entities: {
@@ -80,7 +90,7 @@ export function reducer(
             ...state.entities[mainProjectId],
             contractors: [
               ...state.entities[mainProjectId].contractors.map((item, i) => {
-                if (item.id !== contractor.id) {
+                if (item.contractorId !== contractor.contractorId) {
                   return item;
                 }
                 return {
@@ -99,31 +109,20 @@ export function reducer(
       const mainProjectId = invitation.projectId;
       const existedCompanies = invitation.existCompanies;
       const newContractors = [];
-      const newCompanyEmail = invitation.email;
-      defaultProject.mainProjectId = mainProjectId;
 
       if (existedCompanies && existedCompanies.length > 0) {
         for (let i = 0; i < existedCompanies.length; i++) {
-          const contractor_exist_company: Contractor = {
-            id: undefined,
-            company: existedCompanies[i],
-            project: defaultProject
+          const selectedCompany = existedCompanies[i];
+
+          const contractor_exist_company: fromModels.Contractor = {
+            ...InvitedContractor,
+            companyId: existedCompanies[i].id,
+            companyName: existedCompanies[i].name
           };
           newContractors.push(contractor_exist_company);
         }
       } else {
-        const newCompany: Company = {
-          id: undefined,
-          name: undefined,
-          email: newCompanyEmail
-        };
-
-        const contractor_new_company: Contractor = {
-          id: undefined,
-          company: newCompany,
-          project: defaultProject
-        };
-        newContractors.push(contractor_new_company);
+        newContractors.push(InvitedContractor);
       }
       return {
         ...state,
@@ -152,3 +151,6 @@ export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>
   state.loaded;
+
+export const getCurrentProjectId = (state: ProjectContractorState) =>
+  state.currentProjectId;

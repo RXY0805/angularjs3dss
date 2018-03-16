@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, LoadChildren } from '@angular/router';
 
-import { ProjectContractorsModule } from '../projectContractors/projectContractors.module';
+import { ProjectContractorsModule } from '../projectContractors/project-contractors.module';
 
 // Fix Lazy loading routing issue
 // https://github.com/angular/angular-cli/issues/3204
-
 export function loadChildrenContact() {
   return ProjectContractorsModule;
 }

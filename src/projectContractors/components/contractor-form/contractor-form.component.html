@@ -1,32 +1,22 @@
 <div id="editFormContainer">
     <form (submit)="onSubmit()" [formGroup]="contractorForm" class="ng-edit-form-width">
-        <table class="ng-form-table" formGroupName="company">
-            <tr>
-                <td class="first">Email:</td>
-                <td class="last">
-                    <mat-form-field class="ng-form-field-width">
-                        <input matInput formControlName="email" />
-                    </mat-form-field>
+        <table class="ng-form-table">
 
-                </td>
-            </tr>
             <tr>
                 <td class="first">Company Name:</td>
                 <td class="last">
                     <mat-form-field class="ng-form-field-width">
-                        <input matInput formControlName="name" />
+                        <input matInput formControlName="companyName" />
                     </mat-form-field>
 
                 </td>
             </tr>
-        </table>
 
-        <table class="ng-form-table" formGroupName="project">
-            <tr formGroupName="status">
+            <tr>
                 <td class="first">Project status:</td>
                 <td class="last">
                     <mat-form-field class="full-width">
-                        <mat-select matInput formControlName="id">
+                        <mat-select matInput formControlName="statusId">
                             <mat-option *ngFor="let status of statusList" [value]="status.id">{{status.name}}</mat-option>
                         </mat-select>
                     </mat-form-field>
@@ -36,8 +26,8 @@
                 <td class="first">Audit status:</td>
                 <td class="last">
                     <mat-form-field class="full-width">
-                        <mat-select matInput formControlName="auditStatus">
-                            <mat-option *ngFor="let auditOption of auditStatusOptions" [value]="auditOption.value">{{auditOption.name}}</mat-option>
+                        <mat-select matInput formControlName="auditComplete">
+                            <mat-option *ngFor="let auditOption of auditStatusList" [value]="auditOption.id">{{auditOption.name}}</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </td>
@@ -47,7 +37,7 @@
                 <td class="last">
                     <mat-form-field class="full-width">
                         <mat-select matInput formControlName="onSite">
-                            <mat-option *ngFor="let onsiteOption of onsiteOptions" [value]="onsiteOption.value">{{onsiteOption.name}}</mat-option>
+                            <mat-option *ngFor="let onsiteOption of onSiteStatusList" [value]="onsiteOption.id">{{onsiteOption.name}}</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </td>

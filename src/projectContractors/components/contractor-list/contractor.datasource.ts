@@ -1,6 +1,5 @@
 import { CollectionViewer, DataSource } from '@angular/cdk/collections';
-import { Company } from '../../models/company.model';
-import { Contractor } from '../../models/contractor.model';
+import { Company, Contractor } from '@project-contractors/models';
 
 import { MatPaginator, MatSort } from '@angular/material';
 
@@ -29,7 +28,7 @@ export class ContractorDatabase {
   setData(items: Contractor[]) {
     if (items && items.length) {
       const uniqueCompanyList = Array.from(
-        items.reduce((m, t) => m.set(t.company.id, t), new Map()).values()
+        items.reduce((m, t) => m.set(t.companyId, t), new Map()).values()
       );
 
       this.dataChange.next(uniqueCompanyList);
@@ -85,12 +84,10 @@ export class ContractorDataSource extends DataSource<any> {
       this.filteredData = this._contractorDatabase.data
         // .slice()
         .filter((item: Contractor) => {
-          const searchStr = (
-            item.company.name +
-            ' ' +
-            item.company.email
-          ).toLowerCase();
-          return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
+          const searchStr = item.companyName + ' ' + item.auditUserName;
+          return (
+            searchStr.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1
+          );
         });
       const sortedData = this.sortData(this.filteredData.slice());
       const startIndex = this._paginator.pageIndex * this._paginator.pageSize;
@@ -114,16 +111,22 @@ export class ContractorDataSource extends DataSource<any> {
       let propertyB: number | string = '';
 
       switch (this._sort.active) {
-        case 'company.name':
+        case 'companyName':
           [propertyA, propertyB] = [
-            a.company.name.toLowerCase(),
-            b.company.name.toLowerCase()
+            a.companyName.toLowerCase(),
+            b.companyName.toLowerCase()
           ];
           break;
-        case 'company.email':
+        case 'auditUserName':
           [propertyA, propertyB] = [
-            a.company.email.toLowerCase(),
-            b.company.email.toLowerCase()
+            a.auditUserName.toLowerCase(),
+            b.auditUserName.toLowerCase()
+          ];
+          break;
+        case 'licenceExpires':
+          [propertyA, propertyB] = [
+            a.licenceExpires.toLowerCase(),
+            b.licenceExpires.toLowerCase()
           ];
           break;
       }
@@ -131,9 +134,31 @@ export class ContractorDataSource extends DataSource<any> {
       const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
       const valueB = isNaN(+propertyB) ? propertyB : +propertyB;
 
+      // return (
+
+      //   (valueA < valueB ? -1 : 1) * (this._sort.direction === 'asc' ? 1 : -1)
+      // );
       return (
-        (valueA < valueB ? -1 : 1) * (this._sort.direction === 'asc' ? 1 : -1)
+        this.compareItems(valueA, valueB) *
+        (this._sort.direction === 'asc' ? 1 : -1)
       );
     });
+  }
+
+  // new one
+  compareItems(itemA: any, itemB: any): number {
+    let retVal = 0;
+    if (itemA && itemB) {
+      if (itemA > itemB) {
+        retVal = 1;
+      } else if (itemA < itemB) {
+        retVal = -1;
+      }
+    } else if (itemA) {
+      retVal = 1;
+    } else if (itemB) {
+      retVal = -1;
+    }
+    return retVal;
   }
 }

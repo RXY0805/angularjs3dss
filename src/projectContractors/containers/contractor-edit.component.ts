@@ -13,11 +13,9 @@ import { Observable } from 'rxjs/Observable';
 
 import { Subscription } from 'rxjs/Subscription';
 
-import * as fromStore from '../../store';
+import * as fromStore from '../store';
 
-import { Contractor } from '../../models/contractor.model';
-import { Company } from '../../models/company.model';
-import { Project } from '../../models/project.model';
+import { Contractor, Company, Project } from '@project-contractors/models';
 
 @Component({
   selector: 'app-contractor-edit',
@@ -37,18 +35,18 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.contractor$ = this.store.select(fromStore.getSelectedContractor);
+    this.contractor$ = this.store.select(fromStore.getContractorById);
 
     // If the update effect fires, we check if the current id is the one being updated, and redirect to its details
     this.redirectSub = this.actionsSubject
       .filter(action => action.type === fromStore.UPDATE_CONTRACTOR)
       .filter(
         (action: fromStore.UpdateContractorSuccess) =>
-          action.payload.id ===
+          action.payload.contractorId ===
           parseInt(this.activatedRoute.snapshot.params['contractorId'], 10)
       )
       .subscribe((action: fromStore.UpdateContractorSuccess) =>
-        this.router.navigate(['/contractors', action.payload.id])
+        this.router.navigate(['/contractors', action.payload.contractorId])
       );
 
     this.activatedRoute.params.subscribe(params => {
@@ -56,16 +54,16 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
       // this.store.dispatch(new fromStore.LoadContractor(params['contractorId']));
     });
   }
+
   ngOnDestroy() {
     this.redirectSub.unsubscribe();
   }
+
   onSubmit(contractor) {
-    // console.log(contractor);
-    // 20180302 REMOVE comment while WEPAPI2018 ready
-    // this.store.dispatch(new fromStore.UpdateContractor(contractor));
+    // skip service web api updating
     this.store.dispatch(new fromStore.UpdateContractorSuccess(contractor));
+    //this.store.dispatch(new fromStore.UpdateContractor(contractor));
     this.router.navigate(['/contractors']);
-    // this.store.dispatch(new fromStore.UpdateContractor(contractor));
   }
   onCancel() {
     this.router.navigate(['/contractors']);

@@ -7,8 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { tap, map, filter, take, switchMap } from 'rxjs/operators';
 import * as fromStore from '../store';
 
-import { ProjectContractor } from '../models/project-contractor.model';
-import { Contractor } from '../models/contractor.model';
+import { Contractor, ProjectContractor } from '@project-contractors/models';
 
 @Injectable()
 export class ProjectContractorExistsGuards implements CanActivate {
@@ -17,17 +16,17 @@ export class ProjectContractorExistsGuards implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
     return this.checkStore().pipe(
       switchMap(() => {
-        const id = parseInt(route.params.contractorId, 10);
-        return this.hasContractor(id);
+        const contractorId = parseInt(route.params.contractorId, 10);
+        return this.hasContractor(contractorId);
       })
     );
   }
 
-  hasContractor(id: number): Observable<boolean> {
+  hasContractor(contractorId: number): Observable<boolean> {
     const result = this.store
       .select(fromStore.getAllContractors)
-      .map(cs => cs.filter(c => c.id === id)[0])
-      .map(x => x && x.id > 0);
+      .map(cs => cs.filter(c => c.contractorId === contractorId)[0])
+      .map(x => x && x.contractorId > 0);
 
     return result;
   }

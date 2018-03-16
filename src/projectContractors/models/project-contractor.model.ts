@@ -1,32 +1,28 @@
-import { Contractor } from './contractor.model';
-import { Company } from './company.model';
-import { Project } from './project.model';
-import { TradingEntity } from './trading-entity.model';
-
-export interface ContractorFilter {
-  selectedProjectId: number;
-  selectedStatusId: number;
-  isOnSite: boolean;
-  isAuditStatus: boolean;
-}
+import {
+  Contractor,
+  JSONContractor,
+  Company
+} from '@project-contractors/models';
 
 export interface ProjectFilter {
-  selectedProjectId: number;
-  selectedStatusId: number;
-  isOnSite: boolean;
-  isAuditStatus: boolean;
+  statusId: number;
+  onSiteStatusId: number;
+  auditStatusId: number;
 }
 
 export interface ProjectContractor {
   id: number;
-  mainProject: Project;
+  projectName: string;
   contractors: Contractor[];
 }
 
+export interface JSONProjectContractor {
+  Id: number;
+  ProjectName: string;
+  Contractors: JSONContractor[];
+}
 export interface ProjectInvitation {
   projectId: number;
   existCompanies?: Company[];
   email?: string;
-  abn?: string;
-  tradingEntity?: TradingEntity;
 }

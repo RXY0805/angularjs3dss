@@ -10,8 +10,7 @@ import {
 } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
-import { Contractor } from '../../models/contractor.model';
-import { Company } from '../../models/company.model';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/from';
 import 'rxjs/add/operator/filter';
@@ -21,8 +20,16 @@ import {
   ContractorDatabase,
   ContractorDataSource
 } from './contractor.datasource';
-import { DateUtilities } from '../../../shared/utility/date-utility';
+import {
+  Contractor,
+  Company,
+  TerminatedContractor,
+  InvitedContractor
+} from '@project-contractors/models';
+
+import { DateUtilities } from '@shared-utility/date';
 import { environment } from '../../../environments/environment';
+import { ProjectConstants } from '@shared-utility/constants';
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -36,7 +43,7 @@ export class ContractorListComponent implements OnInit {
   @Input() contractors: Observable<Contractor[]>;
   @Input() isCheckable: boolean;
   @Output()
-  toggleSelectedCompanies: EventEmitter<any> = new EventEmitter<{
+  toggleSelectedCompany: EventEmitter<any> = new EventEmitter<{
     any;
   }>();
 
@@ -45,22 +52,20 @@ export class ContractorListComponent implements OnInit {
   displayedColumns: string[];
   selection = new SelectionModel<number>(true, []);
 
-  onsiteOptions = [
-    { name: 'On Site', value: true },
-    { name: 'Off Site', value: false }
-  ];
-
-  auditStatusOptions = [
-    { name: 'OK', value: true },
-    { name: 'For review', value: false }
-  ];
   public contractorDatabase: ContractorDatabase;
   public dataSource: ContractorDataSource | null;
   public defaultPageSize: number;
-  public selectedCompanies: Company[] = [];
   public dataLength: number;
   currentFilter: string;
   baseUrl: string;
+  terminatedStatusId: number = TerminatedContractor.statusId;
+  invitedStatusId: number = InvitedContractor.statusId;
+
+  statusList = ProjectConstants.ProjectStatusOptions;
+  onSiteStatusList = ProjectConstants.OnSiteStatusOptions;
+  auditStatusList = ProjectConstants.AuditStatusOptions;
+
+  // terminatedStatus: Contractor = terminatedContractor;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -72,20 +77,16 @@ export class ContractorListComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     if (this.isCheckable) {
-      this.displayedColumns = [
-        'select',
-        'company.name',
-        'company.email'
-        // 'company.id',
-        // 'id'
-      ];
+      this.displayedColumns = ['select', 'companyName', 'auditUserName'];
     } else {
       this.displayedColumns = [
-        'company.name',
-        'company.email',
-        'project.auditDate',
-        'project.expiryDate',
-        'id'
+        'companyName',
+        'auditUserName',
+        'statusId',
+        'onSite',
+        'auditComplete',
+        'licenceExpires',
+        'contractorId'
       ];
     }
 
@@ -103,9 +104,9 @@ export class ContractorListComponent implements OnInit {
       if (this.currentFilter) {
         this.dataSource.filter = this.currentFilter;
         this.dataLength = res.filter((item: Contractor) => {
-          const searchContent = (
-            item.company.name + item.company.email
-          ).toLowerCase();
+          const searchContent = item.companyName
+            // + item.company.email
+            .toLowerCase();
           return searchContent.indexOf(this.currentFilter.toLowerCase()) !== -1;
         }).length;
       } else {
@@ -127,6 +128,18 @@ export class ContractorListComponent implements OnInit {
         this.currentFilter = this.filter.nativeElement.value;
         this.dataLength = this.dataSource.filteredData.length;
       });
+  }
+
+  getProjectStatus(statusId) {
+    return ProjectConstants.getProjectStatusName(statusId);
+  }
+
+  getOnSiteStatus(statusId) {
+    return ProjectConstants.getOnSiteStatusName(statusId);
+  }
+
+  getAuditStatus(statusId) {
+    return ProjectConstants.getAuditStatusName(statusId);
   }
 
   getColor(expiredDate) {
@@ -159,39 +172,29 @@ export class ContractorListComponent implements OnInit {
 
     if (this.isAllSelected()) {
       this.selection.clear();
+      this.onToggleSelectedCompany(-1, null, true);
     } else if (this.filter.nativeElement.value) {
       this.dataSource.filteredData.forEach(data => {
-        this.selection.select(data.company.id);
-        this.onToggleSelectedCompanies(data.company.id, data.company.name);
+        this.toggleSelection(data);
       });
     } else {
       this.contractorDatabase.data.forEach(data => {
-        this.selection.select(data.company.id);
-        this.onToggleSelectedCompanies(data.company.id, data.company.name);
+        this.toggleSelection(data);
       });
     }
   }
 
-  onToggleSelectedCompanies(id, name) {
-    let index = -1;
+  toggleSelection(data) {
+    this.selection.select(data.companyId);
 
-    if (this.selectedCompanies) {
-      index = this.selectedCompanies
-        .map(function(c) {
-          return c.id;
-        })
-        .indexOf(id);
-    }
+    this.onToggleSelectedCompany(data.companyId, data.companyName, true);
+  }
 
-    if (index < 0) {
-      const company: Company = {
-        id: id,
-        name: name
-      };
-      this.selectedCompanies.push(company);
-    } else {
-      this.selectedCompanies.splice(index, 1);
-    }
-    this.toggleSelectedCompanies.emit(this.selectedCompanies);
+  onToggleSelectedCompany(id, name, isMasterToggle) {
+    this.toggleSelectedCompany.emit({
+      id: id,
+      name: name,
+      isMasterToggle: isMasterToggle
+    });
   }
 }

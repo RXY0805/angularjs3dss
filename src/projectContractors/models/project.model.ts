@@ -1,31 +1,8 @@
-export interface Project {
-  id?: number;
-  mainProjectId?: number;
-  name?: string;
-  onSite?: boolean;
-  auditStatus?: boolean;
-  auditDate?: string;
-  expiryDate?: string;
-  status: ProjectStatus;
-  isTerminated?: boolean;
-  isInvited?: boolean;
-}
-
-export interface ProjectStatus {
+export class Project {
   id: number;
-  description: string;
+  projectName: string;
+  constructor(id: number, projectName: string) {
+    this.id = id;
+    this.projectName = projectName;
+  }
 }
-
-export const defaultProjectStatus: ProjectStatus = {
-  id: 6,
-  description: 'Invited'
-};
-
-export const defaultProject: Project = {
-  mainProjectId: undefined,
-  onSite: false,
-  auditStatus: false,
-  status: defaultProjectStatus,
-  isTerminated: false,
-  isInvited: true
-};

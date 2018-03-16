@@ -1,10 +1,10 @@
 import { Action } from '@ngrx/store';
 
 import {
-  ProjectContractor,
-  ProjectInvitation
-} from '../../models/project-contractor.model';
-import { Contractor } from '../../models/contractor.model';
+  Contractor,
+  ProjectInvitation,
+  ProjectContractor
+} from '@project-contractors/models';
 
 // import { AnyFn } from '@ngrx/store/src/selector';
 
@@ -13,7 +13,8 @@ export const LOAD_PROJECT_CONTRACTORS_FAIL =
   '[ProjectContractors] Load Contractors Fail';
 export const LOAD_PROJECT_CONTRACTORS_SUCCESS =
   '[ProjectContractors] Load Contractors Success';
-
+export const SET_CURRENT_PROJECT_ID =
+  '[ProjectContractors] Set Current Project Id';
 export const CREATE_INVITATION = '[ProjectContractors] Create Invitation';
 export const CREATE_INVITATION_SUCCESS =
   '[ProjectContractors] Create Invitation Success';
@@ -38,6 +39,12 @@ export class LoadProjectContractorsFail implements Action {
 export class LoadProjectContractorsSuccess implements Action {
   readonly type = LOAD_PROJECT_CONTRACTORS_SUCCESS;
   constructor(public payload: ProjectContractor[]) {}
+}
+export class SetCurrentProjectId implements Action {
+  readonly type = SET_CURRENT_PROJECT_ID;
+  constructor(public payload: number) {
+    // alert(this.payload);
+  }
 }
 
 export class UpdateContractor implements Action {
@@ -72,6 +79,7 @@ export type ProjectContractorsAction =
   | LoadProjectContractors
   | LoadProjectContractorsFail
   | LoadProjectContractorsSuccess
+  | SetCurrentProjectId
   | CreateInvitation
   | CreateInvitationFail
   | CreateInvitationSuccess

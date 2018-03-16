@@ -1,0 +1,2070 @@
+[
+  {
+    "id": 1684,
+    "projectName": "Green Square Site 16",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coates Hire Pty Limited",
+        "companyId": 50,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Linker Surveying Pty Ltd",
+        "companyId": 238,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Total Hoardings Pty Limited",
+        "companyId": 249,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Designed Craft Pty Limited",
+        "companyId": 444,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cityview Group (Aust) Pty Ltd",
+        "companyId": 2195,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Magnetic Automation Pty Ltd",
+        "companyId": 2391,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Stone Alliance Partnership Pty Ltd",
+        "companyId": 2439,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Top Knot Projects Pty Ltd",
+        "companyId": 2586,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 1715,
+    "projectName": "Moreton Bondi",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "City Electrical Services (AUST) Pty Limited",
+        "companyId": 202,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 4004,
+    "projectName": "Green Square Site 5",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "Coates Hire Pty Limited",
+        "companyId": 50,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Schindler Lifts Australia Pty Limited",
+        "companyId": 65,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Trazmet Pty Limited",
+        "companyId": 158,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Monsoon Industries Pty Limited",
+        "companyId": 178,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "McPherson Plumbing (NSW) Pty Limited",
+        "companyId": 198,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Austral Precast (NSW) Pty Limited ",
+        "companyId": 204,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "De Martin & Gasparini Pty Limited",
+        "companyId": 209,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Crest Air Conditioning Pty Limited",
+        "companyId": 210,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Carrington Electrical Services Pty Limited",
+        "companyId": 218,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Innovative Fire Services Pty Limited",
+        "companyId": 226,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Linker Surveying Pty Ltd",
+        "companyId": 238,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Prestressing Services Pty Limited",
+        "companyId": 243,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Total Hoardings Pty Limited",
+        "companyId": 249,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Erect Safe Scaffolding (NSW) Pty Limited",
+        "companyId": 255,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "The Gardenmakers Pty Limited",
+        "companyId": 258,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Premium Doors Pty Limited",
+        "companyId": 266,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fugen Holdings (Australia) ",
+        "companyId": 269,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Micos Aluminium Windows and Doors Pty Ltd",
+        "companyId": 283,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Bettertiles Contracting Pty Limited",
+        "companyId": 288,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Allsystems PFP Pty Limited",
+        "companyId": 293,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "City Rendering Pty Limited",
+        "companyId": 296,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Elephants Foot Waste Compactors Pty Ltd",
+        "companyId": 299,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Buildup Interior Pty Limited",
+        "companyId": 309,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Oz Cut Concrete Cutting Services Pty Limited",
+        "companyId": 313,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Adfinis Pty Limited ",
+        "companyId": 328,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Kalinya Enterprises Pty Limited",
+        "companyId": 332,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ZWF Pty Ltd",
+        "companyId": 333,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Syfon Systems Pty. Ltd.",
+        "companyId": 392,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Feenix NSW Pty Limited",
+        "companyId": 481,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Mainland Civil NSW Pty Limited",
+        "companyId": 489,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Lifting & Safety Pty Ltd",
+        "companyId": 490,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "C.M.S. Surveyors Pty Limited",
+        "companyId": 498,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coastal Steel Fabrications Pty Limited",
+        "companyId": 509,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Electromaster Holdings NSW Pty Limited",
+        "companyId": 540,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "EVS Group Australia Pty Limited",
+        "companyId": 547,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Rix Specialist Contracting",
+        "companyId": 594,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Resolution Rigging Services Pty Ltd",
+        "companyId": 644,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coopers Heavy Industries Pty Limited",
+        "companyId": 741,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Advanced Weather Proofing Pty Ltd",
+        "companyId": 818,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Royal Wolf Trading Australia Pty Limited",
+        "companyId": 843,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Louvreclad Pty Ltd",
+        "companyId": 845,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cityview Group (Aust) Pty Ltd",
+        "companyId": 2195,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Botany Access",
+        "companyId": 2284,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Magnetic Automation Pty Ltd",
+        "companyId": 2391,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Prestige Joinery Sydney Pty Limited",
+        "companyId": 2401,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Morris C Painting - Building NSW Pty Ltd",
+        "companyId": 2413,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Baron Forge (NSW) Pty. Ltd.",
+        "companyId": 2487,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Top Knot Projects Pty Ltd",
+        "companyId": 2586,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "The Tasman Tank Co",
+        "companyId": 3783,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Southside Corp",
+        "companyId": 4018,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "LAF Contracting (NSW) Pty Ltd",
+        "companyId": 6398,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Alphasafe (Nsw) Pty Limited",
+        "companyId": 6447,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Aj Aluminium Pty Limited",
+        "companyId": 6449,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cronulla Carpets",
+        "companyId": 7554,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Sunlite Innovations Pty Ltd",
+        "companyId": 10138,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "DecoGlaze",
+        "companyId": 10148,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Veris Australia Pty Ltd ",
+        "companyId": 10318,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Llamapat (NSW) Pty Ltd",
+        "companyId": 10457,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Mansour Paving (Aust) Pty Ltd",
+        "companyId": 10478,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 4073,
+    "projectName": "Harold Park - Precinct 5",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Otis Elevator Company Pty Limited",
+        "companyId": 185,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "City Electrical Services (AUST) Pty Limited",
+        "companyId": 202,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Decade Waterproofing & Products Pty Limited",
+        "companyId": 211,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Icon Custom Projects Pty Limited",
+        "companyId": 224,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Linker Surveying Pty Ltd",
+        "companyId": 238,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Guardian Protection Services (AUST) Pty Limited",
+        "companyId": 241,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Prestressing Services Pty Limited",
+        "companyId": 243,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Total Hoardings Pty Limited",
+        "companyId": 249,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "The Gardenmakers Pty Limited",
+        "companyId": 258,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Micos Aluminium Windows and Doors Pty Ltd",
+        "companyId": 283,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Bettertiles Contracting Pty Limited",
+        "companyId": 288,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Sydney Plaster Pty Limited",
+        "companyId": 292,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Allsystems PFP Pty Limited",
+        "companyId": 293,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "City Rendering Pty Limited",
+        "companyId": 296,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Elephants Foot Waste Compactors Pty Ltd",
+        "companyId": 299,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Buildup Interior Pty Limited",
+        "companyId": 309,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Oz Cut Concrete Cutting Services Pty Limited",
+        "companyId": 313,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Kalinya Enterprises Pty Limited",
+        "companyId": 332,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ZWF Pty Ltd",
+        "companyId": 333,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Boone & Willard Plumbing Pty Limited",
+        "companyId": 343,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "GVK NSW REO Pty Ltd",
+        "companyId": 344,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Twin Lakes Air Pty Limited",
+        "companyId": 346,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Master Carpet Holdings Pty Ltd",
+        "companyId": 351,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "DJD Brick & Blocklaying Pty Limited",
+        "companyId": 388,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Designed Craft Pty Limited",
+        "companyId": 444,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Never Stop Irrigation Pty Limited",
+        "companyId": 495,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "EJF Engineering Pty Limited",
+        "companyId": 546,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fencing Logistics Pty Limited",
+        "companyId": 556,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Wilken Service Pty. Limited",
+        "companyId": 652,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ADW Johnson Pty Limited",
+        "companyId": 817,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "I.C.M. Property Services Pty. Ltd.",
+        "companyId": 827,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Louvreclad Pty Ltd",
+        "companyId": 845,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "J.L.M.D. Services Pty Ltd",
+        "companyId": 876,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "RISSAFETY PTY LTD",
+        "companyId": 884,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Paintscape Painters & Decorators Pty Ltd",
+        "companyId": 1055,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ATCO Structures & Logistics Pty Ltd",
+        "companyId": 1085,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Clear Sky Contracting Pty Ltd",
+        "companyId": 2431,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Karland Fair Furnishings Pty Ltd",
+        "companyId": 2455,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Baron Forge (NSW) Pty. Ltd.",
+        "companyId": 2487,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Top Knot Projects Pty Ltd",
+        "companyId": 2586,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fyto-Green Australia Pty Ltd",
+        "companyId": 3949,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "JDP Access Pty Ltd",
+        "companyId": 4260,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "DecoGlaze",
+        "companyId": 10148,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Veris Australia Pty Ltd ",
+        "companyId": 10318,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Mansour Paving (Aust) Pty Ltd",
+        "companyId": 10478,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 7047,
+    "projectName": "ATP Building 1",
+    "contractors": [
+      {
+        "contractorId": 1002,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "SRG Building (Northern) P/L",
+        "companyId": 17,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Borger Crane Hire & Rigging Services Pty Limited",
+        "companyId": 20,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Alimak Hek Pty Limited",
+        "companyId": 57,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Wideform Pty Limited",
+        "companyId": 60,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Schindler Lifts Australia Pty Limited",
+        "companyId": 65,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Traino Group Pty Limited",
+        "companyId": 159,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Quick Plumbing Group Pty Limited ",
+        "companyId": 170,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Marr Contracting Pty Limited",
+        "companyId": 217,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Erect Safe Scaffolding (NSW) Pty Limited",
+        "companyId": 255,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Allsystems PFP Pty Limited",
+        "companyId": 293,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "CD Commercial Projects Pty Ltd",
+        "companyId": 301,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ZWF Pty Ltd",
+        "companyId": 333,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Master Carpet Holdings Pty Ltd",
+        "companyId": 351,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Thermal Mechanical Suppliers Pty Ltd",
+        "companyId": 354,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Altius Construction and Engineering Pty Limited",
+        "companyId": 432,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Conrina Masonry Pty. Limited",
+        "companyId": 442,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Lifting & Safety Pty Ltd",
+        "companyId": 490,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "C.M.S. Surveyors Pty Limited",
+        "companyId": 498,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Electromaster Holdings NSW Pty Limited",
+        "companyId": 540,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Resolution Rigging Services Pty Ltd",
+        "companyId": 644,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Wilken Service Pty. Limited",
+        "companyId": 652,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Advanced Weather Proofing Pty Ltd",
+        "companyId": 818,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Triple 'M' Fire Pty Ltd",
+        "companyId": 833,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Santana Studwelding",
+        "companyId": 865,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ATCO Structures & Logistics Pty Ltd",
+        "companyId": 1085,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Yap Engineering Pty Ltd",
+        "companyId": 1122,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cityview Group (Aust) Pty Ltd",
+        "companyId": 2195,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Heyday Group",
+        "companyId": 2453,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Doust Automation & Control Pty Limited",
+        "companyId": 2745,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Energy Power Systems Australia Pty. Limited.",
+        "companyId": 3756,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fredon Air (Nsw) Pty Limited",
+        "companyId": 3830,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Brighton Ceilings Pty Limited",
+        "companyId": 3972,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Southside Corp",
+        "companyId": 4018,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Prestige Joinery (NSW) Pty Ltd",
+        "companyId": 6380,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Skyrise Facade Systems Pty Ltd",
+        "companyId": 10188,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Unreal Steel Pty Ltd",
+        "companyId": 10285,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cubic Interiors Nsw Pty Ltd",
+        "companyId": 10325,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Exodus Doors Pty Ltd",
+        "companyId": 10404,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Teammembers Project Pty Limited",
+        "companyId": 10560,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 8437,
+    "projectName": "The Finery Waterloo",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Titan Cranes & Rigging Pty Limited",
+        "companyId": 34,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Lawrence Group Pty Limited",
+        "companyId": 36,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coates Hire Pty Limited",
+        "companyId": 50,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Wideform Pty Limited",
+        "companyId": 60,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Otis Elevator Company Pty Limited",
+        "companyId": 185,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "McPherson Plumbing (NSW) Pty Limited",
+        "companyId": 198,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Decade Waterproofing & Products Pty Limited",
+        "companyId": 211,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Theos Bros. (Aust) Pty Limited ",
+        "companyId": 213,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Innovative Fire Services Pty Limited",
+        "companyId": 226,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Linker Surveying Pty Ltd",
+        "companyId": 238,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Erect Safe Scaffolding (NSW) Pty Limited",
+        "companyId": 255,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Sydney Plaster Pty Limited",
+        "companyId": 292,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Allsystems PFP Pty Limited",
+        "companyId": 293,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "City Rendering Pty Limited",
+        "companyId": 296,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Elephants Foot Waste Compactors Pty Ltd",
+        "companyId": 299,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Kalinya Enterprises Pty Limited",
+        "companyId": 332,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ZWF Pty Ltd",
+        "companyId": 333,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Zenith Air (NSW) Pty Limited",
+        "companyId": 456,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Feenix NSW Pty Limited",
+        "companyId": 481,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Lifting & Safety Pty Ltd",
+        "companyId": 490,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coastal Steel Fabrications Pty Limited",
+        "companyId": 509,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Robert Bird & Partners Pty Ltd",
+        "companyId": 603,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Killard Excavation Pty Limited",
+        "companyId": 623,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Interspan (NSW) Pty Ltd",
+        "companyId": 628,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coopers Heavy Industries Pty Limited",
+        "companyId": 741,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Advanced Weather Proofing Pty Ltd",
+        "companyId": 818,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian High Voltage",
+        "companyId": 974,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Archiland contractors Pty Ltd",
+        "companyId": 2371,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Magnetic Automation Pty Ltd",
+        "companyId": 2391,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Clear Sky Contracting Pty Ltd",
+        "companyId": 2431,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Stone Alliance Partnership Pty Ltd",
+        "companyId": 2439,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Baron Forge (NSW) Pty. Ltd.",
+        "companyId": 2487,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Top Knot Projects Pty Ltd",
+        "companyId": 2586,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fresh Landscapes & Gardens Pty Ltd",
+        "companyId": 3796,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Goldline Industries Pty Ltd",
+        "companyId": 4080,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Cronulla Carpets",
+        "companyId": 7554,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Northrop Consulting Engineers Pty Limited",
+        "companyId": 9950,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Integrated Group Services Pty Ltd",
+        "companyId": 9951,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fugen Holdings (Aust) Pty Ltd",
+        "companyId": 10074,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Ama (Aust) Pty Ltd",
+        "companyId": 10185,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Veris Australia Pty Ltd ",
+        "companyId": 10318,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "A1 Painting Group Pty Ltd",
+        "companyId": 10321,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Talis Civil Pty Limited",
+        "companyId": 10380,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 10788,
+    "projectName": "ATP Building 2",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "SRG Building (Northern) P/L",
+        "companyId": 17,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Axis Plumbing NSW Pty Limited",
+        "companyId": 31,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Titan Cranes & Rigging Pty Limited",
+        "companyId": 34,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Lawrence Group Pty Limited",
+        "companyId": 36,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Wideform Pty Limited",
+        "companyId": 60,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Schindler Lifts Australia Pty Limited",
+        "companyId": 65,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "De Martin & Gasparini Pty Limited",
+        "companyId": 209,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Marr Contracting Pty Limited",
+        "companyId": 217,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Total Hoardings Pty Limited",
+        "companyId": 249,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Erect Safe Scaffolding (NSW) Pty Limited",
+        "companyId": 255,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "CD Commercial Projects Pty Ltd",
+        "companyId": 301,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "ZWF Pty Ltd",
+        "companyId": 333,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Mainland Civil NSW Pty Limited",
+        "companyId": 489,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Lifting & Safety Pty Ltd",
+        "companyId": 490,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Fencing Logistics Pty Limited",
+        "companyId": 556,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Climatech NSW Pty Ltd",
+        "companyId": 609,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Force Professional Security Services Pty Ltd",
+        "companyId": 642,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Santana Studwelding",
+        "companyId": 865,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Magnetic Automation Pty Ltd",
+        "companyId": 2391,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Energy Power Systems Australia Pty. Limited.",
+        "companyId": 3756,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Southside Corp",
+        "companyId": 4018,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Transelect",
+        "companyId": 9791,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Veris Australia Pty Ltd ",
+        "companyId": 10318,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "F.I.P. Electrical (Nsw) Pty Ltd",
+        "companyId": 10365,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Structural Contracting Services Pty Ltd",
+        "companyId": 10497,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 12444,
+    "projectName": "St Leonards Square",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "Trazmet Pty Limited",
+        "companyId": 158,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "McPherson Plumbing (NSW) Pty Limited",
+        "companyId": 198,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Decade Waterproofing & Products Pty Limited",
+        "companyId": 211,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Innovative Fire Services Pty Limited",
+        "companyId": 226,
+        "statusId": 3,
+        "onSite": 0,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Total Hoardings Pty Limited",
+        "companyId": 249,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Erect Safe Scaffolding (NSW) Pty Limited",
+        "companyId": 255,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Micos Aluminium Windows and Doors Pty Ltd",
+        "companyId": 283,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "MacDonald Contracting Australia Pty Limited",
+        "companyId": 289,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Buildup Interior Pty Limited",
+        "companyId": 309,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Delta Group Pty Limited",
+        "companyId": 310,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "GVK NSW REO Pty Ltd",
+        "companyId": 344,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Australian Lifting & Safety Pty Ltd",
+        "companyId": 490,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "C.M.S. Surveyors Pty Limited",
+        "companyId": 498,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Rix Specialist Contracting",
+        "companyId": 594,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 1
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Interspan (NSW) Pty Ltd",
+        "companyId": 628,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Coopers Heavy Industries Pty Limited",
+        "companyId": 741,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 13016,
+    "projectName": "ATP Building 3",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Engineering Directions",
+        "companyId": 10542,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  },
+  {
+    "id": 13017,
+    "projectName": "ATP Public Domain",
+    "contractors": [
+      {
+        "contractorId": 1000,
+        "companyName": "3D Safety Pty Limited",
+        "companyId": 15,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Sam The Paving Man Pty Limited ",
+        "companyId": 129,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      },
+      {
+        "contractorId": 1000,
+        "companyName": "Glascott Civil",
+        "companyId": 4219,
+        "statusId": 3,
+        "onSite": 1,
+        "auditComplete": 0
+      }
+    ]
+  }
+]

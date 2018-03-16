@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "../Website/AngularJS3DSSAppScripts",
+      "outDir": "../Website/AngularAppScripts",
       "assets": [
         "assets",
         "favicon.ico",
@@ -28,7 +28,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [ "styles.css", "theme-3dss.scss" ],
+      "styles": ["styles.css", "theme-3dss.scss"],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {

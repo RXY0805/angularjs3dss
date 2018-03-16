@@ -25,8 +25,10 @@ import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/project.model';
+import { TradingEntity } from '../../models/trading-entity.model';
 
 import { CustomValidators } from '../../../shared/validator/custom-validators';
+import { getTradingEntity } from '../../store/reducers/company.reducer';
 
 @Component({
   styleUrls: ['contractor-invite-dialog.component.css'],
@@ -35,14 +37,11 @@ import { CustomValidators } from '../../../shared/validator/custom-validators';
 export class ContractorInviteDialogComponent implements OnInit {
   companyForm: FormGroup;
   email: FormControl;
-  abn: FormControl;
 
   duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
-  isDuplicatedEmail: boolean;
-  lastABN: string;
   selectedProject$: Observable<Project>;
-  noneCompanyInvited: boolean;
+  isCompanyInvited: boolean;
   isCheckable: boolean;
   isABNActived: boolean;
   constructor(
@@ -52,65 +51,67 @@ export class ContractorInviteDialogComponent implements OnInit {
     public form: FormBuilder
   ) {
     this.invitation = data.invitation;
-    this.isDuplicatedEmail = false;
   }
   ngOnInit() {
     this.isCheckable = true;
-    this.noneCompanyInvited = true;
+    this.isCompanyInvited = false;
     this.createFormControls();
     this.createForm();
-
-    this.store.select(fromStore.getTradingEntity).subscribe(result => {
-      this.invitation.tradingEntity = result ? result : null;
-      if (result) {
-        this.isABNActived = result.AbnStatus.toUpperCase() === 'ACTIVE';
-      }
-    });
-
-    this.store.select(fromStore.getCompanyABN).subscribe(abn => {
-      this.lastABN = abn;
-    });
-
-    this.store.select(fromStore.isDuplicatedEmail).subscribe(res => {
-      this.isDuplicatedEmail = res && res.length ? true : false;
-    });
   }
 
   public createFormControls() {
     this.email = new FormControl('', [Validators.required, Validators.email]);
-    this.abn = new FormControl('', [
-      Validators.required,
-      Validators.minLength(11),
-      Validators.maxLength(11),
-      CustomValidators.abnValidator
-    ]);
   }
 
   public createForm() {
     this.companyForm = new FormGroup({
-      email: this.email,
-      abn: this.abn
+      email: this.email
     });
   }
 
-  onABNLookup() {
-    if (this.lastABN !== this.companyForm.controls.abn.value) {
-      this.store.dispatch(
-        new fromStore.SearchABN(this.companyForm.controls.abn.value)
-      );
-    }
-  }
+  // onABNLookup() {
+  //   if (this.lastABN !== this.companyForm.controls.abn.value) {
+  //     this.store.dispatch(
+  //       new fromStore.SearchABN(this.companyForm.controls.abn.value)
+  //     );
+  //   }
+  // }
 
-  onToggleSelectedCompanies(event) {
-    this.invitation.existCompanies = event;
-    this.noneCompanyInvited = event && event.length ? false : true;
-  }
+  onToggleSelectedCompany(event) {
+    if (parseInt(event.id, 10) > 0) {
+      let index = -1;
 
-  onDuplicatedEmailCheck(value) {
-    if (!this.companyForm.controls.email.errors) {
-      this.invitation.email = value;
-      this.store.dispatch(new fromStore.SetCompanyEmail(value));
+      if (
+        this.invitation.existCompanies &&
+        this.invitation.existCompanies.length
+      ) {
+        index = this.invitation.existCompanies
+          .map(function(c) {
+            return c.id;
+          })
+          .indexOf(event.id);
+      }
+      if (index < 0) {
+        const selectedCompany: Company = {
+          id: event.id,
+          name: event.name
+        };
+        this.invitation.existCompanies.push(selectedCompany);
+        console.log(this.invitation.existCompanies);
+      } else {
+        if (!event.isMasterToggle) {
+          this.invitation.existCompanies.splice(index, 1);
+        }
+      }
+    } else {
+      // clear exist companies list while untick all checkbox
+      this.invitation.existCompanies = [];
     }
+
+    this.isCompanyInvited =
+      this.invitation.existCompanies && this.invitation.existCompanies.length
+        ? true
+        : false;
   }
 
   onNoClick(): void {

@@ -18,10 +18,8 @@ import {
   FormControl
 } from '@angular/forms';
 
-import { Company } from '../../models/company.model';
-import { Contractor } from '../../models/contractor.model';
-import { Project } from '../../models/project.model';
-import { ProjectConstants } from '../../../shared/utility/constants/project-constants.component';
+import { Company, Contractor, Project } from '@project-contractors/models';
+import { ProjectConstants } from '@shared-utility/constants';
 
 @Component({
   selector: 'app-contractor-form',
@@ -32,105 +30,47 @@ import { ProjectConstants } from '../../../shared/utility/constants/project-cons
 export class ContractorFormComponent implements OnInit {
   @Input()
   contractor: Contractor = {
-    id: undefined,
-    company: undefined,
-    project: undefined
+    contractorId: undefined,
+    principalProjectId: undefined,
+    companyName: undefined,
+    statusId: undefined,
+    onSite: undefined,
+    auditComplete: undefined,
+    licenceExpires: undefined,
+    auditUserName: undefined
   };
+
   @Output() submit = new EventEmitter<Contractor>();
   @Output() cancel = new EventEmitter();
   contractorForm: FormGroup;
-  // project: FormGroup;
-  // auditStatus: FormControl;
-  // onSite: FormControl;
-  // projectStatus: FormControl;
 
   currentContractor: Contractor;
 
-  statusList = ProjectConstants.ProjectStatusOptions;
-  onsiteOptions = ProjectConstants.OnsiteOptions;
-  auditStatusOptions = ProjectConstants.AuditStatusOptions;
+  statusList = ProjectConstants.ProjectStatusEditingOptions;
+  onSiteStatusList = ProjectConstants.OnSiteStatusOptions;
+  auditStatusList = ProjectConstants.AuditStatusOptions;
 
   constructor() {}
 
   ngOnInit() {
     this.contractorForm = new FormGroup({
-      id: new FormControl({ value: this.contractor.id, disabled: true }, [
+      contractorId: new FormControl(
+        { value: this.contractor.contractorId, disabled: true },
+        [Validators.required]
+      ),
+      companyName: new FormControl(
+        { value: this.contractor.companyName, disabled: true },
+        [Validators.required]
+      ),
+      statusId: new FormControl(this.contractor.statusId, [
         Validators.required
       ]),
-      company: new FormGroup({
-        name: new FormControl(
-          { value: this.contractor.company.name, disabled: true },
-          [Validators.required]
-        ),
-        email: new FormControl(
-          { value: this.contractor.company.email, disabled: true },
-          [Validators.required]
-        )
-      }),
-      project: new FormGroup({
-        id: new FormControl(
-          { value: this.contractor.project.id, disabled: false },
-          [Validators.required]
-        ),
-        mainProjectId: new FormControl(
-          { value: this.contractor.project.mainProjectId, disabled: false },
-          [Validators.required]
-        ),
-        auditStatus: new FormControl(this.contractor.project.auditStatus, [
-          Validators.required
-        ]),
-        onSite: new FormControl(this.contractor.project.onSite, [
-          Validators.required
-        ]),
-        // isTerminated: new FormControl(this.contractor.project.isTerminated),
-
-        status: new FormGroup({
-          id: new FormControl(this.contractor.project.status.id),
-          description: new FormControl(
-            this.contractor.project.status.description
-          )
-        })
-      })
+      auditComplete: new FormControl(this.contractor.auditComplete, [
+        Validators.required
+      ]),
+      onSite: new FormControl(this.contractor.onSite, [Validators.required])
     });
-
-    // onSite?: boolean;
-    // auditStatus?: boolean;
-    // auditDate?: string;
-    // expiryDate?: string;
-    // status: ProjectStatus;
-
-    // this.contractor.subscribe(x => {
-    //   this.currentContractor = x;
-    //   this.createFormControls();
-    //   this.createForm();
-    // });
   }
-  // public createFormControls() {
-  //   this.auditStatus = new FormControl(
-  //     this.currentContractor.project.auditStatus,
-  //     [Validators.required]
-  //   );
-  //   this.onSiteStatus = new FormControl(this.currentContractor.project.onSite, [
-  //     Validators.required
-  //   ]);
-  //   this.projectStatus = new FormControl(
-  //     this.currentContractor.project.status.id,
-  //     [Validators.required]
-  //   );
-  // }
-  // public createForm() {
-  //   this.contractorForm = new FormGroup({
-  //     auditStatus: this.auditStatus,
-  //     onSiteStatus: this.onSiteStatus,
-  //     projectStatus: this.projectStatus
-  //   });
-  // }
-
-  // ngOnChanges() {
-  //   if (this.contractor) {
-  //     this.contractorForm.patchValue(this.contractor);
-  //   }
-  // }
 
   onSubmit() {
     if (this.contractorForm.valid) {
