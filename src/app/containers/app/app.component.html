@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div>
+    <div *ngIf="loading" style="padding-top:200px">
+
+        <!-- <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar> -->
+        <mat-spinner style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+    </div>
+    <div *ngIf="!loading">
+        <router-outlet>
+        </router-outlet>
+    </div>
+</div>

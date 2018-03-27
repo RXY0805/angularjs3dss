@@ -1,8 +1,20 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  OnDestroy
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { map, switchMap, catchError, distinct } from 'rxjs/operators';
+import { Subject } from 'rxjs/Subject';
+import {
+  map,
+  switchMap,
+  catchError,
+  distinct,
+  takeUntil
+} from 'rxjs/operators';
 import * as fromStore from '../store';
 import {
   Project,
@@ -19,7 +31,8 @@ import { ProjectFilterState } from '../store/reducers/project-filter.reducer';
   styleUrls: ['project-contractors.component.css'],
   templateUrl: './project-contractors.component.html'
 })
-export class ProjectContractorsComponent implements OnInit {
+export class ProjectContractorsComponent implements OnInit, OnDestroy {
+  private unsubscribe$: Subject<void> = new Subject<void>();
   projectFilter$: Observable<ProjectFilter>;
   projects$: Observable<Project[]>;
   project$: Observable<Project>;
@@ -35,9 +48,18 @@ export class ProjectContractorsComponent implements OnInit {
 
   ngOnInit() {
     this.isCheckable = false;
-    this.projects$ = this.store.select(fromStore.getAllSortedProjects);
-    this.project$ = this.store.select(fromStore.getCurrentProject);
-    this.projectFilter$ = this.store.select(fromStore.getFilterState);
+
+    this.projects$ = this.store
+      .select(fromStore.getAllSortedProjects)
+      .pipe(takeUntil(this.unsubscribe$));
+
+    this.project$ = this.store
+      .select(fromStore.getCurrentProject)
+      .pipe(takeUntil(this.unsubscribe$));
+
+    this.projectFilter$ = this.store
+      .select(fromStore.getFilterState)
+      .pipe(takeUntil(this.unsubscribe$));
 
     this.store
       .select(fromStore.getCurrentProjectId)
@@ -48,7 +70,9 @@ export class ProjectContractorsComponent implements OnInit {
         )
       );
 
-    this.contractors$ = this.store.select(fromStore.getFilteredContractors);
+    this.contractors$ = this.store
+      .select(fromStore.getFilteredContractors)
+      .pipe(takeUntil(this.unsubscribe$));
   }
 
   onFilterChange(projectFilter: ProjectFilter) {
@@ -56,14 +80,21 @@ export class ProjectContractorsComponent implements OnInit {
       new fromStore.ProjectFiltersUpdatedAction(projectFilter)
     );
   }
+
   onProjectChange(currentProjectId: number) {
     this.store.dispatch(new fromStore.SetCurrentProjectId(currentProjectId));
   }
+
   onSendInvitation(projectInvitation) {
     this.store.dispatch(
       // 20180303 remove comment while wep api ready
-      // new fromStore.CreateInvitation(this.invitation)
+      // new fromStore.CreateInvitation(projectInvitation)
       new fromStore.CreateInvitationSuccess(projectInvitation)
     );
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

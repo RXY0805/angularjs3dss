@@ -9,9 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { Store, ActionsSubject } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-// import { map, switchMap, catchError, distinct } from 'rxjs/operators';
+import { Subject } from 'rxjs/Subject';
 
 import { Subscription } from 'rxjs/Subscription';
+import { takeUntil } from 'rxjs/operators';
 
 import * as fromStore from '../store';
 
@@ -26,6 +27,7 @@ import { Contractor, Company, Project } from '@project-contractors/models';
 export class ContractorEditComponent implements OnInit, OnDestroy {
   contractor$: Observable<Contractor>;
   redirectSub: Subscription;
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(
     private store: Store<fromStore.ProjectContractorsState>,
@@ -35,7 +37,9 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.contractor$ = this.store.select(fromStore.getContractorById);
+    this.contractor$ = this.store
+      .select(fromStore.getContractorById)
+      .pipe(takeUntil(this.unsubscribe$));
 
     // If the update effect fires, we check if the current id is the one being updated, and redirect to its details
     this.redirectSub = this.actionsSubject
@@ -57,12 +61,14 @@ export class ContractorEditComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.redirectSub.unsubscribe();
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
   onSubmit(contractor) {
-    // skip service web api updating
+    // 20180326 change back later
     this.store.dispatch(new fromStore.UpdateContractorSuccess(contractor));
-    //this.store.dispatch(new fromStore.UpdateContractor(contractor));
+    // this.store.dispatch(new fromStore.UpdateContractor(contractor));
     this.router.navigate(['/contractors']);
   }
   onCancel() {

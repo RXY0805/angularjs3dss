@@ -6,7 +6,8 @@
             <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleSelectedCompany)="onToggleSelectedCompany($event)"></app-contractor-list>
             <div class="button-group">
                 <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
-                <button class="ngButton" mat-raised-button color="primary" [disabled]="!isCompanyInvited" (click)="onInvitation()" [mat-dialog-close]="data.invitation">Invite</button>
+                <button class="ngButton" mat-raised-button color="primary" [disabled]="!isCompanyInvited" (click)="onInviteExistCompany()"
+                    [mat-dialog-close]="data.invitation">Invite</button>
             </div>
         </mat-tab>
         <mat-tab label="New company">
@@ -30,12 +31,11 @@
                         </table>
                     </form>
                 </mat-card-content>
-
-
             </mat-card>
             <div class="ng-button-group">
                 <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
-                <button class="ngButton" mat-raised-button color="primary" (click)="onInvitation()" [disabled]="companyForm.invalid " [mat-dialog-close]="data.invitation">Invite</button>
+                <button class="ngButton" mat-raised-button color="primary" (click)="onInviteNewCompany()" [disabled]="companyForm.invalid "
+                    [mat-dialog-close]="data.invitation">Invite</button>
             </div>
         </mat-tab>
     </mat-tab-group>

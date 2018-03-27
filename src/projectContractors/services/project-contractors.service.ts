@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment';
 import {
   ProjectContractor,
   ProjectInvitation,
+  ProjectInvitationAPIModel,
   Contractor,
   JSONProjectContractor,
   JSONContractor,
@@ -19,11 +20,9 @@ import {
 @Injectable()
 export class ProjectContractorsService {
   constructor(private http: HttpClient) {}
-  // Capital
+
   getProjectContractors(): Observable<ProjectContractor[]> {
     return (
-      // /Api/contractors
-
       this.http
         // .get<JSONProjectContractor[]>(`/websiteAPI/Contractors`)
         .get<JSONProjectContractor[]>(`${environment.dataFolder}/mirvac.json`)
@@ -35,8 +34,15 @@ export class ProjectContractorsService {
   }
 
   createInvitation(payload: ProjectInvitation): Observable<ProjectInvitation> {
+    const projectInvitationAPIModel = convertToProjectInvitationAPIModel(
+      payload
+    );
+
     return this.http
-      .post<ProjectInvitation>(`/api/projectInvitation`, payload)
+      .post<ProjectInvitationAPIModel>(
+        `/api/projectInvitation`,
+        projectInvitationAPIModel
+      )
       .pipe(catchError((error: any) => Observable.throw(error.json())));
   }
 
@@ -46,6 +52,16 @@ export class ProjectContractorsService {
       .put<ContractorAPIModel>(`/websiteAPI/Contractors`, contractorAPIModel)
       .pipe(catchError((error: any) => Observable.throw(error.json())));
   }
+}
+
+function convertToProjectInvitationAPIModel(
+  data: ProjectInvitation
+): ProjectInvitationAPIModel {
+  return {
+    principalProjectId: data.projectId,
+    existCompanyIdList: data.existCompanies.map(x => x.id),
+    email: data.email || ''
+  };
 }
 
 function convertToContractorAPIModel(data): ContractorAPIModel {

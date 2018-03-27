@@ -12,7 +12,6 @@ import {
   Inject,
   OnInit
 } from '@angular/core';
-import { Store } from '@ngrx/store';
 import {
   FormBuilder,
   FormGroup,
@@ -21,14 +20,12 @@ import {
 } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import * as fromStore from '../../store';
 import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company } from '../../models/company.model';
 import { Project } from '../../models/project.model';
 import { TradingEntity } from '../../models/trading-entity.model';
 
 import { CustomValidators } from '../../../shared/validator/custom-validators';
-import { getTradingEntity } from '../../store/reducers/company.reducer';
 
 @Component({
   styleUrls: ['contractor-invite-dialog.component.css'],
@@ -40,14 +37,12 @@ export class ContractorInviteDialogComponent implements OnInit {
 
   duplicatedContractorIds: string[] = [];
   invitation: ProjectInvitation;
-  selectedProject$: Observable<Project>;
   isCompanyInvited: boolean;
   isCheckable: boolean;
   isABNActived: boolean;
   constructor(
     public dialogRef: MatDialogRef<ContractorInviteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public store: Store<fromStore.ProjectContractorsState>,
     public form: FormBuilder
   ) {
     this.invitation = data.invitation;
@@ -55,27 +50,18 @@ export class ContractorInviteDialogComponent implements OnInit {
   ngOnInit() {
     this.isCheckable = true;
     this.isCompanyInvited = false;
-    this.createFormControls();
-    this.createForm();
-  }
-
-  public createFormControls() {
-    this.email = new FormControl('', [Validators.required, Validators.email]);
-  }
-
-  public createForm() {
     this.companyForm = new FormGroup({
-      email: this.email
+      projectId: new FormControl(
+        { value: this.invitation.projectId, disabled: true },
+        [Validators.required]
+      ),
+
+      email: new FormControl(this.invitation.email, [
+        Validators.required,
+        Validators.email
+      ])
     });
   }
-
-  // onABNLookup() {
-  //   if (this.lastABN !== this.companyForm.controls.abn.value) {
-  //     this.store.dispatch(
-  //       new fromStore.SearchABN(this.companyForm.controls.abn.value)
-  //     );
-  //   }
-  // }
 
   onToggleSelectedCompany(event) {
     if (parseInt(event.id, 10) > 0) {
@@ -97,7 +83,6 @@ export class ContractorInviteDialogComponent implements OnInit {
           name: event.name
         };
         this.invitation.existCompanies.push(selectedCompany);
-        console.log(this.invitation.existCompanies);
       } else {
         if (!event.isMasterToggle) {
           this.invitation.existCompanies.splice(index, 1);
@@ -118,7 +103,14 @@ export class ContractorInviteDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  onInvitation(): void {
+  onInviteNewCompany() {
+    if (this.companyForm.valid) {
+      const { value, valid, touched } = this.companyForm;
+      this.dialogRef.close({ ...this.invitation, ...value });
+    }
+  }
+
+  onInviteExistCompany(): void {
     this.dialogRef.close(this.invitation);
   }
 }

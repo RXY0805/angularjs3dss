@@ -6,7 +6,8 @@ import {
   ElementRef,
   Input,
   Output,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -16,6 +17,9 @@ import 'rxjs/add/observable/from';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/distinct';
 import { Subscription } from 'rxjs/Subscription';
+import { Subject } from 'rxjs/Subject';
+import { takeUntil } from 'rxjs/operators';
+
 import {
   ContractorDatabase,
   ContractorDataSource
@@ -39,14 +43,14 @@ import { ProjectConstants } from '@shared-utility/constants';
   styleUrls: ['contractor-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContractorListComponent implements OnInit {
+export class ContractorListComponent implements OnInit, OnDestroy {
   @Input() contractors: Observable<Contractor[]>;
   @Input() isCheckable: boolean;
   @Output()
   toggleSelectedCompany: EventEmitter<any> = new EventEmitter<{
     any;
   }>();
-
+  private unsubscribe$: Subject<void> = new Subject<void>();
   private currentDate: string;
   private companyData: Company[] = [];
   displayedColumns: string[];
@@ -92,7 +96,7 @@ export class ContractorListComponent implements OnInit {
 
     this.baseUrl = environment.baseUrl;
     this.defaultPageSize = this.isCheckable ? 5 : 10;
-    this.contractors.subscribe(res => {
+    this.contractors.pipe(takeUntil(this.unsubscribe$)).subscribe(res => {
       // console.log(res);
       this.contractorDatabase = new ContractorDatabase(this.contractors);
 
@@ -196,5 +200,9 @@ export class ContractorListComponent implements OnInit {
       name: name,
       isMasterToggle: isMasterToggle
     });
+  }
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

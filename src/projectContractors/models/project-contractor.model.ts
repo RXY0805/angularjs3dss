@@ -26,3 +26,9 @@ export interface ProjectInvitation {
   existCompanies?: Company[];
   email?: string;
 }
+
+export interface ProjectInvitationAPIModel {
+  principalProjectId: number;
+  existCompanyIdList?: number[];
+  email?: string;
+}

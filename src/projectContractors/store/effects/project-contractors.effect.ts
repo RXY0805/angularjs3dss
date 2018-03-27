@@ -64,9 +64,9 @@ export class ProjectContractorsEffects {
           .createInvitation(action.payload)
           .pipe(
             map(
-              projectContractors =>
+              projectInvitation =>
                 new projectContractorActions.CreateInvitationSuccess(
-                  projectContractors
+                  projectInvitation
                 )
             ),
             catchError(error =>

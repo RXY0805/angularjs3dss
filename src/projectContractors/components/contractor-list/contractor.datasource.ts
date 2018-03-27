@@ -134,10 +134,6 @@ export class ContractorDataSource extends DataSource<any> {
       const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
       const valueB = isNaN(+propertyB) ? propertyB : +propertyB;
 
-      // return (
-
-      //   (valueA < valueB ? -1 : 1) * (this._sort.direction === 'asc' ? 1 : -1)
-      // );
       return (
         this.compareItems(valueA, valueB) *
         (this._sort.direction === 'asc' ? 1 : -1)
@@ -147,18 +143,18 @@ export class ContractorDataSource extends DataSource<any> {
 
   // new one
   compareItems(itemA: any, itemB: any): number {
-    let retVal = 0;
+    let result = 0;
     if (itemA && itemB) {
       if (itemA > itemB) {
-        retVal = 1;
+        result = 1;
       } else if (itemA < itemB) {
-        retVal = -1;
+        result = -1;
       }
     } else if (itemA) {
-      retVal = 1;
+      result = 1;
     } else if (itemB) {
-      retVal = -1;
+      result = -1;
     }
-    return retVal;
+    return result;
   }
 }

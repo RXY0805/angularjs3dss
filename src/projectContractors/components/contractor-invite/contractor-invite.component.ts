@@ -10,7 +10,8 @@ import {
   Input,
   EventEmitter,
   Inject,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { FormControl, Validators } from '@angular/forms';
@@ -22,34 +23,41 @@ import { ProjectInvitation } from '../../models/project-contractor.model';
 import { Company, Project, Contractor } from '@project-contractors/models';
 
 import { FormBuilder } from '@angular/forms/src/form_builder';
+import { Subject } from 'rxjs/Subject';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contractor-invite',
   // styleUrls: ['./contractor-invite.component.css'],
   templateUrl: './contractor-invite.component.html'
 })
-export class ContractorInviteComponent implements OnInit {
+export class ContractorInviteComponent implements OnInit, OnDestroy {
   @Input() project: Observable<Project>;
   @Output() sendInvitation = new EventEmitter<ProjectInvitation>();
   availableContractors$: Observable<Contractor[]>;
   currentProject: Project;
   invitation: ProjectInvitation;
   currentAvailableContractors: Contractor[];
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(
     public dialog: MatDialog,
     private store: Store<fromStore.ProjectContractorsState>
   ) {}
   ngOnInit() {
-    this.project.subscribe(x => {
+    this.project.pipe(takeUntil(this.unsubscribe$)).subscribe(x => {
       this.currentProject = x;
     });
   }
 
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
   openDialog(): void {
-    this.availableContractors$ = this.store.select(
-      fromStore.getAvailableContractors
-    );
+    this.availableContractors$ = this.store
+      .select(fromStore.getAvailableContractors)
+      .pipe(takeUntil(this.unsubscribe$));
 
     this.invitation = {
       projectId: this.currentProject.id,

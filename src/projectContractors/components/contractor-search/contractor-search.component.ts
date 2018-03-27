@@ -1,9 +1,20 @@
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/distinctUntilChanged';
-
-import { Component, Output, Input, EventEmitter, OnInit } from '@angular/core';
+import {
+  Component,
+  Output,
+  Input,
+  EventEmitter,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import {
+  map,
+  debounceTime,
+  catchError,
+  distinctUntilChanged,
+  takeUntil
+} from 'rxjs/operators';
 import * as fromModels from 'projectContractors/models';
 import { ProjectConstants } from '@shared-utility/constants';
 import { Project, ProjectFilter } from '@project-contractors/models';
@@ -13,13 +24,14 @@ import { Project, ProjectFilter } from '@project-contractors/models';
   templateUrl: './contractor-search.component.html',
   styles: ['./contractor-search.component.css']
 })
-export class ContractorSearchComponent implements OnInit {
+export class ContractorSearchComponent implements OnInit, OnDestroy {
   @Input() projects: Observable<Project[]>;
   @Input() projectFilter: Observable<ProjectFilter>;
 
   @Output()
   filterChange: EventEmitter<ProjectFilter> = new EventEmitter<ProjectFilter>();
   @Output() projectChange: EventEmitter<number> = new EventEmitter<number>();
+  private unsubscribe$: Subject<void> = new Subject<void>();
   filter: ProjectFilter;
   currentProjectId: number;
   allProjects: Project[];
@@ -31,11 +43,12 @@ export class ContractorSearchComponent implements OnInit {
   auditStatusList = ProjectConstants.AuditStatusOptionsIncludeAll;
 
   ngOnInit() {
-    this.projects.subscribe(x => {
+    this.projects.pipe(takeUntil(this.unsubscribe$)).subscribe(x => {
       this.allProjects = x;
       this.currentProjectId = this.allProjects[0].id;
     });
-    this.projectFilter.subscribe(x => {
+
+    this.projectFilter.pipe(takeUntil(this.unsubscribe$)).subscribe(x => {
       this.filter = {
         auditStatusId: x.auditStatusId,
         onSiteStatusId: x.onSiteStatusId,
@@ -48,8 +61,11 @@ export class ContractorSearchComponent implements OnInit {
     this.filterChange.emit(this.filter);
   }
   onProjectChange() {
-    // alert('project search change'+ this.currentProjectId)
-    // console.log(this.currentProjectId);
     this.projectChange.emit(this.currentProjectId);
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

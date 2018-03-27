@@ -44,8 +44,6 @@ export class ContractorFormComponent implements OnInit {
   @Output() cancel = new EventEmitter();
   contractorForm: FormGroup;
 
-  currentContractor: Contractor;
-
   statusList = ProjectConstants.ProjectStatusEditingOptions;
   onSiteStatusList = ProjectConstants.OnSiteStatusOptions;
   auditStatusList = ProjectConstants.AuditStatusOptions;
