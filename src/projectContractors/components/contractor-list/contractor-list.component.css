@@ -73,9 +73,11 @@
   text-decoration: underline;
 }
 .mat-column-companyName {
-  flex: 4;
+  flex: 3;
 }
-
+.mat-column-contactPerson {
+  flex: 2;
+}
 .mat-column-auditUserName {
   flex: 3;
 }

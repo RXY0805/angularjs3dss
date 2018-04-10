@@ -5,7 +5,7 @@ export const environment = {
   apiUrl: 'https://cloud.3dsafety.com.au/websiteAPI',
   baseUrl: 'https://cloud.3dsafety.com.au/',
   // For local host 4200
-  dataFolder: 'assets'
+  // dataFolder: 'assets'
   // for 3dss integration
-  // dataFolder: '../AngularJS3DSSAppScripts/assets'
+  dataFolder: '../AngularJS3DSSAppScripts/assets'
 };

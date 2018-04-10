@@ -1,3 +1,5 @@
+import { ContactPerson } from '@project-contractors/models';
+
 export interface Contractor {
   contractorId?: number;
   companyId?: number;
@@ -8,7 +10,14 @@ export interface Contractor {
   licenceExpires?: string;
   auditUserName?: string;
   principalProjectId: number;
+  contactPerson: ContactPerson[];
   [key: number]: any;
+}
+
+export interface ContactPersonAPIModel {
+  Id: number;
+  Name: string;
+  Email: string;
 }
 
 export interface ContractorAPIModel {
@@ -28,6 +37,7 @@ export interface JSONContractor {
   AuditComplete: boolean;
   LicenceExpires: string;
   AuditUserName: string;
+  ContactPerson: ContactPersonAPIModel[];
   [key: number]: any;
 }
 
@@ -44,7 +54,8 @@ export const DefaultContractor: Contractor = {
   companyName: undefined,
   statusId: 3,
   onSite: 0,
-  auditComplete: 0
+  auditComplete: 0,
+  contactPerson: []
 };
 
 export const TerminatedContractor: Contractor = {

@@ -28,12 +28,15 @@ import {
   Contractor,
   Company,
   TerminatedContractor,
-  InvitedContractor
+  InvitedContractor,
+  ContactPerson
 } from '@project-contractors/models';
 
 import { DateUtilities } from '@shared-utility/date';
 import { environment } from '../../../environments/environment';
 import { ProjectConstants } from '@shared-utility/constants';
+import { element } from 'protractor';
+import { select } from '@ngrx/store/src/store';
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -50,6 +53,11 @@ export class ContractorListComponent implements OnInit, OnDestroy {
   toggleSelectedCompany: EventEmitter<any> = new EventEmitter<{
     any;
   }>();
+  @Output()
+  toggleContactPersonEmail: EventEmitter<any> = new EventEmitter<{
+    any;
+  }>();
+
   private unsubscribe$: Subject<void> = new Subject<void>();
   private currentDate: string;
   private companyData: Company[] = [];
@@ -60,6 +68,7 @@ export class ContractorListComponent implements OnInit, OnDestroy {
   public dataSource: ContractorDataSource | null;
   public defaultPageSize: number;
   public dataLength: number;
+  public selectedContactPersonEmailList: string[] = [];
   currentFilter: string;
   baseUrl: string;
   terminatedStatusId: number = TerminatedContractor.statusId;
@@ -76,12 +85,12 @@ export class ContractorListComponent implements OnInit, OnDestroy {
   @ViewChild('filter') filter: ElementRef;
 
   // companysTrackByFn = (index: string, company: Company) =>
-  //   company.id.toString();
+  //   company.id.toString();'contactPerson'
 
   constructor() {}
   ngOnInit() {
     if (this.isCheckable) {
-      this.displayedColumns = ['select', 'companyName', 'auditUserName'];
+      this.displayedColumns = ['select', 'companyName', 'contactPerson'];
     } else {
       this.displayedColumns = [
         'companyName',
@@ -176,7 +185,7 @@ export class ContractorListComponent implements OnInit, OnDestroy {
 
     if (this.isAllSelected()) {
       this.selection.clear();
-      this.onToggleSelectedCompany(-1, null, true);
+      this.onToggleSelectedCompany(null, true);
     } else if (this.filter.nativeElement.value) {
       this.dataSource.filteredData.forEach(data => {
         this.toggleSelection(data);
@@ -190,17 +199,70 @@ export class ContractorListComponent implements OnInit, OnDestroy {
 
   toggleSelection(data) {
     this.selection.select(data.companyId);
-
-    this.onToggleSelectedCompany(data.companyId, data.companyName, true);
+    this.onToggleSelectedCompany(data, true);
   }
 
-  onToggleSelectedCompany(id, name, isMasterToggle) {
+  onToggleSelectedCompany(contractor: Contractor, isMasterToggle) {
+    const selectedCompanyId = contractor.companyId;
+    if (selectedCompanyId > 0) {
+      contractor.contactPerson.map(p => {
+        if (this.selection.isSelected(selectedCompanyId)) {
+          this.selectedContactPersonEmailList.push(p.email);
+        } else {
+          this.selectedContactPersonEmailList = this.selectedContactPersonEmailList.filter(
+            e => e !== p.email
+          );
+        }
+        this.onToggleContactPersonEmail(p.email);
+      });
+    }
+    this.onEmitSelectedContractor(contractor, isMasterToggle);
+  }
+
+  onEmitSelectedContractor(contractor, isMasterToggle) {
     this.toggleSelectedCompany.emit({
-      id: id,
-      name: name,
+      id: contractor.companyId || -1,
+      name: contractor.companyName || '',
       isMasterToggle: isMasterToggle
     });
   }
+
+  onToggleContactPersonEmail(email) {
+    this.toggleContactPersonEmail.emit(email);
+  }
+
+  onToggleSelectedContactPerson(event, contractor) {
+    const email = event.source.value;
+    this.onToggleContactPersonEmail(email);
+
+    if (event.selected) {
+      this.selectedContactPersonEmailList.push(email);
+    } else {
+      this.selectedContactPersonEmailList = this.selectedContactPersonEmailList.filter(
+        e => e !== email
+      );
+    }
+
+    let selectedContactPersonCount = 0;
+
+    contractor.contactPerson.map(p => {
+      if (this.selectedContactPersonEmailList.indexOf(p.email) >= 0) {
+        selectedContactPersonCount++;
+      }
+    });
+
+    if (event.selected !== this.selection.isSelected(contractor.companyId)) {
+      if (!event.selected) {
+        // check any other contact person selected
+        if (selectedContactPersonCount) {
+          return;
+        }
+      }
+      this.selection.toggle(contractor.companyId);
+      this.onEmitSelectedContractor(contractor, false);
+    }
+  }
+
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

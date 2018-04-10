@@ -14,7 +14,9 @@ import {
   JSONProjectContractor,
   JSONContractor,
   DefaultContractor,
-  ContractorAPIModel
+  ContractorAPIModel,
+  ContactPerson,
+  ContactPersonAPIModel
 } from '@project-contractors/models';
 
 @Injectable()
@@ -77,6 +79,20 @@ function convertToContractorAPIModel(data): ContractorAPIModel {
 function convertToProjectContractorModel(jsonData): ProjectContractor {
   const result = jsonData.map((x): ProjectContractor => {
     const contractors = x.Contractors.map((c): Contractor => {
+      // console.log(c.ContactPerson.length);
+      const contactPerson = [];
+      const contactPersonEmail = [];
+      c.ContactPerson.map(p => {
+        const person: ContactPerson = {
+          id: p.Id,
+          name: p.Name,
+          email: p.Email
+        };
+
+        contactPerson.push(person);
+        // contactPersonEmail.push(person.email);
+      });
+
       const contractor: Contractor = {
         contractorId: c.ChildProjectId,
         principalProjectId: x.PrincipalProjectId,
@@ -86,7 +102,8 @@ function convertToProjectContractorModel(jsonData): ProjectContractor {
         onSite: c.OnSite ? 1 : 0,
         auditUserName: c.AuditUserName || '',
         auditComplete: c.AuditComplete ? 1 : 0,
-        licenceExpires: c.LicenceExpires || ''
+        licenceExpires: c.LicenceExpires || '',
+        contactPerson: contactPerson
       };
       return contractor;
     });

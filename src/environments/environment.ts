@@ -8,7 +8,7 @@ export const environment = {
   apiUrl: 'http://localhost:1212/websiteAPI',
   baseUrl: 'http://localhost:1212/',
   // For local host 4200
-  dataFolder: '../assets'
+  //dataFolder: '../assets'
   // for 3dss integration
-  // dataFolder: '../AngularAppScripts/assets'
+  dataFolder: '../AngularAppScripts/assets'
 };

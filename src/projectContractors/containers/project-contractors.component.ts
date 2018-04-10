@@ -27,7 +27,7 @@ import { ProjectFilterState } from '../store/reducers/project-filter.reducer';
 
 @Component({
   selector: 'app-project-contractors',
-  changeDetection: ChangeDetectionStrategy.Default,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['project-contractors.component.css'],
   templateUrl: './project-contractors.component.html'
 })

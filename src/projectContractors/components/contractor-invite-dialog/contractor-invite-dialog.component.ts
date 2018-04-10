@@ -12,6 +12,7 @@ import {
   Inject,
   OnInit
 } from '@angular/core';
+
 import {
   FormBuilder,
   FormGroup,
@@ -20,10 +21,13 @@ import {
 } from '@angular/forms';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { ProjectInvitation } from '../../models/project-contractor.model';
-import { Company } from '../../models/company.model';
-import { Project } from '../../models/project.model';
-import { TradingEntity } from '../../models/trading-entity.model';
+import {
+  ProjectInvitation,
+  Company,
+  Project
+} from '@project-contractors/models';
+
+// import { TradingEntity } from '../../models/trading-entity.model';
 
 import { CustomValidators } from '../../../shared/validator/custom-validators';
 
@@ -61,6 +65,22 @@ export class ContractorInviteDialogComponent implements OnInit {
         Validators.email
       ])
     });
+  }
+
+  onToggleContactPersonEmail(email) {
+    let index = -1;
+    if (
+      this.invitation.contactPersonEmailList &&
+      this.invitation.contactPersonEmailList.length
+    ) {
+      index = this.invitation.contactPersonEmailList.indexOf(email);
+    }
+
+    if (index < 0) {
+      this.invitation.contactPersonEmailList.push(email);
+    } else {
+      this.invitation.contactPersonEmailList.splice(index, 1);
+    }
   }
 
   onToggleSelectedCompany(event) {
@@ -111,6 +131,7 @@ export class ContractorInviteDialogComponent implements OnInit {
   }
 
   onInviteExistCompany(): void {
+    console.log(this.invitation);
     this.dialogRef.close(this.invitation);
   }
 }

@@ -1,8 +1,4 @@
-import {
-  Contractor,
-  JSONContractor,
-  Company
-} from '@project-contractors/models';
+import { Contractor, JSONContractor } from '@project-contractors/models';
 
 export interface ProjectFilter {
   statusId: number;
@@ -20,15 +16,4 @@ export interface JSONProjectContractor {
   Id: number;
   ProjectName: string;
   Contractors: JSONContractor[];
-}
-export interface ProjectInvitation {
-  projectId: number;
-  existCompanies?: Company[];
-  email?: string;
-}
-
-export interface ProjectInvitationAPIModel {
-  principalProjectId: number;
-  existCompanyIdList?: number[];
-  email?: string;
 }

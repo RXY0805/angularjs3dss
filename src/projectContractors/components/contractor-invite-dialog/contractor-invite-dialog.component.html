@@ -3,7 +3,8 @@
 <div mat-dialog-content>
     <mat-tab-group>
         <mat-tab label="Existing companies">
-            <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleSelectedCompany)="onToggleSelectedCompany($event)"></app-contractor-list>
+            <app-contractor-list [contractors]="data.currentAvailableContractors" [isCheckable]="isCheckable" (toggleContactPersonEmail)="onToggleContactPersonEmail($event)"
+                (toggleSelectedCompany)="onToggleSelectedCompany($event)"></app-contractor-list>
             <div class="button-group">
                 <button class="ngButton" mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
                 <button class="ngButton" mat-raised-button color="primary" [disabled]="!isCompanyInvited" (click)="onInviteExistCompany()"

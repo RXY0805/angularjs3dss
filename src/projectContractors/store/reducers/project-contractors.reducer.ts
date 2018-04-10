@@ -149,6 +149,7 @@ export const getProjectContractorsEntities = (state: ProjectContractorState) =>
 
 export const getProjectContractorsLoading = (state: ProjectContractorState) =>
   state.loading;
+
 export const getProjectContractorsLoaded = (state: ProjectContractorState) =>
   state.loaded;
 

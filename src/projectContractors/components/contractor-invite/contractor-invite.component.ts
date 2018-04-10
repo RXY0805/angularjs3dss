@@ -19,8 +19,12 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import * as fromStore from '../../store';
 import { ContractorInviteDialogComponent } from '../contractor-invite-dialog/contractor-invite-dialog.component';
-import { ProjectInvitation } from '../../models/project-contractor.model';
-import { Company, Project, Contractor } from '@project-contractors/models';
+import {
+  Company,
+  Project,
+  Contractor,
+  ProjectInvitation
+} from '@project-contractors/models';
 
 import { FormBuilder } from '@angular/forms/src/form_builder';
 import { Subject } from 'rxjs/Subject';
@@ -61,7 +65,8 @@ export class ContractorInviteComponent implements OnInit, OnDestroy {
 
     this.invitation = {
       projectId: this.currentProject.id,
-      existCompanies: []
+      existCompanies: [],
+      contactPersonEmailList: []
     };
 
     const dialogRef = this.dialog.open(ContractorInviteDialogComponent, {

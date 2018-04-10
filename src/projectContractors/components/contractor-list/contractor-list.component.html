@@ -25,7 +25,7 @@
                 </mat-checkbox>
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.companyId) : null;onToggleSelectedCompany(row.companyId,row.companyName,false)"
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.companyId) : null; onToggleSelectedCompany(row, false)"
                     [checked]="selection.isSelected(row.companyId)">&nbsp;
                 </mat-checkbox>
             </mat-cell>
@@ -40,22 +40,26 @@
                 <span *ngIf="isCheckable || row.isInvited">{{row.companyName}}</span>
             </mat-cell>
         </ng-container>
+        <ng-container matColumnDef="contactPerson" *ngIf="isCheckable">
+            <mat-header-cell *matHeaderCellDef>
+                <a>Contact Person</a>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-selection-list>
+                    <mat-list-option checkboxPosition="before" *ngFor="let person of row.contactPerson" [value]="person.email" (selectionChange)="onToggleSelectedContactPerson($event,row)"
+                        [selected]="selectedContactPersonEmailList.indexOf(person.email)>=0">
+                        {{person.name}}
+                    </mat-list-option>
+                </mat-selection-list>
 
-        <ng-container matColumnDef="auditUserName">
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="auditUserName" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef mat-sort-header>
                 <a>User</a>
             </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.auditUserName}} </mat-cell>
         </ng-container>
-
-        <!-- <ng-container matColumnDef="project.onSite" *ngIf="!isCheckable">
-            <mat-header-cell *matHeaderCellDef> On Site </mat-header-cell>
-            <mat-cell *matCellDef="let row">
-                <mat-select class="width-60-percent" [(value)]="row.project? row.project.onSite:''" (change)="alert('change onsite')">
-                    <mat-option *ngFor="let option of onsiteOptions" [value]="option.value">{{option.name}}</mat-option>
-                </mat-select>
-            </mat-cell>
-        </ng-container> -->
 
         <ng-container matColumnDef="statusId" *ngIf="!isCheckable">
             <mat-header-cell *matHeaderCellDef>

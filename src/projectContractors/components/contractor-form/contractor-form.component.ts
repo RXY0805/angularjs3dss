@@ -37,7 +37,8 @@ export class ContractorFormComponent implements OnInit {
     onSite: undefined,
     auditComplete: undefined,
     licenceExpires: undefined,
-    auditUserName: undefined
+    auditUserName: undefined,
+    contactPerson: undefined
   };
 
   @Output() submit = new EventEmitter<Contractor>();

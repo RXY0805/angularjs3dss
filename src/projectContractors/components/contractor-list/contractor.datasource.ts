@@ -84,7 +84,12 @@ export class ContractorDataSource extends DataSource<any> {
       this.filteredData = this._contractorDatabase.data
         // .slice()
         .filter((item: Contractor) => {
-          const searchStr = item.companyName + ' ' + item.auditUserName;
+          let personNameList = '';
+          const contactPersonName = item.contactPerson.map(x => {
+            personNameList += x.name + ' ';
+          });
+          const searchStr =
+            item.companyName + ' ' + item.auditUserName + ' ' + personNameList;
           return (
             searchStr.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1
           );
